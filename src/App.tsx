@@ -161,9 +161,10 @@ function App() {
     const load = async () => {
       setStatus('loading')
       try {
+        const baseUrl = import.meta.env.BASE_URL ?? '/'
         const [sitesResponse, lgaResponse] = await Promise.all([
-          fetch('/data/sites.json'),
-          fetch('/data/lga_centroids.json'),
+          fetch(`${baseUrl}data/sites.json`),
+          fetch(`${baseUrl}data/lga_centroids.json`),
         ])
         if (!sitesResponse.ok) {
           throw new Error('Failed to load sites')
