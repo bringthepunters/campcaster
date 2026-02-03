@@ -368,7 +368,7 @@ function App() {
       }
       if (selectedDate && (!allowHeat || !allowRain)) {
         const summary = getWeatherSummary(site)
-        if (!summary) return false
+        if (!summary) return true
         if (!allowHeat && summary.maxTemp >= HEAT_THRESHOLD_C) {
           return false
         }
@@ -605,9 +605,27 @@ function App() {
               <p className="campground-count-label">
                 Campgrounds shown: {filteredSites.length}
               </p>
-              <p className="mt-2 text-sm text-ink/60">
-                First, choose the date.
-              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-4">
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/70">
+                  First, choose the date
+                </span>
+                <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
+                  <label htmlFor="forecast-date" className="sr-only">
+                    Forecast date
+                  </label>
+                  <input
+                    id="forecast-date"
+                    type="date"
+                    value={selectedDate}
+                    min={new Date().toISOString().slice(0, 10)}
+                    max={new Date(Date.now() + 13 * 24 * 60 * 60 * 1000)
+                      .toISOString()
+                      .slice(0, 10)}
+                    onChange={(event) => setSelectedDate(event.target.value)}
+                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
+                  />
+                </div>
+              </div>
             </div>
             <div className="filter-grid">
               <div className="filter-row">
@@ -672,7 +690,7 @@ function App() {
                 ))}
               </div>
             </div>
-            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:items-end">
+            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)] sm:items-end">
               <div className="flex flex-col gap-2">
                 <label htmlFor="drive-time" className="section-heading">
                   Max drive time
@@ -704,25 +722,6 @@ function App() {
                     />
                   ))}
                 </datalist>
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="forecast-date" className="section-heading">
-                  Forecast date
-                </label>
-                <input
-                  id="forecast-date"
-                  type="date"
-                  value={selectedDate}
-                  min={new Date().toISOString().slice(0, 10)}
-                  max={new Date(Date.now() + 13 * 24 * 60 * 60 * 1000)
-                    .toISOString()
-                    .slice(0, 10)}
-                  onChange={(event) => setSelectedDate(event.target.value)}
-                  className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-                />
-                <p className="text-xs text-ink/50">
-                  Select a date to load weather and availability.
-                </p>
               </div>
             </div>
           </div>
