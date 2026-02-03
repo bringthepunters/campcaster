@@ -386,11 +386,13 @@ function App() {
       const availabilityFilterActive = AVAILABILITY_FILTERS.some(
         (filter) => availabilityFilters[filter.key],
       )
-      if (availabilityFilterActive && selectedDate) {
-        const availabilityForDate =
-          availabilityDate === selectedDate
-            ? availabilityById[site.id] ?? 'unknown'
-            : 'unknown'
+      if (
+        availabilityFilterActive &&
+        selectedDate &&
+        availabilityDate === selectedDate &&
+        !availabilityLoading
+      ) {
+        const availabilityForDate = availabilityById[site.id] ?? 'unknown'
         if (!availabilityFilters[availabilityForDate]) {
           return false
         }
