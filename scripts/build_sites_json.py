@@ -13,6 +13,10 @@ LGA_TOURISM = ROOT / "LGA&TOURISM_REGIONS.csv"
 FACILITIES_BY_URL = ROOT / "data" / "facilities_by_url.json"
 CAMPGROUND_URLS = ROOT / "data" / "campground_urls.txt"
 
+TOURISM_OVERRIDES = {
+    "river-murray-reserve-bruces-bend-yarrawonga-r-p": "Murray",
+}
+
 
 STOPWORDS = {
     "campground",
@@ -186,11 +190,12 @@ def main() -> None:
         if not isinstance(lga_candidate, str) or not lga_candidate.strip():
             lga_candidate = getattr(row, "lga_name", None)
         lga = lga_candidate.strip() if isinstance(lga_candidate, str) else None
+        base_id = slugify(f"{park_name}-{site_name}")
         tourism_region = None
         if lga:
             tourism_region = tourism_map.get(normalize_lga(lga))
-
-        base_id = slugify(f"{park_name}-{site_name}")
+        if base_id in TOURISM_OVERRIDES:
+            tourism_region = TOURISM_OVERRIDES[base_id]
         count = seen.get(base_id, 0) + 1
         seen[base_id] = count
         site_id = base_id if count == 1 else f"{base_id}-{count}"
