@@ -161,10 +161,10 @@ function App() {
     const load = async () => {
       setStatus('loading')
       try {
-        const baseUrl = import.meta.env.BASE_URL ?? '/'
+        const baseUrl = new URL(document.baseURI).toString()
         const [sitesResponse, lgaResponse] = await Promise.all([
-          fetch(`${baseUrl}data/sites.json`),
-          fetch(`${baseUrl}data/lga_centroids.json`),
+          fetch(new URL('data/sites.json', baseUrl)),
+          fetch(new URL('data/lga_centroids.json', baseUrl)),
         ])
         if (!sitesResponse.ok) {
           throw new Error('Failed to load sites')
@@ -427,14 +427,24 @@ function App() {
     const loadAvailability = async () => {
       setAvailabilityLoading(true)
       try {
-        const url = new URL('https://bookings.parks.vic.gov.au/book')
-        url.searchParams.set('format', 'json')
-        url.searchParams.set('q', '114')
-        url.searchParams.set('pagenumber', '1')
-        url.searchParams.set('date', selectedDate)
-        url.searchParams.set('period', '1')
+        const proxyBase = (import.meta.env.VITE_BOOKEASY_PROXY_URL ??
+          '') as string
+        const url = proxyBase
+          ? new URL(proxyBase)
+          : new URL('https://bookings.parks.vic.gov.au/book')
+        if (proxyBase) {
+          url.searchParams.set('date', selectedDate)
+        } else {
+          url.searchParams.set('format', 'json')
+          url.searchParams.set('q', '114')
+          url.searchParams.set('pagenumber', '1')
+          url.searchParams.set('date', selectedDate)
+          url.searchParams.set('period', '1')
+        }
 
-        const response = await fetch(url.toString())
+        const response = await fetch(url.toString(), {
+          cache: 'no-store',
+        })
         if (!response.ok) {
           throw new Error('Availability unavailable')
         }
