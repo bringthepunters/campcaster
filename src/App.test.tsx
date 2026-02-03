@@ -275,16 +275,17 @@ describe('CAMPCASTER list view', () => {
 
     await screen.findAllByText(/20°C to 36°C, rain risk up to 45%/i)
 
-    const under33 = screen.getByLabelText('Under 33°C')
-    await userEvent.click(under33)
+    const allowHeat = screen.getByLabelText('I dont mind the heat')
+    await userEvent.click(allowHeat)
+    await userEvent.click(allowHeat)
     expect(
       await screen.findByText('No matching campsites. Try a different search.'),
     ).toBeInTheDocument()
 
-    await userEvent.click(under33)
-
-    const noRain = screen.getByLabelText('No rain')
-    await userEvent.click(noRain)
+    await userEvent.click(allowHeat)
+    const allowRain = screen.getByLabelText('I dont mind rain')
+    await userEvent.click(allowRain)
+    await userEvent.click(allowRain)
     expect(
       await screen.findByText('No matching campsites. Try a different search.'),
     ).toBeInTheDocument()

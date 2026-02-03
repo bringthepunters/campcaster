@@ -150,13 +150,13 @@ function App() {
   const [availabilityFilters, setAvailabilityFilters] = useState<
     Record<AvailabilityStatus, boolean>
   >(() => ({
-    available: false,
+    available: true,
     booked_out: false,
-    unbookable: false,
+    unbookable: true,
     unknown: false,
   }))
-  const [under33Only, setUnder33Only] = useState(false)
-  const [noRainOnly, setNoRainOnly] = useState(false)
+  const [allowHeat, setAllowHeat] = useState(false)
+  const [allowRain, setAllowRain] = useState(false)
   const [lgaCentroids, setLgaCentroids] = useState<LgaCentroids>({})
   const [weatherByKey, setWeatherByKey] = useState<Record<string, WeatherDaily>>(
     {},
@@ -368,13 +368,13 @@ function App() {
           return false
         }
       }
-      if (under33Only || noRainOnly) {
+      if (!allowHeat || !allowRain) {
         const summary = getWeatherSummary(site)
         if (!summary) return false
-        if (under33Only && summary.maxTemp >= HEAT_THRESHOLD_C) {
+        if (!allowHeat && summary.maxTemp >= HEAT_THRESHOLD_C) {
           return false
         }
-        if (noRainOnly && summary.isRainy) {
+        if (!allowRain && summary.isRainy) {
           return false
         }
       }
@@ -408,14 +408,16 @@ function App() {
     facilityFilters,
     getWeatherSummary,
     maxDriveMinutes,
-    noRainOnly,
+    allowHeat,
+    allowRain,
     query,
     availabilityById,
     availabilityDate,
     availabilityFilters,
     selectedDate,
     sites,
-    under33Only,
+    allowHeat,
+    allowRain,
   ])
 
   useEffect(() => {
@@ -642,22 +644,22 @@ function App() {
                 <label className="checkbox-item">
                   <input
                     type="checkbox"
-                    checked={under33Only}
-                    onChange={(event) => setUnder33Only(event.target.checked)}
+                    checked={allowHeat}
+                    onChange={(event) => setAllowHeat(event.target.checked)}
                     className="accent-fern"
                     disabled={!selectedDate}
                   />
-                  Under 33°C
+                  I dont mind the heat
                 </label>
                 <label className="checkbox-item">
                   <input
                     type="checkbox"
-                    checked={noRainOnly}
-                    onChange={(event) => setNoRainOnly(event.target.checked)}
+                    checked={allowRain}
+                    onChange={(event) => setAllowRain(event.target.checked)}
                     className="accent-fern"
                     disabled={!selectedDate}
                   />
-                  No rain
+                  I dont mind rain
                 </label>
               </div>
               <p className="text-xs text-ink/50">
