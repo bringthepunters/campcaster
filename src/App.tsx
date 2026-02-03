@@ -368,7 +368,7 @@ function App() {
           return false
         }
       }
-      if (!allowHeat || !allowRain) {
+      if (selectedDate && (!allowHeat || !allowRain)) {
         const summary = getWeatherSummary(site)
         if (!summary) return false
         if (!allowHeat && summary.maxTemp >= HEAT_THRESHOLD_C) {
