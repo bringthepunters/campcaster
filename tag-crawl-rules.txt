@@ -1,0 +1,80 @@
+name: ParksVic campground tag extraction rules
+version: 0.2
+output: landscape_tags (1–3) + animals_fauna (open list, exact words)
+
+LANDSCAPE TAGS (controlled list)
+- beach_coast
+- river_creek
+- lake_wetland
+- forest
+- rainforest
+- grassland_plains
+- scrub_heath
+- desert_arid
+- mountains_alpine
+- valley_gorge
+- rocky_cliffs
+
+ANIMALS (open list)
+- animals_fauna: extract exact animal words/phrases found on the page (no normalising)
+
+STEP 1 — Get page text
+- Fetch the campground page
+- Extract visible text from the main content area
+- Remove header/nav/footer and "related links" blocks
+
+STEP 2 — Decide landscape_tags (score + pick top 1–3)
+- Score each tag based on strong cues in the text.
+- Choose the top 1–3 tags by score.
+- If nothing scores above a minimum threshold, return [] (never guess).
+
+SCORING RULES (simple concept cues)
+A) beach_coast
+  - ocean/coast/beach/bay/surf/dunes/headland/foreshore/clifftop/tidal
+
+B) river_creek
+  - river/creek/stream/riverbank/banks/ford/estuary/river mouth
+
+C) lake_wetland
+  - lake/lagoon/wetland/billabong/marsh/swamp/floodplain
+
+D) forest
+  - forest/bushland/tall trees/canopy/shaded
+
+E) rainforest
+  - rainforest/fern gully/mossy forest/closed canopy
+
+F) grassland_plains
+  - plains/grassland/open country/pasture/downs
+
+G) scrub_heath
+  - heath/scrub/mallee/shrubland/low bush
+
+H) desert_arid
+  - desert/arid/semi-arid/red sand/saltbush/dunes
+
+I) mountains_alpine
+  - mountain/alpine/high plains/peaks/ridge/snow
+
+J) valley_gorge
+  - valley/gorge/ravine/canyon/gully
+
+K) rocky_cliffs
+  - rocky/boulders/granite/outcrop/escarpment/cliffs
+
+TIEBREAKS
+- If both beach_coast and river_creek score high and the text suggests river mouth/estuary, allow both.
+- Do not output more than 3 landscape_tags.
+
+STEP 3 — Extract animals_fauna (open list, exact wording)
+- Look for a section titled "Wildlife" (if present) and scan it
+- Also scan for sentences that contain "see/spot/observe/encounter" or "home to"
+- Extract the noun phrase(s) referring to animals, keeping the exact text as written
+- Split "X and Y" into separate entries unless it’s a fixed phrase
+- De-duplicate case-insensitively, but keep the first-seen form
+
+OUTPUT (per campground)
+- campground_name
+- page_url
+- landscape_tags: ["beach_coast", "forest"]  (1–3)
+- animals_fauna: ["koalas", "abundant birdlife", "seals"]  (0..N exact phrases)
