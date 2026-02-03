@@ -908,7 +908,7 @@ function App() {
                     <div className="distance-badge">
                       {estimateDriveTimeLabel(site.lat, site.lng)} from Northcote
                     </div>
-                    {(site.landscapeTags?.length || site.animalsFauna?.length) ? (
+                    {site.landscapeTags?.length ? (
                       <div className="mt-2 flex flex-col gap-2">
                         {site.landscapeTags?.length ? (
                           <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-ink/60">
@@ -920,19 +920,6 @@ function App() {
                                 {tag.replace(/_/g, ' ')}
                               </span>
                             ))}
-                          </div>
-                        ) : null}
-                        {site.animalsFauna?.length ? (
-                          <div className="text-sm text-ink/70">
-                            Wildlife:{' '}
-                            {site.animalsFauna
-                              .filter(
-                                (animal) =>
-                                  !animal.toLowerCase().includes('url source') &&
-                                  !animal.toLowerCase().includes('http'),
-                              )
-                              .slice(0, 3)
-                              .join(', ')}
                           </div>
                         ) : null}
                       </div>

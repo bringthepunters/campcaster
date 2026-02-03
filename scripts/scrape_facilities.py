@@ -97,13 +97,7 @@ LANDSCAPE_CUES = {
     "rocky_cliffs": ["rocky", "boulders", "granite", "outcrop", "escarpment", "cliffs"],
 }
 
-WILDLIFE_TRIGGER = re.compile(
-    r"\b(wildlife|see|spot|observe|encounter|home to)\b", re.I
-)
-WILDLIFE_PHRASE = re.compile(
-    r"(see|spot|observe|encounter|home to)\s+(.*)", re.I
-)
-WILDLIFE_IGNORE = re.compile(r"(url source|http|parks\.vic\.gov\.au)", re.I)
+# Wildlife extraction disabled for now (per product decision).
 
 
 def slugify(value: str) -> str:
@@ -246,35 +240,7 @@ def extract_facilities(text: str) -> dict:
         if score > 0
     ][:3]
 
-    animals_fauna = []
-    for line in lines:
-        if not WILDLIFE_TRIGGER.search(line):
-            continue
-        if WILDLIFE_IGNORE.search(line):
-            continue
-        match = WILDLIFE_PHRASE.search(line)
-        if match:
-            phrase = match.group(2)
-        else:
-            phrase = line
-        phrase = re.sub(r"^[\-\*\u2022]+", "", phrase).strip()
-        phrase = phrase.rstrip(".")
-        if not phrase:
-            continue
-        parts = re.split(r",| and ", phrase)
-        for part in parts:
-            cleaned = part.strip()
-            if not cleaned or cleaned.lower() == "wildlife":
-                continue
-            animals_fauna.append(cleaned)
-    seen_animals = set()
     deduped_animals = []
-    for animal in animals_fauna:
-        key = animal.lower()
-        if key in seen_animals:
-            continue
-        seen_animals.add(key)
-        deduped_animals.append(animal)
 
     return {
         "schemaVersion": SCRAPE_VERSION,
