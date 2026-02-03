@@ -149,25 +149,6 @@ describe('CAMPCASTER list view', () => {
     expect(screen.getByText('Wye River Campground')).toBeInTheDocument()
   })
 
-  it('filters results by search and shows empty state', async () => {
-    render(<App />)
-
-    await screen.findByText('Tidal River Campground')
-
-    const input = screen.getAllByLabelText('Search parks or sites')[0]
-    await userEvent.type(input, 'otway')
-
-    expect(screen.getByText('Wye River Campground')).toBeInTheDocument()
-    expect(screen.queryByText('Tidal River Campground')).toBeNull()
-
-    await userEvent.clear(input)
-    await userEvent.type(input, 'nope')
-
-    expect(
-      await screen.findByText('No matching campsites. Try a different search.'),
-    ).toBeInTheDocument()
-  })
-
   it('filters by dog-friendly and toilets', async () => {
     render(<App />)
 
@@ -314,7 +295,6 @@ describe('CAMPCASTER list view', () => {
     render(<App />)
 
     await screen.findByText('Tidal River Campground')
-    expect(screen.getByLabelText('Search parks or sites')).toBeInTheDocument()
     expect(screen.getByLabelText('Max drive time')).toBeInTheDocument()
     expect(screen.getByLabelText('Forecast date')).toBeInTheDocument()
   })

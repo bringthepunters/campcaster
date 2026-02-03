@@ -140,7 +140,6 @@ const normalizeTokens = (value: string) =>
 function App() {
   const [sites, setSites] = useState<Site[]>([])
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
-  const [query, setQuery] = useState('')
   const [facilityFilters, setFacilityFilters] = useState<Record<string, boolean>>(
     () =>
       Object.fromEntries(
@@ -360,7 +359,6 @@ function App() {
   )
 
   const filteredSites = useMemo(() => {
-    const trimmed = query.trim().toLowerCase()
     return sites.filter((site) => {
       for (const filter of FACILITY_FILTERS) {
         if (!facilityFilters[filter.key]) continue
@@ -398,11 +396,7 @@ function App() {
         }
       }
 
-      if (!trimmed) return true
-      return (
-        site.name.toLowerCase().includes(trimmed) ||
-        site.parkName.toLowerCase().includes(trimmed)
-      )
+      return true
     })
   }, [
     facilityFilters,
@@ -410,7 +404,6 @@ function App() {
     maxDriveMinutes,
     allowHeat,
     allowRain,
-    query,
     availabilityById,
     availabilityDate,
     availabilityFilters,
@@ -610,20 +603,11 @@ function App() {
               <p className="campground-count-label">
                 Campgrounds shown: {filteredSites.length}
               </p>
+              <p className="mt-2 text-sm text-ink/60">
+                First, choose the date.
+              </p>
             </div>
             <div className="filter-grid">
-              <div className="flex w-full flex-1 flex-col gap-2 sm:max-w-md">
-                <label htmlFor="site-search" className="section-heading">
-                  Search parks or sites
-                </label>
-                <input
-                  id="site-search"
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Try Wilsons Promontory"
-                  className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-base text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-                />
-              </div>
               <div className="filter-row">
                 {FACILITY_FILTERS.map((filter) => (
                   <label key={filter.key} className="checkbox-item">
