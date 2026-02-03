@@ -77,6 +77,23 @@ const formatRegion = (site: Site) => {
   return parts.join(' • ')
 }
 
+const getParkTypeLabel = (parkName: string) => {
+  const name = parkName.toLowerCase()
+  if (name.includes('national park')) return 'National Park'
+  if (name.includes('state park')) return 'State Park'
+  if (name.includes('heritage')) return 'Heritage'
+  if (name.includes('regional park')) return 'Regional Park'
+  return 'Park'
+}
+
+const getParkTypeClass = (parkName: string) => {
+  const name = parkName.toLowerCase()
+  if (name.includes('national park')) return 'park-type park-type--national'
+  if (name.includes('state park')) return 'park-type park-type--state'
+  if (name.includes('heritage')) return 'park-type park-type--heritage'
+  return 'park-type'
+}
+
 const getBookingUrl = (sourceUrl?: string | null) => {
   if (!sourceUrl) return null
   try {
@@ -438,35 +455,28 @@ function App() {
               CAMPCASTER
             </h1>
           </div>
-          <div className="flex flex-col gap-4 rounded-3xl bg-white/80 p-5 shadow-sm backdrop-blur">
+          <div className="filter-panel flex flex-col gap-6">
             <div>
-              <p className="text-sm text-ink/60">Campgrounds shown</p>
-              <p className="font-display text-2xl font-semibold text-ink">
-                {filteredSites.length}
+              <p className="campground-count-label">
+                Campgrounds shown: {filteredSites.length}
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div className="filter-grid">
               <div className="flex w-full flex-1 flex-col gap-2 sm:max-w-md">
-              <label
-                htmlFor="site-search"
-                className="text-xs uppercase tracking-[0.2em] text-ink/50"
-              >
-                Search parks or sites
-              </label>
-              <input
-                id="site-search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Try Wilsons Promontory"
-                className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-base text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-              />
-            </div>
-              <div className="flex flex-wrap gap-2 text-sm text-ink/70">
+                <label htmlFor="site-search" className="section-heading">
+                  Search parks or sites
+                </label>
+                <input
+                  id="site-search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Try Wilsons Promontory"
+                  className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-base text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
+                />
+              </div>
+              <div className="filter-row">
                 {FACILITY_FILTERS.map((filter) => (
-                  <label
-                    key={filter.key}
-                    className="flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3 py-2"
-                  >
+                  <label key={filter.key} className="checkbox-item">
                     <input
                       type="checkbox"
                       checked={facilityFilters[filter.key] ?? false}
@@ -481,7 +491,7 @@ function App() {
                     {filter.label}
                   </label>
                 ))}
-                <label className="flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3 py-2">
+                <label className="checkbox-item">
                   <input
                     type="checkbox"
                     checked={under33Only}
@@ -491,7 +501,7 @@ function App() {
                   />
                   Under 33°C
                 </label>
-                <label className="flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3 py-2">
+                <label className="checkbox-item">
                   <input
                     type="checkbox"
                     checked={noRainOnly}
@@ -506,12 +516,9 @@ function App() {
                 Weather thresholds: under 33C and rain under 30% + 4mm.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:items-end">
               <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="drive-time"
-                  className="text-xs uppercase tracking-[0.2em] text-ink/50"
-                >
+                <label htmlFor="drive-time" className="section-heading">
                   Max drive time
                 </label>
                 <div className="flex items-center gap-3">
@@ -543,10 +550,7 @@ function App() {
                 </datalist>
               </div>
               <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="forecast-date"
-                  className="text-xs uppercase tracking-[0.2em] text-ink/50"
-                >
+                <label htmlFor="forecast-date" className="section-heading">
                   Forecast date
                 </label>
                 <input
@@ -582,7 +586,7 @@ function App() {
             </div>
           )}
           {status === 'idle' && (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="campground-grid">
               {filteredSites.map((site) => {
                 const weatherKey = site.lga ?? site.id
                 const summary = getWeatherSummary(site)
@@ -617,32 +621,39 @@ function App() {
                       : availabilityForDate === 'available'
                         ? 'Looks like availability'
                         : 'Unknown'
+                const availabilityClass =
+                  availabilityForDate === 'available'
+                    ? 'availability-status availability-status--available'
+                    : availabilityForDate === 'heavily_booked'
+                      ? 'availability-status availability-status--unavailable'
+                      : 'availability-status availability-status--unknown'
+                const locationLabel = [site.parkName, formatRegion(site)]
+                  .filter(Boolean)
+                  .join(' • ')
 
                 return (
                   <article
                     key={site.id}
-                    className={`flex h-full flex-col justify-between rounded-3xl border p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md ${
-                      isOk
-                        ? 'border-emerald-200/70 bg-emerald-50/70 hover:border-emerald-300/80'
-                        : 'border-ink/5 bg-white/85 hover:border-fern/30'
+                    className={`campground-card ${
+                      isOk ? 'campground-card--good' : ''
                     }`}
                   >
                     <div className="flex flex-col gap-3">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.2em] text-fern/70">
-                          {site.parkName}
-                        </p>
+                        <span className={getParkTypeClass(site.parkName)}>
+                          {getParkTypeLabel(site.parkName)}
+                        </span>
                         <h2 className="font-display text-xl font-semibold text-ink">
                           {site.name}
                         </h2>
                       </div>
-                    <p className="text-sm text-ink/60">
-                      {formatRegion(site)}
-                    </p>
+                      <p className="campground-location">{locationLabel}</p>
                     </div>
-                  <div className="mt-3 rounded-2xl bg-fog/80 p-3 text-xs text-ink/70">
+                  <div className="forecast-section">
                     {!selectedDate ? (
-                      <div>Select a date to see the forecast.</div>
+                      <div className="forecast-prompt">
+                        Select a date to see the forecast.
+                      </div>
                     ) : hasWeather ? (
                       <div>
                         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -738,20 +749,23 @@ function App() {
                         </div>
                     ) : null}
                   </div>
-                  <div className="mt-2 text-[11px] uppercase tracking-[0.2em] text-ink/45">
-                    Availability: {availabilityLabel}
-                  </div>
-                    <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-ink/50">
-                      <span className="rounded-full bg-fern/10 px-3 py-1 text-fern">
-                        {estimateDriveTimeLabel(site.lat, site.lng)} from Northcote
-                      </span>
+                    <div className="distance-badge">
+                      {estimateDriveTimeLabel(site.lat, site.lng)} from Northcote
                     </div>
+                    {selectedDate ? (
+                      <div className="availability-section">
+                        <div className="availability-label">Availability</div>
+                        <div className={availabilityClass}>
+                          {availabilityLabel}
+                        </div>
+                      </div>
+                    ) : null}
                     {bookingUrl ? (
                       <a
                         href={bookingUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-fern/80"
+                        className="btn btn-secondary mt-3 w-full"
                       >
                         Availability
                       </a>

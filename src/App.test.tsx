@@ -296,9 +296,9 @@ describe('CAMPCASTER list view', () => {
     await userEvent.clear(input)
     await userEvent.type(input, today)
 
-    expect(await screen.findByText(/Availability: Looks like availability/i))
+    expect(await screen.findByText(/Looks like availability/i))
       .toBeInTheDocument()
-    expect(screen.getByText(/Availability: Heavily booked/i))
+    expect(screen.getByText(/Heavily booked/i))
       .toBeInTheDocument()
   })
 })

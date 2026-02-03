@@ -1,36 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap');
+TOP PANEL UI ISSUES
+UI Issues:
+
+Inconsistent vertical spacing - The spacing between filter groups is uneven
+Filter checkboxes misaligned - The two rows of amenity checkboxes don't appear to be on a consistent grid
+Weather threshold text is awkwardly positioned - The explanatory text for weather filters breaks awkwardly and has poor spacing
+Slider and date picker not aligned - The "MAX DRIVE TIME" slider and "FORECAST DATE" picker should be on the same visual baseline
+Section labels lack visual hierarchy - "SEARCH PARKS OR SI" text appears truncated and needs better styling
+Checkbox labels have inconsistent spacing - Gap between checkbox and label text varies
+Overall padding/margins need refinement - The content feels cramped
+
+
+
+
+Card Layout Issues:
+
+Inconsistent card heights - Cards don't align properly in the grid
+Poor visual hierarchy - Park category, name, and location all blend together
+Redundant "Select a date" messages - Takes up space unnecessarily
+Availability label is confusing - "AVAILABILITY: SELECT A DATE" is redundant with the message above
+Distance badges lack visual weight - They're important info but look like an afterthought
+Inconsistent bottom spacing - Some cards have "AVAILABILITY" label at bottom, others don't
+Card padding feels cramped
+No hover states or interactive feedback
+
+Overall Site Color & Typography Issues:
+
+Everything is grey - No color hierarchy or visual interest
+Poor contrast - Grey on light grey is hard to read
+Font choice is too generic - Lacks personality for an outdoor/camping site
+All uppercase labels are shouty - And harder to read
+No color coding - Can't quickly distinguish park types, weather conditions, availability status
+Lacks brand personality - Feels corporate, not adventurous
+No visual cues for interactive elements
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
 
 :root {
   /* Color Palette - Nature-inspired */
-  --color-primary: #16a34a;
-  --color-primary-dark: #15803d;
-  --color-primary-light: #22c55e;
-
-  --color-secondary: #0891b2;
-  --color-secondary-dark: #0e7490;
-
-  --color-accent: #f59e0b;
-  --color-accent-dark: #d97706;
-
-  --color-warning: #ef4444;
-  --color-success: #10b981;
-
+  --color-primary: #16a34a;        /* Forest green */
+  --color-primary-dark: #15803d;   
+  --color-primary-light: #22c55e;  
+  
+  --color-secondary: #0891b2;      /* Sky blue */
+  --color-secondary-dark: #0e7490; 
+  
+  --color-accent: #f59e0b;         /* Sunset orange */
+  --color-accent-dark: #d97706;    
+  
+  --color-warning: #ef4444;        /* Alert red */
+  --color-success: #10b981;        /* Available green */
+  
   /* Neutrals - Higher contrast */
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #4b5563;
-  --color-text-tertiary: #6b7280;
-
+  --color-text-primary: #1f2937;   /* Almost black */
+  --color-text-secondary: #4b5563; /* Medium grey */
+  --color-text-tertiary: #6b7280;  /* Light grey */
+  
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f9fafb;
   --color-bg-tertiary: #f3f4f6;
-
+  
   --color-border: #e5e7eb;
   --color-border-dark: #d1d5db;
-
+  
   /* Typography */
   --font-display: 'Lexend', 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-
+  
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -38,12 +75,12 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-
+  
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-
+  
   /* Border radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
@@ -51,103 +88,14 @@
   --radius-xl: 1rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Import better fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap');
 
 body {
-  margin: 0;
   font-family: var(--font-body);
   color: var(--color-text-primary);
-  background: radial-gradient(circle at 12% 12%, #fdf8ef 0%, transparent 45%),
-    radial-gradient(circle at 88% 15%, #f1f8f2 0%, transparent 45%),
-    var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary);
   line-height: 1.6;
-  min-height: 100vh;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-primary-dark);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ============================================
-   FILTER PANEL IMPROVEMENTS
-   ============================================ */
-
-.filter-panel {
-  background: var(--color-bg-primary);
-  padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-}
-
-.campground-count-label {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  font-weight: 600;
-  margin: 0;
-}
-
-.section-heading {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-primary-dark);
-  margin-bottom: var(--spacing-sm);
-  padding-bottom: var(--spacing-xs);
-  border-bottom: 2px solid var(--color-primary);
-  display: inline-block;
-}
-
-.filter-grid {
-  display: grid;
-  gap: var(--spacing-md);
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.filter-row {
-  display: grid;
-  gap: var(--spacing-sm);
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-}
-
-/* Checkbox Improvements */
-.checkbox-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  transition: background-color 0.2s ease;
-  background: var(--color-bg-tertiary);
-  border: 1px solid var(--color-border);
-}
-
-.checkbox-item:hover {
-  background-color: #eef2f6;
-}
-
-.checkbox-item input[type='checkbox'] {
-  width: 1.1rem;
-  height: 1.1rem;
-  cursor: pointer;
-  accent-color: var(--color-primary);
-  border: 2px solid var(--color-border-dark);
-  border-radius: var(--radius-sm);
 }
 
 /* ============================================
@@ -156,8 +104,9 @@ img {
 
 .campground-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
 }
 
 .campground-card {
@@ -171,18 +120,12 @@ img {
   flex-direction: column;
   height: 100%;
   box-shadow: var(--shadow-sm);
-  min-height: 380px;
 }
 
 .campground-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-primary-light);
-}
-
-.campground-card--good {
-  border-color: #bbf7d0;
-  background: #f0fdf4;
 }
 
 /* Park Type Badge */
@@ -196,8 +139,6 @@ img {
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-md);
   width: fit-content;
-  background-color: #e2e8f0;
-  color: #1f2937;
 }
 
 .park-type--national {
@@ -223,7 +164,7 @@ img {
   line-height: 1.3;
   color: var(--color-text-primary);
   margin: 0 0 var(--spacing-sm) 0;
-  min-height: 2.6em;
+  min-height: 2.6em; /* Ensures consistent height */
 }
 
 /* Location */
@@ -238,7 +179,7 @@ img {
 }
 
 .campground-location::before {
-  content: '📍';
+  content: "📍";
   font-size: 1rem;
 }
 
@@ -248,12 +189,10 @@ img {
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-md);
-  min-height: 90px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-secondary);
-  font-size: 0.8125rem;
 }
 
 .forecast-prompt {
@@ -268,11 +207,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-xs);
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-dark) 100%
-  );
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-lg);
@@ -284,7 +219,7 @@ img {
 }
 
 .distance-badge::before {
-  content: '🚗';
+  content: "🚗";
   font-size: 1rem;
 }
 
@@ -325,7 +260,7 @@ img {
 }
 
 .availability-status--available::before {
-  content: '✓';
+  content: "✓";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -343,7 +278,7 @@ img {
 }
 
 .availability-status--unavailable::before {
-  content: '✕';
+  content: "✕";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -353,6 +288,75 @@ img {
   color: white;
   border-radius: 50%;
   font-size: 0.75rem;
+}
+
+/* ============================================
+   FILTER PANEL IMPROVEMENTS
+   ============================================ */
+
+.filter-panel {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.filter-panel h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.campground-count-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-heading {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+}
+
+/* Checkbox Improvements */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-item:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+}
+
+.checkbox-item label {
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* Button Styles */
@@ -372,11 +376,7 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-dark) 100%
-  );
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
   box-shadow: 0 2px 4px rgba(22, 163, 74, 0.2);
 }
@@ -404,10 +404,15 @@ img {
 @media (max-width: 768px) {
   .campground-grid {
     grid-template-columns: 1fr;
+    padding: var(--spacing-md);
   }
-
+  
   .filter-panel {
     padding: var(--spacing-lg);
+  }
+  
+  .filter-panel h1 {
+    font-size: 2rem;
   }
 }
 
@@ -420,18 +425,20 @@ img {
   width: 1px;
   height: 1px;
   padding: 0;
-  margin: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
 }
 
+/* Focus states for keyboard navigation */
 *:focus-visible {
   outline: 3px solid var(--color-primary-light);
   outline-offset: 2px;
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
