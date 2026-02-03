@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import UnoCSS from 'unocss/vite'
 
@@ -6,8 +6,4 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
   base: '/campcaster/',
   plugins: [react(), UnoCSS()],
-  test: {
-    environment: 'jsdom',
-    setupFiles: './src/setupTests.ts',
-  },
 })
