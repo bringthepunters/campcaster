@@ -1,3 +1,4 @@
+import React from 'react'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -83,14 +84,6 @@ describe('CAMPCASTER list view', () => {
       .toISOString()
       .slice(0, 10)
     const weatherPayload = buildWeatherPayload(today, tomorrow)
-    const availabilityPayload = {
-      date: today,
-      items: {
-        'wilsons-prom-1': 'available',
-        'otway-1': 'heavily_booked',
-      },
-    }
-
     const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
       const url = input.toString()
       if (url.endsWith('/data/sites.json')) {
@@ -99,8 +92,26 @@ describe('CAMPCASTER list view', () => {
       if (url.endsWith('/data/lga_centroids.json')) {
         return { ok: true, json: async () => lgaCentroids }
       }
-      if (url.endsWith('/data/availability.json')) {
-        return { ok: true, json: async () => availabilityPayload }
+      if (url.startsWith('https://bookings.parks.vic.gov.au/book')) {
+        return {
+          ok: true,
+          json: async () => ({
+            data: [
+              {
+                alias: 'tidal-river-campground',
+                OperatorName: 'Tidal River Campground',
+                isBookable: true,
+                isBookableAndAvailable: true,
+              },
+              {
+                alias: 'wye-river-campground',
+                OperatorName: 'Wye River Campground',
+                isBookable: true,
+                isBookableAndAvailable: false,
+              },
+            ],
+          }),
+        }
       }
       return { ok: true, json: async () => weatherPayload }
     })
@@ -296,10 +307,8 @@ describe('CAMPCASTER list view', () => {
     await userEvent.clear(input)
     await userEvent.type(input, today)
 
-    expect(await screen.findByText(/Looks like availability/i))
-      .toBeInTheDocument()
-    expect(screen.getByText(/Heavily booked/i))
-      .toBeInTheDocument()
+    expect(await screen.findByText(/Available/i)).toBeInTheDocument()
+    expect(screen.getByText(/Booked out/i)).toBeInTheDocument()
   })
 })
 

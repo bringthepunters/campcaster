@@ -46,11 +46,7 @@ type WeatherDaily = {
 }
 
 type LgaCentroids = Record<string, { lat: number; lng: number }>
-type AvailabilityStatus = 'available' | 'heavily_booked' | 'unknown'
-type AvailabilityPayload = {
-  date: string
-  items: Record<string, AvailabilityStatus>
-}
+type AvailabilityStatus = 'available' | 'booked_out' | 'unbookable' | 'unknown'
 
 const FACILITY_FILTERS = [
   { key: 'dogFriendly', label: 'Dog-friendly' },
@@ -114,6 +110,12 @@ const formatMinutesAsHours = (minutes: number) => {
   if (mins === 0) return `${hours}h`
   return `${hours}h ${mins}m`
 }
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 
 function App() {
   const [sites, setSites] = useState<Site[]>([])
@@ -420,21 +422,61 @@ function App() {
       setAvailabilityLoading(false)
       return
     }
+
     const loadAvailability = async () => {
       setAvailabilityLoading(true)
       try {
-        const response = await fetch('/data/availability.json', {
-          cache: 'no-store',
-        })
+        const url = new URL('https://bookings.parks.vic.gov.au/book')
+        url.searchParams.set('format', 'json')
+        url.searchParams.set('q', '114')
+        url.searchParams.set('pagenumber', '1')
+        url.searchParams.set('date', selectedDate)
+        url.searchParams.set('period', '1')
+
+        const response = await fetch(url.toString())
         if (!response.ok) {
           throw new Error('Availability unavailable')
         }
-        const payload = (await response.json()) as AvailabilityPayload
-        if (!payload?.items || !payload?.date) {
-          throw new Error('Availability malformed')
+
+        const payload = (await response.json()) as {
+          data?: Array<{
+            alias?: string
+            OperatorName?: string
+            isBookable?: boolean
+            isAvailable?: boolean
+            isBookableAndAvailable?: boolean
+          }>
         }
-        setAvailabilityById(payload.items)
-        setAvailabilityDate(payload.date)
+
+        const items = payload.data ?? []
+        const availabilityBySlug: Record<string, AvailabilityStatus> = {}
+
+        for (const item of items) {
+          const alias = item.alias ? slugify(item.alias) : null
+          const nameSlug = item.OperatorName
+            ? slugify(item.OperatorName)
+            : null
+          const isAvailable = Boolean(item.isBookableAndAvailable)
+          const isBookable = Boolean(item.isBookable)
+          const status: AvailabilityStatus = isAvailable
+            ? 'available'
+            : isBookable
+              ? 'booked_out'
+              : 'unbookable'
+          if (alias) availabilityBySlug[alias] = status
+          if (nameSlug && !availabilityBySlug[nameSlug]) {
+            availabilityBySlug[nameSlug] = status
+          }
+        }
+
+        const mapped: Record<string, AvailabilityStatus> = {}
+        for (const site of sites) {
+          const siteSlug = slugify(site.name)
+          mapped[site.id] = availabilityBySlug[siteSlug] ?? 'unbookable'
+        }
+
+        setAvailabilityById(mapped)
+        setAvailabilityDate(selectedDate)
       } catch {
         setAvailabilityById({})
         setAvailabilityDate(null)
@@ -444,7 +486,7 @@ function App() {
     }
 
     void loadAvailability()
-  }, [selectedDate])
+  }, [selectedDate, sites])
 
   return (
     <div className="min-h-screen text-ink">
@@ -616,15 +658,17 @@ function App() {
                   ? 'Select a date'
                   : availabilityLoading
                     ? 'Checking…'
-                    : availabilityForDate === 'heavily_booked'
-                      ? 'Heavily booked'
+                    : availabilityForDate === 'booked_out'
+                      ? 'Booked out'
                       : availabilityForDate === 'available'
-                        ? 'Looks like availability'
-                        : 'Unknown'
+                        ? 'Available'
+                        : availabilityForDate === 'unbookable'
+                          ? 'Unbookable'
+                          : 'Unknown'
                 const availabilityClass =
                   availabilityForDate === 'available'
                     ? 'availability-status availability-status--available'
-                    : availabilityForDate === 'heavily_booked'
+                    : availabilityForDate === 'booked_out'
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
                 const locationLabel = [site.parkName, formatRegion(site)]
