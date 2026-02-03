@@ -119,7 +119,7 @@ const slugify = (value: string) =>
 const normalizeTokens = (value: string) =>
   value
     .toLowerCase()
-    .replace(/[,/()]/g, ' ')
+    .replace(/[-_,/()]/g, ' ')
     .replace(
       /\b(campground|camping|camp|camping area|area|national|state|regional|park)\b/g,
       ' ',
@@ -721,9 +721,7 @@ function App() {
                     : availabilityForDate === 'booked_out'
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
-                const locationLabel = [site.parkName, formatRegion(site)]
-                  .filter(Boolean)
-                  .join(' • ')
+                const locationLabel = formatRegion(site)
 
                 return (
                   <article

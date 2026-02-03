@@ -54,6 +54,21 @@ const sampleSites: Site[] = [
       bbq: true,
     },
   },
+  {
+    id: 'eildon-1',
+    name: 'Candlebark, Lake Eildon National Park',
+    parkName: 'Lake Eildon National Park',
+    lat: -37.2,
+    lng: 145.9,
+    lga: 'Murrindindi Shire',
+    tourismRegion: 'High Country',
+    facilities: {
+      dogFriendly: true,
+      toilets: true,
+      showers: false,
+      bbq: true,
+    },
+  },
 ]
 
 const lgaCentroids = {
@@ -108,6 +123,12 @@ describe('CAMPCASTER list view', () => {
                 OperatorName: 'Wye River Campground',
                 isBookable: true,
                 isBookableAndAvailable: false,
+              },
+              {
+                alias: 'candlebark-campground',
+                OperatorName: 'Candlebark Campground',
+                isBookable: true,
+                isBookableAndAvailable: true,
               },
             ],
           }),
@@ -301,6 +322,7 @@ describe('CAMPCASTER list view', () => {
     render(<App />)
 
     await screen.findByText('Tidal River Campground')
+    await screen.findByText('Candlebark, Lake Eildon National Park')
 
     const input = screen.getByLabelText('Forecast date')
     const today = new Date().toISOString().slice(0, 10)
