@@ -55,6 +55,56 @@ VEHICLE_POSITIVE = re.compile(r"(vehicle access|2wd|4wd|car access|drive-in)", r
 VEHICLE_NEGATIVE = re.compile(r"(no vehicle access|walk-in only|hike-in only)", re.I)
 ACCESS_POSITIVE = re.compile(r"(accessible|accessibility|wheelchair)", re.I)
 
+LANDSCAPE_CUES = {
+    "beach_coast": [
+        "ocean",
+        "coast",
+        "beach",
+        "bay",
+        "surf",
+        "dunes",
+        "headland",
+        "foreshore",
+        "clifftop",
+        "tidal",
+    ],
+    "river_creek": [
+        "river",
+        "creek",
+        "stream",
+        "riverbank",
+        "banks",
+        "ford",
+        "estuary",
+        "river mouth",
+    ],
+    "lake_wetland": [
+        "lake",
+        "lagoon",
+        "wetland",
+        "billabong",
+        "marsh",
+        "swamp",
+        "floodplain",
+    ],
+    "forest": ["forest", "bushland", "tall trees", "canopy", "shaded"],
+    "rainforest": ["rainforest", "fern gully", "mossy forest", "closed canopy"],
+    "grassland_plains": ["plains", "grassland", "open country", "pasture", "downs"],
+    "scrub_heath": ["heath", "scrub", "mallee", "shrubland", "low bush"],
+    "desert_arid": ["desert", "arid", "semi-arid", "red sand", "saltbush", "dunes"],
+    "mountains_alpine": ["mountain", "alpine", "high plains", "peaks", "ridge", "snow"],
+    "valley_gorge": ["valley", "gorge", "ravine", "canyon", "gully"],
+    "rocky_cliffs": ["rocky", "boulders", "granite", "outcrop", "escarpment", "cliffs"],
+}
+
+WILDLIFE_TRIGGER = re.compile(
+    r"\b(wildlife|see|spot|observe|encounter|home to)\b", re.I
+)
+WILDLIFE_PHRASE = re.compile(
+    r"(see|spot|observe|encounter|home to)\s+(.*)", re.I
+)
+WILDLIFE_IGNORE = re.compile(r"(url source|http|parks\.vic\.gov\.au)", re.I)
+
 
 def slugify(value: str) -> str:
     value = value.lower()
@@ -181,6 +231,51 @@ def extract_facilities(text: str) -> dict:
 
     accessibility_notes = access_lines[:2] if access_lines else []
 
+    landscape_scores = {key: 0 for key in LANDSCAPE_CUES}
+    for line in lines:
+        lower = line.lower()
+        for tag, cues in LANDSCAPE_CUES.items():
+            for cue in cues:
+                if cue in lower:
+                    landscape_scores[tag] += 1
+    landscape_tags = [
+        tag
+        for tag, score in sorted(
+            landscape_scores.items(), key=lambda item: item[1], reverse=True
+        )
+        if score > 0
+    ][:3]
+
+    animals_fauna = []
+    for line in lines:
+        if not WILDLIFE_TRIGGER.search(line):
+            continue
+        if WILDLIFE_IGNORE.search(line):
+            continue
+        match = WILDLIFE_PHRASE.search(line)
+        if match:
+            phrase = match.group(2)
+        else:
+            phrase = line
+        phrase = re.sub(r"^[\-\*\u2022]+", "", phrase).strip()
+        phrase = phrase.rstrip(".")
+        if not phrase:
+            continue
+        parts = re.split(r",| and ", phrase)
+        for part in parts:
+            cleaned = part.strip()
+            if not cleaned or cleaned.lower() == "wildlife":
+                continue
+            animals_fauna.append(cleaned)
+    seen_animals = set()
+    deduped_animals = []
+    for animal in animals_fauna:
+        key = animal.lower()
+        if key in seen_animals:
+            continue
+        seen_animals.add(key)
+        deduped_animals.append(animal)
+
     return {
         "schemaVersion": SCRAPE_VERSION,
         "dogFriendly": dog_friendly,
@@ -194,6 +289,8 @@ def extract_facilities(text: str) -> dict:
         "vehicleAccess": vehicle_access,
         "accessibilityNotes": accessibility_notes,
         "dogPolicy": dog_lines[:2] if dog_lines else [],
+        "landscapeTags": landscape_tags,
+        "animalsFauna": deduped_animals,
         "evidence": {
             "dog": dog_lines[:3],
             "toilets": toilet_lines[:3],
@@ -204,6 +301,8 @@ def extract_facilities(text: str) -> dict:
             "water": water_lines[:3],
             "vehicle": vehicle_lines[:3],
             "access": access_lines[:3],
+            "landscape": landscape_tags,
+            "animals": deduped_animals[:3],
         },
     }
 
@@ -278,6 +377,8 @@ def apply_to_sites(facilities_by_url: dict, urls: list[str]) -> None:
         site["facilities"]["accessibilityNotes"] = facilities.get("accessibilityNotes")
         site["facilities"]["dogPolicy"] = facilities.get("dogPolicy")
         site["sourceUrl"] = match_url
+        site["landscapeTags"] = facilities.get("landscapeTags", [])
+        site["animalsFauna"] = facilities.get("animalsFauna", [])
 
     SITES_PATH.write_text(json.dumps(sites, indent=2), encoding="utf-8")
 

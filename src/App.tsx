@@ -924,7 +924,15 @@ function App() {
                         ) : null}
                         {site.animalsFauna?.length ? (
                           <div className="text-sm text-ink/70">
-                            Wildlife: {site.animalsFauna.slice(0, 3).join(', ')}
+                            Wildlife:{' '}
+                            {site.animalsFauna
+                              .filter(
+                                (animal) =>
+                                  !animal.toLowerCase().includes('url source') &&
+                                  !animal.toLowerCase().includes('http'),
+                              )
+                              .slice(0, 3)
+                              .join(', ')}
                           </div>
                         ) : null}
                       </div>
