@@ -15,6 +15,7 @@ type Site = {
   landscapeTags?: string[]
   animalsFauna?: string[]
   sourceUrl?: string | null
+  bookingUrl?: string | null
   facilities?: {
     dogFriendly?: boolean | null
     toilets?: boolean | null
@@ -785,7 +786,9 @@ function App() {
                 const isOk =
                   summary !== null ? !summary.isRainy && !summary.isTooHot : false
                 const bookingUrl =
-                  availabilityUrlById[site.id] ?? getBookingUrl(site.sourceUrl)
+                  site.bookingUrl ??
+                  availabilityUrlById[site.id] ??
+                  getBookingUrl(site.sourceUrl)
                 const availabilityForDate =
                   selectedDate && availabilityDate === selectedDate
                     ? availabilityById[site.id] ?? 'unknown'

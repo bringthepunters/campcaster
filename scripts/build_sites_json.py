@@ -17,6 +17,14 @@ TOURISM_OVERRIDES = {
     "river-murray-reserve-bruces-bend-yarrawonga-r-p": "Murray",
 }
 
+SOURCE_URL_OVERRIDES = {
+    "wilsons-promontory-national-park-roaring-meg-wilsons-promontory-national-park": "https://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/roaring-meg-camping-area",
+}
+
+BOOKING_URL_OVERRIDES = {
+    "wilsons-promontory-national-park-roaring-meg-wilsons-promontory-national-park": "https://bookings.parks.vic.gov.au/wilsons-prom-overnight-hiking#/accom/141064",
+}
+
 
 STOPWORDS = {
     "campground",
@@ -215,6 +223,8 @@ def main() -> None:
         }
         source_url = None
         source_url = best_url_match(site_name, park_name, url_index)
+        if base_id in SOURCE_URL_OVERRIDES:
+            source_url = SOURCE_URL_OVERRIDES[base_id]
         if source_url and source_url in facilities_by_url:
             incoming = facilities_by_url[source_url]
             for key in facilities.keys():
@@ -232,6 +242,7 @@ def main() -> None:
                 "tourismRegion": tourism_region,
                 "facilities": facilities,
                 "sourceUrl": source_url,
+                "bookingUrl": BOOKING_URL_OVERRIDES.get(base_id),
             }
         )
 
