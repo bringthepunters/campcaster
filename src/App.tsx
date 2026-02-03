@@ -59,6 +59,12 @@ const FACILITY_FILTERS = [
   { key: 'vehicleAccess', label: 'Vehicle access' },
 ] as const
 
+const AVAILABILITY_FILTERS = [
+  { key: 'available', label: 'Available' },
+  { key: 'booked_out', label: 'Booked out' },
+  { key: 'unbookable', label: 'Unbookable' },
+] as const
+
 const HEAT_THRESHOLD_C = 33
 const HEAT_ICON_THRESHOLD_C = 31
 const RAIN_PROB_THRESHOLD = 30
@@ -139,6 +145,14 @@ function App() {
         FACILITY_FILTERS.map((filter) => [filter.key, false]),
       ),
   )
+  const [availabilityFilters, setAvailabilityFilters] = useState<
+    Record<AvailabilityStatus, boolean>
+  >(() => ({
+    available: false,
+    booked_out: false,
+    unbookable: false,
+    unknown: false,
+  }))
   const [under33Only, setUnder33Only] = useState(false)
   const [noRainOnly, setNoRainOnly] = useState(false)
   const [lgaCentroids, setLgaCentroids] = useState<LgaCentroids>({})
@@ -366,6 +380,18 @@ function App() {
       ) {
         return false
       }
+      const availabilityFilterActive = AVAILABILITY_FILTERS.some(
+        (filter) => availabilityFilters[filter.key],
+      )
+      if (availabilityFilterActive && selectedDate) {
+        const availabilityForDate =
+          availabilityDate === selectedDate
+            ? availabilityById[site.id] ?? 'unknown'
+            : 'unknown'
+        if (!availabilityFilters[availabilityForDate]) {
+          return false
+        }
+      }
 
       if (!trimmed) return true
       return (
@@ -379,6 +405,10 @@ function App() {
     maxDriveMinutes,
     noRainOnly,
     query,
+    availabilityById,
+    availabilityDate,
+    availabilityFilters,
+    selectedDate,
     sites,
     under33Only,
   ])
@@ -607,6 +637,26 @@ function App() {
               <p className="text-xs text-ink/50">
                 Weather thresholds: under 33C and rain under 30% + 4mm.
               </p>
+              <div className="filter-row">
+                {AVAILABILITY_FILTERS.map((filter) => (
+                  <label key={filter.key} className="checkbox-item">
+                    <input
+                      type="checkbox"
+                      checked={availabilityFilters[filter.key] ?? false}
+                      onChange={(event) =>
+                        setAvailabilityFilters((current) => ({
+                          ...current,
+                          [filter.key]: event.target.checked,
+                        }))
+                      }
+                      className="accent-fern"
+                      disabled={!selectedDate}
+                      aria-label={`Availability ${filter.label}`}
+                    />
+                    {filter.label}
+                  </label>
+                ))}
+              </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:items-end">
               <div className="flex flex-col gap-2">
@@ -713,7 +763,7 @@ function App() {
                       : availabilityForDate === 'available'
                         ? 'Available'
                         : availabilityForDate === 'unbookable'
-                          ? 'Unbookable'
+                          ? 'Unbookable - just rock up'
                           : 'Unknown'
                 const availabilityClass =
                   availabilityForDate === 'available'

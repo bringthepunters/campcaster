@@ -332,6 +332,26 @@ describe('CAMPCASTER list view', () => {
     expect(await screen.findByText(/Available/i)).toBeInTheDocument()
     expect(screen.getByText(/Booked out/i)).toBeInTheDocument()
   })
+
+  it('filters by availability status when selected', async () => {
+    render(<App />)
+
+    await screen.findByText('Tidal River Campground')
+
+    const input = screen.getByLabelText('Forecast date')
+    const today = new Date().toISOString().slice(0, 10)
+    await userEvent.clear(input)
+    await userEvent.type(input, today)
+
+    const availableFilter = screen.getByLabelText('Availability Available')
+    await userEvent.click(availableFilter)
+
+    expect(await screen.findByText('Tidal River Campground')).toBeInTheDocument()
+    expect(
+      screen.getByText('Candlebark, Lake Eildon National Park'),
+    ).toBeInTheDocument()
+    expect(screen.queryByText('Wye River Campground')).not.toBeInTheDocument()
+  })
 })
 
 describe('CAMPCASTER dataset', () => {
