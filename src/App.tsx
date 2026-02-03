@@ -68,9 +68,8 @@ const AUTO_WEATHER_FETCH_LIMIT = 30
 const DEFAULT_MAX_DRIVE_MINUTES = 240
 
 const formatRegion = (site: Site) => {
-  const parts = [site.lga, site.tourismRegion].filter(Boolean)
-  if (parts.length === 0) return 'Region TBD'
-  return parts.join(' • ')
+  const region = site.tourismRegion ?? site.lga
+  return region || 'Region TBD'
 }
 
 const getParkTypeLabel = (parkName: string) => {
@@ -116,6 +115,19 @@ const slugify = (value: string) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
+
+const normalizeTokens = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[,/()]/g, ' ')
+    .replace(
+      /\b(campground|camping|camp|camping area|area|national|state|regional|park)\b/g,
+      ' ',
+    )
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .filter(Boolean)
 
 function App() {
   const [sites, setSites] = useState<Site[]>([])
@@ -461,12 +473,15 @@ function App() {
 
         const items = payload.data ?? []
         const availabilityBySlug: Record<string, AvailabilityStatus> = {}
-
-        for (const item of items) {
+        const availabilityItems = items.map((item) => {
           const alias = item.alias ? slugify(item.alias) : null
           const nameSlug = item.OperatorName
             ? slugify(item.OperatorName)
             : null
+          const tokens = [
+            ...(item.alias ? normalizeTokens(item.alias) : []),
+            ...(item.OperatorName ? normalizeTokens(item.OperatorName) : []),
+          ]
           const isAvailable = Boolean(item.isBookableAndAvailable)
           const isBookable = Boolean(item.isBookable)
           const status: AvailabilityStatus = isAvailable
@@ -478,12 +493,36 @@ function App() {
           if (nameSlug && !availabilityBySlug[nameSlug]) {
             availabilityBySlug[nameSlug] = status
           }
-        }
+          return {
+            status,
+            tokens: Array.from(new Set(tokens)),
+          }
+        })
 
         const mapped: Record<string, AvailabilityStatus> = {}
         for (const site of sites) {
           const siteSlug = slugify(site.name)
-          mapped[site.id] = availabilityBySlug[siteSlug] ?? 'unbookable'
+          const direct = availabilityBySlug[siteSlug]
+          if (direct) {
+            mapped[site.id] = direct
+            continue
+          }
+          const siteTokens = new Set(normalizeTokens(site.name))
+          let best: AvailabilityStatus | null = null
+          let bestTokenCount = 0
+          for (const item of availabilityItems) {
+            if (!item.tokens.length) continue
+            const tokenSet = new Set(item.tokens)
+            const isSubset =
+              item.tokens.every((token) => siteTokens.has(token)) ||
+              Array.from(siteTokens).every((token) => tokenSet.has(token))
+            if (!isSubset) continue
+            if (item.tokens.length > bestTokenCount) {
+              bestTokenCount = item.tokens.length
+              best = item.status
+            }
+          }
+          mapped[site.id] = best ?? 'unbookable'
         }
 
         setAvailabilityById(mapped)
