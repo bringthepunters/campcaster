@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BOOKEASY_PROXY_URL: https://campcaster-bookeasy-proxy.nthorpe.workers.dev/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
