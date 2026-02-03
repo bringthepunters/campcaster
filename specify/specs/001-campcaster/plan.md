@@ -62,6 +62,7 @@
 - GitHub Pages for SPA hosting.
 - GitHub Actions for weekly data refresh and build.
 - Static JSON bundle committed to the repo for client consumption.
+- Availability proxy (Cloudflare Worker) should be deployed under the separate account `nthorpe@gmail.com` to avoid mixing with other business accounts.
 
 ## 10. Risks and Mitigations
 - Facilities data quality: mark verified fields and keep timestamps.
