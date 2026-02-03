@@ -359,7 +359,7 @@ function App() {
   )
 
   const filteredSites = useMemo(() => {
-    return sites.filter((site) => {
+    const filtered = sites.filter((site) => {
       for (const filter of FACILITY_FILTERS) {
         if (!facilityFilters[filter.key]) continue
         if (site.facilities?.[filter.key] !== true) {
@@ -399,6 +399,28 @@ function App() {
       }
 
       return true
+    })
+    const availabilityRank: Record<AvailabilityStatus, number> = {
+      available: 0,
+      unbookable: 1,
+      booked_out: 2,
+      unknown: 3,
+    }
+    return filtered.sort((a, b) => {
+      const availabilityA =
+        selectedDate && availabilityDate === selectedDate
+          ? availabilityById[a.id] ?? 'unknown'
+          : 'unknown'
+      const availabilityB =
+        selectedDate && availabilityDate === selectedDate
+          ? availabilityById[b.id] ?? 'unknown'
+          : 'unknown'
+      const availabilityDiff =
+        availabilityRank[availabilityA] - availabilityRank[availabilityB]
+      if (availabilityDiff !== 0) return availabilityDiff
+      const driveA = estimateDriveTimeMinutesFromOrigin(a.lat, a.lng)
+      const driveB = estimateDriveTimeMinutesFromOrigin(b.lat, b.lng)
+      return driveA - driveB
     })
   }, [
     facilityFilters,
