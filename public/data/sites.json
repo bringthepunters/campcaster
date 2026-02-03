@@ -6,7 +6,7 @@
     "lat": -38.87767315100001,
     "lng": 146.36428014600006,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -35,7 +35,7 @@
     "lat": -36.98880399000001,
     "lng": 147.49100208000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -62,7 +62,7 @@
     "lat": -36.82622097000001,
     "lng": 147.65995583999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -84,7 +84,7 @@
     "lat": -37.17499203,
     "lng": 142.41844116000004,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -109,7 +109,7 @@
     "lat": -36.878402970000025,
     "lng": 147.36335111999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -137,7 +137,7 @@
     "lat": -36.966223979999995,
     "lng": 146.53610388000004,
     "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -164,7 +164,7 @@
     "lat": -37.853303040000014,
     "lng": 146.43184392,
     "lga": "BAW BAW SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -186,7 +186,7 @@
     "lat": -37.440317970000024,
     "lng": 148.30706411999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -215,7 +215,7 @@
     "lat": -38.36038103999999,
     "lng": 141.45669792,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -244,7 +244,7 @@
     "lat": -38.893102020000015,
     "lng": 145.98050004000004,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -273,7 +273,7 @@
     "lat": -37.31610599999999,
     "lng": 143.72046683999997,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -295,7 +295,7 @@
     "lat": -37.31099003999998,
     "lng": 143.70822288,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -317,7 +317,7 @@
     "lat": -38.57329998,
     "lng": 146.95419600000002,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -346,7 +346,7 @@
     "lat": -36.760584677,
     "lng": 141.84925032499996,
     "lga": "HORSHAM RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -371,7 +371,7 @@
     "lat": -38.61802799999998,
     "lng": 142.99457112000005,
     "lga": "CORANGAMITE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -393,7 +393,7 @@
     "lat": -39.02195330500001,
     "lng": 146.44363371300005,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -415,7 +415,7 @@
     "lat": -37.16270100000003,
     "lng": 144.21649716000002,
     "lga": "MOUNT ALEXANDER SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Goldfields",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -437,7 +437,7 @@
     "lat": -37.49603904000003,
     "lng": 144.36122904,
     "lga": "MOORABOOL SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -459,7 +459,7 @@
     "lat": -37.99356352799998,
     "lng": 141.01592164399995,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -488,7 +488,7 @@
     "lat": -36.727598969999974,
     "lng": 147.60799884000005,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -517,7 +517,7 @@
     "lat": -37.60207802999997,
     "lng": 147.33493883999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -539,7 +539,7 @@
     "lat": -37.38380045100001,
     "lng": 148.33895107299998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -589,7 +589,7 @@
     "lat": -37.669476610000004,
     "lng": 145.89029901799995,
     "lga": "YARRA RANGES SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -615,7 +615,7 @@
     "lat": -38.003283752000016,
     "lng": 141.05897936500003,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -644,7 +644,7 @@
     "lat": -38.55037318299998,
     "lng": 143.74478201,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -673,7 +673,7 @@
     "lat": -37.797619456999996,
     "lng": 148.74259925399997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -702,7 +702,7 @@
     "lat": -36.907939915999975,
     "lng": 147.29298410900003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -730,7 +730,7 @@
     "lat": -36.94872548799998,
     "lng": 147.18307238800003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -758,7 +758,7 @@
     "lat": -39.06512361199998,
     "lng": 146.430083126,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -787,7 +787,7 @@
     "lat": -35.76671099599997,
     "lng": 142.006606572,
     "lga": "HINDMARSH SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -809,7 +809,7 @@
     "lat": -37.829224861,
     "lng": 148.18696991399997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -836,7 +836,7 @@
     "lat": -37.799254272999974,
     "lng": 148.51978596100003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -865,7 +865,7 @@
     "lat": -34.81154182,
     "lng": 141.759588871,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -894,7 +894,7 @@
     "lat": -36.103011030000005,
     "lng": 144.81029195999997,
     "lga": "CAMPASPE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -921,7 +921,7 @@
     "lat": -38.800404000000015,
     "lng": 145.884906,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -950,7 +950,7 @@
     "lat": -36.79526304000001,
     "lng": 148.16999411999996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -979,7 +979,7 @@
     "lat": -34.63826796000001,
     "lng": 141.83167284,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1008,7 +1008,7 @@
     "lat": -37.37604798000001,
     "lng": 142.28211708000003,
     "lga": "SOUTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1033,7 +1033,7 @@
     "lat": -36.94179501000002,
     "lng": 146.42866584,
     "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -1062,7 +1062,7 @@
     "lat": -36.758211029999984,
     "lng": 147.32602415999997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -1090,7 +1090,7 @@
     "lat": -37.08120797999999,
     "lng": 148.41455399999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1112,7 +1112,7 @@
     "lat": -36.691498980000006,
     "lng": 146.78400204000002,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -1141,7 +1141,7 @@
     "lat": -37.305343979999975,
     "lng": 143.72491895999997,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1163,7 +1163,7 @@
     "lat": -37.06629399000002,
     "lng": 146.49896016000002,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -1192,7 +1192,7 @@
     "lat": -37.20012903000003,
     "lng": 146.42972208000003,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -1221,7 +1221,7 @@
     "lat": -38.826113964,
     "lng": 143.581936564,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1250,7 +1250,7 @@
     "lat": -38.82639618799999,
     "lng": 143.58221167399995,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1279,7 +1279,7 @@
     "lat": -37.25231499,
     "lng": 142.27859592000004,
     "lga": "SOUTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1304,7 +1304,7 @@
     "lat": -37.17788102999998,
     "lng": 145.86098904000005,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1330,7 +1330,7 @@
     "lat": -39.08457900000002,
     "lng": 146.38416408,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -1358,7 +1358,7 @@
     "lat": -38.00919798000001,
     "lng": 141.08529815999998,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1387,7 +1387,7 @@
     "lat": -38.04346098000002,
     "lng": 141.15833208000004,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1416,7 +1416,7 @@
     "lat": -37.991264039999976,
     "lng": 141.02407512000002,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1445,7 +1445,7 @@
     "lat": -38.21541300000001,
     "lng": 141.31194912,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1474,7 +1474,7 @@
     "lat": -38.21541300000001,
     "lng": 141.31194912,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1525,7 +1525,7 @@
     "lat": -37.81703097000002,
     "lng": 144.26815716,
     "lga": "GREATER GEELONG CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Geelong and the Bellarine",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1551,7 +1551,7 @@
     "lat": -36.94030497,
     "lng": 147.32657387999996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1578,7 +1578,7 @@
     "lat": -37.19598596999998,
     "lng": 146.33042795999995,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -1607,7 +1607,7 @@
     "lat": -36.93506597999999,
     "lng": 147.32703396,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -1635,7 +1635,7 @@
     "lat": -35.996797085000026,
     "lng": 145.96442801700005,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1657,7 +1657,7 @@
     "lat": -37.167009029999974,
     "lng": 146.54351915999996,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -1686,7 +1686,7 @@
     "lat": -37.94658003000001,
     "lng": 145.68772788,
     "lga": "CARDINIA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1713,7 +1713,7 @@
     "lat": -36.002493387000015,
     "lng": 147.78512597199995,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1735,7 +1735,7 @@
     "lat": -38.033572633999995,
     "lng": 140.994188517,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1764,7 +1764,7 @@
     "lat": -37.298627125999985,
     "lng": 148.96282263199998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1786,7 +1786,7 @@
     "lat": -37.780079097,
     "lng": 148.85089652800002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1815,7 +1815,7 @@
     "lat": -37.787777138000024,
     "lng": 148.87980715499998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1844,7 +1844,7 @@
     "lat": -36.005515152999976,
     "lng": 145.96967318199995,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1888,7 +1888,7 @@
     "lat": -37.79822810100001,
     "lng": 148.74227283100004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1917,7 +1917,7 @@
     "lat": -37.79872012999999,
     "lng": 148.74190959099997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -1946,7 +1946,7 @@
     "lat": -35.584151786999996,
     "lng": 142.05137891100003,
     "lga": "YARRIAMBIACK SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -1968,7 +1968,7 @@
     "lat": -36.60116841299998,
     "lng": 143.698207862,
     "lga": "LODDON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Goldfields",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -1995,7 +1995,7 @@
     "lat": -34.753125796999996,
     "lng": 142.342575227,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2020,7 +2020,7 @@
     "lat": -39.043908810999994,
     "lng": 146.46572894400003,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2042,7 +2042,7 @@
     "lat": -37.08335788599999,
     "lng": 143.69138040899998,
     "lga": "CENTRAL GOLDFIELDS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Goldfields",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2068,7 +2068,7 @@
     "lat": -36.96397101000002,
     "lng": 146.53858895999997,
     "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2095,7 +2095,7 @@
     "lat": -37.03446998999999,
     "lng": 148.74195599999996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2117,7 +2117,7 @@
     "lat": -37.13951304,
     "lng": 147.29912207999996,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2139,7 +2139,7 @@
     "lat": -36.89830404000003,
     "lng": 148.42499687999998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2161,7 +2161,7 @@
     "lat": -37.18778400000002,
     "lng": 146.353293,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -2190,7 +2190,7 @@
     "lat": -37.190537010000014,
     "lng": 146.36228291999998,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -2219,7 +2219,7 @@
     "lat": -37.728260999999975,
     "lng": 149.03501796,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2248,7 +2248,7 @@
     "lat": -38.413213868000014,
     "lng": 141.55426684099996,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2277,7 +2277,7 @@
     "lat": -37.36712502,
     "lng": 147.00677615999996,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2304,7 +2304,7 @@
     "lat": -37.208357999999976,
     "lng": 146.83095288000004,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2326,7 +2326,7 @@
     "lat": -37.786258980000014,
     "lng": 148.88905704,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2355,7 +2355,7 @@
     "lat": -37.09126502999999,
     "lng": 148.41317700000002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2384,7 +2384,7 @@
     "lat": -37.19067497999998,
     "lng": 146.36442204000002,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -2413,7 +2413,7 @@
     "lat": -37.19523798,
     "lng": 146.39942592,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -2442,7 +2442,7 @@
     "lat": -38.82611685699999,
     "lng": 143.58221309500004,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2471,7 +2471,7 @@
     "lat": -38.826113964,
     "lng": 143.581936564,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2500,7 +2500,7 @@
     "lat": -36.94402701000001,
     "lng": 147.31670699999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2527,7 +2527,7 @@
     "lat": -38.91051425500001,
     "lng": 146.36493307199999,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2556,7 +2556,7 @@
     "lat": -37.76682402,
     "lng": 144.26311715999998,
     "lga": "MOORABOOL SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2582,7 +2582,7 @@
     "lat": -37.73283067599999,
     "lng": 145.19277647700005,
     "lga": "MANNINGHAM CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Melbourne",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2604,7 +2604,7 @@
     "lat": -37.76992596000002,
     "lng": 143.73832607999998,
     "lga": "GOLDEN PLAINS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Geelong and the Bellarine",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2626,7 +2626,7 @@
     "lat": -35.81794701000001,
     "lng": 145.51789212000006,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -2655,7 +2655,7 @@
     "lat": -36.14101733799998,
     "lng": 147.21029943899998,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2684,7 +2684,7 @@
     "lat": -37.32067196999998,
     "lng": 142.58812104000003,
     "lga": "ARARAT RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2710,7 +2710,7 @@
     "lat": -36.45223594599997,
     "lng": 148.08802593200005,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2754,7 +2754,7 @@
     "lat": -36.12927798099997,
     "lng": 147.59257094500003,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2776,7 +2776,7 @@
     "lat": -37.24235319600001,
     "lng": 148.835248611,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2798,7 +2798,7 @@
     "lat": -36.09798446299999,
     "lng": 147.44958532299995,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -2827,7 +2827,7 @@
     "lat": -36.10926938,
     "lng": 147.70774764700002,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2849,7 +2849,7 @@
     "lat": -36.12466472099999,
     "lng": 147.76967193200005,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2871,7 +2871,7 @@
     "lat": -36.12526335299998,
     "lng": 147.71678136800006,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2893,7 +2893,7 @@
     "lat": -36.42578565000002,
     "lng": 147.04667525000002,
     "lga": "INDIGO SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -2915,7 +2915,7 @@
     "lat": -38.80237871600002,
     "lng": 143.47730313199997,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2944,7 +2944,7 @@
     "lat": -37.85290928699999,
     "lng": 144.195683595,
     "lga": "GOLDEN PLAINS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Geelong and the Bellarine",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -2970,7 +2970,7 @@
     "lat": -37.79617261599998,
     "lng": 148.74597241100003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -2999,7 +2999,7 @@
     "lat": -36.94872548799998,
     "lng": 147.18307238800003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3027,7 +3027,7 @@
     "lat": -36.94872548799998,
     "lng": 147.18307238800003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3055,7 +3055,7 @@
     "lat": -38.826113964,
     "lng": 143.581936564,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -3084,7 +3084,7 @@
     "lat": -37.17682590200002,
     "lng": 145.840446713,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3110,7 +3110,7 @@
     "lat": -36.907939915999975,
     "lng": 147.29298410900003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3138,7 +3138,7 @@
     "lat": -36.907939915999975,
     "lng": 147.29298410900003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3166,7 +3166,7 @@
     "lat": -37.801830784,
     "lng": 148.13848294000002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3195,7 +3195,7 @@
     "lat": -37.38807099000002,
     "lng": 145.73875608000003,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3224,7 +3224,7 @@
     "lat": -37.01640401999998,
     "lng": 142.42624416,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3250,7 +3250,7 @@
     "lat": -36.77899796999998,
     "lng": 147.59599895999997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3277,7 +3277,7 @@
     "lat": -37.09108601999998,
     "lng": 147.42397907999998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3299,7 +3299,7 @@
     "lat": -36.09790428100001,
     "lng": 147.44691870099996,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -3328,7 +3328,7 @@
     "lat": -37.780021895000004,
     "lng": 148.92309823799997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -3357,7 +3357,7 @@
     "lat": -37.33465598999999,
     "lng": 147.06660311999997,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3379,7 +3379,7 @@
     "lat": -36.92787200999999,
     "lng": 148.15495188,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3402,7 +3402,7 @@
     "lat": -37.46766095999999,
     "lng": 143.90850816,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3424,7 +3424,7 @@
     "lat": -37.41020802000003,
     "lng": 145.75752611999997,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3453,7 +3453,7 @@
     "lat": -34.56276101999998,
     "lng": 141.07187016,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3482,7 +3482,7 @@
     "lat": -37.77694304800002,
     "lng": 149.32380017699995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3507,7 +3507,7 @@
     "lat": -36.93054095999997,
     "lng": 147.30317604000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3534,7 +3534,7 @@
     "lat": -37.17300798000002,
     "lng": 145.83989699999995,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3560,7 +3560,7 @@
     "lat": -38.05892496000001,
     "lng": 141.92301204,
     "lga": "MOYNE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3582,7 +3582,7 @@
     "lat": -38.84675004000002,
     "lng": 143.55841896000004,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3611,7 +3611,7 @@
     "lat": -38.858993010000006,
     "lng": 146.24757899999997,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3640,7 +3640,7 @@
     "lat": -37.34327601000001,
     "lng": 145.98737496,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3666,7 +3666,7 @@
     "lat": -38.04791202000001,
     "lng": 141.15972095999996,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3695,7 +3695,7 @@
     "lat": -36.88486397999998,
     "lng": 146.08605095999997,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3717,7 +3717,7 @@
     "lat": -35.958036960000015,
     "lng": 144.95824691999997,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3739,7 +3739,7 @@
     "lat": -37.32067196999998,
     "lng": 142.58812104000003,
     "lga": "ARARAT RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3765,7 +3765,7 @@
     "lat": -37.77683301000002,
     "lng": 149.19859187999998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3816,7 +3816,7 @@
     "lat": -36.381138324000005,
     "lng": 148.04433508700004,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3838,7 +3838,7 @@
     "lat": -36.871535970000025,
     "lng": 146.08653516000004,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3867,7 +3867,7 @@
     "lat": -37.741578882,
     "lng": 149.137403769,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -3896,7 +3896,7 @@
     "lat": -36.23320356200003,
     "lng": 148.03374017299996,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3918,7 +3918,7 @@
     "lat": -37.86159699000001,
     "lng": 147.64150008000001,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3940,7 +3940,7 @@
     "lat": -37.82320100999999,
     "lng": 148.13509788,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -3962,7 +3962,7 @@
     "lat": -36.53806202999999,
     "lng": 148.13195687999996,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -3990,7 +3990,7 @@
     "lat": -36.56739699000002,
     "lng": 141.33400487999995,
     "lga": "WEST WIMMERA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4015,7 +4015,7 @@
     "lat": -37.19090898000002,
     "lng": 146.34783503999995,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4044,7 +4044,7 @@
     "lat": -38.20851701999999,
     "lng": 146.84590188000004,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4066,7 +4066,7 @@
     "lat": -38.05239964399999,
     "lng": 141.19038042800003,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4095,7 +4095,7 @@
     "lat": -37.12164179400003,
     "lng": 148.37244328199995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4117,7 +4117,7 @@
     "lat": -38.030135168000015,
     "lng": 141.26610768199998,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4146,7 +4146,7 @@
     "lat": -37.195828817000006,
     "lng": 148.82767708999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4174,7 +4174,7 @@
     "lat": -38.054346924000015,
     "lng": 141.26860035200002,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4203,7 +4203,7 @@
     "lat": -35.982970008999985,
     "lng": 145.80563337,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4247,7 +4247,7 @@
     "lat": -37.79670093599998,
     "lng": 148.74498541100002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -4276,7 +4276,7 @@
     "lat": -36.94872548799998,
     "lng": 147.18307238800003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4304,7 +4304,7 @@
     "lat": -36.94872548799998,
     "lng": 147.18307238800003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4332,7 +4332,7 @@
     "lat": -36.89880299999999,
     "lng": 148.08800304,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -4361,7 +4361,7 @@
     "lat": -36.77754096000001,
     "lng": 148.10494391999998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4388,7 +4388,7 @@
     "lat": -35.03888198999999,
     "lng": 141.71567291999997,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4417,7 +4417,7 @@
     "lat": -34.90959699000001,
     "lng": 141.70561704,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4446,7 +4446,7 @@
     "lat": -37.371609990000024,
     "lng": 142.50352499999997,
     "lga": "ARARAT RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4472,7 +4472,7 @@
     "lat": -37.02527801999997,
     "lng": 147.22373015999995,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4500,7 +4500,7 @@
     "lat": -36.76469795999998,
     "lng": 147.25322315999995,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4523,7 +4523,7 @@
     "lat": -37.19751803999998,
     "lng": 146.34332784000003,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4552,7 +4552,7 @@
     "lat": -37.44410499000003,
     "lng": 143.93045700000005,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4574,7 +4574,7 @@
     "lat": -36.851855039999975,
     "lng": 144.74352311999996,
     "lga": "GREATER BENDIGO CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Goldfields",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4596,7 +4596,7 @@
     "lat": -37.78088388200001,
     "lng": 148.91610346200002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -4625,7 +4625,7 @@
     "lat": -36.81193231999998,
     "lng": 141.46594538399995,
     "lga": "WEST WIMMERA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4647,7 +4647,7 @@
     "lat": -34.70543397,
     "lng": 140.96971908,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4676,7 +4676,7 @@
     "lat": -36.14784106500002,
     "lng": 147.86138148700002,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -4705,7 +4705,7 @@
     "lat": -38.828160000000025,
     "lng": 143.58312792000004,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4734,7 +4734,7 @@
     "lat": -38.89280254099998,
     "lng": 146.48276406900004,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4756,7 +4756,7 @@
     "lat": -39.11568804000001,
     "lng": 146.38637988000005,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4778,7 +4778,7 @@
     "lat": -36.824877990000005,
     "lng": 146.06341992,
     "lga": "BENALLA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4800,7 +4800,7 @@
     "lat": -38.231917020000026,
     "lng": 146.93846004,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4822,7 +4822,7 @@
     "lat": -37.10795796000002,
     "lng": 142.42378499999995,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4848,7 +4848,7 @@
     "lat": -36.81228897,
     "lng": 147.32961695999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -4876,7 +4876,7 @@
     "lat": -37.30876803000001,
     "lng": 143.711595,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4898,7 +4898,7 @@
     "lat": -36.13191758099998,
     "lng": 147.73451256700002,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4920,7 +4920,7 @@
     "lat": -37.998377081,
     "lng": 141.047096066,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4946,7 +4946,7 @@
     "lat": -38.038019856000005,
     "lng": 141.24612531399998,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -4974,7 +4974,7 @@
     "lat": -36.05362044100002,
     "lng": 147.45133137899995,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -4996,7 +4996,7 @@
     "lat": -36.08573002100002,
     "lng": 147.76773721300003,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5018,7 +5018,7 @@
     "lat": -38.82639618799999,
     "lng": 143.58221167399995,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -5047,7 +5047,7 @@
     "lat": -36.011293111999976,
     "lng": 145.976932714,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5091,7 +5091,7 @@
     "lat": -37.986849619,
     "lng": 140.99073030199997,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5120,7 +5120,7 @@
     "lat": -36.907939915999975,
     "lng": 147.29298410900003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -5148,7 +5148,7 @@
     "lat": -37.79545913599998,
     "lng": 148.747897673,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -5177,7 +5177,7 @@
     "lat": -36.02393521900001,
     "lng": 147.914523466,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5199,7 +5199,7 @@
     "lat": -35.44590620299999,
     "lng": 141.99616140399996,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5221,7 +5221,7 @@
     "lat": -37.84615963099998,
     "lng": 148.10868982800002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5250,7 +5250,7 @@
     "lat": -37.13778998999999,
     "lng": 147.26533715999994,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5272,7 +5272,7 @@
     "lat": -36.94150196999999,
     "lng": 147.47399891999999,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5299,7 +5299,7 @@
     "lat": -37.05907401000002,
     "lng": 142.51495788,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5321,7 +5321,7 @@
     "lat": -34.592138009999985,
     "lng": 141.94613484,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5379,7 +5379,7 @@
     "lat": -37.49248700999999,
     "lng": 148.16299103999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5401,7 +5401,7 @@
     "lat": -36.80499699000001,
     "lng": 147.66400008000005,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -5429,7 +5429,7 @@
     "lat": -36.85465998000001,
     "lng": 148.05101088000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5451,7 +5451,7 @@
     "lat": -37.140332633000014,
     "lng": 145.85747605799997,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -5480,7 +5480,7 @@
     "lat": -37.924970040000005,
     "lng": 146.38435812,
     "lga": "BAW BAW SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5502,7 +5502,7 @@
     "lat": -37.343588039999986,
     "lng": 147.15467316000002,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5524,7 +5524,7 @@
     "lat": -37.37863700999998,
     "lng": 145.75945895999996,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5553,7 +5553,7 @@
     "lat": -37.08199898999999,
     "lng": 148.42599912000003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5575,7 +5575,7 @@
     "lat": -37.46279700000002,
     "lng": 143.90404595999996,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5597,7 +5597,7 @@
     "lat": -37.465981020000015,
     "lng": 143.90500608000002,
     "lga": "HEPBURN SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5619,7 +5619,7 @@
     "lat": -35.92930518999998,
     "lng": 147.70957664900004,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5641,7 +5641,7 @@
     "lat": -36.147965107000005,
     "lng": 147.881502415,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5663,7 +5663,7 @@
     "lat": -37.182267990000014,
     "lng": 145.89489888000003,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5689,7 +5689,7 @@
     "lat": -36.91684098000002,
     "lng": 147.16447200000005,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5712,7 +5712,7 @@
     "lat": -35.891093969999986,
     "lng": 143.80682795999996,
     "lga": "GANNAWARRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5734,7 +5734,7 @@
     "lat": -36.75477599999999,
     "lng": 146.72773115999996,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5763,7 +5763,7 @@
     "lat": -35.92772199000001,
     "lng": 145.69385795999995,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5785,7 +5785,7 @@
     "lat": -38.800163528999974,
     "lng": 143.48191249700005,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -5814,7 +5814,7 @@
     "lat": -37.43364797999999,
     "lng": 142.47558288000005,
     "lga": "ARARAT RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5840,7 +5840,7 @@
     "lat": -37.74084798400003,
     "lng": 149.49794422699995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5866,7 +5866,7 @@
     "lat": -37.334663999999975,
     "lng": 147.05079911999997,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5888,7 +5888,7 @@
     "lat": -37.37432303999998,
     "lng": 147.05647308000005,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -5917,7 +5917,7 @@
     "lat": -38.63802456500002,
     "lng": 143.06356247899998,
     "lga": "CORANGAMITE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -5939,7 +5939,7 @@
     "lat": -38.03087728700001,
     "lng": 141.13866143300004,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -5965,7 +5965,7 @@
     "lat": -38.55021664999998,
     "lng": 143.95996246899995,
     "lga": "SURF COAST SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -5994,7 +5994,7 @@
     "lat": -38.034777727000005,
     "lng": 141.15480445000003,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6023,7 +6023,7 @@
     "lat": -37.40729916700002,
     "lng": 148.36014753799998,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6067,7 +6067,7 @@
     "lat": -37.48496708800002,
     "lng": 148.308078928,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6118,7 +6118,7 @@
     "lat": -38.702702805,
     "lng": 143.478124074,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6147,7 +6147,7 @@
     "lat": -38.826113964,
     "lng": 143.581936564,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -6176,7 +6176,7 @@
     "lat": -38.826113964,
     "lng": 143.581936564,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -6205,7 +6205,7 @@
     "lat": -35.951587227999994,
     "lng": 145.71822414300004,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6227,7 +6227,7 @@
     "lat": -36.997577999999976,
     "lng": 148.67696016000002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6249,7 +6249,7 @@
     "lat": -37.224819000000025,
     "lng": 142.53955884000004,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6274,7 +6274,7 @@
     "lat": -38.460301019999974,
     "lng": 144.92240891999995,
     "lga": "MORNINGTON PENINSULA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Mornington Peninsula",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6296,7 +6296,7 @@
     "lat": -36.96645897000002,
     "lng": 146.44005300000003,
     "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6318,7 +6318,7 @@
     "lat": -37.35589895999999,
     "lng": 145.75287816000002,
     "lga": "MURRINDINDI SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Yarra Valley and Dandenong Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6347,7 +6347,7 @@
     "lat": -37.13778998999999,
     "lng": 147.26533715999994,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6374,7 +6374,7 @@
     "lat": -37.13778998999999,
     "lng": 147.26533715999994,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6396,7 +6396,7 @@
     "lat": -37.76976000000002,
     "lng": 149.41300607999995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6418,7 +6418,7 @@
     "lat": -37.94107401000002,
     "lng": 141.44640912,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6445,7 +6445,7 @@
     "lat": -37.22972697,
     "lng": 146.69788391999998,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6473,7 +6473,7 @@
     "lat": -36.73095804000002,
     "lng": 148.05899783999996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6501,7 +6501,7 @@
     "lat": -37.30445702999998,
     "lng": 146.35275695999997,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -6530,7 +6530,7 @@
     "lat": -37.17548604000001,
     "lng": 146.56133411999997,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -6559,7 +6559,7 @@
     "lat": -35.98714111800001,
     "lng": 147.52577777299996,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6581,7 +6581,7 @@
     "lat": -37.77918576500002,
     "lng": 149.30597719499997,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6609,7 +6609,7 @@
     "lat": -36.699884010000005,
     "lng": 147.25222596000003,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6636,7 +6636,7 @@
     "lat": -38.761397009999996,
     "lng": 143.37869111999998,
     "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6665,7 +6665,7 @@
     "lat": -35.928691019999974,
     "lng": 145.67533091999996,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6687,7 +6687,7 @@
     "lat": -35.826948000000016,
     "lng": 145.55370203999996,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6709,7 +6709,7 @@
     "lat": -36.92379402,
     "lng": 142.38312408000002,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6735,7 +6735,7 @@
     "lat": -37.197017010000025,
     "lng": 146.34552887999996,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6786,7 +6786,7 @@
     "lat": -38.475116723999975,
     "lng": 143.93266988699997,
     "lga": "SURF COAST SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Great Ocean Road",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6815,7 +6815,7 @@
     "lat": -38.02985712200001,
     "lng": 141.140106609,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -6841,7 +6841,7 @@
     "lat": -35.95618169699998,
     "lng": 147.420281252,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": true,
@@ -6870,7 +6870,7 @@
     "lat": -36.64699238200001,
     "lng": 145.03309715900002,
     "lga": "CAMPASPE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6892,7 +6892,7 @@
     "lat": -37.64971419400001,
     "lng": 147.35349489199996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6914,7 +6914,7 @@
     "lat": -36.907939915999975,
     "lng": 147.29298410900003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -6942,7 +6942,7 @@
     "lat": -35.479693854999994,
     "lng": 141.99791188200004,
     "lga": "YARRIAMBIACK SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6964,7 +6964,7 @@
     "lat": -35.727644607,
     "lng": 141.99147538800003,
     "lga": "HINDMARSH SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -6986,7 +6986,7 @@
     "lat": -34.71545900199999,
     "lng": 141.17979289799996,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7015,7 +7015,7 @@
     "lat": -35.05612092199999,
     "lng": 141.72958535299995,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7044,7 +7044,7 @@
     "lat": -37.18081530699999,
     "lng": 142.508825354,
     "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7069,7 +7069,7 @@
     "lat": -38.057443793000004,
     "lng": 141.21805825599995,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7095,7 +7095,7 @@
     "lat": -37.13778998999999,
     "lng": 147.26533715999994,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7117,7 +7117,7 @@
     "lat": -37.13778998999999,
     "lng": 147.26533715999994,
     "lga": "ALPINE SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7144,7 +7144,7 @@
     "lat": -36.998260019999975,
     "lng": 147.49525512000002,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7166,7 +7166,7 @@
     "lat": -36.89399700000001,
     "lng": 147.46230216000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7188,7 +7188,7 @@
     "lat": -37.17286101000002,
     "lng": 146.66882292000003,
     "lga": "WELLINGTON SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7210,7 +7210,7 @@
     "lat": -36.498525029999996,
     "lng": 142.01777196,
     "lga": "HINDMARSH SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7235,7 +7235,7 @@
     "lat": -37.77939602999999,
     "lng": 148.13540388,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7257,7 +7257,7 @@
     "lat": -36.64354500000002,
     "lng": 148.13903591999997,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": true,
       "toilets": null,
@@ -7285,7 +7285,7 @@
     "lat": -37.845601020000004,
     "lng": 148.10830092000003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7307,7 +7307,7 @@
     "lat": -37.51785000000001,
     "lng": 148.26388896000003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7329,7 +7329,7 @@
     "lat": -37.88560503000002,
     "lng": 146.35474308000005,
     "lga": "BAW BAW SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7351,7 +7351,7 @@
     "lat": -38.02358196,
     "lng": 146.33998812000004,
     "lga": "BAW BAW SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7373,7 +7373,7 @@
     "lat": -37.696070969999994,
     "lng": 147.365001,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7400,7 +7400,7 @@
     "lat": -37.28518398,
     "lng": 148.80638592000003,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7422,7 +7422,7 @@
     "lat": -37.21417001999998,
     "lng": 142.08824412,
     "lga": "SOUTHERN GRAMPIANS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7444,7 +7444,7 @@
     "lat": -37.644187835000025,
     "lng": 149.698570508,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7470,7 +7470,7 @@
     "lat": -39.02981202000001,
     "lng": 146.31969888000003,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7492,7 +7492,7 @@
     "lat": -36.864546029999985,
     "lng": 146.07088992,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7520,7 +7520,7 @@
     "lat": -35.90274402,
     "lng": 145.65249396000002,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7542,7 +7542,7 @@
     "lat": -35.86792697999999,
     "lng": 145.61919107999995,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7564,7 +7564,7 @@
     "lat": -37.68119001000002,
     "lng": 144.07208100000003,
     "lga": "MOORABOOL SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Daylesford and Macedon Ranges",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7586,7 +7586,7 @@
     "lat": -36.73129302000001,
     "lng": 147.73314816000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7608,7 +7608,7 @@
     "lat": -35.99297267100002,
     "lng": 145.95485966700005,
     "lga": "MOIRA SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7630,7 +7630,7 @@
     "lat": -37.19716497000002,
     "lng": 146.42078688000004,
     "lga": "MANSFIELD SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": false,
       "toilets": null,
@@ -7659,7 +7659,7 @@
     "lat": -38.022249767999995,
     "lng": 141.10616286100003,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7687,7 +7687,7 @@
     "lat": -37.85944333200001,
     "lng": 144.190458068,
     "lga": "GOLDEN PLAINS SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Geelong and the Bellarine",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7712,7 +7712,7 @@
     "lat": -36.12262904200003,
     "lng": 147.777764036,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7734,7 +7734,7 @@
     "lat": -38.00490618700002,
     "lng": 141.07464277500003,
     "lga": "GLENELG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7760,7 +7760,7 @@
     "lat": -36.060347949000004,
     "lng": 147.74683796700003,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7782,7 +7782,7 @@
     "lat": -37.28709993799998,
     "lng": 148.57246889299995,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7826,7 +7826,7 @@
     "lat": -35.97256158099998,
     "lng": 147.81216926499997,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7848,7 +7848,7 @@
     "lat": -37.79749393899999,
     "lng": 148.74316417399996,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": true,
       "toilets": true,
@@ -7877,7 +7877,7 @@
     "lat": -34.891137415,
     "lng": 141.62692494199996,
     "lga": "MILDURA RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Murray",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7906,7 +7906,7 @@
     "lat": -39.04249659200002,
     "lng": 146.464318285,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7928,7 +7928,7 @@
     "lat": -38.91593865300001,
     "lng": 146.47352988800003,
     "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
       "toilets": true,
@@ -7957,7 +7957,7 @@
     "lat": -37.32378799999998,
     "lng": 142.62079200000005,
     "lga": "ARARAT RURAL CITY",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,
@@ -7979,7 +7979,7 @@
     "lat": -35.779685900000004,
     "lng": 141.93499680399998,
     "lga": "HINDMARSH SHIRE",
-    "tourismRegion": null,
+    "tourismRegion": "Grampians",
     "facilities": {
       "dogFriendly": null,
       "toilets": null,

@@ -64,6 +64,7 @@ def normalize_lga(value: str) -> str:
         "rural city of",
     ]:
         value = value.replace(token, "")
+    value = re.sub(r"\b(shire|city|borough|council|rural)\b", " ", value)
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return value.strip()
 
