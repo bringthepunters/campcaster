@@ -12,6 +12,8 @@ type Site = {
   lng: number
   lga?: string | null
   tourismRegion?: string | null
+  landscapeTags?: string[]
+  animalsFauna?: string[]
   sourceUrl?: string | null
   facilities?: {
     dogFriendly?: boolean | null
@@ -167,6 +169,9 @@ function App() {
   const filteredSitesRef = useRef<Site[]>([])
   const [availabilityById, setAvailabilityById] = useState<
     Record<string, AvailabilityStatus>
+  >({})
+  const [availabilityUrlById, setAvailabilityUrlById] = useState<
+    Record<string, string>
   >({})
   const [availabilityDate, setAvailabilityDate] = useState<string | null>(null)
   const [availabilityLoading, setAvailabilityLoading] = useState(false)
@@ -463,6 +468,7 @@ function App() {
       setAvailabilityById({})
       setAvailabilityDate(null)
       setAvailabilityLoading(false)
+      setAvailabilityUrlById({})
       return
     }
 
@@ -504,10 +510,11 @@ function App() {
         const items = payload.data ?? []
         const availabilityBySlug: Record<string, AvailabilityStatus> = {}
         const availabilityItems = items.map((item) => {
-          const alias = item.alias ? slugify(item.alias) : null
+          const aliasSlug = item.alias ? slugify(item.alias) : null
           const nameSlug = item.OperatorName
             ? slugify(item.OperatorName)
             : null
+          const aliasOriginal = item.alias ?? null
           const tokens = [
             ...(item.alias ? normalizeTokens(item.alias) : []),
             ...(item.OperatorName ? normalizeTokens(item.OperatorName) : []),
@@ -519,27 +526,39 @@ function App() {
             : isBookable
               ? 'booked_out'
               : 'unbookable'
-          if (alias) availabilityBySlug[alias] = status
+          if (aliasSlug) availabilityBySlug[aliasSlug] = status
           if (nameSlug && !availabilityBySlug[nameSlug]) {
             availabilityBySlug[nameSlug] = status
           }
           return {
             status,
             tokens: Array.from(new Set(tokens)),
+            alias: aliasOriginal,
+            aliasSlug,
+            nameSlug,
           }
         })
 
         const mapped: Record<string, AvailabilityStatus> = {}
+        const bookingMap: Record<string, string> = {}
         for (const site of sites) {
           const siteSlug = slugify(site.name)
           const direct = availabilityBySlug[siteSlug]
           if (direct) {
             mapped[site.id] = direct
+            const directItem = availabilityItems.find(
+              (item) => item.aliasSlug === siteSlug || item.nameSlug === siteSlug,
+            )
+            if (directItem?.alias) {
+              bookingMap[site.id] =
+                `https://bookings.parks.vic.gov.au/${directItem.alias}`
+            }
             continue
           }
           const siteTokens = new Set(normalizeTokens(site.name))
           let best: AvailabilityStatus | null = null
           let bestTokenCount = 0
+          let bestAlias: string | null = null
           for (const item of availabilityItems) {
             if (!item.tokens.length) continue
             const tokenSet = new Set(item.tokens)
@@ -550,16 +569,23 @@ function App() {
             if (item.tokens.length > bestTokenCount) {
               bestTokenCount = item.tokens.length
               best = item.status
+              bestAlias = item.alias ?? null
             }
           }
           mapped[site.id] = best ?? 'unbookable'
+          if (bestAlias) {
+            bookingMap[site.id] =
+              `https://bookings.parks.vic.gov.au/${bestAlias}`
+          }
         }
 
         setAvailabilityById(mapped)
         setAvailabilityDate(selectedDate)
+        setAvailabilityUrlById(bookingMap)
       } catch {
         setAvailabilityById({})
         setAvailabilityDate(null)
+        setAvailabilityUrlById({})
       } finally {
         setAvailabilityLoading(false)
       }
@@ -749,7 +775,8 @@ function App() {
                   maxTemp !== null && maxTemp > HEAT_ICON_THRESHOLD_C
                 const isOk =
                   summary !== null ? !summary.isRainy && !summary.isTooHot : false
-                const bookingUrl = getBookingUrl(site.sourceUrl)
+                const bookingUrl =
+                  availabilityUrlById[site.id] ?? getBookingUrl(site.sourceUrl)
                 const availabilityForDate =
                   selectedDate && availabilityDate === selectedDate
                     ? availabilityById[site.id] ?? 'unknown'
@@ -894,6 +921,27 @@ function App() {
                     <div className="distance-badge">
                       {estimateDriveTimeLabel(site.lat, site.lng)} from Northcote
                     </div>
+                    {(site.landscapeTags?.length || site.animalsFauna?.length) ? (
+                      <div className="mt-2 flex flex-col gap-2">
+                        {site.landscapeTags?.length ? (
+                          <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-ink/60">
+                            {site.landscapeTags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="rounded-full bg-ink/5 px-2 py-1"
+                              >
+                                {tag.replace(/_/g, ' ')}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null}
+                        {site.animalsFauna?.length ? (
+                          <div className="text-sm text-ink/70">
+                            Wildlife: {site.animalsFauna.slice(0, 3).join(', ')}
+                          </div>
+                        ) : null}
+                      </div>
+                    ) : null}
                     {selectedDate ? (
                       <div className="availability-section">
                         <div className="availability-label">Availability</div>
