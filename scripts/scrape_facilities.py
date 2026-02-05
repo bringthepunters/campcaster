@@ -10,8 +10,8 @@ URLS_PATH = ROOT / "data" / "campground_urls.txt"
 OUTPUT_BY_URL = ROOT / "data" / "facilities_by_url.json"
 SITES_PATH = ROOT / "public" / "data" / "sites.json"
 
-REQUEST_DELAY_SECONDS = 2.3  # ~26 requests/minute (~35% faster)
-SCRAPE_VERSION = 2
+REQUEST_DELAY_SECONDS = 1.5  # ~40 requests/minute (50% faster)
+SCRAPE_VERSION = 3
 
 STOPWORDS = {
     "campground",
@@ -242,6 +242,17 @@ def extract_facilities(text: str) -> dict:
 
     deduped_animals = []
 
+    lat_lng = None
+    map_match = re.search(
+        r"https?://www\.google\.com/maps/search/\?api=1&query=([\-0-9\.]+),([\-0-9\.]+)",
+        text,
+    )
+    if map_match:
+        try:
+            lat_lng = (float(map_match.group(1)), float(map_match.group(2)))
+        except ValueError:
+            lat_lng = None
+
     return {
         "schemaVersion": SCRAPE_VERSION,
         "dogFriendly": dog_friendly,
@@ -270,6 +281,7 @@ def extract_facilities(text: str) -> dict:
             "landscape": landscape_tags,
             "animals": deduped_animals[:3],
         },
+        "latLng": lat_lng,
     }
 
 
@@ -345,6 +357,10 @@ def apply_to_sites(facilities_by_url: dict, urls: list[str]) -> None:
         site["sourceUrl"] = match_url
         site["landscapeTags"] = facilities.get("landscapeTags", [])
         site["animalsFauna"] = facilities.get("animalsFauna", [])
+        lat_lng = facilities.get("latLng")
+        if lat_lng and (site.get("lat") is None or site.get("lng") is None):
+            site["lat"] = lat_lng[0]
+            site["lng"] = lat_lng[1]
 
     SITES_PATH.write_text(json.dumps(sites, indent=2), encoding="utf-8")
 
@@ -389,7 +405,7 @@ def main() -> None:
 
     if args.apply_only:
         apply_to_sites(facilities_by_url, urls)
-        print("Applied facilities to sites.json")
+        print("Applied collected facilities to sites.json")
         return
 
     for idx, url in enumerate(urls, start=1):
@@ -400,7 +416,7 @@ def main() -> None:
                     skipped += 1
                     if (idx % 10) == 0:
                         print(
-                            f"[{idx}/{total}] skipped (up-to-date): {skipped} | scraped: {scraped} | failed: {failed}"
+                            f"[{idx}/{total}] skipped (up-to-date): {skipped} | collected: {scraped} | failed: {failed}"
                         )
                     continue
             else:
@@ -418,13 +434,13 @@ def main() -> None:
         scraped += 1
         if (idx % 5) == 0:
             print(
-                f"[{idx}/{total}] scraped: {scraped} | skipped: {skipped} | failed: {failed}"
+                f"[{idx}/{total}] collected: {scraped} | skipped: {skipped} | failed: {failed}"
             )
         if idx < len(urls):
             time.sleep(REQUEST_DELAY_SECONDS)
 
     apply_to_sites(facilities_by_url, urls)
-    print(f"Scraped {len(urls)} pages")
+    print(f"Collected {len(urls)} pages")
 
 
 if __name__ == "__main__":

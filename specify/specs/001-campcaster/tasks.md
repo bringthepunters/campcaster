@@ -86,3 +86,6 @@ As a camper, I want to filter sites by driving time from Northcote, so I can foc
 - Weather API calls must be keyless (Open-Meteo) and rate-aware.
 - No map in v1; list-first only.
 - No park boundary polygons; region labels only.
+
+## Data Collection Progress
+- 2026-02-05: Facilities + landscape + map-link lat/lng collection run across 155 URLs (schema v3).
