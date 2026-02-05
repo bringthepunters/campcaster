@@ -405,35 +405,6 @@
     "bookingUrl": null
   },
   {
-    "id": "snowy-river-national-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Snowy River National Park",
-    "lat": -37.38380045100001,
-    "lng": 148.33895107299998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "Thurra River Campground is open to campers with bookings, and day visitors until 1 February 2026. Some parts of the campground are inaccessible due to ongoing restoration work.",
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "*   [Assistance dogs](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/thurra-river-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "river-murray-reserve-bruces-bend-yarrawonga-r-p",
     "name": "Bruces Bend, Yarrawonga R.P",
     "parkName": "River Murray Reserve",
@@ -1348,30 +1319,6 @@
     "bookingUrl": null
   },
   {
-    "id": "errinundra-national-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Errinundra National Park",
-    "lat": -37.298627125999985,
-    "lng": 148.96282263199998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-dock-inlet-cape-conran-coastal-park",
     "name": "Dock Inlet, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -2085,36 +2032,6 @@
     "bookingUrl": null
   },
   {
-    "id": "jarvis-creek-plateau-r-p-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Jarvis Creek Plateau R.P.",
-    "lat": -36.14101733799998,
-    "lng": 147.21029943899998,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": false,
-      "picnicTables": null,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/peachtree-creek-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-first-wannon-remote-campground-grampians-national-park",
     "name": "First Wannon Remote Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -2214,36 +2131,6 @@
     "bookingUrl": null
   },
   {
-    "id": "mount-lawson-state-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Mount Lawson State Park",
-    "lat": -36.09798446299999,
-    "lng": 147.44958532299995,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": null,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "### Accessibility",
-        "Visiting a park can be more of a challenge for people with disabilities, however, in Victoria there are a wide range of facilities to help people of all abilities enjoy our wonderful parks around the state. Parks Victoria provides a range of a equipment, including all-terrain and beach wheelchairs, facilities, accommodation and accessibility information and programs to help you plan and enjoy your visit to Victoria's parks."
-      ],
-      "dogPolicy": [
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. [Entry requirements apply](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)for parks and reserves that are usually dog prohibited, such as national parks.",
-        "Lake Elizabeth Campground is a dogs-on-lead camping area sheltered by tall eucalypt trees and nestled beside the Barwon River."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/hepburn-regional-park/where-to-stay/mount-franklin-lalgambuk-camping-area",
-    "bookingUrl": null
-  },
-  {
     "id": "burrowa-pine-mountain-national-park-hinces-saddle-burrowa-pine-mountain-national-park",
     "name": "Hinces Saddle, Burrowa - Pine Mountain National Park",
     "parkName": "Burrowa - Pine Mountain National Park",
@@ -2298,30 +2185,6 @@
     "lat": -36.12526335299998,
     "lng": 147.71678136800006,
     "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "gundowring-ss-r-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Gundowring SS.R.",
-    "lat": -36.42578565000002,
-    "lng": 147.04667525000002,
-    "lga": "INDIGO SHIRE",
     "tourismRegion": "High Country",
     "facilities": {
       "dogFriendly": null,
@@ -2484,36 +2347,6 @@
     "bookingUrl": null
   },
   {
-    "id": "lake-tyers-s-p-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Lake Tyers S.P.",
-    "lat": -37.801830784,
-    "lng": 148.13848294000002,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "cathedral-range-state-park-the-farmyard-cathedral-range-state-park",
     "name": "The Farmyard, Cathedral Range State Park",
     "parkName": "Cathedral Range State Park",
@@ -2592,36 +2425,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-lawson-state-park-not-attached-to-a-site-2",
-    "name": "_Not Attached to a Site",
-    "parkName": "Mount Lawson State Park",
-    "lat": -36.09790428100001,
-    "lng": 147.44691870099996,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": null,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "### Accessibility",
-        "Visiting a park can be more of a challenge for people with disabilities, however, in Victoria there are a wide range of facilities to help people of all abilities enjoy our wonderful parks around the state. Parks Victoria provides a range of a equipment, including all-terrain and beach wheelchairs, facilities, accommodation and accessibility information and programs to help you plan and enjoy your visit to Victoria's parks."
-      ],
-      "dogPolicy": [
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. [Entry requirements apply](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)for parks and reserves that are usually dog prohibited, such as national parks.",
-        "Lake Elizabeth Campground is a dogs-on-lead camping area sheltered by tall eucalypt trees and nestled beside the Barwon River."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/hepburn-regional-park/where-to-stay/mount-franklin-lalgambuk-camping-area",
     "bookingUrl": null
   },
   {
@@ -2840,36 +2643,6 @@
     "bookingUrl": null
   },
   {
-    "id": "great-otway-national-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Great Otway National Park",
-    "lat": -38.84675004000002,
-    "lng": 143.55841896000004,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "wilsons-promontory-national-park-stockyard-camp-wilsons-promontory-national-park",
     "name": "Stockyard Camp, Wilsons Promontory National Park",
     "parkName": "Wilsons Promontory National Park",
@@ -3029,36 +2802,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "discovery-bay-coastal-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Discovery Bay Coastal Park",
-    "lat": -38.118940950000024,
-    "lng": 141.13097888000004,
-    "lga": null,
-    "tourismRegion": null,
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground",
     "bookingUrl": null
   },
   {
@@ -3355,35 +3098,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/red-gum-landing-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "delegate-river-ss-r-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Delegate River SS.R.",
-    "lat": -37.195828817000006,
-    "lng": 148.82767708999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "Thurra River Campground is open to campers with bookings, and day visitors until 1 February 2026. Some parts of the campground are inaccessible due to ongoing restoration work.",
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "*   [Assistance dogs](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/thurra-river-campground",
     "bookingUrl": null
   },
   {
@@ -3741,66 +3455,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-mitta-mitta-f-r-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Mount Mitta Mitta F.R.",
-    "lat": -36.14784106500002,
-    "lng": 147.86138148700002,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": null,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "### Accessibility",
-        "Visiting a park can be more of a challenge for people with disabilities, however, in Victoria there are a wide range of facilities to help people of all abilities enjoy our wonderful parks around the state. Parks Victoria provides a range of a equipment, including all-terrain and beach wheelchairs, facilities, accommodation and accessibility information and programs to help you plan and enjoy your visit to Victoria's parks."
-      ],
-      "dogPolicy": [
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. [Entry requirements apply](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)for parks and reserves that are usually dog prohibited, such as national parks.",
-        "Lake Elizabeth Campground is a dogs-on-lead camping area sheltered by tall eucalypt trees and nestled beside the Barwon River."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/hepburn-regional-park/where-to-stay/mount-franklin-lalgambuk-camping-area",
-    "bookingUrl": null
-  },
-  {
-    "id": "great-otway-national-park-not-attached-to-a-site-2",
-    "name": "_Not Attached to a Site",
-    "parkName": "Great Otway National Park",
-    "lat": -38.828160000000025,
-    "lng": 143.58312792000004,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
     "bookingUrl": null
   },
   {
@@ -4268,36 +3922,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lake-tyers-s-p-not-attached-to-a-site-2",
-    "name": "_Not Attached to a Site",
-    "parkName": "Lake Tyers S.P.",
-    "lat": -37.84615963099998,
-    "lng": 148.10868982800002,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground",
     "bookingUrl": null
   },
   {
@@ -5310,36 +4934,6 @@
     "bookingUrl": null
   },
   {
-    "id": "great-otway-national-park-not-attached-to-a-site-3",
-    "name": "_Not Attached to a Site",
-    "parkName": "Great Otway National Park",
-    "lat": -38.761397009999996,
-    "lng": 143.37869111999998,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "cobram-r-p-scotts-beach-cobram-r-p",
     "name": "Scotts Beach, Cobram R.P",
     "parkName": "Cobram R.P",
@@ -5469,36 +5063,6 @@
     "bookingUrl": null
   },
   {
-    "id": "great-otway-national-park-not-attached-to-a-site-4",
-    "name": "_Not Attached to a Site",
-    "parkName": "Great Otway National Park",
-    "lat": -38.475116723999975,
-    "lng": 143.93266988699997,
-    "lga": "SURF COAST SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
-    "bookingUrl": null
-  },
-  {
     "id": "lower-glenelg-national-park-forest-camp-north-lower-glenelg-national-park",
     "name": "Forest Camp North, Lower Glenelg National Park",
     "parkName": "Lower Glenelg National Park",
@@ -5523,60 +5087,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/forest-north-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-lawson-state-park-not-attached-to-a-site-3",
-    "name": "_Not Attached to a Site",
-    "parkName": "Mount Lawson State Park",
-    "lat": -35.95618169699998,
-    "lng": 147.420281252,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": null,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": null,
-      "accessibilityNotes": [
-        "### Accessibility",
-        "Visiting a park can be more of a challenge for people with disabilities, however, in Victoria there are a wide range of facilities to help people of all abilities enjoy our wonderful parks around the state. Parks Victoria provides a range of a equipment, including all-terrain and beach wheelchairs, facilities, accommodation and accessibility information and programs to help you plan and enjoy your visit to Victoria's parks."
-      ],
-      "dogPolicy": [
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. [Entry requirements apply](https://www.parks.vic.gov.au/get-into-nature/all-abilities-access/assistance-dogs)for parks and reserves that are usually dog prohibited, such as national parks.",
-        "Lake Elizabeth Campground is a dogs-on-lead camping area sheltered by tall eucalypt trees and nestled beside the Barwon River."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/hepburn-regional-park/where-to-stay/mount-franklin-lalgambuk-camping-area",
-    "bookingUrl": null
-  },
-  {
-    "id": "whroo-h-a-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Whroo H.A.",
-    "lat": -36.64699238200001,
-    "lng": 145.03309715900002,
-    "lga": "CAMPASPE SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -5709,32 +5219,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
-    "bookingUrl": null
-  },
-  {
-    "id": "grampians-national-park-not-attached-to-a-site",
-    "name": "_Not Attached to a Site",
-    "parkName": "Grampians National Park",
-    "lat": -37.18081530699999,
-    "lng": 142.508825354,
-    "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "pit",
-      "showers": null,
-      "bbq": true,
-      "firePits": false,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": []
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/boreang-campground",
     "bookingUrl": null
   },
   {
