@@ -258,9 +258,6 @@ function App() {
         const url = proxyBase
           ? new URL(proxyBase)
           : new URL('https://data.emergency.vic.gov.au/Show?pageId=getIncidentRSS')
-        if (proxyBase) {
-          url.searchParams.set('url', 'https://data.emergency.vic.gov.au/Show?pageId=getIncidentRSS')
-        }
         const response = await fetch(url.toString(), { cache: 'no-store' })
         if (!response.ok) {
           throw new Error('Incident feed unavailable')
