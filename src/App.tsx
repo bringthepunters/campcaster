@@ -128,11 +128,25 @@ const cleanInlineText = (value: unknown) => {
   }
   if (typeof value !== 'string') return ''
   return value
+    .replace(/[*•]/g, ' ')
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     .replace(/https?:\/\/\S+/g, '')
     .replace(/#+\s*/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+const cleanPolicyList = (value: unknown) => {
+  if (Array.isArray(value)) {
+    const items = value
+      .map((entry) => cleanInlineText(entry))
+      .filter(Boolean)
+    return Array.from(new Set(items)).join(', ')
+  }
+  if (typeof value !== 'string') return ''
+  const parts = value.split(/[*•]/g)
+  const cleaned = parts.map((part) => cleanInlineText(part)).filter(Boolean)
+  return Array.from(new Set(cleaned)).join(', ')
 }
 
 const normalizeTokens = (value: string) =>
@@ -839,7 +853,7 @@ function App() {
                 const locationLabel = formatRegion(site)
                 const facilities = site.facilities ?? {}
                 const dogPolicyText = facilities.dogPolicy
-                  ? cleanInlineText(facilities.dogPolicy)
+                  ? cleanPolicyList(facilities.dogPolicy)
                   : ''
                 const accessibilityText = facilities.accessibilityNotes
                   ? cleanInlineText(facilities.accessibilityNotes)
