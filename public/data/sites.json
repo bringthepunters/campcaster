@@ -157,30 +157,6 @@
     "bookingUrl": null
   },
   {
-    "id": "baw-baw-national-park-aberfeldy-bridge-baw-baw-national-park",
-    "name": "Aberfeldy Bridge, Baw Baw National Park",
-    "parkName": "Baw Baw National Park",
-    "lat": -37.853303040000014,
-    "lng": 146.43184392,
-    "lga": "BAW BAW SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "snowy-river-national-park-west-track-camping-ground-snowy-river-national-park",
     "name": "West Track Camping Ground, Snowy River National Park",
     "parkName": "Snowy River National Park",
@@ -5671,30 +5647,6 @@
     "bookingUrl": null
   },
   {
-    "id": "baw-baw-national-park-eastern-tyers-baw-baw-national-park",
-    "name": "Eastern Tyers, Baw Baw National Park",
-    "parkName": "Baw Baw National Park",
-    "lat": -37.924970040000005,
-    "lng": 146.38435812,
-    "lga": "BAW BAW SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grant-h-a-grant-historic-township-grant-h-a",
     "name": "Grant Historic Township, Grant H.A.",
     "parkName": "Grant H.A.",
@@ -7613,30 +7565,6 @@
     "bookingUrl": null
   },
   {
-    "id": "baw-baw-national-park-mushroom-rocks-baw-baw-national-park",
-    "name": "Mushroom Rocks, Baw Baw National Park",
-    "parkName": "Baw Baw National Park",
-    "lat": -37.88560503000002,
-    "lng": 146.35474308000005,
-    "lga": "BAW BAW SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "moondarra-state-park-seninis-visitor-area-moondarra-state-park",
     "name": "Seninis Visitor Area, Moondarra State Park",
     "parkName": "Moondarra State Park",
@@ -8366,6 +8294,54 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/barmah-lakes-camping-area",
+    "bookingUrl": null
+  },
+  {
+    "id": "baw-baw-national-park-aberfeldy-river-camping-area",
+    "name": "Aberfeldy River Camping Area",
+    "parkName": "Baw Baw National Park",
+    "lat": -37.9333278,
+    "lng": 146.1644416,
+    "lga": null,
+    "tourismRegion": null,
+    "facilities": {
+      "dogFriendly": null,
+      "toilets": null,
+      "toiletsType": null,
+      "showers": null,
+      "bbq": null,
+      "firePits": null,
+      "picnicTables": null,
+      "drinkingWater": null,
+      "vehicleAccess": null,
+      "accessibilityNotes": null,
+      "dogPolicy": null
+    },
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/aberfeldy-river-camping-area",
+    "bookingUrl": null
+  },
+  {
+    "id": "baw-baw-national-park-eastern-tyers-camping-area",
+    "name": "Eastern Tyers Camping Area",
+    "parkName": "Baw Baw National Park",
+    "lat": -37.8211551,
+    "lng": 146.303934,
+    "lga": null,
+    "tourismRegion": null,
+    "facilities": {
+      "dogFriendly": null,
+      "toilets": null,
+      "toiletsType": null,
+      "showers": null,
+      "bbq": null,
+      "firePits": null,
+      "picnicTables": null,
+      "drinkingWater": null,
+      "vehicleAccess": null,
+      "accessibilityNotes": null,
+      "dogPolicy": null
+    },
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/eastern-tyers-camping-area",
     "bookingUrl": null
   }
 ]
