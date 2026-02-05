@@ -1,5 +1,6 @@
 const ORIGIN = { lat: -37.7691, lng: 144.9958 }
-const AVG_SPEED_KMH = 80
+const AVG_SPEED_KMH = 70
+const ROAD_FACTOR = 1.25
 
 const toRad = (value: number) => (value * Math.PI) / 180
 
@@ -23,7 +24,7 @@ export const haversineKm = (
 }
 
 export const estimateDriveMinutes = (distanceKm: number) => {
-  return Math.round((distanceKm / AVG_SPEED_KMH) * 60)
+  return Math.round(((distanceKm * ROAD_FACTOR) / AVG_SPEED_KMH) * 60)
 }
 
 export const formatDriveTime = (minutes: number) => {

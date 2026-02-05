@@ -79,9 +79,17 @@ const WEATHER_CACHE_TTL_MS = 12 * 60 * 60 * 1000
 const AUTO_WEATHER_FETCH_LIMIT = 30
 const DEFAULT_MAX_DRIVE_MINUTES = 240
 
+const toTitleCase = (value: string) =>
+  value
+    .toLowerCase()
+    .split(' ')
+    .filter(Boolean)
+    .map((word) => word[0]?.toUpperCase() + word.slice(1))
+    .join(' ')
+
 const formatRegion = (site: Site) => {
   const region = site.tourismRegion ?? site.lga
-  return region || 'Region TBD'
+  return region ? toTitleCase(region) : 'Region TBD'
 }
 
 const getParkTypeLabel = (parkName: string) => {
@@ -1010,7 +1018,7 @@ function App() {
                       <div>
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <span className="font-semibold text-ink">
-                              LGA forecast
+                              Forecast
                             </span>
                             <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
                               {isRainy || isTooHot ? 'Risky' : 'OK'}
@@ -1107,7 +1115,7 @@ function App() {
                     {site.landscapeTags?.length ? (
                       <div className="mt-2 flex flex-col gap-2">
                         {site.landscapeTags?.length ? (
-                          <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-ink/60">
+                          <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
                             {site.landscapeTags.map((tag) => (
                               <span
                                 key={tag}
@@ -1125,7 +1133,7 @@ function App() {
                         <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
                           Facilities
                         </div>
-                        <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-ink/60">
+                        <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
                           {facilityItems
                             .filter(
                               (item) =>
