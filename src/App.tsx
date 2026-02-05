@@ -690,7 +690,7 @@ function App() {
 
   return (
     <div className="min-h-screen text-ink">
-      <div className="bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
+      <div className="incident-banner bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
         <div className="mx-auto max-w-6xl">
           {incidents.length > 0 ? (
             <div className="incident-marquee">

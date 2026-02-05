@@ -68,6 +68,12 @@ body {
   min-height: 100vh;
 }
 
+.incident-banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 a {
   color: inherit;
   text-decoration: none;
