@@ -889,11 +889,6 @@ function App() {
                     label: 'Dog friendly',
                     value: facilities.dogFriendly,
                   },
-                  {
-                    key: 'accessibilityNotes',
-                    label: 'Accessibility',
-                    value: facilities.accessibilityNotes ? true : null,
-                  },
                 ]
                 const hasFacilityDetails =
                   facilityItems.some(
