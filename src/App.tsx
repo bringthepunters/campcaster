@@ -627,14 +627,6 @@ function App() {
             </a>
             .
           </span>
-          <a
-            href="https://www.emergency.vic.gov.au"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/40 px-3 py-1 text-xs uppercase tracking-[0.2em] transition hover:bg-white hover:text-red-700"
-          >
-            VicEmergency
-          </a>
         </div>
       </div>
       <header className="px-6 pb-10 pt-12 sm:px-10">
