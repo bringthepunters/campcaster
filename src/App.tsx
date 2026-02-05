@@ -1164,7 +1164,7 @@ function App() {
                         href={bookingUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn btn-secondary mt-3 w-full"
+                        className="btn btn-secondary btn-small mt-3 w-full"
                       >
                         Link to camp site
                       </a>

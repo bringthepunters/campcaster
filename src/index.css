@@ -450,6 +450,11 @@ img {
   color: var(--color-primary);
 }
 
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
 /* ============================================
    RESPONSIVE ADJUSTMENTS
    ============================================ */
