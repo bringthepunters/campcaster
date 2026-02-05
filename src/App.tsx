@@ -618,7 +618,18 @@ function App() {
     <div className="min-h-screen text-ink">
       <div className="bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
-          <span>Always check fire danger before planning to camp anywhere.</span>
+          <span>
+            Always check fire danger before planning to camp anywhere.{' '}
+            <a
+              href="https://www.emergency.vic.gov.au"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 transition hover:text-white/80"
+            >
+              Check VicEmergency
+            </a>
+            .
+          </span>
           <a
             href="https://www.emergency.vic.gov.au"
             target="_blank"
