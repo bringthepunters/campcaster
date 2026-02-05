@@ -211,6 +211,8 @@ function App() {
   const [selectedDate, setSelectedDate] = useState('')
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
+  const staticIncidentText =
+    'Always check emergency conditions before planning to camp anywhere.'
 
   useEffect(() => {
     weatherByKeyRef.current = weatherByKey
@@ -689,49 +691,57 @@ function App() {
   return (
     <div className="min-h-screen text-ink">
       <div className="bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3">
-          <span>
-            Always check emergency conditions before planning to camp anywhere.{' '}
-            <a
-              href="https://www.emergency.vic.gov.au"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 transition hover:text-white/80"
-            >
-              Check VicEmergency
-            </a>
-            .
-          </span>
+        <div className="mx-auto max-w-6xl">
           {incidents.length > 0 ? (
-            <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
-              {incidents.map((incident, index) => (
-                <span key={`${incident.title}-${index}`} className="flex items-center gap-2">
-                  <a
-                    href={incident.link || 'https://www.emergency.vic.gov.au'}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline underline-offset-4 transition hover:text-white"
-                  >
-                    {incident.title}
-                  </a>
-                  {incident.category ? (
-                    <span className="rounded-full border border-white/40 px-2 py-[2px] text-[10px]">
-                      {incident.category}
+            <div className="incident-marquee">
+              <div className="incident-track">
+                {[...incidents, ...incidents].map((incident, index) => {
+                  const showStatic = (index + 1) % 3 === 0
+                  return (
+                    <span key={`${incident.title}-${index}`} className="incident-item">
+                      <a
+                        href={incident.link || 'https://www.emergency.vic.gov.au'}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="incident-link"
+                      >
+                        {incident.title}
+                      </a>
+                      {incident.category ? (
+                        <span className="incident-badge">{incident.category}</span>
+                      ) : null}
+                      {showStatic ? (
+                        <span className="incident-static">
+                          {staticIncidentText}{' '}
+                          <a
+                            href="https://www.emergency.vic.gov.au"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="incident-link"
+                          >
+                            Check VicEmergency
+                          </a>
+                        </span>
+                      ) : null}
                     </span>
-                  ) : null}
-                  {(index + 1) % 3 === 0 ? (
-                    <span className="text-white/70">
-                      Always check emergency conditions before planning to camp anywhere.
-                    </span>
-                  ) : null}
-                </span>
-              ))}
+                  )
+                })}
+              </div>
             </div>
-          ) : incidentsError ? (
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
-              {incidentsError}
-            </span>
-          ) : null}
+          ) : (
+            <div className="text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
+              {staticIncidentText}{' '}
+              <a
+                href="https://www.emergency.vic.gov.au"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 transition hover:text-white/80"
+              >
+                Check VicEmergency
+              </a>
+              {incidentsError ? ` • ${incidentsError}` : ''}
+            </div>
+          )}
         </div>
       </div>
       <header className="px-6 pb-10 pt-12 sm:px-10">

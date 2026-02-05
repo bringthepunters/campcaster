@@ -77,6 +77,59 @@ a:hover {
   color: var(--color-primary-dark);
 }
 
+.incident-marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.incident-track {
+  display: inline-flex;
+  gap: 1.5rem;
+  animation: incident-scroll 45s linear infinite;
+}
+
+.incident-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.incident-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.incident-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.incident-badge {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+}
+
+.incident-static {
+  opacity: 0.85;
+}
+
+@keyframes incident-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
