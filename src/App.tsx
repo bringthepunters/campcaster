@@ -696,7 +696,7 @@ function App() {
             <div className="incident-marquee">
               <div className="incident-track">
                 {[...incidents, ...incidents].map((incident, index) => {
-                  const showStatic = (index + 1) % 3 === 0
+                  const showStatic = (index + 1) % 4 === 0
                   return (
                     <span key={`${incident.title}-${index}`} className="incident-item">
                       <a
