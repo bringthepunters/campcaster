@@ -55,9 +55,6 @@ const FACILITY_FILTERS = [
   { key: 'dogFriendly', label: 'Dog-friendly' },
   { key: 'toilets', label: 'Toilets' },
   { key: 'showers', label: 'Showers' },
-  { key: 'bbq', label: 'BBQ' },
-  { key: 'firePits', label: 'Fire pits' },
-  { key: 'picnicTables', label: 'Picnic tables' },
   { key: 'drinkingWater', label: 'Drinking water' },
   { key: 'vehicleAccess', label: 'Vehicle access' },
 ] as const
@@ -835,6 +832,51 @@ function App() {
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
+                const facilities = site.facilities ?? {}
+                const facilityItems = [
+                  {
+                    key: 'toilets',
+                    label: facilities.toiletsType
+                      ? `Toilets (${facilities.toiletsType})`
+                      : 'Toilets',
+                    value: facilities.toilets,
+                  },
+                  { key: 'showers', label: 'Showers', value: facilities.showers },
+                  { key: 'bbq', label: 'BBQ', value: facilities.bbq },
+                  { key: 'firePits', label: 'Fire pits', value: facilities.firePits },
+                  {
+                    key: 'picnicTables',
+                    label: 'Picnic tables',
+                    value: facilities.picnicTables,
+                  },
+                  {
+                    key: 'drinkingWater',
+                    label: 'Drinking water',
+                    value: facilities.drinkingWater,
+                  },
+                  {
+                    key: 'vehicleAccess',
+                    label: 'Vehicle access',
+                    value: facilities.vehicleAccess,
+                  },
+                  {
+                    key: 'dogFriendly',
+                    label: 'Dog friendly',
+                    value: facilities.dogFriendly,
+                  },
+                ]
+                const facilityNotes = [
+                  facilities.dogPolicy
+                    ? `Dog policy: ${facilities.dogPolicy}`
+                    : null,
+                  facilities.accessibilityNotes
+                    ? `Accessibility: ${facilities.accessibilityNotes}`
+                    : null,
+                ].filter(Boolean) as string[]
+                const hasFacilityDetails =
+                  facilityItems.some(
+                    (item) => item.value !== null && item.value !== undefined,
+                  ) || facilityNotes.length > 0
 
                 return (
                   <article
@@ -969,6 +1011,33 @@ function App() {
                                 {tag.replace(/_/g, ' ')}
                               </span>
                             ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    ) : null}
+                    {hasFacilityDetails ? (
+                      <div className="mt-2 flex flex-col gap-2">
+                        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                          Facilities
+                        </div>
+                        <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-ink/60">
+                          {facilityItems
+                            .filter(
+                              (item) =>
+                                item.value !== null && item.value !== undefined,
+                            )
+                            .map((item) => (
+                              <span
+                                key={item.key}
+                                className="rounded-full bg-ink/5 px-2 py-1"
+                              >
+                                {item.label}: {item.value ? 'Yes' : 'No'}
+                              </span>
+                            ))}
+                        </div>
+                        {facilityNotes.length ? (
+                          <div className="text-xs text-ink/60">
+                            {facilityNotes.join(' • ')}
                           </div>
                         ) : null}
                       </div>
