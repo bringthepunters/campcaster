@@ -619,7 +619,7 @@ function App() {
       <div className="bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
           <span>
-            Always check fire danger before planning to camp anywhere.{' '}
+            Always check emergency conditions before planning to camp anywhere.{' '}
             <a
               href="https://www.emergency.vic.gov.au"
               target="_blank"
