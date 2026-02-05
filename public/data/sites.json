@@ -30,54 +30,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-anglers-rest-camping-area-alpine-national-park",
-    "name": "Anglers Rest Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.98880399000001,
-    "lng": 147.49100208000004,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/anglers-rest-camping-area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-taylors-crossing-camp-area-alpine-national-park",
-    "name": "Taylors Crossing Camp Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.82622097000001,
-    "lng": 147.65995583999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-boreang-campground-grampians-national-park",
     "name": "Boreang Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -101,59 +53,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/boreang-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-fitzgeralds-hut-camping-area-alpine-national-park",
-    "name": "Fitzgeralds Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.878402970000025,
-    "lng": 147.36335111999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-bennies-camping-area-alpine-national-park",
-    "name": "Bennies Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.966223979999995,
-    "lng": 146.53610388000004,
-    "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -482,36 +381,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-quart-pot-flat-hut-camping-area-alpine-national-park",
-    "name": "Quart Pot Flat Hut & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.727598969999974,
-    "lng": 147.60799884000005,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "mitchell-river-national-park-rock-creek-mitchell-river-national-park",
     "name": "Rock Creek, Mitchell River National Park",
     "parkName": "Mitchell River National Park",
@@ -699,64 +568,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-cope-hut-alpine-national-park",
-    "name": "Cope Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.907939915999975,
-    "lng": 147.29298410900003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-dibbin-hut-camping-area-alpine-national-park",
-    "name": "Dibbin Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94872548799998,
-    "lng": 147.18307238800003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -952,36 +763,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-cowombat-flat-alpine-national-park",
-    "name": "Cowombat Flat, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.79526304000001,
-    "lng": 148.16999411999996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "murray-sunset-national-park-rocket-lake-campground-murray-sunset-national-park",
     "name": "Rocket Lake campground, Murray - Sunset National Park",
     "parkName": "Murray - Sunset National Park",
@@ -1035,65 +816,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/strachans-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-sandy-flat-alpine-national-park",
-    "name": "Sandy Flat, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94179501000002,
-    "lng": 146.42866584,
-    "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-cleve-cole-hut-camping-area-alpine-national-park",
-    "name": "Cleve Cole Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.758211029999984,
-    "lng": 147.32602415999997,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -1172,66 +894,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-pineapple-flat-camping-area-alpine-national-park",
-    "name": "Pineapple Flat Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.06629399000002,
-    "lng": 146.49896016000002,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "This site is accessible by 4WD only and there are numerous deep river crossings throughout the area. Be mindful the weather in the Alps is unpredictable and may change at any time. The King River can rise very quickly after rain/snowmelt and may not be safe to cross. Always ensure you plan ahead, and check river and weather conditions prior to undertaking your trip.",
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "King Hut, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Enjoy a picnic on the shady riverbanks or explore the historic King Hut. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/Pineapple-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-mile-flat-camping-area-alpine-national-park",
-    "name": "Mile Flat Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.20012903000003,
-    "lng": 146.42972208000003,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -1554,30 +1216,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-buckety-plain-camping-area-alpine-national-park",
-    "name": "Buckety Plain Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94030497,
-    "lng": 147.32657387999996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/buckety-plain-camping-area",
-    "bookingUrl": null
-  },
-  {
     "id": "howqua-hills-h-a-frys-flat-howqua-hills-h-a",
     "name": "Frys Flat, Howqua Hills H.A",
     "parkName": "Howqua Hills H.A",
@@ -1608,35 +1246,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-faithfull-hut-alpine-national-park",
-    "name": "Faithfull Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.93506597999999,
-    "lng": 147.32703396,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p",
     "name": "Forges Bend, Yarrawonga R.P",
     "parkName": "Yarrawonga R.P",
@@ -1658,36 +1267,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-bindaree-flat-camping-area-alpine-national-park",
-    "name": "Bindaree Flat Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.167009029999974,
-    "lng": 146.54351915999996,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "Please note access to this campsite is accessible by 4WD only and requires river crossings. Weather in the Victorian High Country can be unpredictable and may change at any time. Ensure you check the weather prior to undertaking your trip as the Howqua River can rise quickly after heavy rain and may be unsafe to cross. Call the local Parks Victoria office on 13 19 63 or check the website to gain an understanding of current track conditions.",
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Dogs are strictly prohibited throughout the Alpine National Park.",
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. Entry requirements apply for parks and reserves that are usually dog prohibited, such as national parks."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/Bindaree-Flat-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -2098,102 +1677,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-bennies-camping-area-alpine-national-park-2",
-    "name": "Bennies Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.96397101000002,
-    "lng": 146.53858895999997,
-    "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-roaring-camp-alpine-national-park",
-    "name": "Roaring Camp, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.03446998999999,
-    "lng": 148.74195599999996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-the-playgrounds-alpine-national-park",
-    "name": "The Playgrounds, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13951304,
-    "lng": 147.29912207999996,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-willis-camp-area-alpine-national-park",
-    "name": "Willis Camp Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.89830404000003,
-    "lng": 148.42499687999998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "howqua-hills-h-a-pickerings-flat-howqua-hills-h-a",
     "name": "Pickerings Flat, Howqua Hills H.A",
     "parkName": "Howqua Hills H.A",
@@ -2314,54 +1797,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-eaglevale-camping-area-alpine-national-park",
-    "name": "Eaglevale Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.36712502,
-    "lng": 147.00677615999996,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-wonnangatta-station-alpine-national-park",
-    "name": "Wonnangatta Station*, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.208357999999976,
-    "lng": 146.83095288000004,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-fourth-beach-cape-conran-coastal-park",
     "name": "Fourth Beach, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -2452,36 +1887,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-six-mile-alpine-national-park",
-    "name": "Six Mile, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.19523798,
-    "lng": 146.39942592,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "great-otway-national-park-blanket-bay-great-otway-national-park-3",
     "name": "Blanket Bay, Great Otway National Park",
     "parkName": "Great Otway National Park",
@@ -2539,30 +1944,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-raspberry-hill-picnic-camping-area-alpine-national-park",
-    "name": "Raspberry Hill Picnic & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94402701000001,
-    "lng": 147.31670699999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -2758,30 +2139,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/first-wannon-hiker-camp-major-mitchell-plateau",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-hermit-creek-alpine-national-park",
-    "name": "Hermit Creek, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.45223594599997,
-    "lng": 148.08802593200005,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -3070,64 +2427,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-dibbin-hut-camping-area-alpine-national-park-2",
-    "name": "Dibbin Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94872548799998,
-    "lng": 147.18307238800003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-dibbin-hut-camping-area-alpine-national-park-3",
-    "name": "Dibbin Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94872548799998,
-    "lng": 147.18307238800003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "great-otway-national-park-blanket-bay-great-otway-national-park-5",
     "name": "Blanket Bay, Great Otway National Park",
     "parkName": "Great Otway National Park",
@@ -3182,64 +2481,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/candlebark-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-cope-hut-alpine-national-park-2",
-    "name": "Cope Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.907939915999975,
-    "lng": 147.29298410900003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-cope-hut-alpine-national-park-3",
-    "name": "Cope Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.907939915999975,
-    "lng": 147.29298410900003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -3327,30 +2568,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/troopers-creek-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-wombat-post-office-camping-area-alpine-national-park",
-    "name": "Wombat Post Office Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.77899796999998,
-    "lng": 147.59599895999997,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -3462,30 +2679,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-rocky-plains-creek-alpine-national-park",
-    "name": "Rocky Plains Creek, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.92787200999999,
-    "lng": 148.15495188,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": [],
-      "dogPolicy": []
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/camping-with-your-horse-in-the-bogong-high-plains",
-    "bookingUrl": null
-  },
-  {
     "id": "creswick-r-p-slatey-creek-picnic-area-no-3-creswick-r-p",
     "name": "Slatey Creek Picnic Area No 3, Creswick R.P.",
     "parkName": "Creswick R.P.",
@@ -3593,30 +2786,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/mueller-inlet-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-langford-west-camping-area-alpine-national-park",
-    "name": "Langford West Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.93054095999997,
-    "lng": 147.30317604000004,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -3893,30 +3062,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-fishermans-bend-alpine-national-park",
-    "name": "Fishermans Bend, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.381138324000005,
-    "lng": 148.04433508700004,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "mount-samaria-state-park-spring-creek-sawmill-area-mount-samaria-state-park",
     "name": "Spring Creek Sawmill Area, Mount Samaria State Park",
     "parkName": "Mount Samaria State Park",
@@ -4046,35 +3191,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-dogmans-hut-camping-area-alpine-national-park",
-    "name": "Dogmans Hut & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.53806202999999,
-    "lng": 148.13195687999996,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -4379,118 +3495,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-dibbin-hut-camping-area-alpine-national-park-4",
-    "name": "Dibbin Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94872548799998,
-    "lng": 147.18307238800003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-dibbin-hut-camping-area-alpine-national-park-5",
-    "name": "Dibbin Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94872548799998,
-    "lng": 147.18307238800003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-native-dog-flat-alpine-national-park",
-    "name": "Native Dog Flat, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.89880299999999,
-    "lng": 148.08800304,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-the-poplars-camping-area-alpine-national-park",
-    "name": "The Poplars Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.77754096000001,
-    "lng": 148.10494391999998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "murray-sunset-national-park-pink-lakes-lake-becking-campground-murray-sunset-national-park",
     "name": "Pink Lakes - Lake Becking campground, Murray - Sunset National Park",
     "parkName": "Murray - Sunset National Park",
@@ -4575,59 +3579,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/jimmy-creek-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-jb-plain-hut-and-camping-area-alpine-national-park",
-    "name": "JB Plain Hut and Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.02527801999997,
-    "lng": 147.22373015999995,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-bogong-creek-huts-2-alpine-national-park",
-    "name": "Bogong Creek Huts (2), Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.76469795999998,
-    "lng": 147.25322315999995,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": [],
-      "dogPolicy": []
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/camping-with-your-horse-in-the-bogong-high-plains",
     "bookingUrl": null
   },
   {
@@ -4982,35 +3933,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-roper-hut-camping-area-alpine-national-park",
-    "name": "Roper Hut Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.81228897,
-    "lng": 147.32961695999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "mount-beckworth-s-r-bracken-gully-picnic-area-mount-beckworth-s-r",
     "name": "Bracken Gully Picnic Area, Mount Beckworth S.R.",
     "parkName": "Mount Beckworth S.R.",
@@ -5271,35 +4193,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-cope-hut-alpine-national-park-4",
-    "name": "Cope Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.907939915999975,
-    "lng": 147.29298410900003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-6",
     "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -5408,54 +4301,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-christie-orourkes-alpine-national-park",
-    "name": "Christie Orourkes, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13778998999999,
-    "lng": 147.26533715999994,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-the-joker-camping-area-alpine-national-park",
-    "name": "The Joker Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.94150196999999,
-    "lng": 147.47399891999999,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "mount-difficult-plantation-campground-plantation-campground-mount-difficult-plantation-campground",
     "name": "Plantation Campground, Mount Difficult Plantation Campground",
     "parkName": "Mount Difficult Plantation Campground",
@@ -5545,59 +4390,6 @@
     "parkName": "Buchan (AT) Cave Reserve",
     "lat": -37.49248700999999,
     "lng": 148.16299103999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-kennedy-hut-camping-area-alpine-national-park",
-    "name": "Kennedy Hut & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.80499699000001,
-    "lng": 147.66400008000005,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-limestone-creek-camp-area-alpine-national-park",
-    "name": "Limestone Creek Camp Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.85465998000001,
-    "lng": 148.05101088000004,
     "lga": "EAST GIPPSLAND SHIRE",
     "tourismRegion": "Gippsland",
     "facilities": {
@@ -5848,30 +4640,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-diamantina-horse-yards-alpine-national-park",
-    "name": "Diamantina Horse Yards, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.91684098000002,
-    "lng": 147.16447200000005,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": [],
-      "dogPolicy": []
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/camping-with-your-horse-in-the-bogong-high-plains",
-    "bookingUrl": null
-  },
-  {
     "id": "leaghur-state-park-south-of-lake-meran-leaghur-state-park",
     "name": "South of Lake Meran, Leaghur State Park",
     "parkName": "Leaghur State Park",
@@ -6031,60 +4799,6 @@
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/wingan-inlet-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-pioneer-racecourse-alpine-national-park",
-    "name": "Pioneer Racecourse, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.334663999999975,
-    "lng": 147.05079911999997,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-bullock-flat-camping-area-alpine-national-park",
-    "name": "Bullock Flat Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.37432303999998,
-    "lng": 147.05647308000005,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -6415,30 +5129,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-mount-tingaringy-alpine-national-park",
-    "name": "Mount Tingaringy, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.997577999999976,
-    "lng": 148.67696016000002,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-borough-huts-campground-grampians-national-park",
     "name": "Borough Huts Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -6489,30 +5179,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-top-crossing-alpine-national-park",
-    "name": "Top Crossing, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.96645897000002,
-    "lng": 146.44005300000003,
-    "lga": "WANGARATTA RURAL CITY",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cathedral-range-state-park-neds-gully-camping-area-cathedral-range-state-park",
     "name": "Neds Gully Camping Area, Cathedral Range State Park",
     "parkName": "Cathedral Range State Park",
@@ -6540,54 +5206,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cathedral-range-state-park/where-to-stay/neds-gully-camping-area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-gibbo-river-camping-area-alpine-national-park",
-    "name": "Gibbo River Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13778998999999,
-    "lng": 147.26533715999994,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-surveyors-creek-alpine-national-park",
-    "name": "Surveyors Creek, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13778998999999,
-    "lng": 147.26533715999994,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -6636,124 +5254,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-howitt-hut-alpine-national-park",
-    "name": "Howitt Hut*, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.22972697,
-    "lng": 146.69788391999998,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-charlie-creek-hut-camping-area-alpine-national-park",
-    "name": "Charlie Creek Hut & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.73095804000002,
-    "lng": 148.05899783999996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-mitchell-flat-picnic-area-alpine-national-park",
-    "name": "Mitchell Flat Picnic Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.30445702999998,
-    "lng": 146.35275695999997,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/6-Mile-Flat-Camping-Area",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-upper-howqua-picnic-area-alpine-national-park",
-    "name": "Upper Howqua Picnic Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.17548604000001,
-    "lng": 146.56133411999997,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "Please note access to this campsite is accessible by 2WD depending on river levels. The trailhead carpark does not require river to be crossed. Weather in the Victorian High Country can be unpredictable and may change at any time. Ensure you check the weather prior to undertaking your trip as the Howqua River can rise quickly after heavy rain and may be unsafe to cross. Call the local Parks Victoria office on 13 19 63 or check the website to gain an understanding of current track conditions.",
-        "Upper Howqua Camping Area is located just over 2 hours\u2019 drive from Mansfield. Take the Mt Buller Road east and enter via Howqua Hills (4WD only). Or continue to Mirrimbah and head in via Circuit Road (2WD accessible). Please note these roads are seasonally closed."
-      ],
-      "dogPolicy": [
-        "Dogs are strictly prohibited throughout the Alpine National Park.",
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. Entry requirements apply for parks and reserves that are usually dog prohibited, such as national parks."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/Upper-Howqua-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -6807,30 +5307,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/thurra-river-campground",
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-mountain-creek-picnic-area-and-camping-area-alpine-national-park",
-    "name": "Mountain Creek Picnic Area and Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.699884010000005,
-    "lng": 147.25222596000003,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
     "bookingUrl": null
   },
   {
@@ -7128,35 +5604,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-cope-hut-alpine-national-park-5",
-    "name": "Cope Hut, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.907939915999975,
-    "lng": 147.29298410900003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
-    "bookingUrl": null
-  },
-  {
     "id": "wyperfeld-national-park-remote-camp-wyperfeld-national-park",
     "name": "Remote Camp, Wyperfeld National Park",
     "parkName": "Wyperfeld National Park",
@@ -7318,108 +5765,12 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-berrima-river-alpine-national-park",
-    "name": "Berrima River, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13778998999999,
-    "lng": 147.26533715999994,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-sandy-creek-camping-area-alpine-national-park",
-    "name": "Sandy Creek Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.13778998999999,
-    "lng": 147.26533715999994,
-    "lga": "ALPINE SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-crb-camp-area-alpine-national-park",
-    "name": "CRB Camp Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.998260019999975,
-    "lng": 147.49525512000002,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "mount-wills-h-a-big-river-camp-area-mount-wills-h-a",
     "name": "Big River Camp Area, Mount Wills H.A",
     "parkName": "Mount Wills H.A",
     "lat": -36.89399700000001,
     "lng": 147.46230216000004,
     "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-macalister-springs-alpine-national-park",
-    "name": "MacAlister Springs, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.17286101000002,
-    "lng": 146.66882292000003,
-    "lga": "WELLINGTON SHIRE",
     "tourismRegion": "Gippsland",
     "facilities": {
       "dogFriendly": null,
@@ -7485,35 +5836,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-davies-plain-hut-camping-area-alpine-national-park",
-    "name": "Davies Plain Hut & Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.64354500000002,
-    "lng": 148.13903591999997,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Pineapple flat, also located on the banks of the King River, offers further camping and recreation opportunities for 4WDs within the King Valley. Please note this is not a designated horse camping area and dogs are prohibited in the Alpine National Park.",
-        "Take a drive with the whole family to Cobbler Lake Hut located on the breath taking Cobbler Lake. From there, undertake a challenging hike to the summit of Mt Cobbler and admire stunning views of the surrounding mountain peaks. Please note dogs are not permitted within the Alpine National Park and always ensure you check road conditions prior to undertaking your trip."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/King-Hut-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -7825,30 +6147,6 @@
     "bookingUrl": null
   },
   {
-    "id": "alpine-national-park-taylors-camp-alpine-national-park",
-    "name": "Taylors Camp, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -36.73129302000001,
-    "lng": 147.73314816000004,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p-3",
     "name": "Forges Bend, Yarrawonga R.P",
     "parkName": "Yarrawonga R.P",
@@ -7870,36 +6168,6 @@
       "dogPolicy": null
     },
     "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "alpine-national-park-7-mile-flat-camping-area-alpine-national-park",
-    "name": "7 Mile Flat Camping Area, Alpine National Park",
-    "parkName": "Alpine National Park",
-    "lat": -37.19716497000002,
-    "lng": 146.42078688000004,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "This site is accessible by 2WD however ensure you check track conditions by calling 13 19 63 prior to undertaking your trip as road conditions may be unsuitable for horse floats.",
-        "### Accessibility"
-      ],
-      "dogPolicy": [
-        "Dogs are strictly prohibited throughout the Alpine National Park.",
-        "Assistance dogs are welcome in Parks Victoria parks and reserves. Entry requirements apply for parks and reserves that are usually dog prohibited, such as national parks."
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/7-Mile-Flat-Camping-Area",
     "bookingUrl": null
   },
   {
@@ -8342,6 +6610,54 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/eastern-tyers-camping-area",
+    "bookingUrl": null
+  },
+  {
+    "id": "alpine-national-park-7-mile-flat-camping-area",
+    "name": "7 Mile Flat Camping Area",
+    "parkName": "Alpine National Park",
+    "lat": -37.1949600668775,
+    "lng": 146.42163599140812,
+    "lga": null,
+    "tourismRegion": null,
+    "facilities": {
+      "dogFriendly": null,
+      "toilets": null,
+      "toiletsType": null,
+      "showers": null,
+      "bbq": null,
+      "firePits": null,
+      "picnicTables": null,
+      "drinkingWater": null,
+      "vehicleAccess": null,
+      "accessibilityNotes": null,
+      "dogPolicy": null
+    },
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/7-mile-flat-camping-area",
+    "bookingUrl": null
+  },
+  {
+    "id": "alpine-national-park-8-mile-flat-camping-area",
+    "name": "8 Mile Flat Camping Area",
+    "parkName": "Alpine National Park",
+    "lat": -37.197930259652864,
+    "lng": 146.43031244907783,
+    "lga": null,
+    "tourismRegion": null,
+    "facilities": {
+      "dogFriendly": null,
+      "toilets": null,
+      "toiletsType": null,
+      "showers": null,
+      "bbq": null,
+      "firePits": null,
+      "picnicTables": null,
+      "drinkingWater": null,
+      "vehicleAccess": null,
+      "accessibilityNotes": null,
+      "dogPolicy": null
+    },
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/8-mile-flat-camping-area",
     "bookingUrl": null
   }
 ]
