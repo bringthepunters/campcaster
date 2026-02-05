@@ -642,7 +642,7 @@ function App() {
                 Campgrounds shown: {filteredSites.length}
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-4">
-                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/70">
+                <span className="text-sm font-bold uppercase tracking-[0.2em] text-ink/70">
                   First, choose the date
                 </span>
                 <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
