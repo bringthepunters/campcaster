@@ -735,42 +735,6 @@
     "animalsFauna": []
   },
   {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-2",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.82639618799999,
-    "lng": 143.58221167399995,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
-    ],
-    "animalsFauna": []
-  },
-  {
     "id": "grampians-national-park-buandik-grampians-national-park",
     "name": "Buandik, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -1013,42 +977,6 @@
     "animalsFauna": []
   },
   {
-    "id": "discovery-bay-coastal-park-swan-lake-camp-discovery-bay-coastal-park-2",
-    "name": "Swan Lake Camp, Discovery Bay Coastal Park",
-    "parkName": "Discovery Bay Coastal Park",
-    "lat": -38.21541300000001,
-    "lng": 141.31194912,
-    "lga": "GLENELG SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/swan-lake-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "lake_wetland",
-      "river_creek"
-    ],
-    "animalsFauna": []
-  },
-  {
     "id": "brisbane-ranges-national-park-little-river-picnic-area-and-walk-in-camping-ground-brisbane-ranges-national-park",
     "name": "Little River Picnic Area and Walk-in Camping Ground, Brisbane Ranges National Park",
     "parkName": "Brisbane Ranges National Park",
@@ -1222,78 +1150,6 @@
     "parkName": "Cape Conran Coastal Park",
     "lat": -37.787777138000024,
     "lng": 148.87980715499998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-2",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79822810100001,
-    "lng": 148.74227283100004,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-3",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79872012999999,
-    "lng": 148.74190959099997,
     "lga": "EAST GIPPSLAND SHIRE",
     "tourismRegion": "Gippsland",
     "facilities": {
@@ -1717,78 +1573,6 @@
     "animalsFauna": []
   },
   {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-3",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.82611685699999,
-    "lng": 143.58221309500004,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-4",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.826113964,
-    "lng": 143.581936564,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
-    ],
-    "animalsFauna": []
-  },
-  {
     "id": "wilsons-promontory-national-park-barry-creek-wilsons-promontory-national-park",
     "name": "Barry Creek, Wilsons Promontory National Park",
     "parkName": "Wilsons Promontory National Park",
@@ -2034,78 +1818,6 @@
       "valley_gorge",
       "mountains_alpine",
       "beach_coast"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-4",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79617261599998,
-    "lng": 148.74597241100003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-5",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.826113964,
-    "lng": 143.581936564,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
     ],
     "animalsFauna": []
   },
@@ -2493,42 +2205,6 @@
     "animalsFauna": []
   },
   {
-    "id": "grampians-national-park-first-wannon-remote-campground-grampians-national-park-2",
-    "name": "First Wannon Remote Campground, Grampians National Park",
-    "parkName": "Grampians National Park",
-    "lat": -37.32067196999998,
-    "lng": 142.58812104000003,
-    "lga": "ARARAT RURAL CITY",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "pit",
-      "showers": null,
-      "bbq": true,
-      "firePits": false,
-      "picnicTables": null,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 34: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/first-wannon-hiker-camp-major-mitchell-plateau",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine",
-      "beach_coast",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
     "id": "mount-samaria-state-park-spring-creek-sawmill-area-mount-samaria-state-park",
     "name": "Spring Creek Sawmill Area, Mount Samaria State Park",
     "parkName": "Mount Samaria State Park",
@@ -2771,42 +2447,6 @@
     "landscapeTags": [
       "river_creek",
       "beach_coast",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-5",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79670093599998,
-    "lng": 148.74498541100002,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
       "lake_wetland"
     ],
     "animalsFauna": []
@@ -3197,42 +2837,6 @@
     "animalsFauna": []
   },
   {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-6",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.82639618799999,
-    "lng": 143.58221167399995,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
-    ],
-    "animalsFauna": []
-  },
-  {
     "id": "nevins-beach-camping-area",
     "name": "Nevins Beach Camping Area",
     "parkName": "River Murray Reserve",
@@ -3284,42 +2888,6 @@
       ]
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/princess-margaret-rose-cave-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-6",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79545913599998,
-    "lng": 148.747897673,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
     "landscapeTags": [
       "beach_coast",
@@ -3820,78 +3388,6 @@
       "beach_coast",
       "river_creek",
       "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-7",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.826113964,
-    "lng": 143.581936564,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "great-otway-national-park-blanket-bay-great-otway-national-park-8",
-    "name": "Blanket Bay, Great Otway National Park",
-    "parkName": "Great Otway National Park",
-    "lat": -38.826113964,
-    "lng": 143.581936564,
-    "lga": "COLAC OTWAY SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "forest"
     ],
     "animalsFauna": []
   },
@@ -4479,114 +3975,6 @@
       "river_creek",
       "lake_wetland",
       "beach_coast"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-7",
-    "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
-    "parkName": "Cape Conran Coastal Park",
-    "lat": -37.79749393899999,
-    "lng": 148.74316417399996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": true,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": true,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": true,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "river_creek",
-      "lake_wetland"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "murray-sunset-national-park-underbool-track-campground-murray-sunset-national-park-2",
-    "name": "Underbool Track campground, Murray - Sunset National Park",
-    "parkName": "Murray - Sunset National Park",
-    "lat": -34.891137415,
-    "lng": 141.62692494199996,
-    "lga": "MILDURA RURAL CITY",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": true,
-      "toiletsType": "flushing",
-      "showers": null,
-      "bbq": true,
-      "firePits": true,
-      "picnicTables": true,
-      "drinkingWater": false,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 9: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland",
-      "river_creek",
-      "beach_coast"
-    ],
-    "animalsFauna": []
-  },
-  {
-    "id": "wilsons-promontory-national-park-refuge-cove-wilsons-promontory-national-park-2",
-    "name": "Refuge Cove, Wilsons Promontory National Park",
-    "parkName": "Wilsons Promontory National Park",
-    "lat": -39.04249659200002,
-    "lng": 146.464318285,
-    "lga": "SOUTH GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": false,
-      "toilets": true,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": true,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": true,
-      "accessibilityNotes": [
-        "*   [Accessible accommodation](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access/accessible-accommodation-information)",
-        "*           *   [![Image 30: Man in wheelchair waits as his two friends cross accessible Kane's Bridge in Yarra Bend Park. ](http://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/things-to-do/accessibility/1-accessibility-yarra-bend-1920x1124.jpg?rev=837ecfa3513a4d608dc817ea967a6fda&la=en&h=325&w=556&hash=9CE941267351E0F9C6115B8C11E77AF2) All abilities access](http://www.parks.vic.gov.au/get-into-nature/all-abilities-access)"
-      ],
-      "dogPolicy": [
-        "*   [Dog walking](http://www.parks.vic.gov.au/things-to-do/dog-friendly-parks)",
-        "*   [Dog friendly camping](http://www.parks.vic.gov.au/where-to-stay/dog-friendly-camping)"
-      ]
-    },
-    "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/refuge-cove-camping-area",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast",
-      "mountains_alpine",
-      "lake_wetland"
     ],
     "animalsFauna": []
   },
