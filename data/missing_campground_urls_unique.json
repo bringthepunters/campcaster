@@ -1,0 +1,632 @@
+[
+  {
+    "id": "alpine-national-park-anglers-rest-camping-area-alpine-national-park",
+    "name": "Anglers Rest Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-bennies-camping-area-alpine-national-park",
+    "name": "Bennies Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-berrima-river-alpine-national-park",
+    "name": "Berrima River, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-buckety-plain-camping-area-alpine-national-park",
+    "name": "Buckety Plain Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-crb-camp-area-alpine-national-park",
+    "name": "CRB Camp Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-christie-orourkes-alpine-national-park",
+    "name": "Christie Orourkes, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-eaglevale-camping-area-alpine-national-park",
+    "name": "Eaglevale Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-fishermans-bend-alpine-national-park",
+    "name": "Fishermans Bend, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-gibbo-river-camping-area-alpine-national-park",
+    "name": "Gibbo River Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-hermit-creek-alpine-national-park",
+    "name": "Hermit Creek, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-langford-west-camping-area-alpine-national-park",
+    "name": "Langford West Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-limestone-creek-camp-area-alpine-national-park",
+    "name": "Limestone Creek Camp Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-macalister-springs-alpine-national-park",
+    "name": "MacAlister Springs, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-mount-tingaringy-alpine-national-park",
+    "name": "Mount Tingaringy, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-mountain-creek-picnic-area-and-camping-area-alpine-national-park",
+    "name": "Mountain Creek Picnic Area and Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-pioneer-racecourse-alpine-national-park",
+    "name": "Pioneer Racecourse, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-raspberry-hill-picnic-camping-area-alpine-national-park",
+    "name": "Raspberry Hill Picnic & Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-roaring-camp-alpine-national-park",
+    "name": "Roaring Camp, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-sandy-creek-camping-area-alpine-national-park",
+    "name": "Sandy Creek Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-surveyors-creek-alpine-national-park",
+    "name": "Surveyors Creek, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-taylors-camp-alpine-national-park",
+    "name": "Taylors Camp, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-taylors-crossing-camp-area-alpine-national-park",
+    "name": "Taylors Crossing Camp Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-the-joker-camping-area-alpine-national-park",
+    "name": "The Joker Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-the-playgrounds-alpine-national-park",
+    "name": "The Playgrounds, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-the-poplars-camping-area-alpine-national-park",
+    "name": "The Poplars Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-top-crossing-alpine-national-park",
+    "name": "Top Crossing, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-willis-camp-area-alpine-national-park",
+    "name": "Willis Camp Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-wombat-post-office-camping-area-alpine-national-park",
+    "name": "Wombat Post Office Camping Area, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "alpine-national-park-wonnangatta-station-alpine-national-park",
+    "name": "Wonnangatta Station*, Alpine National Park",
+    "parkName": "Alpine National Park"
+  },
+  {
+    "id": "barmah-national-park-barmah-lakes-proposed-murray-river-park-part",
+    "name": "Barmah Lakes, Proposed Murray River Park (part)",
+    "parkName": "Barmah National Park"
+  },
+  {
+    "id": "barmah-national-park-not-attached-to-a-site",
+    "name": "_Not Attached to a Site",
+    "parkName": "Barmah National Park"
+  },
+  {
+    "id": "baw-baw-national-park-aberfeldy-bridge-baw-baw-national-park",
+    "name": "Aberfeldy Bridge, Baw Baw National Park",
+    "parkName": "Baw Baw National Park"
+  },
+  {
+    "id": "baw-baw-national-park-eastern-tyers-baw-baw-national-park",
+    "name": "Eastern Tyers, Baw Baw National Park",
+    "parkName": "Baw Baw National Park"
+  },
+  {
+    "id": "baw-baw-national-park-mushroom-rocks-baw-baw-national-park",
+    "name": "Mushroom Rocks, Baw Baw National Park",
+    "parkName": "Baw Baw National Park"
+  },
+  {
+    "id": "black-range-state-park-burrunj-campground-black-range-state-park",
+    "name": "Burrunj Campground, Black Range State Park",
+    "parkName": "Black Range State Park"
+  },
+  {
+    "id": "buchan-at-cave-reserve-buchan-work-centre-buchan-at-cave-reserve",
+    "name": "Buchan, Work Centre, Buchan (AT) Cave Reserve",
+    "parkName": "Buchan (AT) Cave Reserve"
+  },
+  {
+    "id": "bunyip-state-park-nash-creek-camping-area-bunyip-state-park",
+    "name": "Nash Creek Camping Area, Bunyip State Park",
+    "parkName": "Bunyip State Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-black-mountain-burrowa-pine-mountain-national-park",
+    "name": "Black Mountain, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-bluegum-camp-burrowa-pine-mountain-national-park",
+    "name": "Bluegum Camp, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-bluff-creek-burrowa-pine-mountain-national-park",
+    "name": "Bluff Creek, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-hinces-creek-burrowa-pine-mountain-national-park",
+    "name": "Hinces Creek, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-hinces-saddle-burrowa-pine-mountain-national-park",
+    "name": "Hinces Saddle, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-pine-mountain-picnic-area-burrowa-pine-mountain-national-park",
+    "name": "Pine Mountain Picnic Area, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-ross-lookout-burrowa-pine-mountain-national-park",
+    "name": "Ross Lookout, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "burrowa-pine-mountain-national-park-the-ridge-burrowa-pine-mountain-national-park",
+    "name": "The Ridge, Burrowa - Pine Mountain National Park",
+    "parkName": "Burrowa - Pine Mountain National Park"
+  },
+  {
+    "id": "castlemaine-diggings-national-heritage-park-vaughan-spring-castlemaine-diggings-national-heritage-park",
+    "name": "Vaughan Spring, Castlemaine Diggings National Heritage Park",
+    "parkName": "Castlemaine Diggings National Heritage Park"
+  },
+  {
+    "id": "cobram-r-p-big-toms-bend-cobram-r-p",
+    "name": "Big Toms Bend, Cobram R.P",
+    "parkName": "Cobram R.P"
+  },
+  {
+    "id": "cobram-r-p-horse-shoe-bend-cobram-r-p",
+    "name": "Horse-shoe Bend, Cobram R.P",
+    "parkName": "Cobram R.P"
+  },
+  {
+    "id": "cobram-r-p-scotts-beach-cobram-r-p",
+    "name": "Scotts Beach, Cobram R.P",
+    "parkName": "Cobram R.P"
+  },
+  {
+    "id": "crawford-river-r-p-hiscocks-camping-area-crawford-river-r-p",
+    "name": "Hiscocks Camping Area, Crawford River R.P",
+    "parkName": "Crawford River R.P"
+  },
+  {
+    "id": "creswick-r-p-eatons-dam-creswick-r-p",
+    "name": "Eatons Dam, Creswick R.P.",
+    "parkName": "Creswick R.P."
+  },
+  {
+    "id": "creswick-r-p-slatey-creek-picnic-area-no-1-creswick-r-p",
+    "name": "Slatey Creek Picnic Area No 1, Creswick R.P.",
+    "parkName": "Creswick R.P."
+  },
+  {
+    "id": "creswick-r-p-slatey-creek-picnic-area-no-2-creswick-r-p",
+    "name": "Slatey Creek Picnic Area No 2, Creswick R.P.",
+    "parkName": "Creswick R.P."
+  },
+  {
+    "id": "creswick-r-p-slatey-creek-picnic-area-no-3-creswick-r-p",
+    "name": "Slatey Creek Picnic Area No 3, Creswick R.P.",
+    "parkName": "Creswick R.P."
+  },
+  {
+    "id": "croajingolong-national-park-clinton-rocks-croajingolong-national-park",
+    "name": "Clinton Rocks, Croajingolong National Park",
+    "parkName": "Croajingolong National Park"
+  },
+  {
+    "id": "croajingolong-national-park-gale-hill-croajingolong-national-park",
+    "name": "Gale Hill, Croajingolong National Park",
+    "parkName": "Croajingolong National Park"
+  },
+  {
+    "id": "echuca-r-p-christies-beach-camping-area-echuca-r-p",
+    "name": "Christies Beach Camping Area, Echuca R.P",
+    "parkName": "Echuca R.P"
+  },
+  {
+    "id": "enfield-state-park-surface-point-picnic-ground-enfield-state-park",
+    "name": "Surface Point Picnic Ground, Enfield State Park",
+    "parkName": "Enfield State Park"
+  },
+  {
+    "id": "errinundra-national-park-bonang-river-errinundra-national-park",
+    "name": "Bonang River, Errinundra National Park",
+    "parkName": "Errinundra National Park"
+  },
+  {
+    "id": "errinundra-national-park-tea-tree-flat-errinundra-national-park",
+    "name": "Tea Tree Flat, Errinundra National Park",
+    "parkName": "Errinundra National Park"
+  },
+  {
+    "id": "errinundra-national-park-not-attached-to-a-site",
+    "name": "_Not Attached to a Site",
+    "parkName": "Errinundra National Park"
+  },
+  {
+    "id": "ewing-morass-w-r-trident-arm-camping-area-lake-tyers-s-p",
+    "name": "Trident Arm Camping Area, Lake Tyers S.P.",
+    "parkName": "Ewing Morass W.R"
+  },
+  {
+    "id": "grampians-national-park-kalymna-falls-campground-grampians-national-park",
+    "name": "Kalymna Falls Campground, Grampians National Park",
+    "parkName": "Grampians National Park"
+  },
+  {
+    "id": "grant-h-a-grant-historic-township-grant-h-a",
+    "name": "Grant Historic Township, Grant H.A.",
+    "parkName": "Grant H.A."
+  },
+  {
+    "id": "grant-h-a-talbotville-historic-township-grant-h-a",
+    "name": "Talbotville Historic Township, Grant H.A.",
+    "parkName": "Grant H.A."
+  },
+  {
+    "id": "gundowring-ss-r-not-attached-to-a-site",
+    "name": "_Not Attached to a Site",
+    "parkName": "Gundowring SS.R."
+  },
+  {
+    "id": "heathcote-graytown-national-park-dargile-heathcote-graytown-national-park",
+    "name": "Dargile, Heathcote-Graytown National Park",
+    "parkName": "Heathcote-Graytown National Park"
+  },
+  {
+    "id": "holey-plains-state-park-harrier-swamp-holey-plains-state-park",
+    "name": "Harrier Swamp, Holey Plains State Park",
+    "parkName": "Holey Plains State Park"
+  },
+  {
+    "id": "holey-plains-state-park-holey-hill-holey-plains-state-park",
+    "name": "Holey Hill, Holey Plains State Park",
+    "parkName": "Holey Plains State Park"
+  },
+  {
+    "id": "kooyoora-state-park-melville-caves-camping-area-kooyoora-state-park",
+    "name": "Melville Caves Camping Area, Kooyoora State Park",
+    "parkName": "Kooyoora State Park"
+  },
+  {
+    "id": "lake-albacutya-park-o-t-i-t-from-fishers-lake-albacutya-park",
+    "name": "O.T.I.T. From Fishers, Lake Albacutya Park",
+    "parkName": "Lake Albacutya Park"
+  },
+  {
+    "id": "lake-albacutya-park-western-beach-lake-albacutya-park",
+    "name": "Western Beach, Lake Albacutya Park",
+    "parkName": "Lake Albacutya Park"
+  },
+  {
+    "id": "lake-albacutya-park-yaapeet-beach-lake-albacutya-park",
+    "name": "Yaapeet Beach, Lake Albacutya Park",
+    "parkName": "Lake Albacutya Park"
+  },
+  {
+    "id": "lake-ratzcastle-l-r-lake-ratzcastle-lake-reserve-lake-ratzcastle-l-r",
+    "name": "Lake Ratzcastle Lake Reserve, Lake Ratzcastle L.R.",
+    "parkName": "Lake Ratzcastle L.R."
+  },
+  {
+    "id": "lake-tyers-s-p-camerons-arms-no-1-lake-tyers-s-p",
+    "name": "Camerons Arms No. 1, Lake Tyers S.P.",
+    "parkName": "Lake Tyers S.P."
+  },
+  {
+    "id": "lake-tyers-s-p-the-glasshouse-lake-tyers-s-p",
+    "name": "The Glasshouse, Lake Tyers S.P.",
+    "parkName": "Lake Tyers S.P."
+  },
+  {
+    "id": "lake-tyers-s-p-trident-arm-picinc-area-lake-tyers-s-p",
+    "name": "Trident Arm Picinc Area, Lake Tyers S.P.",
+    "parkName": "Lake Tyers S.P."
+  },
+  {
+    "id": "lal-lal-bungal-h-a-lal-lal-bungle-historic-area-lal-lal-bungal-h-a",
+    "name": "Lal Lal Bungle Historic Area, Lal Lal - Bungal H.A.",
+    "parkName": "Lal Lal - Bungal H.A."
+  },
+  {
+    "id": "leaghur-state-park-south-of-lake-meran-leaghur-state-park",
+    "name": "South of Lake Meran, Leaghur State Park",
+    "parkName": "Leaghur State Park"
+  },
+  {
+    "id": "lerderderg-state-park-o-briens-crossing-lerderderg-state-park",
+    "name": "O'Briens Crossing, Lerderderg State Park",
+    "parkName": "Lerderderg State Park"
+  },
+  {
+    "id": "macleod-morass-w-r-macleod-morass-macleod-morass-w-r",
+    "name": "MacLeod Morass, Macleod Morass W.R.",
+    "parkName": "Macleod Morass W.R."
+  },
+  {
+    "id": "mitchell-river-national-park-jerguson-point-mitchell-river-national-park",
+    "name": "Jerguson Point, Mitchell River National Park",
+    "parkName": "Mitchell River National Park"
+  },
+  {
+    "id": "mitchell-river-national-park-rock-creek-mitchell-river-national-park",
+    "name": "Rock Creek, Mitchell River National Park",
+    "parkName": "Mitchell River National Park"
+  },
+  {
+    "id": "mitchell-river-national-park-woolshed-creek-camping-area-mitchell-river-national-park",
+    "name": "Woolshed Creek Camping Area, Mitchell River National Park",
+    "parkName": "Mitchell River National Park"
+  },
+  {
+    "id": "moondarra-state-park-seninis-visitor-area-moondarra-state-park",
+    "name": "Seninis Visitor Area, Moondarra State Park",
+    "parkName": "Moondarra State Park"
+  },
+  {
+    "id": "mornington-peninsula-national-park-greens-bush-mornington-peninsula-national-park",
+    "name": "Greens Bush, Mornington Peninsula National Park",
+    "parkName": "Mornington Peninsula National Park"
+  },
+  {
+    "id": "mount-beckworth-s-r-bracken-gully-picnic-area-mount-beckworth-s-r",
+    "name": "Bracken Gully Picnic Area, Mount Beckworth S.R.",
+    "parkName": "Mount Beckworth S.R."
+  },
+  {
+    "id": "mount-beckworth-s-r-manna-gums-picnic-area-mount-beckworth-s-r",
+    "name": "Manna Gums Picnic Area, Mount Beckworth S.R.",
+    "parkName": "Mount Beckworth S.R."
+  },
+  {
+    "id": "mount-beckworth-s-r-the-cork-oaks-picnic-area-mount-beckworth-s-r",
+    "name": "The Cork Oaks Picnic Area, Mount Beckworth S.R.",
+    "parkName": "Mount Beckworth S.R."
+  },
+  {
+    "id": "mount-beckworth-s-r-the-dam-picnic-area-mount-beckworth-s-r",
+    "name": "The Dam Picnic Area, Mount Beckworth S.R.",
+    "parkName": "Mount Beckworth S.R."
+  },
+  {
+    "id": "mount-difficult-plantation-campground-plantation-campground-mount-difficult-plantation-campground",
+    "name": "Plantation Campground, Mount Difficult Plantation Campground",
+    "parkName": "Mount Difficult Plantation Campground"
+  },
+  {
+    "id": "mount-eccles-national-park-mt-eccles-mount-eccles-national-park",
+    "name": "Mt Eccles, Mount Eccles National Park",
+    "parkName": "Mount Eccles National Park"
+  },
+  {
+    "id": "mount-lawson-state-park-mt-lawson-summit-mount-lawson-state-park",
+    "name": "Mt Lawson Summit, Mount Lawson State Park",
+    "parkName": "Mount Lawson State Park"
+  },
+  {
+    "id": "mount-mitta-mitta-r-p-embry-lookout-mount-mitta-mitta-r-p",
+    "name": "Embry Lookout, Mount Mitta Mitta R.P",
+    "parkName": "Mount Mitta Mitta R.P"
+  },
+  {
+    "id": "mount-samaria-state-park-camphora-campsite-mount-samaria-state-park",
+    "name": "Camphora Campsite, Mount Samaria State Park",
+    "parkName": "Mount Samaria State Park"
+  },
+  {
+    "id": "mount-samaria-state-park-samaria-well-mount-samaria-state-park",
+    "name": "Samaria Well, Mount Samaria State Park",
+    "parkName": "Mount Samaria State Park"
+  },
+  {
+    "id": "mount-wills-h-a-big-river-camp-area-mount-wills-h-a",
+    "name": "Big River Camp Area, Mount Wills H.A",
+    "parkName": "Mount Wills H.A"
+  },
+  {
+    "id": "pheasant-creek-f-r-pikes-dam-pheasant-creek-f-r",
+    "name": "Pikes Dam, Pheasant Creek F.R.",
+    "parkName": "Pheasant Creek F.R."
+  },
+  {
+    "id": "port-campbell-national-park-sherbrook-guide-camp-port-campbell-national-park",
+    "name": "Sherbrook Guide Camp, Port Campbell National Park",
+    "parkName": "Port Campbell National Park"
+  },
+  {
+    "id": "port-campbell-recreation-and-camping-reserve-port-campbell-precinct-port-campbell-coastal-reserve",
+    "name": "Port Campbell precinct, Port Campbell Coastal Reserve",
+    "parkName": "Port Campbell Recreation and Camping Reserve"
+  },
+  {
+    "id": "proposed-murray-river-park-part-horse-shoe-bend-cobram-r-p",
+    "name": "Horse-shoe Bend, Cobram R.P",
+    "parkName": "Proposed Murray River Park (part)"
+  },
+  {
+    "id": "river-murray-reserve-bourkes-bend-proposed-murray-river-park-part",
+    "name": "Bourkes Bend, Proposed Murray River Park (part)",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-bruces-bend-yarrawonga-r-p",
+    "name": "Bruces Bend, Yarrawonga R.P",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-burrowye-reserve-campground-river-murray-reserve",
+    "name": "Burrowye Reserve Campground, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-clarkes-lagoon-visitor-area-river-murray-reserve",
+    "name": "Clarkes Lagoon Visitor Area, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-cobrawonga-island-river-murray-reserve",
+    "name": "Cobrawonga Island, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-indigo-falls-baranduda-r-p",
+    "name": "Indigo Falls, Baranduda R.P.",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-jingelic-visitor-area-river-murray-reserve",
+    "name": "Jingelic Visitor Area, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-neils-reserve-river-murray-reserve",
+    "name": "Neils Reserve, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "river-murray-reserve-nevins-bend-river-murray-reserve",
+    "name": "Nevins Bend, River Murray Reserve",
+    "parkName": "River Murray Reserve"
+  },
+  {
+    "id": "snowy-river-national-park-balley-hooley-snowy-river-national-park",
+    "name": "Balley Hooley, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-bull-flat-snowy-river-national-park",
+    "name": "Bull Flat, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-hicks-snowy-river-national-park",
+    "name": "Hicks, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-little-river-junction-snowy-river-national-park",
+    "name": "Little River Junction, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-raymond-creek-falls-snowy-river-national-park",
+    "name": "Raymond Creek Falls, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-waratah-flat-snowy-river-national-park",
+    "name": "Waratah Flat, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "snowy-river-national-park-white-box-snowy-river-national-park",
+    "name": "White Box, Snowy River National Park",
+    "parkName": "Snowy River National Park"
+  },
+  {
+    "id": "tocumwal-r-p-eastern-section-tocumwal-r-p",
+    "name": "Eastern Section, Tocumwal R.P",
+    "parkName": "Tocumwal R.P"
+  },
+  {
+    "id": "victoria-falls-h-a-victoria-falls-camp-area-victoria-falls-h-a",
+    "name": "Victoria Falls Camp Area, Victoria Falls H.A",
+    "parkName": "Victoria Falls H.A"
+  },
+  {
+    "id": "whroo-h-a-not-attached-to-a-site",
+    "name": "_Not Attached to a Site",
+    "parkName": "Whroo H.A."
+  },
+  {
+    "id": "wyperfeld-national-park-casuarina-campground-wyperfeld-national-park",
+    "name": "Casuarina Campground, Wyperfeld National Park",
+    "parkName": "Wyperfeld National Park"
+  },
+  {
+    "id": "wyperfeld-national-park-remote-camp-wyperfeld-national-park",
+    "name": "Remote Camp, Wyperfeld National Park",
+    "parkName": "Wyperfeld National Park"
+  },
+  {
+    "id": "yarrawonga-r-p-bruces-bend-yarrawonga-r-p",
+    "name": "Bruces Bend, Yarrawonga R.P",
+    "parkName": "Yarrawonga R.P"
+  },
+  {
+    "id": "yarrawonga-r-p-chinamans-bend-yarrawonga-r-p",
+    "name": "Chinamans Bend, Yarrawonga R.P",
+    "parkName": "Yarrawonga R.P"
+  },
+  {
+    "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p",
+    "name": "Forges Bend, Yarrawonga R.P",
+    "parkName": "Yarrawonga R.P"
+  },
+  {
+    "id": "yarrawonga-r-p-the-common-yarrawonga-r-p",
+    "name": "The Common, Yarrawonga R.P",
+    "parkName": "Yarrawonga R.P"
+  }
+]
