@@ -3793,8 +3793,8 @@
     "bookingUrl": null
   },
   {
-    "id": "river-murray-reserve-nevins-bend-river-murray-reserve",
-    "name": "Nevins Bend, River Murray Reserve",
+    "id": "nevins-beach-camping-area",
+    "name": "Nevins Beach Camping Area",
     "parkName": "River Murray Reserve",
     "lat": -35.95487104699998,
     "lng": 145.89231293600005,
@@ -3813,7 +3813,7 @@
       "accessibilityNotes": null,
       "dogPolicy": null
     },
-    "sourceUrl": null,
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nevins-beach-camping-area-",
     "bookingUrl": null
   },
   {
