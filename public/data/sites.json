@@ -176,54 +176,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-beckworth-s-r-manna-gums-picnic-area-mount-beckworth-s-r",
-    "name": "Manna Gums Picnic Area, Mount Beckworth S.R.",
-    "parkName": "Mount Beckworth S.R.",
-    "lat": -37.31610599999999,
-    "lng": 143.72046683999997,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-beckworth-s-r-the-cork-oaks-picnic-area-mount-beckworth-s-r",
-    "name": "The Cork Oaks Picnic Area, Mount Beckworth S.R.",
-    "parkName": "Mount Beckworth S.R.",
-    "lat": -37.31099003999998,
-    "lng": 143.70822288,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "mcloughlins-beach-seaspray-coastal-reserve-reeves-beach-mcloughlins-beach-seaspray-coastal-reserve",
     "name": "Reeves Beach, McLoughlins Beach - Seaspray Coastal Reserve",
     "parkName": "McLoughlins Beach - Seaspray Coastal Reserve",
@@ -292,30 +244,6 @@
     "animalsFauna": []
   },
   {
-    "id": "port-campbell-recreation-and-camping-reserve-port-campbell-precinct-port-campbell-coastal-reserve",
-    "name": "Port Campbell precinct, Port Campbell Coastal Reserve",
-    "parkName": "Port Campbell Recreation and Camping Reserve",
-    "lat": -38.61802799999998,
-    "lng": 142.99457112000005,
-    "lga": "CORANGAMITE SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "wilsons-promontory-national-park-sealers-cove-wilsons-promontory-national-park",
     "name": "Sealers Cove, Wilsons Promontory National Park",
     "parkName": "Wilsons Promontory National Park",
@@ -348,54 +276,6 @@
       "river_creek"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "castlemaine-diggings-national-heritage-park-vaughan-spring-castlemaine-diggings-national-heritage-park",
-    "name": "Vaughan Spring, Castlemaine Diggings National Heritage Park",
-    "parkName": "Castlemaine Diggings National Heritage Park",
-    "lat": -37.16270100000003,
-    "lng": 144.21649716000002,
-    "lga": "MOUNT ALEXANDER SHIRE",
-    "tourismRegion": "Goldfields",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lerderderg-state-park-o-briens-crossing-lerderderg-state-park",
-    "name": "O'Briens Crossing, Lerderderg State Park",
-    "parkName": "Lerderderg State Park",
-    "lat": -37.49603904000003,
-    "lng": 144.36122904,
-    "lga": "MOORABOOL SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "lower-glenelg-national-park-lasletts-lower-glenelg-national-park",
@@ -432,54 +312,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "mitchell-river-national-park-rock-creek-mitchell-river-national-park",
-    "name": "Rock Creek, Mitchell River National Park",
-    "parkName": "Mitchell River National Park",
-    "lat": -37.60207802999997,
-    "lng": 147.33493883999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-bruces-bend-yarrawonga-r-p",
-    "name": "Bruces Bend, Yarrawonga R.P",
-    "parkName": "River Murray Reserve",
-    "lat": -35.96475111799998,
-    "lng": 145.91490905499995,
-    "lga": null,
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "upper-yarra-reservoir-park-visitors-area-upper-yarra-reservoir-park",
@@ -655,54 +487,6 @@
     "animalsFauna": []
   },
   {
-    "id": "lake-albacutya-park-yaapeet-beach-lake-albacutya-park",
-    "name": "Yaapeet Beach, Lake Albacutya Park",
-    "parkName": "Lake Albacutya Park",
-    "lat": -35.76671099599997,
-    "lng": 142.006606572,
-    "lga": "HINDMARSH SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "ewing-morass-w-r-trident-arm-camping-area-lake-tyers-s-p",
-    "name": "Trident Arm Camping Area, Lake Tyers S.P.",
-    "parkName": "Ewing Morass W.R",
-    "lat": -37.829224861,
-    "lng": 148.18696991399997,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "marlo-coastal-reserve-corringle-slips-marlo-coastal-reserve",
     "name": "Corringle Slips, Marlo Coastal Reserve",
     "parkName": "Marlo Coastal Reserve",
@@ -773,30 +557,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "echuca-r-p-christies-beach-camping-area-echuca-r-p",
-    "name": "Christies Beach Camping Area, Echuca R.P",
-    "parkName": "Echuca R.P",
-    "lat": -36.103011030000005,
-    "lng": 144.81029195999997,
-    "lga": "CAMPASPE SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cape-liptrap-coastal-park-five-mile-road-cape-liptrap-coastal-park",
@@ -903,30 +663,6 @@
     "animalsFauna": []
   },
   {
-    "id": "snowy-river-national-park-white-box-snowy-river-national-park",
-    "name": "White Box, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.08120797999999,
-    "lng": 148.41455399999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "mount-buffalo-national-park-mount-mcleod-camping-area-mount-buffalo-national-park",
     "name": "Mount Mcleod Camping Area, Mount Buffalo National Park",
     "parkName": "Mount Buffalo National Park",
@@ -961,30 +697,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "mount-beckworth-s-r-the-dam-picnic-area-mount-beckworth-s-r",
-    "name": "The Dam Picnic Area, Mount Beckworth S.R.",
-    "parkName": "Mount Beckworth S.R.",
-    "lat": -37.305343979999975,
-    "lng": 143.72491895999997,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "great-otway-national-park-blanket-bay-great-otway-national-park",
@@ -1409,30 +1121,6 @@
     "animalsFauna": []
   },
   {
-    "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p",
-    "name": "Forges Bend, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -35.996797085000026,
-    "lng": 145.96442801700005,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "bunyip-state-park-nash-creek-camping-area-bunyip-state-park",
     "name": "Nash Creek Camping Area, Bunyip State Park",
     "parkName": "Bunyip State Park",
@@ -1453,31 +1141,7 @@
       "accessibilityNotes": null,
       "dogPolicy": null
     },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-pine-mountain-picnic-area-burrowa-pine-mountain-national-park",
-    "name": "Pine Mountain Picnic Area, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.002493387000015,
-    "lng": 147.78512597199995,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
+    "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/parks/bunyip-state-park/where-to-stay/camping-in-bunyip-state-park",
     "bookingUrl": null
   },
   {
@@ -1589,54 +1253,6 @@
     "animalsFauna": []
   },
   {
-    "id": "yarrawonga-r-p-chinamans-bend-yarrawonga-r-p",
-    "name": "Chinamans Bend, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -36.005515152999976,
-    "lng": 145.96967318199995,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-bourkes-bend-proposed-murray-river-park-part",
-    "name": "Bourkes Bend, Proposed Murray River Park (part)",
-    "parkName": "River Murray Reserve",
-    "lat": -35.97675147899997,
-    "lng": 145.83518580400005,
-    "lga": null,
-    "tourismRegion": null,
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-2",
     "name": "Banksia Bluff Campground, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -1743,30 +1359,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "kooyoora-state-park-melville-caves-camping-area-kooyoora-state-park",
-    "name": "Melville Caves Camping Area, Kooyoora State Park",
-    "parkName": "Kooyoora State Park",
-    "lat": -36.60116841299998,
-    "lng": 143.698207862,
-    "lga": "LODDON SHIRE",
-    "tourismRegion": "Goldfields",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "hattah-kulkyne-national-park-lake-hattah-hattah-kulkyne-national-park",
@@ -2302,30 +1894,6 @@
     "animalsFauna": []
   },
   {
-    "id": "enfield-state-park-surface-point-picnic-ground-enfield-state-park",
-    "name": "Surface Point Picnic Ground, Enfield State Park",
-    "parkName": "Enfield State Park",
-    "lat": -37.76992596000002,
-    "lng": 143.73832607999998,
-    "lga": "GOLDEN PLAINS SHIRE",
-    "tourismRegion": "Geelong and the Bellarine",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "river-murray-reserve-ulupna-creek-east-river-murray-reserve",
     "name": "Ulupna Creek East, River Murray Reserve",
     "parkName": "River Murray Reserve",
@@ -2396,150 +1964,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p-2",
-    "name": "Forges Bend, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -35.98380540199997,
-    "lng": 145.950898531,
-    "lga": null,
-    "tourismRegion": null,
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "pheasant-creek-f-r-pikes-dam-pheasant-creek-f-r",
-    "name": "Pikes Dam, Pheasant Creek F.R.",
-    "parkName": "Pheasant Creek F.R.",
-    "lat": -36.12927798099997,
-    "lng": 147.59257094500003,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "errinundra-national-park-tea-tree-flat-errinundra-national-park",
-    "name": "Tea Tree Flat, Errinundra National Park",
-    "parkName": "Errinundra National Park",
-    "lat": -37.24235319600001,
-    "lng": 148.835248611,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-hinces-saddle-burrowa-pine-mountain-national-park",
-    "name": "Hinces Saddle, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.10926938,
-    "lng": 147.70774764700002,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-bluegum-camp-burrowa-pine-mountain-national-park",
-    "name": "Bluegum Camp, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.12466472099999,
-    "lng": 147.76967193200005,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-black-mountain-burrowa-pine-mountain-national-park",
-    "name": "Black Mountain, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.12526335299998,
-    "lng": 147.71678136800006,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "great-otway-national-park-aire-river-west-great-otway-national-park",
@@ -2791,30 +2215,6 @@
     "animalsFauna": []
   },
   {
-    "id": "victoria-falls-h-a-victoria-falls-camp-area-victoria-falls-h-a",
-    "name": "Victoria Falls Camp Area, Victoria Falls H.A",
-    "parkName": "Victoria Falls H.A",
-    "lat": -37.09108601999998,
-    "lng": 147.42397907999998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-binns-beach-cape-conran-coastal-park",
     "name": "Binns Beach, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -2849,54 +2249,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "grant-h-a-talbotville-historic-township-grant-h-a",
-    "name": "Talbotville Historic Township, Grant H.A.",
-    "parkName": "Grant H.A.",
-    "lat": -37.33465598999999,
-    "lng": 147.06660311999997,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "creswick-r-p-slatey-creek-picnic-area-no-3-creswick-r-p",
-    "name": "Slatey Creek Picnic Area No 3, Creswick R.P.",
-    "parkName": "Creswick R.P.",
-    "lat": -37.46766095999999,
-    "lng": 143.90850816,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cathedral-range-state-park-sugarloaf-saddle-day-visitor-area-cathedral-range-state-park",
@@ -3036,30 +2388,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-eccles-national-park-mt-eccles-mount-eccles-national-park",
-    "name": "Mt Eccles, Mount Eccles National Park",
-    "parkName": "Mount Eccles National Park",
-    "lat": -38.05892496000001,
-    "lng": 141.92301204,
-    "lga": "MOYNE SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "wilsons-promontory-national-park-stockyard-camp-wilsons-promontory-national-park",
     "name": "Stockyard Camp, Wilsons Promontory National Park",
     "parkName": "Wilsons Promontory National Park",
@@ -3165,30 +2493,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-samaria-state-park-camphora-campsite-mount-samaria-state-park",
-    "name": "Camphora Campsite, Mount Samaria State Park",
-    "parkName": "Mount Samaria State Park",
-    "lat": -36.88486397999998,
-    "lng": 146.08605095999997,
-    "lga": "MANSFIELD SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-first-wannon-remote-campground-grampians-national-park-2",
     "name": "First Wannon Remote Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -3223,30 +2527,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "croajingolong-national-park-clinton-rocks-croajingolong-national-park",
-    "name": "Clinton Rocks, Croajingolong National Park",
-    "parkName": "Croajingolong National Park",
-    "lat": -37.77683301000002,
-    "lng": 149.19859187999998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "mount-samaria-state-park-spring-creek-sawmill-area-mount-samaria-state-park",
@@ -3321,78 +2601,6 @@
     "animalsFauna": []
   },
   {
-    "id": "river-murray-reserve-indigo-falls-baranduda-r-p",
-    "name": "Indigo Falls, Baranduda R.P.",
-    "parkName": "River Murray Reserve",
-    "lat": -36.23320356200003,
-    "lng": 148.03374017299996,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "macleod-morass-w-r-macleod-morass-macleod-morass-w-r",
-    "name": "MacLeod Morass, Macleod Morass W.R.",
-    "parkName": "Macleod Morass W.R.",
-    "lat": -37.86159699000001,
-    "lng": 147.64150008000001,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lake-tyers-s-p-trident-arm-picinc-area-lake-tyers-s-p",
-    "name": "Trident Arm Picinc Area, Lake Tyers S.P.",
-    "parkName": "Lake Tyers S.P.",
-    "lat": -37.82320100999999,
-    "lng": 148.13509788,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "little-desert-national-park-broughtons-waterhole-little-desert-national-park",
     "name": "Broughtons Waterhole, Little Desert National Park",
     "parkName": "Little Desert National Park",
@@ -3460,30 +2668,6 @@
     "animalsFauna": []
   },
   {
-    "id": "holey-plains-state-park-harrier-swamp-holey-plains-state-park",
-    "name": "Harrier Swamp, Holey Plains State Park",
-    "parkName": "Holey Plains State Park",
-    "lat": -38.20851701999999,
-    "lng": 146.84590188000004,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lower-glenelg-national-park-skipworth-springs-lower-glenelg-national-park",
     "name": "Skipworth Springs, Lower Glenelg National Park",
     "parkName": "Lower Glenelg National Park",
@@ -3518,30 +2702,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "snowy-river-national-park-little-river-junction-snowy-river-national-park",
-    "name": "Little River Junction, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.12164179400003,
-    "lng": 148.37244328199995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "lower-glenelg-national-park-pines-landing-lower-glenelg-national-park",
@@ -3614,54 +2774,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "river-murray-reserve-bourkes-bend-proposed-murray-river-park-part-2",
-    "name": "Bourkes Bend, Proposed Murray River Park (part)",
-    "parkName": "River Murray Reserve",
-    "lat": -35.982970008999985,
-    "lng": 145.80563337,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-cobrawonga-island-river-murray-reserve",
-    "name": "Cobrawonga Island, River Murray Reserve",
-    "parkName": "River Murray Reserve",
-    "lat": -35.963817070999994,
-    "lng": 145.76776280499996,
-    "lga": null,
-    "tourismRegion": null,
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-5",
@@ -3841,54 +2953,6 @@
     "animalsFauna": []
   },
   {
-    "id": "creswick-r-p-eatons-dam-creswick-r-p",
-    "name": "Eatons Dam, Creswick R.P.",
-    "parkName": "Creswick R.P.",
-    "lat": -37.44410499000003,
-    "lng": 143.93045700000005,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "heathcote-graytown-national-park-dargile-heathcote-graytown-national-park",
-    "name": "Dargile, Heathcote-Graytown National Park",
-    "parkName": "Heathcote-Graytown National Park",
-    "lat": -36.851855039999975,
-    "lng": 144.74352311999996,
-    "lga": "GREATER BENDIGO CITY",
-    "tourismRegion": "Goldfields",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "cape-conran-coastal-park-gunnia-beach-cape-conran-coastal-park",
     "name": "Gunnia Beach, Cape Conran Coastal Park",
     "parkName": "Cape Conran Coastal Park",
@@ -3923,30 +2987,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "lake-ratzcastle-l-r-lake-ratzcastle-lake-reserve-lake-ratzcastle-l-r",
-    "name": "Lake Ratzcastle Lake Reserve, Lake Ratzcastle L.R.",
-    "parkName": "Lake Ratzcastle L.R.",
-    "lat": -36.81193231999998,
-    "lng": 141.46594538399995,
-    "lga": "WEST WIMMERA SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "murray-sunset-national-park-border-campground-murray-sunset-national-park",
@@ -4056,54 +3096,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-samaria-state-park-samaria-well-mount-samaria-state-park",
-    "name": "Samaria Well, Mount Samaria State Park",
-    "parkName": "Mount Samaria State Park",
-    "lat": -36.824877990000005,
-    "lng": 146.06341992,
-    "lga": "BENALLA RURAL CITY",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "holey-plains-state-park-holey-hill-holey-plains-state-park",
-    "name": "Holey Hill, Holey Plains State Park",
-    "parkName": "Holey Plains State Park",
-    "lat": -38.231917020000026,
-    "lng": 146.93846004,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-smiths-mill-campground-grampians-national-park",
     "name": "Smiths Mill Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -4135,54 +3127,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "mount-beckworth-s-r-bracken-gully-picnic-area-mount-beckworth-s-r",
-    "name": "Bracken Gully Picnic Area, Mount Beckworth S.R.",
-    "parkName": "Mount Beckworth S.R.",
-    "lat": -37.30876803000001,
-    "lng": 143.711595,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-ross-lookout-burrowa-pine-mountain-national-park",
-    "name": "Ross Lookout, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.13191758099998,
-    "lng": 147.73451256700002,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "lower-glenelg-national-park-hutchessons-lower-glenelg-national-park",
@@ -4253,54 +3197,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-lawson-state-park-mt-lawson-summit-mount-lawson-state-park",
-    "name": "Mt Lawson Summit, Mount Lawson State Park",
-    "parkName": "Mount Lawson State Park",
-    "lat": -36.05362044100002,
-    "lng": 147.45133137899995,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-hinces-creek-burrowa-pine-mountain-national-park",
-    "name": "Hinces Creek, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.08573002100002,
-    "lng": 147.76773721300003,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "great-otway-national-park-blanket-bay-great-otway-national-park-6",
     "name": "Blanket Bay, Great Otway National Park",
     "parkName": "Great Otway National Park",
@@ -4335,30 +3231,6 @@
       "forest"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "yarrawonga-r-p-the-common-yarrawonga-r-p",
-    "name": "The Common, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -36.011293111999976,
-    "lng": 145.976932714,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "nevins-beach-camping-area",
@@ -4457,78 +3329,6 @@
     "animalsFauna": []
   },
   {
-    "id": "river-murray-reserve-clarkes-lagoon-visitor-area-river-murray-reserve",
-    "name": "Clarkes Lagoon Visitor Area, River Murray Reserve",
-    "parkName": "River Murray Reserve",
-    "lat": -36.02393521900001,
-    "lng": 147.914523466,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "wyperfeld-national-park-casuarina-campground-wyperfeld-national-park",
-    "name": "Casuarina Campground, Wyperfeld National Park",
-    "parkName": "Wyperfeld National Park",
-    "lat": -35.44590620299999,
-    "lng": 141.99616140399996,
-    "lga": "MILDURA RURAL CITY",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-difficult-plantation-campground-plantation-campground-mount-difficult-plantation-campground",
-    "name": "Plantation Campground, Mount Difficult Plantation Campground",
-    "parkName": "Mount Difficult Plantation Campground",
-    "lat": -37.05907401000002,
-    "lng": 142.51495788,
-    "lga": "NORTHERN GRAMPIANS SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "murray-sunset-national-park-henschke-track-campground-murray-sunset-national-park",
     "name": "Henschke Track campground, Murray - Sunset National Park",
     "parkName": "Murray - Sunset National Park",
@@ -4601,30 +3401,6 @@
     "animalsFauna": []
   },
   {
-    "id": "buchan-at-cave-reserve-buchan-work-centre-buchan-at-cave-reserve",
-    "name": "Buchan, Work Centre, Buchan (AT) Cave Reserve",
-    "parkName": "Buchan (AT) Cave Reserve",
-    "lat": -37.49248700999999,
-    "lng": 148.16299103999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lake-eildon-national-park-mountaineer-creek-camping-area-lake-eildon-national-park",
     "name": "Mountaineer Creek Camping Area, Lake Eildon National Park",
     "parkName": "Lake Eildon National Park",
@@ -4659,30 +3435,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "grant-h-a-grant-historic-township-grant-h-a",
-    "name": "Grant Historic Township, Grant H.A.",
-    "parkName": "Grant H.A.",
-    "lat": -37.343588039999986,
-    "lng": 147.15467316000002,
-    "lga": "WELLINGTON SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cathedral-range-state-park-cooks-mill-cathedral-range-state-park",
@@ -4721,126 +3473,6 @@
     "animalsFauna": []
   },
   {
-    "id": "snowy-river-national-park-bull-flat-snowy-river-national-park",
-    "name": "Bull Flat, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.08199898999999,
-    "lng": 148.42599912000003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "creswick-r-p-slatey-creek-picnic-area-no-1-creswick-r-p",
-    "name": "Slatey Creek Picnic Area No 1, Creswick R.P.",
-    "parkName": "Creswick R.P.",
-    "lat": -37.46279700000002,
-    "lng": 143.90404595999996,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "creswick-r-p-slatey-creek-picnic-area-no-2-creswick-r-p",
-    "name": "Slatey Creek Picnic Area No 2, Creswick R.P.",
-    "parkName": "Creswick R.P.",
-    "lat": -37.465981020000015,
-    "lng": 143.90500608000002,
-    "lga": "HEPBURN SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-jingelic-visitor-area-river-murray-reserve",
-    "name": "Jingelic Visitor Area, River Murray Reserve",
-    "parkName": "River Murray Reserve",
-    "lat": -35.92930518999998,
-    "lng": 147.70957664900004,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "mount-mitta-mitta-r-p-embry-lookout-mount-mitta-mitta-r-p",
-    "name": "Embry Lookout, Mount Mitta Mitta R.P",
-    "parkName": "Mount Mitta Mitta R.P",
-    "lat": -36.147965107000005,
-    "lng": 147.881502415,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lake-eildon-national-park-coopers-point-camping-area-lake-eildon-national-park",
     "name": "Coopers Point Camping Area, Lake Eildon National Park",
     "parkName": "Lake Eildon National Park",
@@ -4872,30 +3504,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "leaghur-state-park-south-of-lake-meran-leaghur-state-park",
-    "name": "South of Lake Meran, Leaghur State Park",
-    "parkName": "Leaghur State Park",
-    "lat": -35.891093969999986,
-    "lng": 143.80682795999996,
-    "lga": "GANNAWARRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "mount-buffalo-national-park-rocky-creek-camping-area-mount-buffalo-national-park",
@@ -4932,30 +3540,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "cobram-r-p-horse-shoe-bend-cobram-r-p",
-    "name": "Horse-shoe Bend, Cobram R.P",
-    "parkName": "Cobram R.P",
-    "lat": -35.92772199000001,
-    "lng": 145.69385795999995,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "great-otway-national-park-aire-river-east-great-otway-national-park",
@@ -5063,30 +3647,6 @@
     "animalsFauna": []
   },
   {
-    "id": "port-campbell-national-park-sherbrook-guide-camp-port-campbell-national-park",
-    "name": "Sherbrook Guide Camp, Port Campbell National Park",
-    "parkName": "Port Campbell National Park",
-    "lat": -38.63802456500002,
-    "lng": 143.06356247899998,
-    "lga": "CORANGAMITE SHIRE",
-    "tourismRegion": "Great Ocean Road",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lower-glenelg-national-park-forest-camp-south-lower-glenelg-national-park",
     "name": "Forest Camp South, Lower Glenelg National Park",
     "parkName": "Lower Glenelg National Park",
@@ -5190,78 +3750,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "snowy-river-national-park-hicks-snowy-river-national-park",
-    "name": "Hicks, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.40729916700002,
-    "lng": 148.36014753799998,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "yarrawonga-r-p-bruces-bend-yarrawonga-r-p",
-    "name": "Bruces Bend, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -35.96707098000002,
-    "lng": 145.94046191999996,
-    "lga": null,
-    "tourismRegion": null,
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "snowy-river-national-park-raymond-creek-falls-snowy-river-national-park",
-    "name": "Raymond Creek Falls, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.48496708800002,
-    "lng": 148.308078928,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "french-island-national-park-fairhaven-french-island-national-park",
@@ -5408,30 +3896,6 @@
     "animalsFauna": []
   },
   {
-    "id": "proposed-murray-river-park-part-horse-shoe-bend-cobram-r-p",
-    "name": "Horse-shoe Bend, Cobram R.P",
-    "parkName": "Proposed Murray River Park (part)",
-    "lat": -35.951587227999994,
-    "lng": 145.71822414300004,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "grampians-national-park-borough-huts-campground-grampians-national-park",
     "name": "Borough Huts Campground, Grampians National Park",
     "parkName": "Grampians National Park",
@@ -5466,30 +3930,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "mornington-peninsula-national-park-greens-bush-mornington-peninsula-national-park",
-    "name": "Greens Bush, Mornington Peninsula National Park",
-    "parkName": "Mornington Peninsula National Park",
-    "lat": -38.460301019999974,
-    "lng": 144.92240891999995,
-    "lga": "MORNINGTON PENINSULA SHIRE",
-    "tourismRegion": "Mornington Peninsula",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cathedral-range-state-park-neds-gully-camping-area-cathedral-range-state-park",
@@ -5528,78 +3968,6 @@
     "animalsFauna": []
   },
   {
-    "id": "croajingolong-national-park-gale-hill-croajingolong-national-park",
-    "name": "Gale Hill, Croajingolong National Park",
-    "parkName": "Croajingolong National Park",
-    "lat": -37.76976000000002,
-    "lng": 149.41300607999995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "crawford-river-r-p-hiscocks-camping-area-crawford-river-r-p",
-    "name": "Hiscocks Camping Area, Crawford River R.P",
-    "parkName": "Crawford River R.P",
-    "lat": -37.94107401000002,
-    "lng": 141.44640912,
-    "lga": "GLENELG SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-burrowye-reserve-campground-river-murray-reserve",
-    "name": "Burrowye Reserve Campground, River Murray Reserve",
-    "parkName": "River Murray Reserve",
-    "lat": -35.98714111800001,
-    "lng": 147.52577777299996,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "croajingolong-national-park-thurra-river-croajingolong-national-park",
     "name": "Thurra River, Croajingolong National Park",
     "parkName": "Croajingolong National Park",
@@ -5634,54 +4002,6 @@
       "mountains_alpine"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "cobram-r-p-scotts-beach-cobram-r-p",
-    "name": "Scotts Beach, Cobram R.P",
-    "parkName": "Cobram R.P",
-    "lat": -35.928691019999974,
-    "lng": 145.67533091999996,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "tocumwal-r-p-eastern-section-tocumwal-r-p",
-    "name": "Eastern Section, Tocumwal R.P",
-    "parkName": "Tocumwal R.P",
-    "lat": -35.826948000000016,
-    "lng": 145.55370203999996,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "grampians-national-park-stapylton-campground-grampians-national-park",
@@ -5753,30 +4073,6 @@
     "animalsFauna": []
   },
   {
-    "id": "river-murray-reserve-bruces-bend-yarrawonga-r-p-2",
-    "name": "Bruces Bend, Yarrawonga R.P",
-    "parkName": "River Murray Reserve",
-    "lat": -35.96339700200002,
-    "lng": 145.90676561700002,
-    "lga": null,
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lower-glenelg-national-park-forest-camp-north-lower-glenelg-national-park",
     "name": "Forest Camp North, Lower Glenelg National Park",
     "parkName": "Lower Glenelg National Park",
@@ -5808,78 +4104,6 @@
       "river_creek"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "mitchell-river-national-park-jerguson-point-mitchell-river-national-park",
-    "name": "Jerguson Point, Mitchell River National Park",
-    "parkName": "Mitchell River National Park",
-    "lat": -37.64971419400001,
-    "lng": 147.35349489199996,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "wyperfeld-national-park-remote-camp-wyperfeld-national-park",
-    "name": "Remote Camp, Wyperfeld National Park",
-    "parkName": "Wyperfeld National Park",
-    "lat": -35.479693854999994,
-    "lng": 141.99791188200004,
-    "lga": "YARRIAMBIACK SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lake-albacutya-park-o-t-i-t-from-fishers-lake-albacutya-park",
-    "name": "O.T.I.T. From Fishers, Lake Albacutya Park",
-    "parkName": "Lake Albacutya Park",
-    "lat": -35.727644607,
-    "lng": 141.99147538800003,
-    "lga": "HINDMARSH SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "murray-sunset-national-park-pheenys-track-campground-murray-sunset-national-park",
@@ -5987,30 +4211,6 @@
     "animalsFauna": []
   },
   {
-    "id": "mount-wills-h-a-big-river-camp-area-mount-wills-h-a",
-    "name": "Big River Camp Area, Mount Wills H.A",
-    "parkName": "Mount Wills H.A",
-    "lat": -36.89399700000001,
-    "lng": 147.46230216000004,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "little-desert-national-park-horseshoe-bend-campground-little-desert-national-park",
     "name": "Horseshoe Bend Campground, Little Desert National Park",
     "parkName": "Little Desert National Park",
@@ -6040,174 +4240,6 @@
       "river_creek"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "lake-tyers-s-p-camerons-arms-no-1-lake-tyers-s-p",
-    "name": "Camerons Arms No. 1, Lake Tyers S.P.",
-    "parkName": "Lake Tyers S.P.",
-    "lat": -37.77939602999999,
-    "lng": 148.13540388,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lake-tyers-s-p-the-glasshouse-lake-tyers-s-p",
-    "name": "The Glasshouse, Lake Tyers S.P.",
-    "parkName": "Lake Tyers S.P.",
-    "lat": -37.845601020000004,
-    "lng": 148.10830092000003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "snowy-river-national-park-balley-hooley-snowy-river-national-park",
-    "name": "Balley Hooley, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.51785000000001,
-    "lng": 148.26388896000003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "moondarra-state-park-seninis-visitor-area-moondarra-state-park",
-    "name": "Seninis Visitor Area, Moondarra State Park",
-    "parkName": "Moondarra State Park",
-    "lat": -38.02358196,
-    "lng": 146.33998812000004,
-    "lga": "BAW BAW SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "mitchell-river-national-park-woolshed-creek-camping-area-mitchell-river-national-park",
-    "name": "Woolshed Creek Camping Area, Mitchell River National Park",
-    "parkName": "Mitchell River National Park",
-    "lat": -37.696070969999994,
-    "lng": 147.365001,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "errinundra-national-park-bonang-river-errinundra-national-park",
-    "name": "Bonang River, Errinundra National Park",
-    "parkName": "Errinundra National Park",
-    "lat": -37.28518398,
-    "lng": 148.80638592000003,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "black-range-state-park-burrunj-campground-black-range-state-park",
-    "name": "Burrunj Campground, Black Range State Park",
-    "parkName": "Black Range State Park",
-    "lat": -37.21417001999998,
-    "lng": 142.08824412,
-    "lga": "SOUTHERN GRAMPIANS SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "croajingolong-national-park-shipwreck-creek-croajingolong-national-park",
@@ -6314,30 +4346,6 @@
     "animalsFauna": []
   },
   {
-    "id": "cobram-r-p-big-toms-bend-cobram-r-p",
-    "name": "Big Toms Bend, Cobram R.P",
-    "parkName": "Cobram R.P",
-    "lat": -35.90274402,
-    "lng": 145.65249396000002,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "river-murray-reserve-wilsons-bend-river-murray-reserve",
     "name": "Wilsons Bend, River Murray Reserve",
     "parkName": "River Murray Reserve",
@@ -6372,54 +4380,6 @@
       "mountains_alpine"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "lal-lal-bungal-h-a-lal-lal-bungle-historic-area-lal-lal-bungal-h-a",
-    "name": "Lal Lal Bungle Historic Area, Lal Lal - Bungal H.A.",
-    "parkName": "Lal Lal - Bungal H.A.",
-    "lat": -37.68119001000002,
-    "lng": 144.07208100000003,
-    "lga": "MOORABOOL SHIRE",
-    "tourismRegion": "Daylesford and Macedon Ranges",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "yarrawonga-r-p-forges-bend-yarrawonga-r-p-3",
-    "name": "Forges Bend, Yarrawonga R.P",
-    "parkName": "Yarrawonga R.P",
-    "lat": -35.99297267100002,
-    "lng": 145.95485966700005,
-    "lga": "MOIRA SHIRE",
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "lower-glenelg-national-park-wilson-hall-lower-glenelg-national-park",
@@ -6490,30 +4450,6 @@
     "animalsFauna": []
   },
   {
-    "id": "burrowa-pine-mountain-national-park-bluff-creek-burrowa-pine-mountain-national-park",
-    "name": "Bluff Creek, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.12262904200003,
-    "lng": 147.777764036,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
     "id": "lower-glenelg-national-park-mclennans-punt-lower-glenelg-national-park",
     "name": "McLennans Punt, Lower Glenelg National Park",
     "parkName": "Lower Glenelg National Park",
@@ -6545,102 +4481,6 @@
       "beach_coast"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "burrowa-pine-mountain-national-park-the-ridge-burrowa-pine-mountain-national-park",
-    "name": "The Ridge, Burrowa - Pine Mountain National Park",
-    "parkName": "Burrowa - Pine Mountain National Park",
-    "lat": -36.060347949000004,
-    "lng": 147.74683796700003,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "snowy-river-national-park-waratah-flat-snowy-river-national-park",
-    "name": "Waratah Flat, Snowy River National Park",
-    "parkName": "Snowy River National Park",
-    "lat": -37.28709993799998,
-    "lng": 148.57246889299995,
-    "lga": "EAST GIPPSLAND SHIRE",
-    "tourismRegion": "Gippsland",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-bruces-bend-yarrawonga-r-p-3",
-    "name": "Bruces Bend, Yarrawonga R.P",
-    "parkName": "River Murray Reserve",
-    "lat": -35.96476974799998,
-    "lng": 145.91497533899997,
-    "lga": null,
-    "tourismRegion": "Murray",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "river-murray-reserve-neils-reserve-river-murray-reserve",
-    "name": "Neils Reserve, River Murray Reserve",
-    "parkName": "River Murray Reserve",
-    "lat": -35.97256158099998,
-    "lng": 147.81216926499997,
-    "lga": "TOWONG SHIRE",
-    "tourismRegion": "High Country",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "cape-conran-coastal-park-banksia-bluff-campground-cape-conran-coastal-park-7",
@@ -6785,54 +4625,6 @@
       "lake_wetland"
     ],
     "animalsFauna": []
-  },
-  {
-    "id": "grampians-national-park-kalymna-falls-campground-grampians-national-park",
-    "name": "Kalymna Falls Campground, Grampians National Park",
-    "parkName": "Grampians National Park",
-    "lat": -37.32378799999998,
-    "lng": 142.62079200000005,
-    "lga": "ARARAT RURAL CITY",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
-  },
-  {
-    "id": "lake-albacutya-park-western-beach-lake-albacutya-park",
-    "name": "Western Beach, Lake Albacutya Park",
-    "parkName": "Lake Albacutya Park",
-    "lat": -35.779685900000004,
-    "lng": 141.93499680399998,
-    "lga": "HINDMARSH SHIRE",
-    "tourismRegion": "Grampians",
-    "facilities": {
-      "dogFriendly": null,
-      "toilets": null,
-      "toiletsType": null,
-      "showers": null,
-      "bbq": null,
-      "firePits": null,
-      "picnicTables": null,
-      "drinkingWater": null,
-      "vehicleAccess": null,
-      "accessibilityNotes": null,
-      "dogPolicy": null
-    },
-    "sourceUrl": null,
-    "bookingUrl": null
   },
   {
     "id": "barmah-lakes-camping-area",
