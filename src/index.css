@@ -294,6 +294,8 @@ img {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .distance-text {
@@ -313,8 +315,7 @@ img {
 }
 
 .campground-location::before {
-  content: '📍';
-  font-size: 1rem;
+  content: '';
 }
 
 /* Weather/Forecast Section */
