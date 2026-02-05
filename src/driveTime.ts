@@ -1,6 +1,6 @@
 const ORIGIN = { lat: -37.7691, lng: 144.9958 }
-const AVG_SPEED_KMH = 70
-const ROAD_FACTOR = 1.25
+const AVG_SPEED_KMH = 50
+const ROAD_FACTOR = 1.6
 
 const toRad = (value: number) => (value * Math.PI) / 180
 
