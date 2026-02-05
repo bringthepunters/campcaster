@@ -61,15 +61,17 @@
   - Any warnings or alerts
 
 ### 4.5 Availability
-- Initially: link to official Parks Victoria booking pages
-- Optionally: approximate busyness/occupancy trends for weekends and peak periods
-- Include booking type:
-  - Bookable online
-  - First-come
-  - Mixed
+- Provide booking links and a simple availability indicator for a selected date.
+- Availability states:
+  - **Available**
+  - **Booked out**
+  - **Unbookable – just rock up**
+- Availability is date-specific and only shown after the user selects a date.
+- Use the Parks Victoria booking grid API (via proxy) to determine availability when possible.
 
 ### 4.6 Filters
 - Filter by facilities, dog-friendly status, weather conditions, and popularity/trend indicators
+- Filter by availability state (Available / Booked out / Unbookable).
 
 ### 4.7 Booking Links
 - Direct links to official Parks Victoria booking pages
@@ -113,7 +115,10 @@
 - Update cadence: static for at least a year; refresh only when needed.  
 - Weather: provider TBD; must support 13+ day forecasts.  
 - Weather provider: Open-Meteo (keyless).  
+- Weather granularity: LGA-level forecasts (use LGA centroid for each site).
+- Users must select a date before weather and availability are evaluated.
 - Availability: initially only links to booking pages; later indicate how early booked/out.  
+- Availability uses the Parks Victoria booking grid API via a Cloudflare Worker proxy to avoid CORS.  
 - Popularity/trends: defer until real usage data exists.  
 - Driving times: rough estimates; assume departures around 10am.  
 - Essential filters for v1: dog-friendly and toilets.  
@@ -123,6 +128,8 @@
 - National park boundaries are not required; parks/camping areas change slowly and can be treated as static.  
 - Auth: no accounts or saved trips.  
 - Performance: dataset size unknown; plan for all Victoria sites.  
+- Metadata collection should include extended facility detail (e.g., flushing toilets) and landscape tags where present.  
+- Fill missing lat/lng from official page map links when available.  
 
 ---
 

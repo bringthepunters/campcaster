@@ -100,6 +100,8 @@ When implementing a spec or task:
 
 - Keep linting/formatting automated and consistent.
 - CI must be green before merging.
+- Long-running data collection tasks must report progress (counts, rate, ETA if possible) and update the task checklist/status.
+- Use neutral language like "data collection" instead of "scraping" in user-facing updates.
 - If constraints conflict, follow this order:
   1) Spec requirements
   2) This constitution
