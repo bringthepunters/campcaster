@@ -1159,7 +1159,7 @@ function App() {
                         rel="noreferrer"
                         className="btn btn-secondary mt-3 w-full"
                       >
-                        Availability
+                        Link to camp site
                       </a>
                     ) : null}
                   </article>
