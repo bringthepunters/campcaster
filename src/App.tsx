@@ -88,7 +88,7 @@ const toTitleCase = (value: string) =>
     .join(' ')
 
 const formatRegion = (site: Site) => {
-  const region = site.tourismRegion ?? site.lga
+  const region = site.tourismRegion
   return region ? toTitleCase(region) : 'Region TBD'
 }
 
@@ -947,6 +947,8 @@ function App() {
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
+                const driveLabel = estimateDriveTimeLabel(site.lat, site.lng)
+                const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=Northcote+VIC&destination=${site.lat},${site.lng}`
                 const facilities = site.facilities ?? {}
                 const dogPolicyText = facilities.dogPolicy
                   ? cleanPolicyList(facilities.dogPolicy)
@@ -1008,6 +1010,14 @@ function App() {
                         </h2>
                       </div>
                       <p className="campground-location">{locationLabel}</p>
+                      <a
+                        href={mapsLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="distance-text"
+                      >
+                        🚗 {driveLabel} from Northcote
+                      </a>
                     </div>
                   <div className="forecast-section">
                     {!selectedDate ? (
@@ -1032,16 +1042,16 @@ function App() {
                         <div className="mt-2 flex flex-wrap gap-2">
                           {hasPrecip ? (
                             <span
-                              className="inline-flex items-center gap-1 rounded-full bg-ink/5 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink/60"
+                              className="weather-chip"
                               aria-label="Rain expected"
                             >
                               <svg
                                 aria-hidden="true"
                                 viewBox="0 0 24 24"
-                                className="h-3 w-3"
+                                className="h-4 w-4"
                                 fill="none"
                                 stroke="currentColor"
-                                strokeWidth="2"
+                                strokeWidth="2.5"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                               >
@@ -1056,16 +1066,16 @@ function App() {
                           ) : null}
                           {isSnowy ? (
                             <span
-                              className="inline-flex items-center gap-1 rounded-full bg-ink/5 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink/60"
+                              className="weather-chip"
                               aria-label="Snow possible"
                             >
                               <svg
                                 aria-hidden="true"
                                 viewBox="0 0 24 24"
-                                className="h-3 w-3"
+                                className="h-4 w-4"
                                 fill="none"
                                 stroke="currentColor"
-                                strokeWidth="2"
+                                strokeWidth="2.5"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                               >
@@ -1078,16 +1088,16 @@ function App() {
                           ) : null}
                           {isHeatIcon ? (
                             <span
-                              className="inline-flex items-center gap-1 rounded-full bg-ink/5 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink/60"
+                              className="weather-chip"
                               aria-label="Heat expected"
                             >
                               <svg
                                 aria-hidden="true"
                                 viewBox="0 0 24 24"
-                                className="h-3 w-3"
+                                className="h-4 w-4"
                                 fill="none"
                                 stroke="currentColor"
-                                strokeWidth="2"
+                                strokeWidth="2.5"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                               >
@@ -1109,9 +1119,6 @@ function App() {
                         </div>
                     ) : null}
                   </div>
-                    <div className="distance-badge">
-                      {estimateDriveTimeLabel(site.lat, site.lng)} from Northcote
-                    </div>
                     {site.landscapeTags?.length ? (
                       <div className="mt-2 flex flex-col gap-2">
                         {site.landscapeTags?.length ? (
@@ -1129,7 +1136,7 @@ function App() {
                       </div>
                     ) : null}
                     {hasFacilityDetails ? (
-                      <div className="mt-2 flex flex-col gap-2">
+                      <div className="facilities-block flex flex-col gap-2">
                         <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
                           Facilities
                         </div>
