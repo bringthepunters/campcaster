@@ -1,4 +1,6 @@
 import json
+import os
+import random
 import re
 import time
 from pathlib import Path
@@ -10,7 +12,8 @@ URLS_PATH = ROOT / "data" / "campground_urls.txt"
 OUTPUT_BY_URL = ROOT / "data" / "facilities_by_url.json"
 SITES_PATH = ROOT / "public" / "data" / "sites.json"
 
-REQUEST_DELAY_SECONDS = 1.5  # ~40 requests/minute (50% faster)
+REQUEST_DELAY_SECONDS = float(os.getenv("REQUEST_DELAY_SECONDS", "1.5"))
+REQUEST_JITTER_SECONDS = float(os.getenv("REQUEST_JITTER_SECONDS", "13"))
 SCRAPE_VERSION = 3
 
 STOPWORDS = {
@@ -394,6 +397,18 @@ def main() -> None:
         action="store_true",
         help="Skip scraping and just apply facilities to sites.json.",
     )
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=1,
+        help="1-based index to start from in the URL list.",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Maximum number of URLs to process (0 = no limit).",
+    )
     args = parser.parse_args()
 
     urls = load_urls()
@@ -408,7 +423,16 @@ def main() -> None:
         print("Applied collected facilities to sites.json")
         return
 
+    start_idx = max(1, args.start)
+    max_count = args.limit if args.limit and args.limit > 0 else None
+    processed = 0
+
     for idx, url in enumerate(urls, start=1):
+        if idx < start_idx:
+            continue
+        if max_count is not None and processed >= max_count:
+            break
+        did_fetch = False
         if url in facilities_by_url and not args.refresh:
             if args.refresh_missing:
                 existing = facilities_by_url.get(url, {})
@@ -424,6 +448,7 @@ def main() -> None:
                 continue
         try:
             text = fetch_text(url)
+            did_fetch = True
         except Exception as err:
             print(f"Failed to fetch {url}: {err}")
             failed += 1
@@ -432,12 +457,15 @@ def main() -> None:
         facilities_by_url[url] = extract_facilities(text)
         save_progress(facilities_by_url)
         scraped += 1
+        processed += 1
         if (idx % 5) == 0:
             print(
                 f"[{idx}/{total}] collected: {scraped} | skipped: {skipped} | failed: {failed}"
             )
-        if idx < len(urls):
-            time.sleep(REQUEST_DELAY_SECONDS)
+        if did_fetch and idx < len(urls):
+            jitter = random.uniform(-REQUEST_JITTER_SECONDS, REQUEST_JITTER_SECONDS)
+            delay = max(0, REQUEST_DELAY_SECONDS + jitter)
+            time.sleep(delay)
 
     apply_to_sites(facilities_by_url, urls)
     print(f"Collected {len(urls)} pages")
