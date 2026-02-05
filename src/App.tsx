@@ -122,13 +122,18 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 
-const cleanInlineText = (value: string) =>
-  value
+const cleanInlineText = (value: unknown) => {
+  if (Array.isArray(value)) {
+    return cleanInlineText(value.join(' '))
+  }
+  if (typeof value !== 'string') return ''
+  return value
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     .replace(/https?:\/\/\S+/g, '')
     .replace(/#+\s*/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
 
 const normalizeTokens = (value: string) =>
   value
