@@ -86,7 +86,7 @@ a:hover {
 .incident-track {
   display: inline-flex;
   gap: 1.5rem;
-  animation: incident-scroll 45s linear infinite;
+  animation: incident-scroll 225s linear infinite;
 }
 
 .incident-item {
