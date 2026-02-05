@@ -122,6 +122,14 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 
+const cleanInlineText = (value: string) =>
+  value
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/#+\s*/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
 const normalizeTokens = (value: string) =>
   value
     .toLowerCase()
@@ -825,6 +833,12 @@ function App() {
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
                 const facilities = site.facilities ?? {}
+                const dogPolicyText = facilities.dogPolicy
+                  ? cleanInlineText(facilities.dogPolicy)
+                  : ''
+                const accessibilityText = facilities.accessibilityNotes
+                  ? cleanInlineText(facilities.accessibilityNotes)
+                  : ''
                 const facilityItems = [
                   {
                     key: 'toilets',
@@ -856,19 +870,16 @@ function App() {
                     label: 'Dog friendly',
                     value: facilities.dogFriendly,
                   },
+                  {
+                    key: 'accessibilityNotes',
+                    label: 'Accessibility',
+                    value: facilities.accessibilityNotes ? true : null,
+                  },
                 ]
-                const facilityNotes = [
-                  facilities.dogPolicy
-                    ? `Dog policy: ${facilities.dogPolicy}`
-                    : null,
-                  facilities.accessibilityNotes
-                    ? `Accessibility: ${facilities.accessibilityNotes}`
-                    : null,
-                ].filter(Boolean) as string[]
                 const hasFacilityDetails =
                   facilityItems.some(
                     (item) => item.value !== null && item.value !== undefined,
-                  ) || facilityNotes.length > 0
+                  )
 
                 return (
                   <article
@@ -1018,20 +1029,24 @@ function App() {
                               (item) =>
                                 item.value !== null && item.value !== undefined,
                             )
+                            .filter((item) => item.value === true)
                             .map((item) => (
                               <span
                                 key={item.key}
                                 className="rounded-full bg-ink/5 px-2 py-1"
+                                title={
+                                  item.key === 'dogFriendly' && dogPolicyText
+                                    ? dogPolicyText
+                                    : item.key === 'accessibilityNotes' &&
+                                        accessibilityText
+                                      ? accessibilityText
+                                      : undefined
+                                }
                               >
-                                {item.label}: {item.value ? 'Yes' : 'No'}
+                                {item.label}
                               </span>
                             ))}
                         </div>
-                        {facilityNotes.length ? (
-                          <div className="text-xs text-ink/60">
-                            {facilityNotes.join(' • ')}
-                          </div>
-                        ) : null}
                       </div>
                     ) : null}
                     {selectedDate ? (
