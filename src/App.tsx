@@ -50,6 +50,12 @@ type WeatherDaily = {
 
 type LgaCentroids = Record<string, { lat: number; lng: number }>
 type AvailabilityStatus = 'available' | 'booked_out' | 'unbookable' | 'unknown'
+type IncidentItem = {
+  title: string
+  link: string
+  pubDate: string
+  category: string
+}
 
 const FACILITY_FILTERS = [
   { key: 'dogFriendly', label: 'Dog-friendly' },
@@ -203,6 +209,8 @@ function App() {
     DEFAULT_MAX_DRIVE_MINUTES,
   )
   const [selectedDate, setSelectedDate] = useState('')
+  const [incidents, setIncidents] = useState<IncidentItem[]>([])
+  const [incidentsError, setIncidentsError] = useState<string | null>(null)
 
   useEffect(() => {
     weatherByKeyRef.current = weatherByKey
@@ -239,6 +247,49 @@ function App() {
     }
 
     void load()
+  }, [])
+
+  useEffect(() => {
+    const loadIncidents = async () => {
+      try {
+        setIncidentsError(null)
+        const proxyBase = (import.meta.env.VITE_INCIDENT_PROXY_URL ??
+          '') as string
+        const url = proxyBase
+          ? new URL(proxyBase)
+          : new URL('https://data.emergency.vic.gov.au/Show?pageId=getIncidentRSS')
+        if (proxyBase) {
+          url.searchParams.set('url', 'https://data.emergency.vic.gov.au/Show?pageId=getIncidentRSS')
+        }
+        const response = await fetch(url.toString(), { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error('Incident feed unavailable')
+        }
+        const xml = await response.text()
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(xml, 'application/xml')
+        const items = Array.from(doc.querySelectorAll('item'))
+          .map((item) => {
+            const title = item.querySelector('title')?.textContent?.trim() ?? ''
+            const link = item.querySelector('link')?.textContent?.trim() ?? ''
+            const pubDate =
+              item.querySelector('pubDate')?.textContent?.trim() ?? ''
+            const category =
+              item.querySelector('category')?.textContent?.trim() ?? ''
+            return { title, link, pubDate, category }
+          })
+          .filter((item) => item.title)
+        setIncidents(items)
+      } catch (error) {
+        console.error(error)
+        setIncidentsError('Unable to load live incident feed.')
+        setIncidents([])
+      }
+    }
+
+    void loadIncidents()
+    const interval = setInterval(loadIncidents, 10 * 60 * 1000)
+    return () => clearInterval(interval)
   }, [])
 
   const loadWeather = useCallback(
@@ -641,7 +692,7 @@ function App() {
   return (
     <div className="min-h-screen text-ink">
       <div className="bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3">
           <span>
             Always check emergency conditions before planning to camp anywhere.{' '}
             <a
@@ -654,6 +705,36 @@ function App() {
             </a>
             .
           </span>
+          {incidents.length > 0 ? (
+            <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
+              {incidents.map((incident, index) => (
+                <span key={`${incident.title}-${index}`} className="flex items-center gap-2">
+                  <a
+                    href={incident.link || 'https://www.emergency.vic.gov.au'}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-4 transition hover:text-white"
+                  >
+                    {incident.title}
+                  </a>
+                  {incident.category ? (
+                    <span className="rounded-full border border-white/40 px-2 py-[2px] text-[10px]">
+                      {incident.category}
+                    </span>
+                  ) : null}
+                  {(index + 1) % 3 === 0 ? (
+                    <span className="text-white/70">
+                      Always check emergency conditions before planning to camp anywhere.
+                    </span>
+                  ) : null}
+                </span>
+              ))}
+            </div>
+          ) : incidentsError ? (
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
+              {incidentsError}
+            </span>
+          ) : null}
         </div>
       </div>
       <header className="px-6 pb-10 pt-12 sm:px-10">
