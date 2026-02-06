@@ -68,7 +68,7 @@ const FACILITY_FILTERS = [
 const AVAILABILITY_FILTERS = [
   { key: 'available', label: 'Available' },
   { key: 'booked_out', label: 'Booked out' },
-  { key: 'unbookable', label: 'Unbookable' },
+  { key: 'unbookable', label: 'Not Bookable. Just Rock up.' },
 ] as const
 
 const HEAT_THRESHOLD_C = 33
