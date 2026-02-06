@@ -1113,11 +1113,11 @@ function App() {
                     ) : (
                       <div>Forecast pending.</div>
                     )}
-                      {weatherErrors[weatherKey] ? (
+                      {!hasWeather && weatherErrors[weatherKey] ? (
                         <div className="mt-2 text-[11px] text-ember">
                           {weatherErrors[weatherKey]}
                         </div>
-                    ) : null}
+                      ) : null}
                   </div>
                     {site.landscapeTags?.length ? (
                       <div className="mt-2 flex flex-col gap-2">
