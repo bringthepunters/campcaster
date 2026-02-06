@@ -938,7 +938,7 @@ function App() {
                       : availabilityForDate === 'available'
                         ? 'Available'
                         : availabilityForDate === 'unbookable'
-                          ? 'Unbookable - just rock up'
+                          ? 'Not Bookable. Just Rock up.'
                           : 'Unknown'
                 const availabilityClass =
                   availabilityForDate === 'available'
