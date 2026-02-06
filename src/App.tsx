@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import MapView from './MapView'
 import {
   estimateDriveTimeLabel,
   estimateDriveTimeMinutesFromOrigin,
@@ -219,6 +220,7 @@ function App() {
   const [selectedDate, setSelectedDate] = useState('')
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
 
@@ -788,6 +790,28 @@ function App() {
             </div>
             <div className="filter-grid">
               <div className="filter-row">
+                <label className="checkbox-item">
+                  <input
+                    type="radio"
+                    name="view-mode"
+                    checked={viewMode === 'list'}
+                    onChange={() => setViewMode('list')}
+                    className="accent-fern"
+                  />
+                  List view
+                </label>
+                <label className="checkbox-item">
+                  <input
+                    type="radio"
+                    name="view-mode"
+                    checked={viewMode === 'map'}
+                    onChange={() => setViewMode('map')}
+                    className="accent-fern"
+                  />
+                  Map view
+                </label>
+              </div>
+              <div className="filter-row">
                 {FACILITY_FILTERS.map((filter) => (
                   <label key={filter.key} className="checkbox-item">
                     <input
@@ -899,7 +923,7 @@ function App() {
               Could not load campgrounds. Check `public/data/sites.json`.
             </div>
           )}
-          {status === 'idle' && (
+          {status === 'idle' && viewMode === 'list' && (
             <div className="campground-grid">
               {filteredSites.map((site) => {
                 const weatherKey = site.lga ?? site.id
@@ -1188,6 +1212,9 @@ function App() {
                 )
               })}
             </div>
+          )}
+          {status === 'idle' && viewMode === 'map' && (
+            <MapView sites={filteredSites} />
           )}
           {status === 'idle' && filteredSites.length === 0 && (
             <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
