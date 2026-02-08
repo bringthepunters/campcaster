@@ -62,6 +62,8 @@ const FACILITY_FILTERS = [
   { key: 'dogFriendly', label: 'Dog-friendly' },
   { key: 'toilets', label: 'Toilets' },
   { key: 'showers', label: 'Showers' },
+  { key: 'bbq', label: 'BBQ' },
+  { key: 'firePits', label: 'Fire pits' },
   { key: 'drinkingWater', label: 'Drinking water' },
   { key: 'vehicleAccess', label: 'Vehicle access' },
 ] as const
