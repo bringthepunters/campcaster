@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import MapView from './MapView'
 import {
-  estimateDriveTimeLabel,
+  DEFAULT_ORIGIN,
+  estimateDriveTimeLabelFrom,
   estimateDriveTimeMinutesFromOrigin,
 } from './driveTime'
 
@@ -223,12 +224,78 @@ function App() {
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
+  const [originPostcode, setOriginPostcode] = useState('')
+  const [originCoords, setOriginCoords] = useState<{
+    lat: number
+    lng: number
+    label: string
+  } | null>(null)
+  const [originError, setOriginError] = useState<string | null>(null)
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
 
   useEffect(() => {
     weatherByKeyRef.current = weatherByKey
   }, [weatherByKey])
+
+  useEffect(() => {
+    const postcode = originPostcode.trim()
+    if (!postcode) {
+      setOriginCoords(null)
+      setOriginError(null)
+      return
+    }
+    if (!/^\d{4}$/.test(postcode)) {
+      setOriginCoords(null)
+      setOriginError('Enter a 4 digit postcode')
+      return
+    }
+
+    const controller = new AbortController()
+    const loadOrigin = async () => {
+      try {
+        setOriginError(null)
+        const url = new URL('https://geocoding-api.open-meteo.com/v1/search')
+        url.searchParams.set('name', postcode)
+        url.searchParams.set('country', 'AU')
+        url.searchParams.set('count', '1')
+        const response = await fetch(url.toString(), {
+          signal: controller.signal,
+        })
+        if (!response.ok) throw new Error('Geocoding failed')
+        const payload = (await response.json()) as {
+          results?: Array<{
+            latitude: number
+            longitude: number
+            name?: string
+            admin1?: string
+          }>
+        }
+        const result = payload.results?.[0]
+        if (!result) {
+          setOriginCoords(null)
+          setOriginError('Postcode not found')
+          return
+        }
+        const label = result.name
+          ? `${result.name} (${postcode})`
+          : `Postcode ${postcode}`
+        setOriginCoords({
+          lat: result.latitude,
+          lng: result.longitude,
+          label,
+        })
+        setOriginError(null)
+      } catch (error) {
+        if ((error as Error).name === 'AbortError') return
+        setOriginCoords(null)
+        setOriginError('Could not find that postcode')
+      }
+    }
+
+    void loadOrigin()
+    return () => controller.abort()
+  }, [originPostcode])
 
   useEffect(() => {
     weatherLoadingRef.current = weatherLoading
@@ -463,10 +530,16 @@ function App() {
           return false
         }
       }
+      const originLat = originCoords?.lat ?? DEFAULT_ORIGIN.lat
+      const originLng = originCoords?.lng ?? DEFAULT_ORIGIN.lng
       if (
         maxDriveMinutes > 0 &&
-        estimateDriveTimeMinutesFromOrigin(site.lat, site.lng) >
-          maxDriveMinutes
+        estimateDriveTimeMinutesFromOrigin(
+          originLat,
+          originLng,
+          site.lat,
+          site.lng,
+        ) > maxDriveMinutes
       ) {
         return false
       }
@@ -505,8 +578,20 @@ function App() {
       const availabilityDiff =
         availabilityRank[availabilityA] - availabilityRank[availabilityB]
       if (availabilityDiff !== 0) return availabilityDiff
-      const driveA = estimateDriveTimeMinutesFromOrigin(a.lat, a.lng)
-      const driveB = estimateDriveTimeMinutesFromOrigin(b.lat, b.lng)
+      const originLat = originCoords?.lat ?? DEFAULT_ORIGIN.lat
+      const originLng = originCoords?.lng ?? DEFAULT_ORIGIN.lng
+      const driveA = estimateDriveTimeMinutesFromOrigin(
+        originLat,
+        originLng,
+        a.lat,
+        a.lng,
+      )
+      const driveB = estimateDriveTimeMinutesFromOrigin(
+        originLat,
+        originLng,
+        b.lat,
+        b.lng,
+      )
       return driveA - driveB
     })
   }, [
@@ -522,6 +607,7 @@ function App() {
     sites,
     allowHeat,
     allowRain,
+    originCoords,
   ])
 
   useEffect(() => {
@@ -532,11 +618,16 @@ function App() {
     if (!sites.length) return DEFAULT_MAX_DRIVE_MINUTES
     const maxMinutes = Math.max(
       ...sites.map((site) =>
-        estimateDriveTimeMinutesFromOrigin(site.lat, site.lng),
+        estimateDriveTimeMinutesFromOrigin(
+          originCoords?.lat ?? DEFAULT_ORIGIN.lat,
+          originCoords?.lng ?? DEFAULT_ORIGIN.lng,
+          site.lat,
+          site.lng,
+        ),
       ),
     )
     return Math.max(DEFAULT_MAX_DRIVE_MINUTES, maxMinutes)
-  }, [sites])
+  }, [sites, originCoords])
 
   const driveMarks = useMemo(() => {
     const marks = new Set<number>()
@@ -907,6 +998,25 @@ function App() {
                     />
                   ))}
                 </datalist>
+                <div className="mt-3 flex flex-col gap-2">
+                  <label htmlFor="origin-postcode" className="section-heading">
+                    Your postcode
+                  </label>
+                  <input
+                    id="origin-postcode"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="e.g. 3070"
+                    value={originPostcode}
+                    onChange={(event) =>
+                      setOriginPostcode(event.target.value.trim())
+                    }
+                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
+                  />
+                  {originError ? (
+                    <div className="text-xs text-ember">{originError}</div>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
@@ -973,8 +1083,17 @@ function App() {
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
-                const driveLabel = estimateDriveTimeLabel(site.lat, site.lng)
-                const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=Northcote+VIC&destination=${site.lat},${site.lng}`
+                const originLabel = originCoords?.label ?? 'Northcote'
+                const driveLabel = estimateDriveTimeLabelFrom(
+                  originCoords?.lat ?? DEFAULT_ORIGIN.lat,
+                  originCoords?.lng ?? DEFAULT_ORIGIN.lng,
+                  site.lat,
+                  site.lng,
+                )
+                const originQuery = originCoords
+                  ? encodeURIComponent(originPostcode)
+                  : 'Northcote+VIC'
+                const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
                 const facilities = site.facilities ?? {}
                 const dogPolicyText = facilities.dogPolicy
                   ? cleanPolicyList(facilities.dogPolicy)
@@ -1042,7 +1161,7 @@ function App() {
                         rel="noreferrer"
                         className="distance-text"
                       >
-                        🚗 {driveLabel} from Northcote
+                        🚗 {driveLabel} from {originLabel}
                       </a>
                     </div>
                   <div className="forecast-section">

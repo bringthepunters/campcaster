@@ -194,7 +194,7 @@ describe('CAMPCASTER list view', () => {
     await userEvent.clear(input)
     await userEvent.type(input, today)
 
-    const forecasts = await screen.findAllByText(/LGA forecast/i)
+    const forecasts = await screen.findAllByText(/Forecast/i)
     expect(forecasts.length).toBeGreaterThan(0)
     const summaries = screen.getAllByText(
       /11°C to 26°C, rain risk up to 10%/i,

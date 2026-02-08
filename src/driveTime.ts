@@ -1,4 +1,4 @@
-const ORIGIN = { lat: -37.7691, lng: 144.9958 }
+export const DEFAULT_ORIGIN = { lat: -37.7691, lng: 144.9958 }
 const AVG_SPEED_KMH = 50
 const ROAD_FACTOR = 1.6
 
@@ -36,13 +36,23 @@ export const formatDriveTime = (minutes: number) => {
   return `${hours}h ${mins}m`
 }
 
-export const estimateDriveTimeLabel = (lat: number, lng: number) => {
-  const distanceKm = haversineKm(ORIGIN.lat, ORIGIN.lng, lat, lng)
+export const estimateDriveTimeLabelFrom = (
+  originLat: number,
+  originLng: number,
+  lat: number,
+  lng: number,
+) => {
+  const distanceKm = haversineKm(originLat, originLng, lat, lng)
   const minutes = estimateDriveMinutes(distanceKm)
   return formatDriveTime(minutes)
 }
 
-export const estimateDriveTimeMinutesFromOrigin = (lat: number, lng: number) => {
-  const distanceKm = haversineKm(ORIGIN.lat, ORIGIN.lng, lat, lng)
+export const estimateDriveTimeMinutesFromOrigin = (
+  originLat: number,
+  originLng: number,
+  lat: number,
+  lng: number,
+) => {
+  const distanceKm = haversineKm(originLat, originLng, lat, lng)
   return estimateDriveMinutes(distanceKm)
 }
