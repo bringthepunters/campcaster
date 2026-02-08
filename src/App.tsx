@@ -1000,7 +1000,7 @@ function App() {
             <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)] sm:items-end">
               <div className="flex flex-col gap-2">
                 <label htmlFor="drive-time" className="section-heading">
-                  Max drive time from Northside of the CBD
+                  Approx drive time from the postcode you gave us
                 </label>
                 <div className="flex items-center gap-3">
                   <input
