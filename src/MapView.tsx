@@ -22,15 +22,14 @@ type MapLibreMap = {
 
 type MapLibreMarker = {
   remove: () => void
+  addTo?: (map: MapLibreMap) => MapLibreMarker
+  setPopup?: (popup: unknown) => MapLibreMarker
 }
 
 type MapLibre = {
   Map: new (options: Record<string, unknown>) => MapLibreMap
   Marker: new (options?: Record<string, unknown>) => {
-    setLngLat: (coords: [number, number]) => MapLibreMarker & {
-      addTo: (map: MapLibreMap) => MapLibreMarker
-      setPopup: (popup: unknown) => MapLibreMarker
-    }
+    setLngLat: (coords: [number, number]) => MapLibreMarker
   }
   Popup: new (options?: Record<string, unknown>) => {
     setHTML: (html: string) => unknown
@@ -91,8 +90,8 @@ const MapView = ({ sites }: MapViewProps) => {
       )
       const marker = new maplibre.Marker({ color: '#16a34a' })
         .setLngLat([site.lng, site.lat])
-        .setPopup(popup)
-        .addTo(map)
+        .setPopup?.(popup)
+        .addTo?.(map)
       markersRef.current.push(marker)
     })
 
