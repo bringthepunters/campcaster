@@ -530,8 +530,11 @@ function App() {
           return false
         }
       }
-      const originLat = originCoords?.lat ?? DEFAULT_ORIGIN.lat
-      const originLng = originCoords?.lng ?? DEFAULT_ORIGIN.lng
+      if (!originCoords) {
+        return false
+      }
+      const originLat = originCoords.lat
+      const originLng = originCoords.lng
       if (
         maxDriveMinutes > 0 &&
         estimateDriveTimeMinutesFromOrigin(
@@ -615,12 +618,12 @@ function App() {
   }, [filteredSites])
 
   const maxAvailableDriveMinutes = useMemo(() => {
-    if (!sites.length) return DEFAULT_MAX_DRIVE_MINUTES
+    if (!sites.length || !originCoords) return DEFAULT_MAX_DRIVE_MINUTES
     const maxMinutes = Math.max(
       ...sites.map((site) =>
         estimateDriveTimeMinutesFromOrigin(
-          originCoords?.lat ?? DEFAULT_ORIGIN.lat,
-          originCoords?.lng ?? DEFAULT_ORIGIN.lng,
+          originCoords.lat,
+          originCoords.lng,
           site.lat,
           site.lng,
         ),
@@ -855,14 +858,41 @@ function App() {
             </h1>
           </div>
           <div className="filter-panel flex flex-col gap-6">
-            <div>
+            <div className="step-block">
               <p className="campground-count-label">
                 Campgrounds shown: {filteredSites.length}
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-4">
-                <span className="text-sm font-bold uppercase tracking-[0.2em] text-ink/70">
-                  First, choose the date
-                </span>
+              <div className="step-title">
+                Step 1 — Enter your postcode
+              </div>
+              <div className="step-body">
+                <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
+                  <label htmlFor="origin-postcode" className="sr-only">
+                    Your postcode
+                  </label>
+                  <input
+                    id="origin-postcode"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="e.g. 3070"
+                    value={originPostcode}
+                    onChange={(event) =>
+                      setOriginPostcode(event.target.value.trim())
+                    }
+                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
+                  />
+                </div>
+                {originError ? (
+                  <div className="text-xs text-ember">{originError}</div>
+                ) : null}
+              </div>
+            </div>
+            <div className="step-block">
+              <div className="step-title">
+                Step 2 — What date do you want to go (within the next 14 days)?
+                We will check availability and weather for you.
+              </div>
+              <div className="step-body">
                 <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
                   <label htmlFor="forecast-date" className="sr-only">
                     Forecast date
@@ -904,6 +934,7 @@ function App() {
                   Map view
                 </label>
               </div>
+              <div className="step-title">Step 3 — Use filters to refine your selection</div>
               <div className="filter-row">
                 {FACILITY_FILTERS.map((filter) => (
                   <label key={filter.key} className="checkbox-item">
@@ -998,25 +1029,6 @@ function App() {
                     />
                   ))}
                 </datalist>
-                <div className="mt-3 flex flex-col gap-2">
-                  <label htmlFor="origin-postcode" className="section-heading">
-                    Your postcode
-                  </label>
-                  <input
-                    id="origin-postcode"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="e.g. 3070"
-                    value={originPostcode}
-                    onChange={(event) =>
-                      setOriginPostcode(event.target.value.trim())
-                    }
-                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-                  />
-                  {originError ? (
-                    <div className="text-xs text-ember">{originError}</div>
-                  ) : null}
-                </div>
               </div>
             </div>
           </div>
@@ -1083,13 +1095,15 @@ function App() {
                       ? 'availability-status availability-status--unavailable'
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
-                const originLabel = originCoords?.label ?? 'Northcote'
-                const driveLabel = estimateDriveTimeLabelFrom(
-                  originCoords?.lat ?? DEFAULT_ORIGIN.lat,
-                  originCoords?.lng ?? DEFAULT_ORIGIN.lng,
-                  site.lat,
-                  site.lng,
-                )
+                const originLabel = originCoords?.label ?? 'Postcode'
+                const driveLabel = originCoords
+                  ? estimateDriveTimeLabelFrom(
+                      originCoords.lat,
+                      originCoords.lng,
+                      site.lat,
+                      site.lng,
+                    )
+                  : ''
                 const originQuery = originCoords
                   ? encodeURIComponent(originPostcode)
                   : 'Northcote+VIC'
@@ -1155,14 +1169,16 @@ function App() {
                         </h2>
                       </div>
                       <p className="campground-location">{locationLabel}</p>
-                      <a
-                        href={mapsLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="distance-text"
-                      >
-                        🚗 {driveLabel} from {originLabel}
-                      </a>
+                      {originCoords ? (
+                        <a
+                          href={mapsLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="distance-text"
+                        >
+                          🚗 {driveLabel} from {originLabel}
+                        </a>
+                      ) : null}
                     </div>
                   <div className="forecast-section">
                     {!selectedDate ? (
