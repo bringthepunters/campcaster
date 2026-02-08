@@ -205,23 +205,8 @@ img {
   width: 100%;
   height: 520px;
   display: block;
-}
-
-.map-canvas__bg {
-  fill: #eef6f0;
-  stroke: var(--color-border);
-  stroke-width: 1;
-}
-
-.map-canvas__dot {
-  fill: var(--color-primary);
-  stroke: #0f2c1a;
-  stroke-width: 1;
-  opacity: 0.85;
-}
-
-.map-canvas__dot:hover {
-  opacity: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
 .map-panel__hint {

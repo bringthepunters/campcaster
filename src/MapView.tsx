@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { useEffect, useRef } from 'react'
 
 type Site = {
   id: string
@@ -13,73 +13,108 @@ type MapViewProps = {
   sites: Site[]
 }
 
-const padBounds = (min: number, max: number, pad = 0.02) => {
-  const range = max - min
-  return [min - range * pad, max + range * pad]
+type MapLibreMap = {
+  remove: () => void
+  fitBounds: (bounds: [[number, number], [number, number]], options?: {
+    padding?: number
+  }) => void
 }
 
-const MapView: FC<MapViewProps> = ({ sites }) => {
+type MapLibreMarker = {
+  remove: () => void
+}
+
+type MapLibre = {
+  Map: new (options: Record<string, unknown>) => MapLibreMap
+  Marker: new (options?: Record<string, unknown>) => {
+    setLngLat: (coords: [number, number]) => MapLibreMarker & {
+      addTo: (map: MapLibreMap) => MapLibreMarker
+      setPopup: (popup: unknown) => MapLibreMarker
+    }
+  }
+  Popup: new (options?: Record<string, unknown>) => {
+    setHTML: (html: string) => unknown
+  }
+}
+
+const MapView = ({ sites }: MapViewProps) => {
   const validSites = sites.filter(
     (site) => Number.isFinite(site.lat) && Number.isFinite(site.lng),
   )
-  if (!validSites.length) {
-    return (
-      <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
-        No campsites to plot on the map.
-      </div>
+  const mapRef = useRef<HTMLDivElement | null>(null)
+  const mapInstance = useRef<MapLibreMap | null>(null)
+  const markersRef = useRef<MapLibreMarker[]>([])
+
+  useEffect(() => {
+    const maplibre = (window as unknown as { maplibregl?: MapLibre })
+      .maplibregl
+    if (!maplibre || !mapRef.current) return
+
+    if (mapInstance.current) {
+      mapInstance.current.remove()
+      mapInstance.current = null
+    }
+
+    const map = new maplibre.Map({
+      container: mapRef.current,
+      style: 'https://demotiles.maplibre.org/style.json',
+      center: [144.9631, -37.8136],
+      zoom: 6,
+    })
+
+    mapInstance.current = map
+
+    markersRef.current.forEach((marker) => marker.remove())
+    markersRef.current = []
+
+    if (!validSites.length) return
+
+    const lngs = validSites.map((site) => site.lng)
+    const lats = validSites.map((site) => site.lat)
+    const minLng = Math.min(...lngs)
+    const maxLng = Math.max(...lngs)
+    const minLat = Math.min(...lats)
+    const maxLat = Math.max(...lats)
+
+    map.fitBounds(
+      [
+        [minLng, minLat],
+        [maxLng, maxLat],
+      ],
+      { padding: 40 },
     )
-  }
 
-  const lats = validSites.map((site) => site.lat)
-  const lngs = validSites.map((site) => site.lng)
-  const [minLat, maxLat] = padBounds(Math.min(...lats), Math.max(...lats))
-  const [minLng, maxLng] = padBounds(Math.min(...lngs), Math.max(...lngs))
+    validSites.forEach((site) => {
+      const link = `https://www.google.com/maps/dir/?api=1&origin=Northcote+VIC&destination=${site.lat},${site.lng}`
+      const popup = new maplibre.Popup({ offset: 16 }).setHTML(
+        `<strong>${site.name}</strong><br/>${site.parkName}<br/><a href="${link}" target="_blank" rel="noreferrer">Directions</a>`,
+      )
+      const marker = new maplibre.Marker({ color: '#16a34a' })
+        .setLngLat([site.lng, site.lat])
+        .setPopup(popup)
+        .addTo(map)
+      markersRef.current.push(marker)
+    })
 
-  const width = 1000
-  const height = 600
-
-  const project = (lat: number, lng: number) => {
-    const x = ((lng - minLng) / (maxLng - minLng)) * width
-    const y = ((maxLat - lat) / (maxLat - minLat)) * height
-    return { x, y }
-  }
+    return () => {
+      markersRef.current.forEach((marker) => marker.remove())
+      markersRef.current = []
+      map.remove()
+      mapInstance.current = null
+    }
+  }, [validSites])
 
   return (
     <div className="map-panel">
       <div className="map-panel__title">Map view (schematic)</div>
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
+      <div
+        ref={mapRef}
         className="map-canvas"
         role="img"
         aria-label="Campcaster map view"
-      >
-        <rect width={width} height={height} rx="20" className="map-canvas__bg" />
-        {validSites.map((site) => {
-          const { x, y } = project(site.lat, site.lng)
-          const link = `https://www.google.com/maps/dir/?api=1&origin=Northcote+VIC&destination=${site.lat},${site.lng}`
-          return (
-            <a
-              key={site.id}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <circle
-                cx={x}
-                cy={y}
-                r={4}
-                className="map-canvas__dot"
-              >
-                <title>
-                  {site.name} · {site.parkName}
-                </title>
-              </circle>
-            </a>
-          )
-        })}
-      </svg>
+      />
       <div className="map-panel__hint">
-        Click a dot to open Google Maps directions.
+        Click a marker for details and directions.
       </div>
     </div>
   )
