@@ -277,9 +277,7 @@ function App() {
           setOriginError('Postcode not found')
           return
         }
-        const label = result.name
-          ? `${result.name} (${postcode})`
-          : `Postcode ${postcode}`
+        const label = result.name ? result.name : `Postcode ${postcode}`
         setOriginCoords({
           lat: result.latitude,
           lng: result.longitude,
