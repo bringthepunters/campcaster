@@ -232,6 +232,12 @@ function App() {
   } | null>(null)
   const [originError, setOriginError] = useState<string | null>(null)
   const [vicPostcodes, setVicPostcodes] = useState<Set<string>>(new Set())
+  const [vicPostcodeLookup, setVicPostcodeLookup] = useState<
+    Record<
+      string,
+      { lat: number; lng: number; label?: string; lga?: string; tourismArea?: string | null }
+    >
+  >({})
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
 
@@ -257,57 +263,19 @@ function App() {
       return
     }
 
-    const controller = new AbortController()
-    const loadOrigin = async () => {
-      try {
-        setOriginError(null)
-        const url = new URL('https://geocoding-api.open-meteo.com/v1/search')
-        url.searchParams.set('name', postcode)
-        url.searchParams.set('country', 'AU')
-        url.searchParams.set('count', '5')
-        const response = await fetch(url.toString(), {
-          signal: controller.signal,
-        })
-        if (!response.ok) throw new Error('Geocoding failed')
-        const payload = (await response.json()) as {
-          results?: Array<{
-            latitude: number
-            longitude: number
-            name?: string
-            admin1?: string
-            country_code?: string
-          }>
-        }
-        const results = payload.results ?? []
-        const auResults = results.filter(
-          (result) => result.country_code?.toUpperCase() === 'AU',
-        )
-        const result =
-          auResults.find((match) =>
-            match.admin1?.toLowerCase().includes('victoria'),
-          ) ?? auResults[0]
-        if (!result) {
-          setOriginCoords(null)
-          setOriginError('Postcode not found')
-          return
-        }
-        const label = result.name ? result.name : `Postcode ${postcode}`
-        setOriginCoords({
-          lat: result.latitude,
-          lng: result.longitude,
-          label,
-        })
-        setOriginError(null)
-      } catch (error) {
-        if ((error as Error).name === 'AbortError') return
-        setOriginCoords(null)
-        setOriginError('Could not find that postcode')
-      }
+    const match = vicPostcodeLookup[postcode]
+    if (!match) {
+      setOriginCoords(null)
+      setOriginError('Postcode not found')
+      return
     }
-
-    void loadOrigin()
-    return () => controller.abort()
-  }, [originPostcode, vicPostcodes])
+    setOriginCoords({
+      lat: match.lat,
+      lng: match.lng,
+      label: match.label ?? `Postcode ${postcode}`,
+    })
+    setOriginError(null)
+  }, [originPostcode, vicPostcodes, vicPostcodeLookup])
 
   useEffect(() => {
     weatherLoadingRef.current = weatherLoading
@@ -321,7 +289,7 @@ function App() {
         const [sitesResponse, lgaResponse, postcodeResponse] = await Promise.all([
           fetch(`${baseUrl}data/sites.json`),
           fetch(`${baseUrl}data/lga_centroids.json`),
-          fetch(`${baseUrl}data/vic_postcodes.json`),
+          fetch(`${baseUrl}data/vic_postcode_centroids.json`),
         ])
         if (!sitesResponse.ok) {
           throw new Error('Failed to load sites')
@@ -334,10 +302,14 @@ function App() {
         }
         const data = (await sitesResponse.json()) as Site[]
         const centroids = (await lgaResponse.json()) as LgaCentroids
-        const postcodeList = (await postcodeResponse.json()) as string[]
+        const postcodeLookup = (await postcodeResponse.json()) as Record<
+          string,
+          { lat: number; lng: number; label?: string; lga?: string; tourismArea?: string | null }
+        >
         setSites(data)
         setLgaCentroids(centroids)
-        setVicPostcodes(new Set(postcodeList))
+        setVicPostcodeLookup(postcodeLookup)
+        setVicPostcodes(new Set(Object.keys(postcodeLookup)))
         setStatus('idle')
       } catch (error) {
         console.error(error)
