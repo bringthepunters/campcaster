@@ -269,12 +269,20 @@ function App() {
             longitude: number
             name?: string
             admin1?: string
+            country_code?: string
           }>
         }
-        const result = payload.results?.[0]
+        const results = payload.results ?? []
+        const auResults = results.filter(
+          (result) =>
+            result.country_code?.toUpperCase() === 'AU' &&
+            (result.admin1?.toLowerCase().includes('victoria') ||
+              result.admin1?.toLowerCase().includes('vic')),
+        )
+        const result = auResults[0]
         if (!result) {
           setOriginCoords(null)
-          setOriginError('Postcode not found')
+          setOriginError('Postcode not found in Victoria')
           return
         }
         const label = result.name ? result.name : `Postcode ${postcode}`
