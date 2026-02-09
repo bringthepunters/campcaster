@@ -1,10 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import MapView from './MapView'
-import {
-  DEFAULT_ORIGIN,
-  estimateDriveTimeLabelFrom,
-  estimateDriveTimeMinutesFromOrigin,
-} from './driveTime'
+import { formatDriveTime } from './driveTime'
 
 type Site = {
   id: string
@@ -238,6 +234,10 @@ function App() {
       { lat: number; lng: number; label?: string; lga?: string; tourismArea?: string | null }
     >
   >({})
+  const [driveTimesById, setDriveTimesById] = useState<Record<string, number>>(
+    {},
+  )
+  const [driveTimesLoading, setDriveTimesLoading] = useState(false)
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
 
@@ -523,18 +523,11 @@ function App() {
       if (!originCoords) {
         return false
       }
-      const originLat = originCoords.lat
-      const originLng = originCoords.lng
-      if (
-        maxDriveMinutes > 0 &&
-        estimateDriveTimeMinutesFromOrigin(
-          originLat,
-          originLng,
-          site.lat,
-          site.lng,
-        ) > maxDriveMinutes
-      ) {
-        return false
+      const driveMinutes = driveTimesById[site.id]
+      if (maxDriveMinutes > 0 && driveMinutes !== undefined) {
+        if (driveMinutes > maxDriveMinutes) {
+          return false
+        }
       }
       const availabilityFilterActive = AVAILABILITY_FILTERS.some(
         (filter) => availabilityFilters[filter.key],
@@ -571,20 +564,11 @@ function App() {
       const availabilityDiff =
         availabilityRank[availabilityA] - availabilityRank[availabilityB]
       if (availabilityDiff !== 0) return availabilityDiff
-      const originLat = originCoords?.lat ?? DEFAULT_ORIGIN.lat
-      const originLng = originCoords?.lng ?? DEFAULT_ORIGIN.lng
-      const driveA = estimateDriveTimeMinutesFromOrigin(
-        originLat,
-        originLng,
-        a.lat,
-        a.lng,
-      )
-      const driveB = estimateDriveTimeMinutesFromOrigin(
-        originLat,
-        originLng,
-        b.lat,
-        b.lng,
-      )
+      const driveA = driveTimesById[a.id]
+      const driveB = driveTimesById[b.id]
+      if (driveA === undefined && driveB === undefined) return 0
+      if (driveA === undefined) return 1
+      if (driveB === undefined) return -1
       return driveA - driveB
     })
   }, [
@@ -601,6 +585,7 @@ function App() {
     allowHeat,
     allowRain,
     originCoords,
+    driveTimesById,
   ])
 
   useEffect(() => {
@@ -609,18 +594,10 @@ function App() {
 
   const maxAvailableDriveMinutes = useMemo(() => {
     if (!sites.length || !originCoords) return DEFAULT_MAX_DRIVE_MINUTES
-    const maxMinutes = Math.max(
-      ...sites.map((site) =>
-        estimateDriveTimeMinutesFromOrigin(
-          originCoords.lat,
-          originCoords.lng,
-          site.lat,
-          site.lng,
-        ),
-      ),
-    )
+    const times = Object.values(driveTimesById)
+    const maxMinutes = times.length ? Math.max(...times) : DEFAULT_MAX_DRIVE_MINUTES
     return Math.max(DEFAULT_MAX_DRIVE_MINUTES, maxMinutes)
-  }, [sites, originCoords])
+  }, [sites, originCoords, driveTimesById])
 
   const driveMarks = useMemo(() => {
     const marks = new Set<number>()
@@ -640,6 +617,84 @@ function App() {
       void loadWeather(site)
     })
   }, [filteredSites, loadWeather])
+
+  useEffect(() => {
+    if (!originCoords || !originPostcode) {
+      setDriveTimesById({})
+      setDriveTimesLoading(false)
+      return
+    }
+
+    const cacheKey = `driveTimes:${originPostcode}`
+    const cached = window.localStorage.getItem(cacheKey)
+    if (cached) {
+      try {
+        const parsed = JSON.parse(cached) as Record<string, number>
+        setDriveTimesById(parsed)
+        return
+      } catch {
+        window.localStorage.removeItem(cacheKey)
+      }
+    }
+
+    const proxyBase = (import.meta.env.VITE_ROUTE_PROXY_URL ?? '') as string
+    if (!proxyBase) {
+      setDriveTimesById({})
+      setDriveTimesLoading(false)
+      return
+    }
+
+    let cancelled = false
+    const loadDriveTimes = async () => {
+      setDriveTimesLoading(true)
+      try {
+        const allSites = sites.filter(
+          (site) => Number.isFinite(site.lat) && Number.isFinite(site.lng),
+        )
+        const batchSize = 50
+        const results: Record<string, number> = {}
+        for (let i = 0; i < allSites.length; i += batchSize) {
+          if (cancelled) return
+          const batch = allSites.slice(i, i + batchSize)
+          const response = await fetch(proxyBase, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              origin: { lat: originCoords.lat, lng: originCoords.lng },
+              destinations: batch.map((site) => ({
+                id: site.id,
+                lat: site.lat,
+                lng: site.lng,
+              })),
+            }),
+          })
+          if (!response.ok) {
+            throw new Error('Drive time request failed')
+          }
+          const payload = (await response.json()) as {
+            durations?: Record<string, number>
+          }
+          Object.assign(results, payload.durations ?? {})
+          setDriveTimesById((prev) => ({ ...prev, ...payload.durations }))
+          await new Promise((resolve) => setTimeout(resolve, 300))
+        }
+        window.localStorage.setItem(cacheKey, JSON.stringify(results))
+      } catch (error) {
+        if (!cancelled) {
+          console.error(error)
+        }
+      } finally {
+        if (!cancelled) {
+          setDriveTimesLoading(false)
+        }
+      }
+    }
+
+    void loadDriveTimes()
+    return () => {
+      cancelled = true
+    }
+  }, [originCoords, originPostcode, sites])
 
   useEffect(() => {
     if (!selectedDate) return
@@ -1090,14 +1145,13 @@ function App() {
                       : 'availability-status availability-status--unknown'
                 const locationLabel = formatRegion(site)
                 const originLabel = originCoords?.label ?? 'Postcode'
-                const driveLabel = originCoords
-                  ? estimateDriveTimeLabelFrom(
-                      originCoords.lat,
-                      originCoords.lng,
-                      site.lat,
-                      site.lng,
-                    )
-                  : ''
+                const driveMinutes = driveTimesById[site.id]
+                const driveLabel =
+                  originCoords && driveMinutes !== undefined
+                    ? formatDriveTime(driveMinutes)
+                    : driveTimesLoading
+                      ? 'Calculating…'
+                      : 'Unknown'
                 const originQuery = originCoords
                   ? encodeURIComponent(originPostcode)
                   : 'Northcote+VIC'
