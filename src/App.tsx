@@ -857,7 +857,7 @@ function App() {
                 Campgrounds shown: {filteredSites.length}
               </p>
               <div className="step-title">
-                Step 1 — Enter your postcode
+                Step 1 — Enter your home postcode
               </div>
               <div className="step-body">
                 <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
