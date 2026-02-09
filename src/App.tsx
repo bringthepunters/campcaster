@@ -231,6 +231,7 @@ function App() {
     label: string
   } | null>(null)
   const [originError, setOriginError] = useState<string | null>(null)
+  const [vicPostcodes, setVicPostcodes] = useState<Set<string>>(new Set())
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
 
@@ -248,6 +249,11 @@ function App() {
     if (!/^\d{4}$/.test(postcode)) {
       setOriginCoords(null)
       setOriginError('Enter a 4 digit postcode')
+      return
+    }
+    if (vicPostcodes.size > 0 && !vicPostcodes.has(postcode)) {
+      setOriginCoords(null)
+      setOriginError('Postcode must be in Victoria')
       return
     }
 
@@ -274,15 +280,12 @@ function App() {
         }
         const results = payload.results ?? []
         const auResults = results.filter(
-          (result) =>
-            result.country_code?.toUpperCase() === 'AU' &&
-            (result.admin1?.toLowerCase().includes('victoria') ||
-              result.admin1?.toLowerCase().includes('vic')),
+          (result) => result.country_code?.toUpperCase() === 'AU',
         )
         const result = auResults[0]
         if (!result) {
           setOriginCoords(null)
-          setOriginError('Postcode not found in Victoria')
+          setOriginError('Postcode not found')
           return
         }
         const label = result.name ? result.name : `Postcode ${postcode}`
@@ -301,7 +304,7 @@ function App() {
 
     void loadOrigin()
     return () => controller.abort()
-  }, [originPostcode])
+  }, [originPostcode, vicPostcodes])
 
   useEffect(() => {
     weatherLoadingRef.current = weatherLoading
@@ -312,9 +315,10 @@ function App() {
       setStatus('loading')
       try {
         const baseUrl = new URL(document.baseURI).toString()
-        const [sitesResponse, lgaResponse] = await Promise.all([
+        const [sitesResponse, lgaResponse, postcodeResponse] = await Promise.all([
           fetch(new URL('data/sites.json', baseUrl)),
           fetch(new URL('data/lga_centroids.json', baseUrl)),
+          fetch(new URL('data/vic_postcodes.json', baseUrl)),
         ])
         if (!sitesResponse.ok) {
           throw new Error('Failed to load sites')
@@ -322,10 +326,15 @@ function App() {
         if (!lgaResponse.ok) {
           throw new Error('Failed to load LGA centroids')
         }
+        if (!postcodeResponse.ok) {
+          throw new Error('Failed to load postcode list')
+        }
         const data = (await sitesResponse.json()) as Site[]
         const centroids = (await lgaResponse.json()) as LgaCentroids
+        const postcodeList = (await postcodeResponse.json()) as string[]
         setSites(data)
         setLgaCentroids(centroids)
+        setVicPostcodes(new Set(postcodeList))
         setStatus('idle')
       } catch (error) {
         console.error(error)
