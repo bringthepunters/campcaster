@@ -262,7 +262,7 @@ function App() {
       try {
         setOriginError(null)
         const url = new URL('https://geocoding-api.open-meteo.com/v1/search')
-        url.searchParams.set('name', postcode)
+        url.searchParams.set('name', `${postcode} Victoria`)
         url.searchParams.set('country', 'AU')
         url.searchParams.set('count', '1')
         const response = await fetch(url.toString(), {
@@ -314,11 +314,11 @@ function App() {
     const load = async () => {
       setStatus('loading')
       try {
-        const baseUrl = new URL(document.baseURI).toString()
+        const baseUrl = import.meta.env.BASE_URL || '/'
         const [sitesResponse, lgaResponse, postcodeResponse] = await Promise.all([
-          fetch(new URL('data/sites.json', baseUrl)),
-          fetch(new URL('data/lga_centroids.json', baseUrl)),
-          fetch(new URL('data/vic_postcodes.json', baseUrl)),
+          fetch(`${baseUrl}data/sites.json`),
+          fetch(`${baseUrl}data/lga_centroids.json`),
+          fetch(`${baseUrl}data/vic_postcodes.json`),
         ])
         if (!sitesResponse.ok) {
           throw new Error('Failed to load sites')
