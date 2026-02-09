@@ -262,9 +262,9 @@ function App() {
       try {
         setOriginError(null)
         const url = new URL('https://geocoding-api.open-meteo.com/v1/search')
-        url.searchParams.set('name', `${postcode} Victoria`)
+        url.searchParams.set('name', postcode)
         url.searchParams.set('country', 'AU')
-        url.searchParams.set('count', '1')
+        url.searchParams.set('count', '5')
         const response = await fetch(url.toString(), {
           signal: controller.signal,
         })
@@ -282,7 +282,10 @@ function App() {
         const auResults = results.filter(
           (result) => result.country_code?.toUpperCase() === 'AU',
         )
-        const result = auResults[0]
+        const result =
+          auResults.find((match) =>
+            match.admin1?.toLowerCase().includes('victoria'),
+          ) ?? auResults[0]
         if (!result) {
           setOriginCoords(null)
           setOriginError('Postcode not found')
