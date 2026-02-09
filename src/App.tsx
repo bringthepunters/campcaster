@@ -862,6 +862,10 @@ function App() {
             <h1 className="font-sans text-3xl font-semibold uppercase tracking-[0.35em] text-ink sm:text-4xl">
               CAMPCASTER
             </h1>
+            <p className="text-sm text-ink/70 sm:text-base">
+              Which National Park camp sites within my desired drivetime range are
+              available, have decent weather and the facilities I want?
+            </p>
           </div>
           <div className="filter-panel flex flex-col gap-6">
             <div className="step-block">
