@@ -276,7 +276,7 @@ img {
   border: 1px solid var(--color-border);
   padding: var(--spacing-lg);
   transition: all 0.2s ease;
-  cursor: pointer;
+  cursor: default;
   display: flex;
   flex-direction: column;
   height: 100%;
