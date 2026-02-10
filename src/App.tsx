@@ -220,7 +220,7 @@ function App() {
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
-  const [originPostcode, setOriginPostcode] = useState('')
+  const [originPostcode, setOriginPostcode] = useState('3000')
   const [originCoords, setOriginCoords] = useState<{
     lat: number
     lng: number
