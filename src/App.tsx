@@ -347,6 +347,14 @@ function App() {
             return { title, link, pubDate, category }
           })
           .filter((item) => item.title)
+          .filter((item) => !/test|do not delete/i.test(item.title))
+          .filter((item) => {
+            if (!item.pubDate) return true
+            const timestamp = Date.parse(item.pubDate)
+            if (Number.isNaN(timestamp)) return true
+            const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000
+            return timestamp >= weekAgo
+          })
         setIncidents(items)
       } catch (error) {
         console.error(error)
@@ -901,7 +909,7 @@ function App() {
             <h1 className="font-sans text-3xl font-semibold uppercase tracking-[0.35em] text-ink sm:text-4xl">
               CAMPCASTER
             </h1>
-            <p className="text-sm text-ink/70 sm:text-base">
+            <p className="text-base font-semibold text-ink/80 sm:text-lg">
               Which National Park camp sites within my desired drivetime range are
               available, have decent weather and the facilities I want?
             </p>
