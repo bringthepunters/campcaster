@@ -35,6 +35,7 @@ jobs:
         env:
           VITE_BOOKEASY_PROXY_URL: https://campcaster-bookeasy-proxy.nthorpe.workers.dev/
           VITE_INCIDENT_PROXY_URL: ${{ secrets.VITE_INCIDENT_PROXY_URL }}
+          VITE_ROUTE_PROXY_URL: ${{ secrets.VITE_ROUTE_PROXY_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
