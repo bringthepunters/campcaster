@@ -919,8 +919,13 @@ function App() {
               <p className="campground-count-label">
                 Campgrounds shown: {filteredSites.length}
               </p>
-              <div className="step-title">
+              <div className="step-title flex items-center gap-2">
                 Step 1 — Enter your home postcode
+                {originCoords && !originError ? (
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-fern/15 text-fern">
+                    ✓
+                  </span>
+                ) : null}
               </div>
               <div className="step-body">
                 <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
@@ -948,9 +953,14 @@ function App() {
               </div>
             </div>
             <div className="step-block">
-              <div className="step-title">
+              <div className="step-title flex items-center gap-2">
                 Step 2 — What date do you want to go (within the next 14 days)?
                 We will check availability and weather for you.
+                {selectedDate ? (
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-fern/15 text-fern">
+                    ✓
+                  </span>
+                ) : null}
               </div>
               <div className="step-body">
                 <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
