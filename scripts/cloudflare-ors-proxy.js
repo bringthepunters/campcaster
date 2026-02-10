@@ -9,6 +9,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type',
 }
 
+
 export default {
   async fetch(request, env) {
     if (request.method === 'OPTIONS') {

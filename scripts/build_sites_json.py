@@ -1,5 +1,6 @@
 import json
 import re
+import math
 from pathlib import Path
 
 import geopandas as gpd
@@ -184,8 +185,17 @@ def main() -> None:
     seen = {}
 
     for row in joined.itertuples():
-        park_name = (row.PARK_NAME or "").strip()
-        site_name = (row.SITE_NAME or "").strip()
+        def safe_str(value: object) -> str:
+            if isinstance(value, str):
+                return value.strip()
+            if value is None:
+                return ""
+            if isinstance(value, float) and math.isnan(value):
+                return ""
+            return str(value).strip()
+
+        park_name = safe_str(getattr(row, "PARK_NAME", None))
+        site_name = safe_str(getattr(row, "SITE_NAME", None))
 
         if not park_name or not site_name:
             continue
