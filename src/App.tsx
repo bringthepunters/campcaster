@@ -939,6 +939,9 @@ function App() {
                     className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
                   />
                 </div>
+                <div className="text-xs text-ink/60">
+                  Defaults to Melbourne CBD.
+                </div>
                 {originError ? (
                   <div className="text-xs text-ember">{originError}</div>
                 ) : null}
