@@ -1228,7 +1228,7 @@ function App() {
                       isOk ? 'campground-card--good' : ''
                     }`}
                   >
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-1">
                       <div>
                         <span className={getParkTypeClass(site.parkName)}>
                           {getParkTypeLabel(site.parkName)}
@@ -1349,22 +1349,6 @@ function App() {
                         </div>
                       ) : null}
                   </div>
-                    {site.landscapeTags?.length ? (
-                      <div className="mt-2 flex flex-col gap-2">
-                        {site.landscapeTags?.length ? (
-                          <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
-                            {site.landscapeTags.map((tag) => (
-                              <span
-                                key={tag}
-                                className="rounded-full bg-ink/5 px-2 py-1"
-                              >
-                                {tag.replace(/_/g, ' ')}
-                              </span>
-                            ))}
-                          </div>
-                        ) : null}
-                      </div>
-                    ) : null}
                     {hasFacilityDetails ? (
                       <div className="facilities-block flex flex-col gap-2">
                         <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
