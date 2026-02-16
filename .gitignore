@@ -11,6 +11,22 @@ node_modules
 dist
 dist-ssr
 *.local
+.vite
+.env
+.env.*
+*.key
+*.pem
+data/*state*.json
+data/*status*.csv
+data/campground_url_search_state.json
+data/campground_url_discovery_state.json
+data/missing_url_candidate_state.json
+data/gunbower_add_state.json
+data/gunbower_map_unmatched.json
+data/gunbower_unmatched.json
+data/booking_grid_mapping.json
+data/booking_urls.txt
+Gunbower National Park.html
 
 # Editor directories and files
 .vscode/*

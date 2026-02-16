@@ -10,7 +10,6 @@ type Site = {
   lng: number
   lga?: string | null
   tourismRegion?: string | null
-  landscapeTags?: string[]
   animalsFauna?: string[]
   sourceUrl?: string | null
   bookingUrl?: string | null

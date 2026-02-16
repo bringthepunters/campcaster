@@ -28,9 +28,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/Camping-and-accommodation",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -58,9 +55,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/boreang-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -92,7 +86,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-west-campground",
     "bookingUrl": null,
-    "landscapeTags": [],
     "animalsFauna": []
   },
   {
@@ -124,9 +117,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -158,9 +148,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-liptrap-coastal-park/where-to-stay/bear-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -183,7 +170,7 @@
       "vehicleAccess": null,
       "accessibilityNotes": [
         "Gippsland Lakes Coastal Park is located in East Gippsland. The western section of the park is accessible by a sealed road via Seaspray and Golden Beach. Paradise Beach Campground is located in campgrounds along Shoreline Drive.",
-        "Accessible only by boat, Bunga Arm was formed over many thousands of years when sand, deposited by the sea, built up between the original bay (now Lake Victoria) and the ocean. Approximately 250 metres divides the tranquil waters of Bunga Arm from the pounding surf of Bass Strait - and you can stay at one of the seven boat-based bush campsites located there. If you don\u2019t have your own boat to access Bunga Arm, you can hire one at one of the lakeside towns."
+        "Accessible only by boat, Bunga Arm was formed over many thousands of years when sand, deposited by the sea, built up between the original bay (now Lake Victoria) and the ocean. Approximately 250 metres divides the tranquil waters of Bunga Arm from the pounding surf of Bass Strait - and you can stay at one of the seven boat-based bush campsites located there. If you don’t have your own boat to access Bunga Arm, you can hire one at one of the lakeside towns."
       ],
       "dogPolicy": [
         "Pack your four-legged friend for dog-friendly car-based camping at Paradise Beach in Gippsland Lakes Coastal Park, west of Loch Sport.",
@@ -192,9 +179,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/gippsland-lakes-coastal-park/where-to-stay/paradise-beach-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -222,7 +206,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/mount-arapiles-tooan-state-park/where-to-stay/camping-in-mount-arapiles-tooan-state-park",
     "bookingUrl": null,
-    "landscapeTags": [],
     "animalsFauna": []
   },
   {
@@ -253,9 +236,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/sealers-cove-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -287,9 +267,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -318,9 +295,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/upper-yarra-reservoir-park/where-to-stay/upper-yarra-reservoir-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -348,9 +322,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/glenelg-river-canoe-trail",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -382,9 +353,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/lake-elizabeth-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -416,9 +384,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -450,9 +415,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/little-waterloo-bay-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -484,9 +446,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/marlo-coastal-reserve/where-to-stay/corringle-foreshore-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -518,9 +477,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -552,9 +508,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-liptrap-coastal-park/where-to-stay/bear-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -586,9 +539,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -616,9 +566,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/strachans-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -650,9 +597,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/mount-buffalo-national-park/where-to-stay/lake-catani-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -684,9 +628,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/blanket-bay-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -714,9 +655,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/buandik-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -745,9 +683,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/lakeside-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -778,9 +713,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/halfway-hut-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -812,9 +744,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -846,9 +775,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -880,9 +806,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -914,9 +837,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/swan-lake-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -948,9 +868,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/brisbane-ranges-national-park/where-to-stay/boar-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -982,9 +899,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1009,10 +923,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.google.com/search?q=Nash+Creek+Camping+Area%2C+Bunyip+State+Park+Bunyip+State+Park+site%3Aparks.vic.gov.au%2Fplaces-to-see",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "lower-glenelg-national-park-simsons-lower-glenelg-national-park",
@@ -1043,9 +954,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -1077,9 +985,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1111,9 +1016,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1145,9 +1047,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wyperfeld-national-park/where-to-stay/wonga-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "desert_arid"
-    ],
     "animalsFauna": []
   },
   {
@@ -1175,9 +1074,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/hattah---kulkyne-national-park/where-to-stay/lake-hattah-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -1209,9 +1105,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/refuge-cove-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1243,9 +1136,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/brisbane-ranges-national-park/where-to-stay/boar-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -1277,9 +1167,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1311,9 +1198,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1345,9 +1229,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/swan-lake-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1379,9 +1260,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/discovery-bay-coastal-park/where-to-stay/lake-mombeong-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1413,9 +1291,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1447,7 +1322,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-west-campground",
     "bookingUrl": null,
-    "landscapeTags": [],
     "animalsFauna": []
   },
   {
@@ -1479,9 +1353,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1513,9 +1384,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/Camping-and-accommodation",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1547,9 +1415,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/brisbane-ranges-national-park/where-to-stay/boar-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -1578,9 +1443,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/yarra-valley-parklands/where-to-stay/longridge-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1612,9 +1474,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1646,9 +1505,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/first-wannon-hiker-camp-major-mitchell-plateau",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1680,9 +1536,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-west-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1714,9 +1567,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/brisbane-ranges-national-park/where-to-stay/boar-gully-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -1745,9 +1595,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/candlebark-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -1779,9 +1626,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cathedral-range-state-park/where-to-stay/camping-in-cathedral-range",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1813,9 +1657,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/troopers-creek-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -1847,9 +1688,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -1881,9 +1719,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cathedral-range-state-park/where-to-stay/camping-in-cathedral-range",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -1915,9 +1750,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/shearers-quarters",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -1945,9 +1777,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/mueller-inlet-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -1976,9 +1805,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/devil-cove-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2010,9 +1836,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/stockyard-picnic-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2041,9 +1864,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/candlebark-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2075,9 +1895,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2109,9 +1926,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/mount-buangor-state-park/where-to-stay/middle-creek-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2143,9 +1957,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/peachtree-creek-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2173,9 +1984,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/little-desert-national-park/where-to-stay/ackle-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "desert_arid"
-    ],
     "animalsFauna": []
   },
   {
@@ -2207,9 +2015,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -2241,9 +2046,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2275,9 +2077,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/red-gum-landing-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2309,9 +2108,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/battersbys-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2343,9 +2139,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2377,9 +2170,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2401,16 +2191,13 @@
       "drinkingWater": true,
       "vehicleAccess": true,
       "accessibilityNotes": [
-        "The campground is 2WD accessible and amenities include shared pit-toilets and a cold water shower. There are shared fireplaces with barbecue hot plates and communal picnic tables throughout the campground. Bring your own firewood with you \u2014 firewood collection in the park is prohibited.",
+        "The campground is 2WD accessible and amenities include shared pit-toilets and a cold water shower. There are shared fireplaces with barbecue hot plates and communal picnic tables throughout the campground. Bring your own firewood with you — firewood collection in the park is prohibited.",
         "### Accessibility"
       ],
       "dogPolicy": []
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/jimmy-creek-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2442,9 +2229,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -2476,9 +2260,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cape-conran-coastal-park/where-to-stay/banksia-bluff-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2510,9 +2291,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2544,9 +2322,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/refuge-cove-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2577,9 +2352,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/southern-overnight-hikes/roaring-meg-camping-area",
     "bookingUrl": "https://bookings.parks.vic.gov.au/wilsons-prom-overnight-hiking#/accom/141064",
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2608,9 +2380,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/smiths-mill-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2639,9 +2408,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/hutchessons-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2672,9 +2438,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/wild-dog-bend-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2706,7 +2469,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nevins-beach-camping-area-",
     "bookingUrl": null,
-    "landscapeTags": [],
     "animalsFauna": []
   },
   {
@@ -2738,9 +2500,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/princess-margaret-rose-cave-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2772,9 +2531,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2797,7 +2553,7 @@
       "vehicleAccess": null,
       "accessibilityNotes": [
         "Gippsland Lakes Coastal Park is located in East Gippsland. The western section of the park is accessible by a sealed road via Seaspray and Golden Beach. Paradise Beach Campground is located in campgrounds along Shoreline Drive.",
-        "Accessible only by boat, Bunga Arm was formed over many thousands of years when sand, deposited by the sea, built up between the original bay (now Lake Victoria) and the ocean. Approximately 250 metres divides the tranquil waters of Bunga Arm from the pounding surf of Bass Strait - and you can stay at one of the seven boat-based bush campsites located there. If you don\u2019t have your own boat to access Bunga Arm, you can hire one at one of the lakeside towns."
+        "Accessible only by boat, Bunga Arm was formed over many thousands of years when sand, deposited by the sea, built up between the original bay (now Lake Victoria) and the ocean. Approximately 250 metres divides the tranquil waters of Bunga Arm from the pounding surf of Bass Strait - and you can stay at one of the seven boat-based bush campsites located there. If you don’t have your own boat to access Bunga Arm, you can hire one at one of the lakeside towns."
       ],
       "dogPolicy": [
         "Pack your four-legged friend for dog-friendly car-based camping at Paradise Beach in Gippsland Lakes Coastal Park, west of Loch Sport.",
@@ -2806,9 +2562,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/gippsland-lakes-coastal-park/where-to-stay/paradise-beach-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -2840,9 +2593,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/jerusalem-creek-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2874,9 +2624,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cathedral-range-state-park/where-to-stay/cooks-mill-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -2905,9 +2652,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lake-eildon-national-park/where-to-stay/candlebark-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -2939,9 +2683,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/mount-buangor-state-park/where-to-stay/middle-creek-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -2973,9 +2714,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3007,9 +2745,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/first-wannon-hiker-camp-major-mitchell-plateau",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3038,9 +2773,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/wingan-inlet-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3069,9 +2801,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/forest-south-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -3103,9 +2832,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/allenvale-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3137,9 +2863,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/red-gum-landing-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3171,9 +2894,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/french-island-national-park/where-to-stay/fairhaven-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3205,9 +2925,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/great-otway-national-park/where-to-stay/aire-river-east-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3239,9 +2956,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/borough-huts-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3273,9 +2987,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/cathedral-range-state-park/where-to-stay/neds-gully-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -3307,9 +3018,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/thurra-river-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3338,9 +3046,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/grampians-national-park/where-to-stay/stapylton-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3372,9 +3077,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/howqua-hills-historic-area/where-to-stay/camping-with-your-horse-in-the-howqua-hills",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3403,9 +3105,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/forest-north-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -3437,9 +3136,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -3471,9 +3167,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/murray---sunset-national-park/where-to-stay/camping-in-murray-sunset-national-park",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -3502,9 +3195,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/pritchards-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3532,9 +3222,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/little-desert-national-park/where-to-stay/horseshoe-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "desert_arid"
-    ],
     "animalsFauna": []
   },
   {
@@ -3563,9 +3250,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/croajingolong-national-park/where-to-stay/shipwreck-creek-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3597,9 +3281,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/tidal-river-accommodation",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3630,9 +3311,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/wild-dog-bend-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3664,9 +3342,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/tidal-river-accommodation",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3698,9 +3373,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/wilson-hall-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3728,9 +3400,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/brisbane-ranges-national-park/where-to-stay/fridays-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "valley_gorge"
-    ],
     "animalsFauna": []
   },
   {
@@ -3759,9 +3428,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/lower-glenelg-national-park/where-to-stay/mclennans-punt-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3793,9 +3459,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park/where-to-stay/Camping-and-accommodation",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3827,9 +3490,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/barmah-lakes-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -3861,9 +3521,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/aberfeldy-river-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -3895,9 +3552,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/eastern-tyers-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -3929,9 +3583,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/7-Mile-Flat-Camping-Area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3962,9 +3613,6 @@
     },
     "sourceUrl": "http://www.parks.vic.gov.au/places-to-see/parks/alpine-national-park/where-to-stay/8-Mile-Flat-Camping-Area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -3996,9 +3644,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/wee-wee-rup-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4030,9 +3675,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/batemans-track-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4064,9 +3706,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -4098,9 +3737,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -4132,9 +3768,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/peter-creek-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4166,9 +3799,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-4",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -4200,9 +3830,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mcclures-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4234,9 +3861,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/halfway-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4268,9 +3892,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-west-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -4302,9 +3923,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/wattle-track-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4336,9 +3954,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/old-headworks-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4370,9 +3985,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bell-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4404,9 +4016,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mopoke-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4438,9 +4047,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -4472,9 +4078,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/kate-malone-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4506,9 +4109,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/wattle-track-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4540,9 +4140,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-camping-area-4",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4574,9 +4171,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bonnemans-bend-camping-area-site-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4608,9 +4202,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4642,9 +4233,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/sandbar-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4676,9 +4264,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4710,9 +4295,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mcclures-bend-camping-area-5",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4744,9 +4326,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/munroe-track-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4778,9 +4357,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/broken-river-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4812,9 +4388,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/gravel-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4846,9 +4419,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/sandbar-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4880,9 +4450,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/86-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4914,9 +4481,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/halfway-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4948,9 +4512,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/scottys-bend-camping-area-",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -4982,9 +4543,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5016,9 +4574,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/84-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5050,9 +4605,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/86-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5084,9 +4636,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/robertson-track-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5118,9 +4667,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-1-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5152,9 +4698,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/82-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5186,9 +4729,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bonnemans-bend-camping-area-site-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5220,9 +4760,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/norris-bend-camping-area-2-",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5254,9 +4791,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5288,9 +4822,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/kate-malone-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5322,9 +4853,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/long-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5356,9 +4884,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mcclures-bend-camping-area-4",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5390,9 +4915,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bonnemans-bend-camping-area-site-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5424,9 +4946,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mckay-mill-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5458,9 +4977,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/wattle-track-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5492,9 +5008,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-west-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5526,9 +5039,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/dalley-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5560,9 +5070,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/86-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5594,9 +5101,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/social-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5628,9 +5132,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/broken-river-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5662,9 +5163,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bonnemans-bend-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5696,9 +5194,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mcclures-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5730,9 +5225,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/sandbar-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5764,9 +5256,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/kangaroo-track-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5798,9 +5287,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mckay-mill-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5832,9 +5318,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/82-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5866,9 +5349,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/kate-malone-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -5900,9 +5380,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/barton-track-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5934,9 +5411,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/barton-track-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -5968,9 +5442,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/peter-creek-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6002,9 +5473,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/doc-grahams-hut-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6036,9 +5504,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/bells-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6070,9 +5535,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/social-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -6104,9 +5566,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/mcclures-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6138,9 +5597,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/norris-bend-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6172,9 +5628,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/williams-bend-camping-area-3",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6206,9 +5659,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/broken-river-bend-camping-area-4",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6240,9 +5690,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/broken-river-bend-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6274,9 +5721,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/munroe-track-camping-area-1",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6308,9 +5752,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cemetery-bend-camping-area-5",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6342,9 +5783,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/nursery-bend-no,-d-,-3-camping-area-2",
     "bookingUrl": null,
-    "landscapeTags": [
-      "forest"
-    ],
     "animalsFauna": []
   },
   {
@@ -6369,8 +5807,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/parks/buchan-caves-reserve/where-to-stay/buchan-caves-camping",
-    "bookingUrl": null,
-    "landscapeTags": []
+    "bookingUrl": null
   },
   {
     "id": "crawford-river-r-p-hiscocks-camping-area-crawford-river-r-p",
@@ -6394,8 +5831,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/hiscocks-camping-area",
-    "bookingUrl": null,
-    "landscapeTags": []
+    "bookingUrl": null
   },
   {
     "id": "grampians-national-park-kalymna-falls-campground-grampians-national-park",
@@ -6419,10 +5855,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/kalymna-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "kooyoora-state-park-melville-caves-camping-area-kooyoora-state-park",
@@ -6453,9 +5886,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/melville-caves-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -6487,9 +5917,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/o,-d-,t,-d-,i,-d-,t,-d-,-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ],
     "animalsFauna": []
   },
   {
@@ -6521,9 +5948,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/yaapeet-beach-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "beach_coast"
-    ],
     "animalsFauna": []
   },
   {
@@ -6548,10 +5972,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/leaghur-camp-area",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "lake_wetland"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "mitchell-river-national-park-woolshed-creek-camping-area-mitchell-river-national-park",
@@ -6582,9 +6003,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/woolshed-creek-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6609,10 +6027,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/plantation-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "mount-samaria-state-park-samaria-well-mount-samaria-state-park",
@@ -6636,10 +6051,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/plantation-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "mount-wills-h-a-big-river-camp-area-mount-wills-h-a",
@@ -6670,9 +6082,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/big-river-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6697,8 +6106,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cobrawonga-creek-camping-area",
-    "bookingUrl": null,
-    "landscapeTags": []
+    "bookingUrl": null
   },
   {
     "id": "snowy-river-national-park-balley-hooley-snowy-river-national-park",
@@ -6722,8 +6130,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/cobrawonga-creek-camping-area",
-    "bookingUrl": null,
-    "landscapeTags": []
+    "bookingUrl": null
   },
   {
     "id": "snowy-river-national-park-hicks-snowy-river-national-park",
@@ -6747,8 +6154,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/hicks-camping-area",
-    "bookingUrl": null,
-    "landscapeTags": []
+    "bookingUrl": null
   },
   {
     "id": "snowy-river-national-park-raymond-creek-falls-snowy-river-national-park",
@@ -6779,9 +6185,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/raymond-creek-falls-camping-area",
     "bookingUrl": null,
-    "landscapeTags": [
-      "river_creek"
-    ],
     "animalsFauna": []
   },
   {
@@ -6813,9 +6216,6 @@
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/waratah-flat-campground",
     "bookingUrl": null,
-    "landscapeTags": [
-      "mountains_alpine"
-    ],
     "animalsFauna": []
   },
   {
@@ -6840,10 +6240,7 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/sites/waratah-flat-campground",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "desert_arid"
-    ]
+    "bookingUrl": null
   },
   {
     "id": "wyperfeld-national-park-remote-camp-wyperfeld-national-park",
@@ -6867,9 +6264,6 @@
       "dogPolicy": null
     },
     "sourceUrl": "https://www.parks.vic.gov.au/places-to-see/parks/wyperfeld-national-park/where-to-stay/other-camping-areas-in-wyperfeld-national-park",
-    "bookingUrl": null,
-    "landscapeTags": [
-      "desert_arid"
-    ]
+    "bookingUrl": null
   }
 ]
