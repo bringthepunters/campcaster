@@ -56,7 +56,27 @@ const MapView = ({ sites }: MapViewProps) => {
 
     const map = new maplibre.Map({
       container: mapRef.current,
-      style: 'https://demotiles.maplibre.org/style.json',
+      style: {
+        version: 8,
+        sources: {
+          'carto-light': {
+            type: 'raster',
+            tiles: [
+              'https://basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+            ],
+            tileSize: 256,
+            attribution:
+              '© OpenStreetMap contributors © CARTO',
+          },
+        },
+        layers: [
+          {
+            id: 'base',
+            type: 'raster',
+            source: 'carto-light',
+          },
+        ],
+      },
       center: [144.9631, -37.8136],
       zoom: 6,
     })
