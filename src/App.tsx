@@ -1412,6 +1412,9 @@ function App() {
           )}
         </div>
       </main>
+      <footer className="px-6 pb-10 text-center text-xs text-ink/50 sm:px-10">
+        Parks Information sourced from the PARKRES data set.
+      </footer>
     </div>
   )
 }
