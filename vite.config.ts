@@ -6,4 +6,14 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
   base: '/campcaster/',
   plugins: [react(), UnoCSS()],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      mangle: {
+        properties: {
+          regex: /^_/,
+        },
+      },
+    },
+  },
 })
