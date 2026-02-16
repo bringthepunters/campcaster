@@ -915,9 +915,11 @@ function App() {
           </div>
           <div className="filter-panel flex flex-col gap-6">
             <div className="step-block">
-              <p className="campground-count-label">
-                Campgrounds shown: {filteredSites.length}
-              </p>
+              <div className="flex items-start justify-end">
+                <div className="campground-count-label text-right font-sans text-3xl font-semibold uppercase tracking-[0.35em] text-ink sm:text-4xl">
+                  Matching Campsites: {filteredSites.length}
+                </div>
+              </div>
               <div className="step-title flex items-center gap-2">
                 Step 1 — Enter your home postcode
                 {originCoords && !originError ? (
