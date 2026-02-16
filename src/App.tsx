@@ -1382,6 +1382,11 @@ function App() {
                     {selectedDate ? (
                       <div className="availability-section">
                         <div className="availability-label">Availability</div>
+                        {availabilityLoading ? (
+                          <div className="text-xs text-ink/60">
+                            Checking availability…
+                          </div>
+                        ) : null}
                         <div className={availabilityClass}>
                           {availabilityLabel}
                         </div>
@@ -1413,7 +1418,8 @@ function App() {
         </div>
       </main>
       <footer className="px-6 pb-10 text-center text-xs text-ink/50 sm:px-10">
-        Parks Information sourced from the PARKRES data set.
+        Parks Information sourced from the PARKRES data set. Data sources:
+        VicEmergency RSS, Open-Meteo, Parks Victoria bookings.
       </footer>
     </div>
   )
