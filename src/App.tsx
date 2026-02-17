@@ -218,6 +218,9 @@ function App() {
   const [selectedDate, setSelectedDate] = useState('')
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
+  const [incidentsUpdatedAt, setIncidentsUpdatedAt] = useState<string | null>(
+    null,
+  )
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
   const [originPostcode, setOriginPostcode] = useState('3000')
   const [originCoords, setOriginCoords] = useState<{
@@ -355,6 +358,7 @@ function App() {
             return timestamp >= weekAgo
           })
         setIncidents(items)
+        setIncidentsUpdatedAt(new Date().toISOString())
       } catch (error) {
         console.error(error)
         setIncidentsError('Unable to load live incident feed.')
@@ -850,6 +854,11 @@ function App() {
     <div className="min-h-screen text-ink">
       <div className="incident-banner bg-red-600 px-6 py-3 text-sm font-semibold text-white sm:px-10">
         <div className="mx-auto max-w-6xl">
+          {incidentsUpdatedAt ? (
+            <div className="mb-2 text-xs font-medium uppercase tracking-[0.15em] text-white/80">
+              Feed updated {new Date(incidentsUpdatedAt).toLocaleTimeString()}
+            </div>
+          ) : null}
           {incidents.length > 0 ? (
             <div className="incident-marquee">
               <div className="incident-track">
