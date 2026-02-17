@@ -242,6 +242,14 @@ function App() {
   const [driveTimesLoading, setDriveTimesLoading] = useState(false)
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
+  const weatherMaxDate = useMemo(() => {
+    const date = new Date()
+    date.setDate(date.getDate() + 13)
+    return date.toISOString().slice(0, 10)
+  }, [])
+  const isWeatherEligible = Boolean(
+    selectedDate && selectedDate <= weatherMaxDate,
+  )
 
   useEffect(() => {
     weatherByKeyRef.current = weatherByKey
@@ -521,7 +529,7 @@ function App() {
           return false
         }
       }
-      if (selectedDate && (!allowHeat || !allowRain)) {
+      if (selectedDate && isWeatherEligible && (!allowHeat || !allowRain)) {
         const summary = getWeatherSummary(site)
         if (!summary) return true
         if (!allowHeat && summary.maxTemp >= HEAT_THRESHOLD_C) {
@@ -622,7 +630,7 @@ function App() {
   }, [maxAvailableDriveMinutes])
 
   useEffect(() => {
-    if (!selectedDate) return
+    if (!selectedDate || !isWeatherEligible) return
     const targets = filteredSites.slice(0, AUTO_WEATHER_FETCH_LIMIT)
     targets.forEach((site) => {
       void loadWeather(site)
@@ -708,7 +716,7 @@ function App() {
   }, [originCoords, originPostcode, sites])
 
   useEffect(() => {
-    if (!selectedDate) return
+    if (!selectedDate || !isWeatherEligible) return
     const targets = filteredSitesRef.current.slice(0, AUTO_WEATHER_FETCH_LIMIT)
     if (!targets.length) return
     setWeatherByKey({})
@@ -963,9 +971,8 @@ function App() {
               </div>
             </div>
             <div className="step-block">
-              <div className="step-title flex items-center gap-2">
-                Step 2 — What date do you want to go (within the next 14 days)?
-                We will check availability and weather for you.
+                <div className="step-title flex items-center gap-2">
+                Step 2 — What date do you want to go? We can only filter weather for the next 14 days.
                 {selectedDate ? (
                   <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-fern/15 text-fern">
                     ✓
@@ -982,13 +989,15 @@ function App() {
                     type="date"
                     value={selectedDate}
                     min={new Date().toISOString().slice(0, 10)}
-                    max={new Date(Date.now() + 13 * 24 * 60 * 60 * 1000)
-                      .toISOString()
-                      .slice(0, 10)}
                     onChange={(event) => setSelectedDate(event.target.value)}
                     className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
                   />
                 </div>
+                {!isWeatherEligible && selectedDate ? (
+                  <div className="text-xs text-ink/60">
+                    Weather filters and forecasts are only available for the next 14 days.
+                  </div>
+                ) : null}
               </div>
             </div>
             <div className="filter-grid">
@@ -1038,7 +1047,7 @@ function App() {
                     checked={allowHeat}
                     onChange={(event) => setAllowHeat(event.target.checked)}
                     className="accent-fern"
-                    disabled={!selectedDate}
+                    disabled={!selectedDate || !isWeatherEligible}
                   />
                   I dont mind the heat
                 </label>
@@ -1048,7 +1057,7 @@ function App() {
                     checked={allowRain}
                     onChange={(event) => setAllowRain(event.target.checked)}
                     className="accent-fern"
-                    disabled={!selectedDate}
+                    disabled={!selectedDate || !isWeatherEligible}
                   />
                   I dont mind rain
                 </label>
@@ -1056,6 +1065,11 @@ function App() {
               <p className="text-xs text-ink/50">
                 Weather thresholds: under 33C and rain under 30% + 4mm.
               </p>
+              {!isWeatherEligible && selectedDate ? (
+                <p className="text-xs text-ink/50">
+                  Weather filters are disabled for dates beyond 14 days.
+                </p>
+              ) : null}
               <div className="filter-row">
                 {AVAILABILITY_FILTERS.map((filter) => (
                   <label key={filter.key} className="checkbox-item">
@@ -1263,6 +1277,10 @@ function App() {
                     {!selectedDate ? (
                       <div className="forecast-prompt">
                         Select a date to see the forecast.
+                      </div>
+                    ) : !isWeatherEligible ? (
+                      <div className="forecast-prompt">
+                        Weather forecasts are only available for the next 14 days.
                       </div>
                     ) : hasWeather ? (
                       <div>
