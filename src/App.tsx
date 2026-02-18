@@ -931,7 +931,7 @@ function App() {
           <div className="controls-row">
             <div className="control-block">
               <label htmlFor="origin-postcode" className="control-label">
-                Home Postcode
+                Starting point postcode
               </label>
               <input
                 id="origin-postcode"
