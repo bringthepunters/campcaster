@@ -919,184 +919,77 @@ function App() {
           )}
         </div>
       </div>
-      <header className="px-6 pb-10 pt-12 sm:px-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6">
-          <div className="flex flex-col gap-3">
-            <h1 className="font-sans text-3xl font-semibold uppercase tracking-[0.35em] text-ink sm:text-4xl">
-              CAMPCASTER
-            </h1>
-            <p className="text-base font-semibold text-ink/80 sm:text-lg">
+      <header className="px-6 pb-8 pt-10 sm:px-10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4">
+          <div className="hero-row">
+            <div className="brand-title">🏕️ CAMP CASTER</div>
+            <p className="hero-tagline">
               Which National Park camp sites within my desired drivetime range are
               available, have decent weather and the facilities I want?
             </p>
           </div>
-          <div className="filter-panel flex flex-col gap-6">
-            <div className="step-block">
-              <div className="flex items-start justify-end">
-                <div className="campground-count-label text-right font-sans text-3xl font-semibold uppercase tracking-[0.35em] text-ink sm:text-4xl">
-                  Matching Campsites: {filteredSites.length}
-                </div>
-              </div>
-              <div className="step-title flex items-center gap-2">
-                Step 1 — Enter your home postcode
-                {originCoords && !originError ? (
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-fern/15 text-fern">
-                    ✓
-                  </span>
-                ) : null}
-              </div>
-              <div className="step-body">
-                <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
-                  <label htmlFor="origin-postcode" className="sr-only">
-                    Your postcode
-                  </label>
-                  <input
-                    id="origin-postcode"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    placeholder="e.g. 3070"
-                    value={originPostcode}
-                    onChange={(event) =>
-                      setOriginPostcode(event.target.value.trim())
-                    }
-                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-                  />
-                </div>
-                <div className="text-xs text-ink/60">
-                  Defaults to Melbourne CBD.
-                </div>
-                {originError ? (
-                  <div className="text-xs text-ember">{originError}</div>
-                ) : null}
-              </div>
-            </div>
-            <div className="step-block">
-                <div className="step-title flex items-center gap-2">
-                Step 2 — What date do you want to go? We can only filter weather for the next 14 days.
-                {selectedDate ? (
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-fern/15 text-fern">
-                    ✓
-                  </span>
-                ) : null}
-              </div>
-              <div className="step-body">
-                <div className="flex min-w-[220px] flex-1 items-center gap-2 sm:max-w-xs">
-                  <label htmlFor="forecast-date" className="sr-only">
-                    Forecast date
-                  </label>
-                  <input
-                    id="forecast-date"
-                    type="date"
-                    value={selectedDate}
-                    min={new Date().toISOString().slice(0, 10)}
-                    onChange={(event) => setSelectedDate(event.target.value)}
-                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition focus:border-fern/60 focus:ring-2 focus:ring-fern/20"
-                  />
-                </div>
-                {!isWeatherEligible && selectedDate ? (
-                  <div className="text-xs text-ink/60">
-                    Weather filters and forecasts are only available for the next 14 days.
-                  </div>
-                ) : null}
-              </div>
-            </div>
-            <div className="filter-grid">
-              <div className="filter-row">
-                <label className="checkbox-item">
-                  <input
-                    type="radio"
-                    name="view-mode"
-                    checked={viewMode === 'list'}
-                    onChange={() => setViewMode('list')}
-                    className="accent-fern"
-                  />
-                  List view
-                </label>
-                <label className="checkbox-item">
-                  <input
-                    type="radio"
-                    name="view-mode"
-                    checked={viewMode === 'map'}
-                    onChange={() => setViewMode('map')}
-                    className="accent-fern"
-                  />
-                  Map view
-                </label>
-              </div>
-              <div className="step-title">Step 3 — Use filters to refine your selection</div>
-              <div className="filter-row">
-                {FACILITY_FILTERS.map((filter) => (
-                  <label key={filter.key} className="checkbox-item">
-                    <input
-                      type="checkbox"
-                      checked={facilityFilters[filter.key] ?? false}
-                      onChange={(event) =>
-                        setFacilityFilters((prev) => ({
-                          ...prev,
-                          [filter.key]: event.target.checked,
-                        }))
-                      }
-                      className="accent-fern"
-                    />
-                    {filter.label}
-                  </label>
-                ))}
-                <label className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    checked={allowHeat}
-                    onChange={(event) => setAllowHeat(event.target.checked)}
-                    className="accent-fern"
-                    disabled={!selectedDate || !isWeatherEligible}
-                  />
-                  I dont mind the heat
-                </label>
-                <label className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    checked={allowRain}
-                    onChange={(event) => setAllowRain(event.target.checked)}
-                    className="accent-fern"
-                    disabled={!selectedDate || !isWeatherEligible}
-                  />
-                  I dont mind rain
-                </label>
-              </div>
-              <p className="text-xs text-ink/50">
-                Weather thresholds: under 33C and rain under 30% + 4mm.
-              </p>
-              {!isWeatherEligible && selectedDate ? (
-                <p className="text-xs text-ink/50">
-                  Weather filters are disabled for dates beyond 14 days.
-                </p>
+          <div className="controls-row">
+            <div className="control-block">
+              <label htmlFor="origin-postcode" className="control-label">
+                Home Postcode
+              </label>
+              <input
+                id="origin-postcode"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                placeholder="e.g. 3070"
+                value={originPostcode}
+                onChange={(event) => setOriginPostcode(event.target.value.trim())}
+                className="control-input"
+              />
+              <div className="control-help">Defaults to Melbourne CBD.</div>
+              {originError ? (
+                <div className="control-error">{originError}</div>
               ) : null}
-              <div className="filter-row">
-                {AVAILABILITY_FILTERS.map((filter) => (
-                  <label key={filter.key} className="checkbox-item">
-                    <input
-                      type="checkbox"
-                      checked={availabilityFilters[filter.key] ?? false}
-                      onChange={(event) =>
-                        setAvailabilityFilters((current) => ({
-                          ...current,
-                          [filter.key]: event.target.checked,
-                        }))
-                      }
-                      className="accent-fern"
-                      disabled={!selectedDate}
-                      aria-label={`Availability ${filter.label}`}
-                    />
-                    {filter.label}
-                  </label>
-                ))}
-              </div>
             </div>
-            <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)] sm:items-end">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="drive-time" className="section-heading">
-                  Approx drive time from the postcode you gave us
-                </label>
-                <div className="flex items-center gap-3">
+            <div className="control-block">
+              <label htmlFor="forecast-date" className="control-label">
+                Date
+              </label>
+              <input
+                id="forecast-date"
+                type="date"
+                value={selectedDate}
+                min={new Date().toISOString().slice(0, 10)}
+                onChange={(event) => setSelectedDate(event.target.value)}
+                className="control-input"
+              />
+              <div className="control-help">Forecast works for the next 14 days.</div>
+              {!isWeatherEligible && selectedDate ? (
+                <div className="control-help">
+                  Weather filters and forecasts are only available for the next 14 days.
+                </div>
+              ) : null}
+            </div>
+            <div className="control-block">
+              <label htmlFor="location-region" className="control-label">
+                Location
+              </label>
+              <input
+                id="location-region"
+                value="Victoria"
+                readOnly
+                className="control-input"
+              />
+              <div className="control-help">Where are you in the mood to go?</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="px-6 pb-16 sm:px-10">
+        <div className="mx-auto max-w-6xl">
+          <div className="layout-grid">
+            <aside className="filters-panel">
+              <div className="filters-header">Filter by:</div>
+              <div className="filters-section">
+                <div className="section-heading">Approx drive time</div>
+                <div className="filter-row">
                   <input
                     id="drive-time"
                     type="range"
@@ -1124,326 +1017,426 @@ function App() {
                   ))}
                 </datalist>
               </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main className="px-6 pb-16 sm:px-10">
-        <div className="mx-auto max-w-6xl">
-          {status === 'loading' && (
-            <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
-              Loading campgrounds…
-            </div>
-          )}
-          {status === 'error' && (
-            <div className="rounded-2xl bg-white/70 p-6 text-ember">
-              Could not load campgrounds. Check `public/data/sites.json`.
-            </div>
-          )}
-          {status === 'idle' && viewMode === 'list' && (
-            <div className="campground-grid">
-              {filteredSites.map((site) => {
-                const weatherKey = site.lga ?? site.id
-                const summary = getWeatherSummary(site)
-                const hasWeather = summary !== null
-                const minTemp = summary?.minTemp ?? null
-                const maxTemp = summary?.maxTemp ?? null
-                const rainProb = summary?.maxRain ?? null
-                const rainMm = summary?.maxRainMm ?? null
-                const isRainy = summary?.isRainy ?? false
-                const isTooHot = summary?.isTooHot ?? false
-                const hasPrecip =
-                  rainProb !== null &&
-                  rainMm !== null &&
-                  (rainProb > 0 || rainMm > 0)
-                const isSnowy =
-                  maxTemp !== null && rainMm !== null && maxTemp <= 1 && rainMm > 0
-                const isHeatIcon =
-                  maxTemp !== null && maxTemp > HEAT_ICON_THRESHOLD_C
-                const isOk =
-                  summary !== null ? !summary.isRainy && !summary.isTooHot : false
-                const bookingUrl =
-                  site.bookingUrl ??
-                  availabilityUrlById[site.id] ??
-                  getBookingUrl(site.sourceUrl)
-                const availabilityForDate =
-                  selectedDate && availabilityDate === selectedDate
-                    ? availabilityById[site.id] ?? 'unknown'
-                    : 'unknown'
-                const availabilityLabel = !selectedDate
-                  ? 'Select a date'
-                  : availabilityLoading
-                    ? 'Checking…'
-                    : availabilityForDate === 'booked_out'
-                      ? 'Booked out'
-                      : availabilityForDate === 'available'
-                        ? 'Available'
-                        : availabilityForDate === 'unbookable'
-                          ? 'Not Bookable. Just Rock up.'
+              <div className="filters-section">
+                <div className="section-heading">Facilities</div>
+                <div className="filter-col">
+                  {FACILITY_FILTERS.map((filter) => (
+                    <label key={filter.key} className="checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={facilityFilters[filter.key] ?? false}
+                        onChange={(event) =>
+                          setFacilityFilters((prev) => ({
+                            ...prev,
+                            [filter.key]: event.target.checked,
+                          }))
+                        }
+                        className="accent-fern"
+                      />
+                      {filter.label}
+                    </label>
+                  ))}
+                  <label className="checkbox-item">
+                    <input
+                      type="checkbox"
+                      checked={allowHeat}
+                      onChange={(event) => setAllowHeat(event.target.checked)}
+                      className="accent-fern"
+                      disabled={!selectedDate || !isWeatherEligible}
+                    />
+                    I dont mind the heat
+                  </label>
+                  <label className="checkbox-item">
+                    <input
+                      type="checkbox"
+                      checked={allowRain}
+                      onChange={(event) => setAllowRain(event.target.checked)}
+                      className="accent-fern"
+                      disabled={!selectedDate || !isWeatherEligible}
+                    />
+                    I dont mind rain
+                  </label>
+                </div>
+                <p className="text-xs text-ink/50">
+                  Weather thresholds: under 33C and rain under 30% + 4mm.
+                </p>
+                {!isWeatherEligible && selectedDate ? (
+                  <p className="text-xs text-ink/50">
+                    Weather filters are disabled for dates beyond 14 days.
+                  </p>
+                ) : null}
+              </div>
+              <div className="filters-section">
+                <div className="section-heading">Availability</div>
+                <div className="filter-col">
+                  {AVAILABILITY_FILTERS.map((filter) => (
+                    <label key={filter.key} className="checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={availabilityFilters[filter.key] ?? false}
+                        onChange={(event) =>
+                          setAvailabilityFilters((current) => ({
+                            ...current,
+                            [filter.key]: event.target.checked,
+                          }))
+                        }
+                        className="accent-fern"
+                        disabled={!selectedDate}
+                        aria-label={`Availability ${filter.label}`}
+                      />
+                      {filter.label}
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <div className="filters-section">
+                <div className="section-heading">View</div>
+                <div className="filter-row">
+                  <label className="checkbox-item">
+                    <input
+                      type="radio"
+                      name="view-mode"
+                      checked={viewMode === 'list'}
+                      onChange={() => setViewMode('list')}
+                      className="accent-fern"
+                    />
+                    List view
+                  </label>
+                  <label className="checkbox-item">
+                    <input
+                      type="radio"
+                      name="view-mode"
+                      checked={viewMode === 'map'}
+                      onChange={() => setViewMode('map')}
+                      className="accent-fern"
+                    />
+                    Map view
+                  </label>
+                </div>
+              </div>
+            </aside>
+            <section className="results-panel">
+              <div className="results-header">
+                <div className="campground-count-label">
+                  Matching Campsites: {filteredSites.length}
+                </div>
+              </div>
+              {status === 'loading' && (
+                <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
+                  Loading campgrounds…
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="rounded-2xl bg-white/70 p-6 text-ember">
+                  Could not load campgrounds. Check `public/data/sites.json`.
+                </div>
+              )}
+              {status === 'idle' && viewMode === 'list' && (
+                <div className="campground-grid">
+                  {filteredSites.map((site) => {
+                    const weatherKey = site.lga ?? site.id
+                    const summary = getWeatherSummary(site)
+                    const hasWeather = summary !== null
+                    const minTemp = summary?.minTemp ?? null
+                    const maxTemp = summary?.maxTemp ?? null
+                    const rainProb = summary?.maxRain ?? null
+                    const rainMm = summary?.maxRainMm ?? null
+                    const isRainy = summary?.isRainy ?? false
+                    const isTooHot = summary?.isTooHot ?? false
+                    const hasPrecip =
+                      rainProb !== null &&
+                      rainMm !== null &&
+                      (rainProb > 0 || rainMm > 0)
+                    const isSnowy =
+                      maxTemp !== null && rainMm !== null && maxTemp <= 1 && rainMm > 0
+                    const isHeatIcon =
+                      maxTemp !== null && maxTemp > HEAT_ICON_THRESHOLD_C
+                    const isOk =
+                      summary !== null ? !summary.isRainy && !summary.isTooHot : false
+                    const bookingUrl =
+                      site.bookingUrl ??
+                      availabilityUrlById[site.id] ??
+                      getBookingUrl(site.sourceUrl)
+                    const availabilityForDate =
+                      selectedDate && availabilityDate === selectedDate
+                        ? availabilityById[site.id] ?? 'unknown'
+                        : 'unknown'
+                    const availabilityLabel = !selectedDate
+                      ? 'Select a date'
+                      : availabilityLoading
+                        ? 'Checking…'
+                        : availabilityForDate === 'booked_out'
+                          ? 'Booked out'
+                          : availabilityForDate === 'available'
+                            ? 'Available'
+                            : availabilityForDate === 'unbookable'
+                              ? 'Not Bookable. Just Rock up.'
+                              : 'Unknown'
+                    const availabilityClass =
+                      availabilityForDate === 'available'
+                        ? 'availability-status availability-status--available'
+                        : availabilityForDate === 'booked_out'
+                          ? 'availability-status availability-status--unavailable'
+                          : 'availability-status availability-status--unknown'
+                    const locationLabel = formatRegion(site)
+                    const originLabel = originCoords?.label ?? 'Postcode'
+                    const driveMinutes = driveTimesById[site.id]
+                    const driveLabel =
+                      originCoords && driveMinutes !== undefined
+                        ? formatDriveTime(driveMinutes)
+                        : driveTimesLoading
+                          ? 'Calculating…'
                           : 'Unknown'
-                const availabilityClass =
-                  availabilityForDate === 'available'
-                    ? 'availability-status availability-status--available'
-                    : availabilityForDate === 'booked_out'
-                      ? 'availability-status availability-status--unavailable'
-                      : 'availability-status availability-status--unknown'
-                const locationLabel = formatRegion(site)
-                const originLabel = originCoords?.label ?? 'Postcode'
-                const driveMinutes = driveTimesById[site.id]
-                const driveLabel =
-                  originCoords && driveMinutes !== undefined
-                    ? formatDriveTime(driveMinutes)
-                    : driveTimesLoading
-                      ? 'Calculating…'
-                      : 'Unknown'
-                const originQuery = originCoords
-                  ? encodeURIComponent(originPostcode)
-                  : 'Northcote+VIC'
-                const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
-                const facilities = site.facilities ?? {}
-                const dogPolicyText = facilities.dogPolicy
-                  ? cleanPolicyList(facilities.dogPolicy)
-                  : ''
-                const accessibilityText = facilities.accessibilityNotes
-                  ? cleanInlineText(facilities.accessibilityNotes)
-                  : ''
-                const facilityItems = [
-                  {
-                    key: 'toilets',
-                    label: facilities.toiletsType
-                      ? `Toilets (${facilities.toiletsType})`
-                      : 'Toilets',
-                    value: facilities.toilets,
-                  },
-                  { key: 'showers', label: 'Showers', value: facilities.showers },
-                  { key: 'bbq', label: 'BBQ', value: facilities.bbq },
-                  { key: 'firePits', label: 'Fire pits', value: facilities.firePits },
-                  {
-                    key: 'picnicTables',
-                    label: 'Picnic tables',
-                    value: facilities.picnicTables,
-                  },
-                  {
-                    key: 'drinkingWater',
-                    label: 'Drinking water',
-                    value: facilities.drinkingWater,
-                  },
-                  {
-                    key: 'vehicleAccess',
-                    label: 'Vehicle access',
-                    value: facilities.vehicleAccess,
-                  },
-                  {
-                    key: 'dogFriendly',
-                    label: 'Dog friendly',
-                    value: facilities.dogFriendly,
-                  },
-                ]
-                const hasFacilityDetails =
-                  facilityItems.some(
-                    (item) => item.value !== null && item.value !== undefined,
-                  )
+                    const originQuery = originCoords
+                      ? encodeURIComponent(originPostcode)
+                      : 'Northcote+VIC'
+                    const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
+                    const facilities = site.facilities ?? {}
+                    const dogPolicyText = facilities.dogPolicy
+                      ? cleanPolicyList(facilities.dogPolicy)
+                      : ''
+                    const accessibilityText = facilities.accessibilityNotes
+                      ? cleanInlineText(facilities.accessibilityNotes)
+                      : ''
+                    const facilityItems = [
+                      {
+                        key: 'toilets',
+                        label: facilities.toiletsType
+                          ? `Toilets (${facilities.toiletsType})`
+                          : 'Toilets',
+                        value: facilities.toilets,
+                      },
+                      { key: 'showers', label: 'Showers', value: facilities.showers },
+                      { key: 'bbq', label: 'BBQ', value: facilities.bbq },
+                      { key: 'firePits', label: 'Fire pits', value: facilities.firePits },
+                      {
+                        key: 'picnicTables',
+                        label: 'Picnic tables',
+                        value: facilities.picnicTables,
+                      },
+                      {
+                        key: 'drinkingWater',
+                        label: 'Drinking water',
+                        value: facilities.drinkingWater,
+                      },
+                      {
+                        key: 'vehicleAccess',
+                        label: 'Vehicle access',
+                        value: facilities.vehicleAccess,
+                      },
+                      {
+                        key: 'dogFriendly',
+                        label: 'Dog friendly',
+                        value: facilities.dogFriendly,
+                      },
+                    ]
+                    const hasFacilityDetails =
+                      facilityItems.some(
+                        (item) => item.value !== null && item.value !== undefined,
+                      )
 
-                return (
-                  <article
-                    key={site.id}
-                    className={`campground-card ${
-                      isOk ? 'campground-card--good' : ''
-                    }`}
-                  >
-                    <div className="flex flex-col gap-1">
-                      <div>
-                        <span className={getParkTypeClass(site.parkName)}>
-                          {getParkTypeLabel(site.parkName)}
-                        </span>
-                        <h2 className="font-display text-xl font-semibold text-ink">
-                          {site.name}
-                        </h2>
-                      </div>
-                      <p className="campground-location">{locationLabel}</p>
-                      {originCoords ? (
-                        <a
-                          href={mapsLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="distance-text"
-                        >
-                          🚗 {driveLabel} from {originLabel}
-                        </a>
-                      ) : null}
-                    </div>
-                  <div className="forecast-section">
-                    {!selectedDate ? (
-                      <div className="forecast-prompt">
-                        Select a date to see the forecast.
-                      </div>
-                    ) : !isWeatherEligible ? (
-                      <div className="forecast-prompt">
-                        Weather forecasts are only available for the next 14 days.
-                      </div>
-                    ) : hasWeather ? (
-                      <div>
-                        <div className="flex flex-wrap items-center justify-between gap-2">
-                          <span className="font-semibold text-ink">
-                              Forecast
+                    return (
+                      <article
+                        key={site.id}
+                        className={`campground-card ${
+                          isOk ? 'campground-card--good' : ''
+                        }`}
+                      >
+                        <div className="flex flex-col gap-1">
+                          <div>
+                            <span className={getParkTypeClass(site.parkName)}>
+                              {getParkTypeLabel(site.parkName)}
                             </span>
-                            <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
-                              {isRainy || isTooHot ? 'Risky' : 'OK'}
-                            </span>
+                            <h2 className="font-display text-xl font-semibold text-ink">
+                              {site.name}
+                            </h2>
                           </div>
-                        <div>
-                          {minTemp?.toFixed(0)}°C to {maxTemp?.toFixed(0)}°C,
-                          rain risk up to {rainProb?.toFixed(0)}% (max{' '}
-                          {rainMm?.toFixed(1)}mm).
-                        </div>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          {hasPrecip ? (
-                            <span
-                              className="weather-chip"
-                              aria-label="Rain expected"
+                          <p className="campground-location">{locationLabel}</p>
+                          {originCoords ? (
+                            <a
+                              href={mapsLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="distance-text"
                             >
-                              <svg
-                                aria-hidden="true"
-                                viewBox="0 0 24 24"
-                                className="h-4 w-4"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path d="M16 16a4 4 0 0 0-8 0" />
-                                <path d="M6 16v3" />
-                                <path d="M10 16v3" />
-                                <path d="M14 16v3" />
-                                <path d="M18 16v3" />
-                              </svg>
-                              Rain
-                            </span>
-                          ) : null}
-                          {isSnowy ? (
-                            <span
-                              className="weather-chip"
-                              aria-label="Snow possible"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                viewBox="0 0 24 24"
-                                className="h-4 w-4"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path d="M12 2v20" />
-                                <path d="M4 6l16 12" />
-                                <path d="M20 6L4 18" />
-                              </svg>
-                              Snow
-                            </span>
-                          ) : null}
-                          {isHeatIcon ? (
-                            <span
-                              className="weather-chip"
-                              aria-label="Heat expected"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                viewBox="0 0 24 24"
-                                className="h-4 w-4"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path d="M10 14a4 4 0 1 0 4 0V5a2 2 0 1 0-4 0v9z" />
-                              </svg>
-                              Heat
-                            </span>
+                              🚗 {driveLabel} from {originLabel}
+                            </a>
                           ) : null}
                         </div>
-                      </div>
-                    ) : weatherLoading[weatherKey] ? (
-                      <div>Fetching forecast…</div>
-                    ) : (
-                      <div>Forecast pending.</div>
-                    )}
-                      {!hasWeather && weatherErrors[weatherKey] ? (
-                        <div className="mt-2 text-[11px] text-ember">
-                          {weatherErrors[weatherKey]}
+                        <div className="forecast-section">
+                          {!selectedDate ? (
+                            <div className="forecast-prompt">
+                              Select a date to see the forecast.
+                            </div>
+                          ) : !isWeatherEligible ? (
+                            <div className="forecast-prompt">
+                              Weather forecasts are only available for the next 14 days.
+                            </div>
+                          ) : hasWeather ? (
+                            <div>
+                              <div className="flex flex-wrap items-center justify-between gap-2">
+                                <span className="font-semibold text-ink">
+                                  Forecast
+                                </span>
+                                <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
+                                  {isRainy || isTooHot ? 'Risky' : 'OK'}
+                                </span>
+                              </div>
+                              <div>
+                                {minTemp?.toFixed(0)}°C to {maxTemp?.toFixed(0)}°C,
+                                rain risk up to {rainProb?.toFixed(0)}% (max{' '}
+                                {rainMm?.toFixed(1)}mm).
+                              </div>
+                              <div className="mt-2 flex flex-wrap gap-2">
+                                {hasPrecip ? (
+                                  <span
+                                    className="weather-chip"
+                                    aria-label="Rain expected"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      viewBox="0 0 24 24"
+                                      className="h-4 w-4"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="2.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    >
+                                      <path d="M16 16a4 4 0 0 0-8 0" />
+                                      <path d="M6 16v3" />
+                                      <path d="M10 16v3" />
+                                      <path d="M14 16v3" />
+                                      <path d="M18 16v3" />
+                                    </svg>
+                                    Rain
+                                  </span>
+                                ) : null}
+                                {isSnowy ? (
+                                  <span
+                                    className="weather-chip"
+                                    aria-label="Snow possible"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      viewBox="0 0 24 24"
+                                      className="h-4 w-4"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="2.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    >
+                                      <path d="M12 2v20" />
+                                      <path d="M4 6l16 12" />
+                                      <path d="M20 6L4 18" />
+                                    </svg>
+                                    Snow
+                                  </span>
+                                ) : null}
+                                {isHeatIcon ? (
+                                  <span
+                                    className="weather-chip"
+                                    aria-label="Heat expected"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      viewBox="0 0 24 24"
+                                      className="h-4 w-4"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="2.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    >
+                                      <path d="M10 14a4 4 0 1 0 4 0V5a2 2 0 1 0-4 0v9z" />
+                                    </svg>
+                                    Heat
+                                  </span>
+                                ) : null}
+                              </div>
+                            </div>
+                          ) : weatherLoading[weatherKey] ? (
+                            <div>Fetching forecast…</div>
+                          ) : (
+                            <div>Forecast pending.</div>
+                          )}
+                          {!hasWeather && weatherErrors[weatherKey] ? (
+                            <div className="mt-2 text-[11px] text-ember">
+                              {weatherErrors[weatherKey]}
+                            </div>
+                          ) : null}
                         </div>
-                      ) : null}
-                  </div>
-                    {hasFacilityDetails ? (
-                      <div className="facilities-block flex flex-col gap-2">
-                        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
-                          Facilities
-                        </div>
-                        <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
-                          {facilityItems
-                            .filter(
-                              (item) =>
-                                item.value !== null && item.value !== undefined,
-                            )
-                            .filter((item) => item.value === true)
-                            .map((item) => (
-                              <span
-                                key={item.key}
-                                className="rounded-full bg-ink/5 px-2 py-1"
-                                title={
-                                  item.key === 'dogFriendly' && dogPolicyText
-                                    ? dogPolicyText
-                                    : item.key === 'accessibilityNotes' &&
-                                        accessibilityText
-                                      ? accessibilityText
-                                      : undefined
-                                }
-                              >
-                                {item.label}
-                              </span>
-                            ))}
-                        </div>
-                      </div>
-                    ) : null}
-                    {selectedDate ? (
-                      <div className="availability-section">
-                        <div className="availability-label">Availability</div>
-                        {availabilityLoading ? (
-                          <div className="text-xs text-ink/60">
-                            Checking availability…
+                        {hasFacilityDetails ? (
+                          <div className="facilities-block flex flex-col gap-2">
+                            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                              Facilities
+                            </div>
+                            <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
+                              {facilityItems
+                                .filter(
+                                  (item) =>
+                                    item.value !== null &&
+                                    item.value !== undefined,
+                                )
+                                .filter((item) => item.value === true)
+                                .map((item) => (
+                                  <span
+                                    key={item.key}
+                                    className="rounded-full bg-ink/5 px-2 py-1"
+                                    title={
+                                      item.key === 'dogFriendly' && dogPolicyText
+                                        ? dogPolicyText
+                                        : item.key === 'accessibilityNotes' &&
+                                            accessibilityText
+                                          ? accessibilityText
+                                          : undefined
+                                    }
+                                  >
+                                    {item.label}
+                                  </span>
+                                ))}
+                            </div>
                           </div>
                         ) : null}
-                        <div className={availabilityClass}>
-                          {availabilityLabel}
-                        </div>
-                      </div>
-                    ) : null}
-                    {bookingUrl ? (
-                      <a
-                        href={bookingUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn btn-secondary btn-small mt-3 w-full"
-                      >
-                        Link to camp site
-                      </a>
-                    ) : null}
-                  </article>
-                )
-              })}
-            </div>
-          )}
-          {status === 'idle' && viewMode === 'map' && (
-            <MapView sites={filteredSites} />
-          )}
-          {status === 'idle' && filteredSites.length === 0 && (
-            <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
-              No matching campsites. Try a different search.
-            </div>
-          )}
+                        {selectedDate ? (
+                          <div className="availability-section">
+                            <div className="availability-label">Availability</div>
+                            {availabilityLoading ? (
+                              <div className="text-xs text-ink/60">
+                                Checking availability…
+                              </div>
+                            ) : null}
+                            <div className={availabilityClass}>
+                              {availabilityLabel}
+                            </div>
+                          </div>
+                        ) : null}
+                        {bookingUrl ? (
+                          <a
+                            href={bookingUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn btn-secondary btn-small mt-3 w-full"
+                          >
+                            Link to camp site
+                          </a>
+                        ) : null}
+                      </article>
+                    )
+                  })}
+                </div>
+              )}
+              {status === 'idle' && viewMode === 'map' && (
+                <MapView sites={filteredSites} />
+              )}
+              {status === 'idle' && filteredSites.length === 0 && (
+                <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
+                  No matching campsites. Try a different search.
+                </div>
+              )}
+            </section>
+          </div>
         </div>
       </main>
       <footer className="px-6 pb-10 text-center text-xs text-ink/50 sm:px-10">

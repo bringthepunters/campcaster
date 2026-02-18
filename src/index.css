@@ -270,6 +270,123 @@ img {
   gap: var(--spacing-lg);
 }
 
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.hero-tagline {
+  flex: 1 1 360px;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.controls-row {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.control-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.control-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.control-input {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control-input:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+.control-help {
+  font-size: 0.7rem;
+  color: var(--color-text-tertiary);
+}
+
+.control-error {
+  font-size: 0.7rem;
+  color: var(--color-ember);
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.filters-panel {
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.filters-header {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.results-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .campground-card {
   background: var(--color-bg-primary);
   border-radius: var(--radius-lg);
@@ -537,6 +654,14 @@ img {
 
   .campground-card {
     padding: var(--spacing-md);
+  }
+
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-header {
+    justify-content: flex-start;
   }
 }
 
