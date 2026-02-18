@@ -1091,27 +1091,45 @@ function App() {
               </div>
               <div className="filters-section">
                 <div className="section-heading">View</div>
-                <div className="filter-row">
-                  <label className="checkbox-item">
-                    <input
-                      type="radio"
-                      name="view-mode"
-                      checked={viewMode === 'list'}
-                      onChange={() => setViewMode('list')}
-                      className="accent-fern"
-                    />
-                    List view
-                  </label>
-                  <label className="checkbox-item">
-                    <input
-                      type="radio"
-                      name="view-mode"
-                      checked={viewMode === 'map'}
-                      onChange={() => setViewMode('map')}
-                      className="accent-fern"
-                    />
-                    Map view
-                  </label>
+                <div className="view-toggle">
+                  <button
+                    type="button"
+                    className={`view-toggle__button ${
+                      viewMode === 'list' ? 'is-active' : ''
+                    }`}
+                    onClick={() => setViewMode('list')}
+                    aria-pressed={viewMode === 'list'}
+                    aria-label="List view"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M6 7h12M6 12h12M6 17h12"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    className={`view-toggle__button ${
+                      viewMode === 'map' ? 'is-active' : ''
+                    }`}
+                    onClick={() => setViewMode('map')}
+                    aria-pressed={viewMode === 'map'}
+                    aria-label="Map view"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M4 6l6-2 5 2 5-2v14l-5 2-5-2-6 2V6z"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinejoin="round"
+                      />
+                      <path d="M10 4v14M15 6v14" stroke="currentColor" strokeWidth="1.8" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </aside>
@@ -1274,20 +1292,29 @@ function App() {
                             </div>
                           ) : hasWeather ? (
                             <div>
-                              <div className="flex flex-wrap items-center justify-between gap-2">
-                                <span className="font-semibold text-ink">
-                                  Forecast
-                                </span>
-                                <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
-                                  {isRainy || isTooHot ? 'Risky' : 'OK'}
-                                </span>
-                              </div>
-                              <div>
-                                {minTemp?.toFixed(0)}°C to {maxTemp?.toFixed(0)}°C,
-                                rain risk up to {rainProb?.toFixed(0)}% (max{' '}
-                                {rainMm?.toFixed(1)}mm).
-                              </div>
-                              <div className="mt-2 flex flex-wrap gap-2">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="font-semibold text-ink">
+                            Forecast
+                          </span>
+                          <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
+                            {isRainy || isTooHot ? 'Risky' : 'OK'}
+                          </span>
+                        </div>
+                        <div className="weather-tiles">
+                          <div className="weather-tile">
+                            <div className="weather-tile__label">Range</div>
+                            <div className="weather-tile__value">
+                              {minTemp?.toFixed(0)}°C – {maxTemp?.toFixed(0)}°C
+                            </div>
+                          </div>
+                          <div className="weather-tile">
+                            <div className="weather-tile__label">Rain risk</div>
+                            <div className="weather-tile__value">
+                              {rainProb?.toFixed(0)}% / {rainMm?.toFixed(1)}mm
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-3 flex flex-wrap gap-2">
                                 {hasPrecip ? (
                                   <span
                                     className="weather-chip"

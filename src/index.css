@@ -370,6 +370,41 @@ img {
   margin-bottom: var(--spacing-md);
 }
 
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle__button {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(16, 185, 129, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-toggle__button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.view-toggle__button.is-active {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.view-toggle__button:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
 .filter-col {
   display: flex;
   flex-direction: column;
@@ -498,6 +533,34 @@ img {
   justify-content: center;
   color: var(--color-text-secondary);
   font-size: 0.8125rem;
+}
+
+.weather-tiles {
+  margin-top: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.weather-tile {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  padding: 0.5rem 0.6rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.weather-tile__label {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.weather-tile__value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
 }
 
 .facilities-block {
