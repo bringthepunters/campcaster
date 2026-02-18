@@ -1291,97 +1291,32 @@ function App() {
                               Weather forecasts are only available for the next 14 days.
                             </div>
                           ) : hasWeather ? (
-                            <div>
-                        <div className="flex flex-wrap items-center justify-between gap-2">
-                          <span className="font-semibold text-ink">
-                            Forecast
-                          </span>
-                          <span className="rounded-full bg-ink/5 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-ink/70">
-                            {isRainy || isTooHot ? 'Risky' : 'OK'}
-                          </span>
-                        </div>
-                        <div className="weather-tiles">
-                          <div className="weather-tile">
-                            <div className="weather-tile__label">Range</div>
-                            <div className="weather-tile__value">
-                              {minTemp?.toFixed(0)}°C – {maxTemp?.toFixed(0)}°C
-                            </div>
-                          </div>
-                          <div className="weather-tile">
-                            <div className="weather-tile__label">Rain risk</div>
-                            <div className="weather-tile__value">
-                              {rainProb?.toFixed(0)}% / {rainMm?.toFixed(1)}mm
-                            </div>
-                          </div>
-                        </div>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                                {hasPrecip ? (
-                                  <span
-                                    className="weather-chip"
-                                    aria-label="Rain expected"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      viewBox="0 0 24 24"
-                                      className="h-4 w-4"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      strokeWidth="2.5"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    >
-                                      <path d="M16 16a4 4 0 0 0-8 0" />
-                                      <path d="M6 16v3" />
-                                      <path d="M10 16v3" />
-                                      <path d="M14 16v3" />
-                                      <path d="M18 16v3" />
-                                    </svg>
-                                    Rain
-                                  </span>
-                                ) : null}
-                                {isSnowy ? (
-                                  <span
-                                    className="weather-chip"
-                                    aria-label="Snow possible"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      viewBox="0 0 24 24"
-                                      className="h-4 w-4"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      strokeWidth="2.5"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    >
-                                      <path d="M12 2v20" />
-                                      <path d="M4 6l16 12" />
-                                      <path d="M20 6L4 18" />
-                                    </svg>
-                                    Snow
-                                  </span>
-                                ) : null}
-                                {isHeatIcon ? (
-                                  <span
-                                    className="weather-chip"
-                                    aria-label="Heat expected"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      viewBox="0 0 24 24"
-                                      className="h-4 w-4"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      strokeWidth="2.5"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    >
-                                      <path d="M10 14a4 4 0 1 0 4 0V5a2 2 0 1 0-4 0v9z" />
-                                    </svg>
-                                    Heat
-                                  </span>
-                                ) : null}
+                            <div
+                              className={`weather-panel ${
+                                isTooHot
+                                  ? 'weather-panel--hot'
+                                  : hasPrecip
+                                    ? 'weather-panel--rain'
+                                    : 'weather-panel--ok'
+                              }`}
+                            >
+                              <div className="weather-panel__meta">
+                                <span className="weather-panel__title">Forecast</span>
+                                <span className={`weather-panel__chip ${
+                                  isRainy || isTooHot ? 'is-risky' : 'is-ok'
+                                }`}>
+                                  {isRainy || isTooHot ? 'Risky' : 'OK'}
+                                </span>
                               </div>
+                              <div className="weather-panel__range">
+                                {minTemp?.toFixed(0)}°C to {maxTemp?.toFixed(0)}°C
+                              </div>
+                              <div className="weather-panel__rain">
+                                Rain risk up to {rainProb?.toFixed(0)}% (max {rainMm?.toFixed(1)}mm).
+                              </div>
+                              {(rainProb ?? 0) > 5 ? (
+                                <div className="weather-panel__badge">🌧️ Rain likely</div>
+                              ) : null}
                             </div>
                           ) : weatherLoading[weatherKey] ? (
                             <div>Fetching forecast…</div>
