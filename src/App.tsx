@@ -860,10 +860,13 @@ function App() {
 
   return (
     <div className="min-h-screen text-ink">
-      <div className="incident-banner incident-banner--egg px-6 py-3 text-sm font-semibold sm:px-10">
+      <div
+        className="incident-banner incident-banner--egg px-6 py-3 text-sm font-semibold sm:px-10"
+        style={{ background: '#f1c84b', color: '#2b2b2b' }}
+      >
         <div className="mx-auto max-w-6xl">
           {incidentsUpdatedAt ? (
-            <div className="mb-2 text-xs font-medium uppercase tracking-[0.15em] text-white/80">
+            <div className="mb-2 text-xs font-medium uppercase tracking-[0.15em] text-ink/70">
               Feed updated {new Date(incidentsUpdatedAt).toLocaleTimeString()}
             </div>
           ) : null}
