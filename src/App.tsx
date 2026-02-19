@@ -1300,6 +1300,9 @@ function App() {
                                     : 'weather-panel--ok'
                               }`}
                             >
+                              <div className="weather-panel__icon" aria-hidden="true">
+                                {(rainProb ?? 0) > 5 ? '🌧️' : isTooHot ? '☀️' : '⛅'}
+                              </div>
                               <div className="weather-panel__meta">
                                 <span className="weather-panel__title">Forecast</span>
                                 <span className={`weather-panel__chip ${
