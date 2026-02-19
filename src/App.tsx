@@ -1288,7 +1288,7 @@ function App() {
                             </div>
                           ) : !isWeatherEligible ? (
                             <div className="forecast-prompt">
-                              Weather forecasts are only available for the next 14 days.
+                              🤷 We don’t know what the weather will be like that far out.
                             </div>
                           ) : hasWeather ? (
                             <div
