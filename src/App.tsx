@@ -71,7 +71,6 @@ const AVAILABILITY_FILTERS = [
 ] as const
 
 const HEAT_THRESHOLD_C = 33
-const HEAT_ICON_THRESHOLD_C = 31
 const RAIN_PROB_THRESHOLD = 30
 const RAIN_MM_THRESHOLD = 4
 const WEATHER_CACHE_TTL_MS = 12 * 60 * 60 * 1000
@@ -1168,10 +1167,6 @@ function App() {
                       rainProb !== null &&
                       rainMm !== null &&
                       (rainProb > 0 || rainMm > 0)
-                    const isSnowy =
-                      maxTemp !== null && rainMm !== null && maxTemp <= 1 && rainMm > 0
-                    const isHeatIcon =
-                      maxTemp !== null && maxTemp > HEAT_ICON_THRESHOLD_C
                     const isOk =
                       summary !== null ? !summary.isRainy && !summary.isTooHot : false
                     const bookingUrl =
