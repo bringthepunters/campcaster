@@ -924,7 +924,7 @@ function App() {
       <header className="px-6 pb-8 pt-10 sm:px-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-4">
           <div className="hero-row">
-            <div className="brand-title">🏕️ CAMP CASTER</div>
+            <div className="brand-title">🏕️ CampCaster</div>
             <p className="hero-tagline">
               Which National Park camp sites within my desired drivetime range are
               available, have decent weather and the facilities I want?
