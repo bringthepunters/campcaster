@@ -152,6 +152,10 @@ const normalizeLocationText = (value: string) =>
     .trim()
     .replace(/\s+/g, ' ')
 
+const LOCATION_ALIAS_OVERRIDES: Record<string, string> = {
+  myrtleford: '3737',
+}
+
 const cleanInlineText = (value: unknown) => {
   if (Array.isArray(value)) {
     return cleanInlineText(value.join(' '))
@@ -323,6 +327,7 @@ function App() {
     const postcodeFromQuery = query.match(/^(\d{4})\b/)?.[1]
     let postcode =
       postcodeFromQuery ??
+      LOCATION_ALIAS_OVERRIDES[normalized] ??
       originIndex.aliasToPostcode.get(normalized) ??
       null
     let match = postcode ? vicPostcodeLookup[postcode] : undefined
