@@ -148,6 +148,7 @@ const normalizeLocationText = (value: string) =>
     .replace(/\bmt\b/g, 'mount')
     .replace(/\bst\b/g, 'saint')
     .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\b(vic|victoria|australia)\b/g, ' ')
     .trim()
     .replace(/\s+/g, ' ')
 
@@ -332,7 +333,10 @@ function App() {
       const contains = originIndex.aliasEntries.find((entry) =>
         entry.alias.includes(normalized),
       )
-      const found = startsWith ?? contains
+      const reverseContains = originIndex.aliasEntries.find((entry) =>
+        normalized.includes(entry.alias),
+      )
+      const found = startsWith ?? contains ?? reverseContains
       if (found) {
         postcode = found.postcode
         match = vicPostcodeLookup[found.postcode]
