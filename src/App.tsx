@@ -47,6 +47,13 @@ type WeatherDaily = {
 
 type LgaCentroids = Record<string, { lat: number; lng: number }>
 type AvailabilityStatus = 'available' | 'booked_out' | 'unbookable' | 'unknown'
+type VicLocationRecord = {
+  lat: number
+  lng: number
+  label?: string
+  lga?: string
+  tourismArea?: string | null
+}
 type IncidentItem = {
   title: string
   link: string
@@ -133,6 +140,16 @@ const slugify = (value: string) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
+
+const normalizeLocationText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/\bmt\b/g, 'mount')
+    .replace(/\bst\b/g, 'saint')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ')
 
 const cleanInlineText = (value: unknown) => {
   if (Array.isArray(value)) {
@@ -230,10 +247,7 @@ function App() {
   } | null>(null)
   const [originError, setOriginError] = useState<string | null>(null)
   const [vicPostcodeLookup, setVicPostcodeLookup] = useState<
-    Record<
-      string,
-      { lat: number; lng: number; label?: string; lga?: string; tourismArea?: string | null }
-    >
+    Record<string, VicLocationRecord>
   >({})
   const [driveTimesById, setDriveTimesById] = useState<Record<string, number>>(
     {},
@@ -249,6 +263,37 @@ function App() {
   const isWeatherEligible = Boolean(
     selectedDate && selectedDate <= weatherMaxDate,
   )
+  const originIndex = useMemo(() => {
+    const aliasToPostcode = new Map<string, string>()
+    const aliasEntries: Array<{ alias: string; postcode: string }> = []
+    const addAlias = (alias: string, postcode: string) => {
+      const normalized = normalizeLocationText(alias)
+      if (!normalized) return
+      if (!aliasToPostcode.has(normalized)) {
+        aliasToPostcode.set(normalized, postcode)
+      }
+      aliasEntries.push({ alias: normalized, postcode })
+    }
+
+    Object.entries(vicPostcodeLookup).forEach(([postcode, data]) => {
+      const locality = (data.label ?? '').trim()
+      addAlias(postcode, postcode)
+      if (locality) {
+        addAlias(locality, postcode)
+        addAlias(`${postcode} ${locality}`, postcode)
+        addAlias(`${locality} ${postcode}`, postcode)
+        if (locality.includes('Mount ')) {
+          addAlias(locality.replace('Mount ', 'Mt '), postcode)
+        }
+        if (locality.includes('Saint ')) {
+          addAlias(locality.replace('Saint ', 'St '), postcode)
+        }
+      }
+    })
+
+    return { aliasToPostcode, aliasEntries }
+  }, [vicPostcodeLookup])
+
   const originSuggestions = useMemo(() => {
     const values = new Set<string>()
     Object.entries(vicPostcodeLookup).forEach(([postcode, data]) => {
@@ -273,25 +318,24 @@ function App() {
       setOriginError(null)
       return
     }
-    const queryLower = query.toLowerCase()
+    const normalized = normalizeLocationText(query)
     const postcodeFromQuery = query.match(/^(\d{4})\b/)?.[1]
-    let postcode = postcodeFromQuery ?? null
+    let postcode =
+      postcodeFromQuery ??
+      originIndex.aliasToPostcode.get(normalized) ??
+      null
     let match = postcode ? vicPostcodeLookup[postcode] : undefined
-    if (!match) {
-      const entries = Object.entries(vicPostcodeLookup)
-      const exactLocality = entries.find(
-        ([, data]) => (data.label ?? '').toLowerCase() === queryLower,
+    if (!match && normalized) {
+      const startsWith = originIndex.aliasEntries.find((entry) =>
+        entry.alias.startsWith(normalized),
       )
-      const startsWithLocality = entries.find(([, data]) =>
-        (data.label ?? '').toLowerCase().startsWith(queryLower),
+      const contains = originIndex.aliasEntries.find((entry) =>
+        entry.alias.includes(normalized),
       )
-      const containsLocality = entries.find(([, data]) =>
-        (data.label ?? '').toLowerCase().includes(queryLower),
-      )
-      const found = exactLocality ?? startsWithLocality ?? containsLocality
+      const found = startsWith ?? contains
       if (found) {
-        postcode = found[0]
-        match = found[1]
+        postcode = found.postcode
+        match = vicPostcodeLookup[found.postcode]
       }
     }
     if (!match) {
@@ -306,7 +350,7 @@ function App() {
       postcode: postcode ?? '',
     })
     setOriginError(null)
-  }, [originPostcode, vicPostcodeLookup])
+  }, [originIndex, originPostcode, vicPostcodeLookup])
 
   useEffect(() => {
     weatherLoadingRef.current = weatherLoading
@@ -335,7 +379,7 @@ function App() {
         const centroids = (await lgaResponse.json()) as LgaCentroids
         const postcodeLookup = (await postcodeResponse.json()) as Record<
           string,
-          { lat: number; lng: number; label?: string; lga?: string; tourismArea?: string | null }
+          VicLocationRecord
         >
         setSites(data)
         setLgaCentroids(centroids)
