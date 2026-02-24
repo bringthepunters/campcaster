@@ -226,9 +226,9 @@ function App() {
     lat: number
     lng: number
     label: string
+    postcode: string
   } | null>(null)
   const [originError, setOriginError] = useState<string | null>(null)
-  const [vicPostcodes, setVicPostcodes] = useState<Set<string>>(new Set())
   const [vicPostcodeLookup, setVicPostcodeLookup] = useState<
     Record<
       string,
@@ -249,42 +249,64 @@ function App() {
   const isWeatherEligible = Boolean(
     selectedDate && selectedDate <= weatherMaxDate,
   )
+  const originSuggestions = useMemo(() => {
+    const values = new Set<string>()
+    Object.entries(vicPostcodeLookup).forEach(([postcode, data]) => {
+      const locality = (data.label ?? '').trim()
+      values.add(postcode)
+      if (locality) {
+        values.add(locality)
+        values.add(`${postcode} ${locality}`)
+      }
+    })
+    return Array.from(values).sort((a, b) => a.localeCompare(b))
+  }, [vicPostcodeLookup])
 
   useEffect(() => {
     weatherByKeyRef.current = weatherByKey
   }, [weatherByKey])
 
   useEffect(() => {
-    const postcode = originPostcode.trim()
-    if (!postcode) {
+    const query = originPostcode.trim()
+    if (!query) {
       setOriginCoords(null)
       setOriginError(null)
       return
     }
-    if (!/^\d{4}$/.test(postcode)) {
-      setOriginCoords(null)
-      setOriginError('Enter a 4 digit postcode')
-      return
+    const queryLower = query.toLowerCase()
+    const postcodeFromQuery = query.match(/^(\d{4})\b/)?.[1]
+    let postcode = postcodeFromQuery ?? null
+    let match = postcode ? vicPostcodeLookup[postcode] : undefined
+    if (!match) {
+      const entries = Object.entries(vicPostcodeLookup)
+      const exactLocality = entries.find(
+        ([, data]) => (data.label ?? '').toLowerCase() === queryLower,
+      )
+      const startsWithLocality = entries.find(([, data]) =>
+        (data.label ?? '').toLowerCase().startsWith(queryLower),
+      )
+      const containsLocality = entries.find(([, data]) =>
+        (data.label ?? '').toLowerCase().includes(queryLower),
+      )
+      const found = exactLocality ?? startsWithLocality ?? containsLocality
+      if (found) {
+        postcode = found[0]
+        match = found[1]
+      }
     }
-    if (vicPostcodes.size > 0 && !vicPostcodes.has(postcode)) {
-      setOriginCoords(null)
-      setOriginError('Postcode must be in Victoria')
-      return
-    }
-
-    const match = vicPostcodeLookup[postcode]
     if (!match) {
       setOriginCoords(null)
-      setOriginError('Postcode not found')
+      setOriginError('Enter a VIC postcode or locality')
       return
     }
     setOriginCoords({
       lat: match.lat,
       lng: match.lng,
-      label: match.label ?? `Postcode ${postcode}`,
+      label: match.label ?? `Postcode ${postcode ?? ''}`,
+      postcode: postcode ?? '',
     })
     setOriginError(null)
-  }, [originPostcode, vicPostcodes, vicPostcodeLookup])
+  }, [originPostcode, vicPostcodeLookup])
 
   useEffect(() => {
     weatherLoadingRef.current = weatherLoading
@@ -318,7 +340,6 @@ function App() {
         setSites(data)
         setLgaCentroids(centroids)
         setVicPostcodeLookup(postcodeLookup)
-        setVicPostcodes(new Set(Object.keys(postcodeLookup)))
         setStatus('idle')
       } catch (error) {
         console.error(error)
@@ -637,13 +658,13 @@ function App() {
   }, [filteredSites, loadWeather])
 
   useEffect(() => {
-    if (!originCoords || !originPostcode) {
+    if (!originCoords) {
       setDriveTimesById({})
       setDriveTimesLoading(false)
       return
     }
 
-    const cacheKey = `driveTimes:${originPostcode}`
+    const cacheKey = `driveTimes:${originCoords.postcode}`
     const cached = window.localStorage.getItem(cacheKey)
     if (cached) {
       try {
@@ -712,7 +733,7 @@ function App() {
     return () => {
       cancelled = true
     }
-  }, [originCoords, originPostcode, sites])
+  }, [originCoords, sites])
 
   useEffect(() => {
     if (!selectedDate || !isWeatherEligible) return
@@ -933,17 +954,22 @@ function App() {
           <div className="controls-row">
             <div className="control-block">
               <label htmlFor="origin-postcode" className="control-label">
-                Starting point postcode
+                Starting point postcode / locality
               </label>
               <input
                 id="origin-postcode"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                placeholder="e.g. 3070"
+                list="vic-origin-options"
+                inputMode="text"
+                placeholder="e.g. 3070 or Northcote"
                 value={originPostcode}
                 onChange={(event) => setOriginPostcode(event.target.value.trim())}
                 className="control-input"
               />
+              <datalist id="vic-origin-options">
+                {originSuggestions.map((option) => (
+                  <option key={option} value={option} />
+                ))}
+              </datalist>
               <div className="control-help">Defaults to Melbourne CBD.</div>
               {originError ? (
                 <div className="control-error">{originError}</div>
@@ -1204,7 +1230,9 @@ function App() {
                           ? 'Calculating…'
                           : 'Unknown'
                     const originQuery = originCoords
-                      ? encodeURIComponent(originPostcode)
+                      ? encodeURIComponent(
+                          `${originCoords.postcode} ${originCoords.label} VIC`,
+                        )
                       : 'Northcote+VIC'
                     const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
                     const facilities = site.facilities ?? {}
