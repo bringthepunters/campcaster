@@ -243,6 +243,7 @@ function App() {
     null,
   )
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
+  const [selectedMapSiteId, setSelectedMapSiteId] = useState<string | null>(null)
   const [originPostcode, setOriginPostcode] = useState('3000')
   const [originCoords, setOriginCoords] = useState<{
     lat: number
@@ -702,6 +703,11 @@ function App() {
     return Array.from(marks).sort((a, b) => a - b)
   }, [maxAvailableDriveMinutes])
 
+  const selectedMapSite = useMemo(
+    () => filteredSites.find((site) => site.id === selectedMapSiteId) ?? null,
+    [filteredSites, selectedMapSiteId],
+  )
+
   useEffect(() => {
     if (!selectedDate || !isWeatherEligible) return
     const targets = filteredSites.slice(0, AUTO_WEATHER_FETCH_LIMIT)
@@ -709,6 +715,16 @@ function App() {
       void loadWeather(site)
     })
   }, [filteredSites, loadWeather])
+
+  useEffect(() => {
+    if (viewMode !== 'map') {
+      setSelectedMapSiteId(null)
+      return
+    }
+    if (selectedMapSiteId && !filteredSites.some((site) => site.id === selectedMapSiteId)) {
+      setSelectedMapSiteId(null)
+    }
+  }, [filteredSites, selectedMapSiteId, viewMode])
 
   useEffect(() => {
     if (!originCoords) {
@@ -1472,7 +1488,219 @@ function App() {
                 </div>
               )}
               {status === 'idle' && viewMode === 'map' && (
-                <MapView sites={filteredSites} />
+                <>
+                  <MapView
+                    sites={filteredSites}
+                    origin={originCoords}
+                    onSiteClick={(siteId) => setSelectedMapSiteId(siteId)}
+                  />
+                  {selectedMapSite ? (
+                    <div
+                      className="map-card-overlay"
+                      role="dialog"
+                      aria-modal="true"
+                      aria-label={selectedMapSite.name}
+                    >
+                      <div className="map-card-overlay__backdrop" onClick={() => setSelectedMapSiteId(null)} />
+                      <article className="campground-card map-card-popup">
+                        <button
+                          type="button"
+                          className="map-card-popup__close"
+                          onClick={() => setSelectedMapSiteId(null)}
+                          aria-label="Close campsite details"
+                        >
+                          Close
+                        </button>
+                        {(() => {
+                          const site = selectedMapSite
+                          const summary = getWeatherSummary(site)
+                          const hasWeather = summary !== null
+                          const minTemp = summary?.minTemp ?? null
+                          const maxTemp = summary?.maxTemp ?? null
+                          const rainProb = summary?.maxRain ?? null
+                          const rainMm = summary?.maxRainMm ?? null
+                          const isRainy = summary?.isRainy ?? false
+                          const isTooHot = summary?.isTooHot ?? false
+                          const hasPrecip =
+                            rainProb !== null &&
+                            rainMm !== null &&
+                            (rainProb > 0 || rainMm > 0)
+                          const availabilityForDate =
+                            selectedDate && availabilityDate === selectedDate
+                              ? availabilityById[site.id] ?? 'unknown'
+                              : 'unknown'
+                          const availabilityLabel = !selectedDate
+                            ? 'Select a date'
+                            : availabilityLoading
+                              ? 'Checking…'
+                              : availabilityForDate === 'booked_out'
+                                ? 'Booked out'
+                                : availabilityForDate === 'available'
+                                  ? 'Available'
+                                  : availabilityForDate === 'unbookable'
+                                    ? 'Not Bookable. Just Rock up.'
+                                    : 'Unknown'
+                          const availabilityClass =
+                            availabilityForDate === 'available'
+                              ? 'availability-status availability-status--available'
+                              : availabilityForDate === 'booked_out'
+                                ? 'availability-status availability-status--unavailable'
+                                : 'availability-status availability-status--unknown'
+                          const driveMinutes = driveTimesById[site.id]
+                          const driveLabel =
+                            originCoords && driveMinutes !== undefined
+                              ? formatDriveTime(driveMinutes)
+                              : driveTimesLoading
+                                ? 'Calculating…'
+                                : 'Unknown'
+                          const originQuery = originCoords
+                            ? encodeURIComponent(
+                                `${originCoords.postcode} ${originCoords.label} VIC`,
+                              )
+                            : 'Northcote+VIC'
+                          const mapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
+                          const bookingUrl =
+                            site.bookingUrl ??
+                            availabilityUrlById[site.id] ??
+                            getBookingUrl(site.sourceUrl)
+                          const facilities = site.facilities ?? {}
+                          const facilityItems = [
+                            {
+                              key: 'toilets',
+                              label: facilities.toiletsType
+                                ? `Toilets (${facilities.toiletsType})`
+                                : 'Toilets',
+                              value: facilities.toilets,
+                            },
+                            { key: 'showers', label: 'Showers', value: facilities.showers },
+                            { key: 'bbq', label: 'BBQ', value: facilities.bbq },
+                            { key: 'firePits', label: 'Fire pits', value: facilities.firePits },
+                            {
+                              key: 'picnicTables',
+                              label: 'Picnic tables',
+                              value: facilities.picnicTables,
+                            },
+                            {
+                              key: 'drinkingWater',
+                              label: 'Drinking water',
+                              value: facilities.drinkingWater,
+                            },
+                            {
+                              key: 'vehicleAccess',
+                              label: 'Vehicle access',
+                              value: facilities.vehicleAccess,
+                            },
+                            {
+                              key: 'dogFriendly',
+                              label: 'Dog friendly',
+                              value: facilities.dogFriendly,
+                            },
+                          ]
+                          const hasFacilityDetails = facilityItems.some((item) => item.value === true)
+
+                          return (
+                            <>
+                              <div className="flex flex-col gap-1">
+                                <div>
+                                  <span className={getParkTypeClass(site.parkName)}>
+                                    {getParkTypeLabel(site.parkName)}
+                                  </span>
+                                  <h2 className="font-display text-xl font-semibold text-ink">
+                                    {site.name}
+                                  </h2>
+                                </div>
+                                <p className="campground-location">{formatRegion(site)}</p>
+                                {originCoords ? (
+                                  <a
+                                    href={mapsLink}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="distance-text"
+                                  >
+                                    🚗 {driveLabel} from {originCoords.label}
+                                  </a>
+                                ) : null}
+                              </div>
+                              <div className="forecast-section">
+                                {!selectedDate ? (
+                                  <div className="forecast-prompt">Select a date to see the forecast.</div>
+                                ) : !isWeatherEligible ? (
+                                  <div className="forecast-prompt">
+                                    🤷 We don’t know what the weather will be like that far out.
+                                  </div>
+                                ) : hasWeather ? (
+                                  <div
+                                    className={`weather-panel ${
+                                      isTooHot
+                                        ? 'weather-panel--hot'
+                                        : hasPrecip
+                                          ? 'weather-panel--rain'
+                                          : 'weather-panel--ok'
+                                    }`}
+                                  >
+                                    <div className="weather-panel__icon" aria-hidden="true">
+                                      {(rainProb ?? 0) > 5 ? '🌧️' : isTooHot ? '☀️' : '⛅'}
+                                    </div>
+                                    <div className="weather-panel__meta">
+                                      <span className="weather-panel__title">Forecast</span>
+                                      <span
+                                        className={`weather-panel__chip ${
+                                          isRainy || isTooHot ? 'is-risky' : 'is-ok'
+                                        }`}
+                                      >
+                                        {isRainy || isTooHot ? 'Risky' : 'OK'}
+                                      </span>
+                                    </div>
+                                    <div className="weather-panel__range">
+                                      {minTemp?.toFixed(0)}°C to {maxTemp?.toFixed(0)}°C
+                                    </div>
+                                    <div className="weather-panel__rain">
+                                      Rain risk up to {rainProb?.toFixed(0)}% (max {rainMm?.toFixed(1)}mm).
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div>Forecast pending.</div>
+                                )}
+                              </div>
+                              {hasFacilityDetails ? (
+                                <div className="facilities-block flex flex-col gap-2">
+                                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                                    Facilities
+                                  </div>
+                                  <div className="flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ink/60">
+                                    {facilityItems
+                                      .filter((item) => item.value === true)
+                                      .map((item) => (
+                                        <span key={item.key} className="rounded-full bg-ink/5 px-2 py-1">
+                                          {item.label}
+                                        </span>
+                                      ))}
+                                  </div>
+                                </div>
+                              ) : null}
+                              {selectedDate ? (
+                                <div className="availability-section">
+                                  <div className="availability-label">Availability</div>
+                                  <div className={availabilityClass}>{availabilityLabel}</div>
+                                </div>
+                              ) : null}
+                              {bookingUrl ? (
+                                <a
+                                  href={bookingUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="btn btn-secondary btn-small mt-3 w-full"
+                                >
+                                  Link to camp site
+                                </a>
+                              ) : null}
+                            </>
+                          )
+                        })()}
+                      </article>
+                    </div>
+                  ) : null}
+                </>
               )}
               {status === 'idle' && filteredSites.length === 0 && (
                 <div className="rounded-2xl bg-white/70 p-6 text-ink/70">

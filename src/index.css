@@ -240,6 +240,61 @@ img {
   color: var(--color-text-tertiary);
 }
 
+.map-site-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid #0f172a;
+  background: #16a34a;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.map-site-marker:hover {
+  transform: scale(1.12);
+}
+
+.map-card-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.map-card-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.map-card-popup {
+  position: relative;
+  z-index: 1;
+  width: min(540px, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+
+.map-card-popup__close {
+  position: sticky;
+  top: 0.5rem;
+  margin-left: auto;
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
 /* Checkbox Improvements */
 .checkbox-item {
   display: flex;

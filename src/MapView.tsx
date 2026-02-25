@@ -11,10 +11,14 @@ type Site = {
 
 type MapViewProps = {
   sites: Site[]
+  origin: { lat: number; lng: number; label: string } | null
+  onSiteClick: (siteId: string) => void
 }
 
 type MapLibreMap = {
   remove: () => void
+  setCenter: (center: [number, number]) => void
+  setZoom: (zoom: number) => void
   fitBounds: (bounds: [[number, number], [number, number]], options?: {
     padding?: number
   }) => void
@@ -22,21 +26,20 @@ type MapLibreMap = {
 
 type MapLibreMarker = {
   remove: () => void
-  addTo?: (map: MapLibreMap) => MapLibreMarker
-  setPopup?: (popup: unknown) => MapLibreMarker
+  setLngLat: (coords: [number, number]) => MapLibreMarker
+  addTo: (map: MapLibreMap) => MapLibreMarker
+  setPopup: (popup: unknown) => MapLibreMarker
 }
 
 type MapLibre = {
   Map: new (options: Record<string, unknown>) => MapLibreMap
-  Marker: new (options?: Record<string, unknown>) => {
-    setLngLat: (coords: [number, number]) => MapLibreMarker | undefined
-  }
+  Marker: new (options?: Record<string, unknown>) => MapLibreMarker
   Popup: new (options?: Record<string, unknown>) => {
     setHTML: (html: string) => unknown
   }
 }
 
-const MapView = ({ sites }: MapViewProps) => {
+const MapView = ({ sites, origin, onSiteClick }: MapViewProps) => {
   const validSites = sites.filter(
     (site) => Number.isFinite(site.lat) && Number.isFinite(site.lng),
   )
@@ -86,35 +89,62 @@ const MapView = ({ sites }: MapViewProps) => {
     markersRef.current.forEach((marker) => marker.remove())
     markersRef.current = []
 
-    if (!validSites.length) return
+    const allPoints = [
+      ...validSites.map((site) => ({ lat: site.lat, lng: site.lng })),
+      ...(origin ? [{ lat: origin.lat, lng: origin.lng }] : []),
+    ]
+    if (!allPoints.length) return
 
-    const lngs = validSites.map((site) => site.lng)
-    const lats = validSites.map((site) => site.lat)
+    const lngs = allPoints.map((point) => point.lng)
+    const lats = allPoints.map((point) => point.lat)
     const minLng = Math.min(...lngs)
     const maxLng = Math.max(...lngs)
     const minLat = Math.min(...lats)
     const maxLat = Math.max(...lats)
 
-    map.fitBounds(
-      [
-        [minLng, minLat],
-        [maxLng, maxLat],
-      ],
-      { padding: 40 },
-    )
+    if (allPoints.length === 1) {
+      map.setCenter([allPoints[0].lng, allPoints[0].lat])
+      map.setZoom(8)
+    } else {
+      map.fitBounds(
+        [
+          [minLng, minLat],
+          [maxLng, maxLat],
+        ],
+        { padding: 40 },
+      )
+    }
+
+    if (origin) {
+      const originPopup = new maplibre.Popup({ offset: 16 }).setHTML(
+        `<strong>Starting point</strong><br/>${origin.label}`,
+      )
+      const originMarker = new maplibre.Marker({ color: '#dc2626' })
+        .setLngLat([origin.lng, origin.lat])
+        .setPopup(originPopup)
+        .addTo(map)
+      markersRef.current.push(originMarker)
+    }
 
     validSites.forEach((site) => {
-      const link = `https://www.google.com/maps/dir/?api=1&origin=Northcote+VIC&destination=${site.lat},${site.lng}`
+      const markerEl = document.createElement('button')
+      markerEl.type = 'button'
+      markerEl.className = 'map-site-marker'
+      markerEl.setAttribute('aria-label', `Open ${site.name}`)
+      markerEl.addEventListener('click', () => onSiteClick(site.id))
+
+      const originQuery = origin
+        ? encodeURIComponent(`${origin.label} VIC`)
+        : 'Melbourne+VIC'
+      const link = `https://www.google.com/maps/dir/?api=1&origin=${originQuery}&destination=${site.lat},${site.lng}`
       const popup = new maplibre.Popup({ offset: 16 }).setHTML(
         `<strong>${site.name}</strong><br/>${site.parkName}<br/><a href="${link}" target="_blank" rel="noreferrer">Directions</a>`,
       )
-      const marker = new maplibre.Marker({ color: '#16a34a' })
+      const marker = new maplibre.Marker({ element: markerEl })
         .setLngLat([site.lng, site.lat])
-        ?.setPopup?.(popup)
-        ?.addTo?.(map)
-      if (marker) {
-        markersRef.current.push(marker)
-      }
+        .setPopup(popup)
+        .addTo(map)
+      markersRef.current.push(marker)
     })
 
     return () => {
@@ -123,7 +153,7 @@ const MapView = ({ sites }: MapViewProps) => {
       map.remove()
       mapInstance.current = null
     }
-  }, [validSites])
+  }, [origin, onSiteClick, validSites])
 
   return (
     <div className="map-panel">
