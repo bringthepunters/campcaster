@@ -352,6 +352,11 @@ img {
   color: var(--color-text-secondary);
 }
 
+.hero-tagline__emphasis {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
 .controls-row {
   display: grid;
   gap: var(--spacing-md);

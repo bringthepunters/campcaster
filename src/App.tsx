@@ -1016,8 +1016,11 @@ function App() {
           <div className="hero-row">
             <div className="brand-title">🏕️ CampCaster</div>
             <p className="hero-tagline">
-              Which Victorian National Park camp sites within my desired drivetime range are
-              available, have decent weather and the facilities I want?
+              Which Victorian National Park camp sites within my desired{' '}
+              <span className="hero-tagline__emphasis">drivetime</span> range are{' '}
+              <span className="hero-tagline__emphasis">available</span>, have decent{' '}
+              <span className="hero-tagline__emphasis">weather</span> and the{' '}
+              <span className="hero-tagline__emphasis">facilities</span> I want?
             </p>
           </div>
           <div className="controls-row">
