@@ -627,6 +627,25 @@ function App() {
     [getWeatherSummaryForDate, selectedDates],
   )
 
+  const getSiteAvailabilityStatus = useCallback(
+    (siteId: string): AvailabilityStatus => {
+      if (selectedDates.length === 0) return 'unknown'
+      if (selectedDates.length === 1) {
+        return availabilityDate === selectedDate
+          ? availabilityById[siteId] ?? 'unknown'
+          : 'unknown'
+      }
+      const statuses = selectedDates.map(
+        (date) => availabilityByDate[date]?.[siteId] ?? 'unknown',
+      )
+      if (statuses.includes('available')) return 'available'
+      if (statuses.includes('booked_out')) return 'booked_out'
+      if (statuses.includes('unbookable')) return 'unbookable'
+      return 'unknown'
+    },
+    [availabilityByDate, availabilityById, availabilityDate, selectedDate, selectedDates],
+  )
+
   const filteredSites = useMemo(() => {
     const filtered = sites.filter((site) => {
       for (const filter of FACILITY_FILTERS) {
@@ -659,11 +678,10 @@ function App() {
       )
       if (
         availabilityFilterActive &&
-        selectedDate &&
-        availabilityDate === selectedDate &&
+        selectedDates.length > 0 &&
         !availabilityLoading
       ) {
-        const availabilityForDate = availabilityById[site.id] ?? 'unknown'
+        const availabilityForDate = getSiteAvailabilityStatus(site.id)
         if (!availabilityFilters[availabilityForDate]) {
           return false
         }
@@ -678,14 +696,8 @@ function App() {
       unknown: 3,
     }
     return filtered.sort((a, b) => {
-      const availabilityA =
-        selectedDate && availabilityDate === selectedDate
-          ? availabilityById[a.id] ?? 'unknown'
-          : 'unknown'
-      const availabilityB =
-        selectedDate && availabilityDate === selectedDate
-          ? availabilityById[b.id] ?? 'unknown'
-          : 'unknown'
+      const availabilityA = getSiteAvailabilityStatus(a.id)
+      const availabilityB = getSiteAvailabilityStatus(b.id)
       const availabilityDiff =
         availabilityRank[availabilityA] - availabilityRank[availabilityB]
       if (availabilityDiff !== 0) return availabilityDiff
@@ -704,8 +716,10 @@ function App() {
     allowRain,
     availabilityById,
     availabilityDate,
+    getSiteAvailabilityStatus,
     availabilityFilters,
     selectedDate,
+    selectedDates,
     sites,
     allowHeat,
     allowRain,
@@ -1332,10 +1346,7 @@ function App() {
                       site.bookingUrl ??
                       availabilityUrlById[site.id] ??
                       getBookingUrl(site.sourceUrl)
-                    const availabilityForDate =
-                      selectedDates.length > 0 && availabilityDate === selectedDate
-                        ? availabilityById[site.id] ?? 'unknown'
-                        : 'unknown'
+                    const availabilityForDate = getSiteAvailabilityStatus(site.id)
                     const availabilityLabel = selectedDates.length === 0
                       ? 'Select a date'
                       : availabilityLoading
@@ -1465,7 +1476,7 @@ function App() {
                                         className="forecast-grid__cell forecast-grid__icon-cell"
                                         title="We don’t know what the weather will be like"
                                       >
-                                        🤷
+                                        🎲
                                       </div>
                                     )
                                   }
@@ -1514,7 +1525,7 @@ function App() {
                                       : dayAvailability === 'booked_out'
                                         ? '❌'
                                         : dayAvailability === 'unbookable'
-                                          ? '🤷'
+                                          ? '🎲'
                                           : '❔'
                                   const dayTitle =
                                     dayAvailability === 'available'
@@ -1538,7 +1549,7 @@ function App() {
                             </div>
                           ) : !isWeatherEligible ? (
                             <div className="forecast-prompt">
-                              🤷 We don’t know what the weather will be like that far out.
+                              🎲 We don’t know what the weather will be like that far out.
                             </div>
                           ) : hasWeather ? (
                             <div
@@ -1680,10 +1691,7 @@ function App() {
                             rainProb !== null &&
                             rainMm !== null &&
                             (rainProb > 0 || rainMm > 0)
-                          const availabilityForDate =
-                            selectedDates.length > 0 && availabilityDate === selectedDate
-                              ? availabilityById[site.id] ?? 'unknown'
-                              : 'unknown'
+                          const availabilityForDate = getSiteAvailabilityStatus(site.id)
                           const availabilityLabel = selectedDates.length === 0
                             ? 'Select a date'
                             : availabilityLoading
@@ -1799,7 +1807,7 @@ function App() {
                                               className="forecast-grid__cell forecast-grid__icon-cell"
                                               title="We don’t know what the weather will be like"
                                             >
-                                              🤷
+                                              🎲
                                             </div>
                                           )
                                         }
@@ -1848,7 +1856,7 @@ function App() {
                                             : dayAvailability === 'booked_out'
                                               ? '❌'
                                               : dayAvailability === 'unbookable'
-                                                ? '🤷'
+                                                ? '🎲'
                                                 : '❔'
                                         const dayTitle =
                                           dayAvailability === 'available'
@@ -1872,7 +1880,7 @@ function App() {
                                   </div>
                                 ) : !isWeatherEligible ? (
                                   <div className="forecast-prompt">
-                                    🤷 We don’t know what the weather will be like that far out.
+                                    🎲 We don’t know what the weather will be like that far out.
                                   </div>
                                 ) : hasWeather ? (
                                   <div
