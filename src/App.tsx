@@ -137,7 +137,7 @@ const formatMinutesAsHours = (minutes: number) => {
 
 const formatGridDate = (value: string) => {
   const date = new Date(`${value}T00:00:00`)
-  return date.toLocaleDateString('en-AU', { day: '2-digit', month: '2-digit' })
+  return date.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric' })
 }
 
 const slugify = (value: string) =>
@@ -1460,7 +1460,11 @@ function App() {
                                 {selectedDates.map((date) => {
                                   if (date > weatherMaxDate) {
                                     return (
-                                      <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
+                                      <div
+                                        key={`${site.id}-${date}-weather`}
+                                        className="forecast-grid__cell forecast-grid__icon-cell"
+                                        title="We don’t know what the weather will be like"
+                                      >
                                         🤷
                                       </div>
                                     )
@@ -1468,14 +1472,34 @@ function App() {
                                   const daySummary = getWeatherSummaryForDate(site, date)
                                   if (!daySummary) {
                                     return (
-                                      <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
+                                      <div
+                                        key={`${site.id}-${date}-weather`}
+                                        className="forecast-grid__cell forecast-grid__icon-cell"
+                                        title="Forecast pending"
+                                      >
                                         -
                                       </div>
                                     )
                                   }
+                                  const weatherIcon = daySummary.isRainy
+                                    ? '🌧️'
+                                    : daySummary.isTooHot
+                                      ? '☀️'
+                                      : '⛅'
+                                  const weatherTitle = `${daySummary.minTemp.toFixed(
+                                    0,
+                                  )}°C to ${daySummary.maxTemp.toFixed(
+                                    0,
+                                  )}°C, rain risk up to ${daySummary.maxRain.toFixed(
+                                    0,
+                                  )}% (max ${daySummary.maxRainMm.toFixed(1)}mm)`
                                   return (
-                                    <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
-                                      {daySummary.minTemp.toFixed(0)}-{daySummary.maxTemp.toFixed(0)}C
+                                    <div
+                                      key={`${site.id}-${date}-weather`}
+                                      className="forecast-grid__cell forecast-grid__icon-cell"
+                                      title={weatherTitle}
+                                    >
+                                      {weatherIcon}
                                     </div>
                                   )
                                 })}
@@ -1484,17 +1508,29 @@ function App() {
                                 <div className="forecast-grid__head">Avail</div>
                                 {selectedDates.map((date) => {
                                   const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
-                                  const dayLabel =
+                                  const dayIcon =
                                     dayAvailability === 'available'
-                                      ? 'Avail'
+                                      ? '✅'
                                       : dayAvailability === 'booked_out'
-                                        ? 'Out'
+                                        ? '❌'
                                         : dayAvailability === 'unbookable'
-                                          ? 'Unbook'
-                                          : '?'
+                                          ? '🤷'
+                                          : '❔'
+                                  const dayTitle =
+                                    dayAvailability === 'available'
+                                      ? 'Available'
+                                      : dayAvailability === 'booked_out'
+                                        ? 'Booked out'
+                                        : dayAvailability === 'unbookable'
+                                          ? 'Not bookable, take your chances'
+                                          : 'Unknown'
                                   return (
-                                    <div key={`${site.id}-${date}-avail`} className="forecast-grid__cell">
-                                      {dayLabel}
+                                    <div
+                                      key={`${site.id}-${date}-avail`}
+                                      className="forecast-grid__cell forecast-grid__icon-cell"
+                                      title={dayTitle}
+                                    >
+                                      {dayIcon}
                                     </div>
                                   )
                                 })}
@@ -1758,7 +1794,11 @@ function App() {
                                       {selectedDates.map((date) => {
                                         if (date > weatherMaxDate) {
                                           return (
-                                            <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
+                                            <div
+                                              key={`${site.id}-${date}-weather-popup`}
+                                              className="forecast-grid__cell forecast-grid__icon-cell"
+                                              title="We don’t know what the weather will be like"
+                                            >
                                               🤷
                                             </div>
                                           )
@@ -1766,14 +1806,34 @@ function App() {
                                         const daySummary = getWeatherSummaryForDate(site, date)
                                         if (!daySummary) {
                                           return (
-                                            <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
+                                            <div
+                                              key={`${site.id}-${date}-weather-popup`}
+                                              className="forecast-grid__cell forecast-grid__icon-cell"
+                                              title="Forecast pending"
+                                            >
                                               -
                                             </div>
                                           )
                                         }
+                                        const weatherIcon = daySummary.isRainy
+                                          ? '🌧️'
+                                          : daySummary.isTooHot
+                                            ? '☀️'
+                                            : '⛅'
+                                        const weatherTitle = `${daySummary.minTemp.toFixed(
+                                          0,
+                                        )}°C to ${daySummary.maxTemp.toFixed(
+                                          0,
+                                        )}°C, rain risk up to ${daySummary.maxRain.toFixed(
+                                          0,
+                                        )}% (max ${daySummary.maxRainMm.toFixed(1)}mm)`
                                         return (
-                                          <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
-                                            {daySummary.minTemp.toFixed(0)}-{daySummary.maxTemp.toFixed(0)}C
+                                          <div
+                                            key={`${site.id}-${date}-weather-popup`}
+                                            className="forecast-grid__cell forecast-grid__icon-cell"
+                                            title={weatherTitle}
+                                          >
+                                            {weatherIcon}
                                           </div>
                                         )
                                       })}
@@ -1782,17 +1842,29 @@ function App() {
                                       <div className="forecast-grid__head">Avail</div>
                                       {selectedDates.map((date) => {
                                         const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
-                                        const dayLabel =
+                                        const dayIcon =
                                           dayAvailability === 'available'
-                                            ? 'Avail'
+                                            ? '✅'
                                             : dayAvailability === 'booked_out'
-                                              ? 'Out'
+                                              ? '❌'
                                               : dayAvailability === 'unbookable'
-                                                ? 'Unbook'
-                                                : '?'
+                                                ? '🤷'
+                                                : '❔'
+                                        const dayTitle =
+                                          dayAvailability === 'available'
+                                            ? 'Available'
+                                            : dayAvailability === 'booked_out'
+                                              ? 'Booked out'
+                                              : dayAvailability === 'unbookable'
+                                                ? 'Not bookable, take your chances'
+                                                : 'Unknown'
                                         return (
-                                          <div key={`${site.id}-${date}-avail-popup`} className="forecast-grid__cell">
-                                            {dayLabel}
+                                          <div
+                                            key={`${site.id}-${date}-avail-popup`}
+                                            className="forecast-grid__cell forecast-grid__icon-cell"
+                                            title={dayTitle}
+                                          >
+                                            {dayIcon}
                                           </div>
                                         )
                                       })}
