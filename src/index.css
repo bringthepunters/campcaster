@@ -599,6 +599,45 @@ img {
   font-size: 0.8125rem;
 }
 
+.forecast-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.forecast-grid__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(48px, 1fr);
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.forecast-grid__head {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  font-weight: 700;
+  min-width: 56px;
+  text-align: left;
+}
+
+.forecast-grid__date,
+.forecast-grid__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.25rem 0.4rem;
+  min-height: 1.6rem;
+  font-size: 0.68rem;
+  color: var(--color-text-secondary);
+}
+
 .weather-panel {
   width: 100%;
   border-radius: 14px;

@@ -135,6 +135,11 @@ const formatMinutesAsHours = (minutes: number) => {
   return `${hours}h ${mins}m`
 }
 
+const formatGridDate = (value: string) => {
+  const date = new Date(`${value}T00:00:00`)
+  return date.toLocaleDateString('en-AU', { day: '2-digit', month: '2-digit' })
+}
+
 const slugify = (value: string) =>
   value
     .toLowerCase()
@@ -228,6 +233,9 @@ function App() {
   const [availabilityById, setAvailabilityById] = useState<
     Record<string, AvailabilityStatus>
   >({})
+  const [availabilityByDate, setAvailabilityByDate] = useState<
+    Record<string, Record<string, AvailabilityStatus>>
+  >({})
   const [availabilityUrlById, setAvailabilityUrlById] = useState<
     Record<string, string>
   >({})
@@ -237,6 +245,7 @@ function App() {
     DEFAULT_MAX_DRIVE_MINUTES,
   )
   const [selectedDate, setSelectedDate] = useState('')
+  const [selectedEndDate, setSelectedEndDate] = useState('')
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
   const [incidentsUpdatedAt, setIncidentsUpdatedAt] = useState<string | null>(
@@ -266,9 +275,23 @@ function App() {
     date.setDate(date.getDate() + 13)
     return date.toISOString().slice(0, 10)
   }, [])
-  const isWeatherEligible = Boolean(
-    selectedDate && selectedDate <= weatherMaxDate,
-  )
+  const selectedDates = useMemo(() => {
+    if (!selectedDate) return [] as string[]
+    if (!selectedEndDate || selectedEndDate < selectedDate) return [selectedDate]
+    const result: string[] = []
+    const cursor = new Date(`${selectedDate}T00:00:00`)
+    const end = new Date(`${selectedEndDate}T00:00:00`)
+    while (cursor <= end) {
+      result.push(cursor.toISOString().slice(0, 10))
+      cursor.setDate(cursor.getDate() + 1)
+      if (result.length > 31) break
+    }
+    return result
+  }, [selectedDate, selectedEndDate])
+  const isWeatherEligible =
+    selectedDates.length > 0 &&
+    selectedDates.every((date) => date <= weatherMaxDate)
+  const isMultiDateSelection = selectedDates.length > 1
   const originIndex = useMemo(() => {
     const aliasToPostcode = new Map<string, string>()
     const aliasEntries: Array<{ alias: string; postcode: string }> = []
@@ -568,13 +591,13 @@ function App() {
     [lgaCentroids],
   )
 
-  const getWeatherSummary = useCallback(
-    (site: Site): WeatherSummary | null => {
-      if (!selectedDate) return null
+  const getWeatherSummaryForDate = useCallback(
+    (site: Site, date: string): WeatherSummary | null => {
+      if (!date) return null
       const weatherKey = site.lga ?? site.id
       const daily = weatherByKey[weatherKey]
       if (!daily) return null
-      const index = daily.time.findIndex((value) => value === selectedDate)
+      const index = daily.time.findIndex((value) => value === date)
       if (index < 0) return null
       const minTemp = daily.minTemps[index]
       const maxTemp = daily.maxTemps[index]
@@ -592,7 +615,16 @@ function App() {
         isRainy,
       }
     },
-    [selectedDate, weatherByKey],
+    [weatherByKey],
+  )
+
+  const getWeatherSummary = useCallback(
+    (site: Site): WeatherSummary | null => {
+      const primaryDate = selectedDates[0]
+      if (!primaryDate) return null
+      return getWeatherSummaryForDate(site, primaryDate)
+    },
+    [getWeatherSummaryForDate, selectedDates],
   )
 
   const filteredSites = useMemo(() => {
@@ -709,12 +741,12 @@ function App() {
   )
 
   useEffect(() => {
-    if (!selectedDate || !isWeatherEligible) return
+    if (!selectedDates.length || !isWeatherEligible) return
     const targets = filteredSites.slice(0, AUTO_WEATHER_FETCH_LIMIT)
     targets.forEach((site) => {
       void loadWeather(site)
     })
-  }, [filteredSites, loadWeather])
+  }, [filteredSites, isWeatherEligible, loadWeather, selectedDates])
 
   useEffect(() => {
     if (viewMode !== 'map') {
@@ -805,7 +837,7 @@ function App() {
   }, [originCoords, sites])
 
   useEffect(() => {
-    if (!selectedDate || !isWeatherEligible) return
+    if (!selectedDates.length || !isWeatherEligible) return
     const targets = filteredSitesRef.current.slice(0, AUTO_WEATHER_FETCH_LIMIT)
     if (!targets.length) return
     setWeatherByKey({})
@@ -814,128 +846,143 @@ function App() {
     targets.forEach((site) => {
       void loadWeather(site, false)
     })
-  }, [loadWeather, selectedDate])
+  }, [isWeatherEligible, loadWeather, selectedDates])
 
   useEffect(() => {
-    if (!selectedDate) {
+    if (!selectedDates.length) {
       setAvailabilityById({})
+      setAvailabilityByDate({})
       setAvailabilityDate(null)
       setAvailabilityLoading(false)
       setAvailabilityUrlById({})
       return
     }
 
+    const mapAvailabilityItems = (
+      items: Array<{
+        alias?: string
+        OperatorName?: string
+        isBookable?: boolean
+        isAvailable?: boolean
+        isBookableAndAvailable?: boolean
+      }>,
+    ) => {
+      const availabilityBySlug: Record<string, AvailabilityStatus> = {}
+      const availabilityItems = items.map((item) => {
+        const aliasSlug = item.alias ? slugify(item.alias) : null
+        const nameSlug = item.OperatorName ? slugify(item.OperatorName) : null
+        const aliasOriginal = item.alias ?? null
+        const tokens = [
+          ...(item.alias ? normalizeTokens(item.alias) : []),
+          ...(item.OperatorName ? normalizeTokens(item.OperatorName) : []),
+        ]
+        const isAvailable = Boolean(item.isBookableAndAvailable)
+        const isBookable = Boolean(item.isBookable)
+        const status: AvailabilityStatus = isAvailable
+          ? 'available'
+          : isBookable
+            ? 'booked_out'
+            : 'unbookable'
+        if (aliasSlug) availabilityBySlug[aliasSlug] = status
+        if (nameSlug && !availabilityBySlug[nameSlug]) {
+          availabilityBySlug[nameSlug] = status
+        }
+        return {
+          status,
+          tokens: Array.from(new Set(tokens)),
+          alias: aliasOriginal,
+          aliasSlug,
+          nameSlug,
+        }
+      })
+
+      const mapped: Record<string, AvailabilityStatus> = {}
+      const bookingMap: Record<string, string> = {}
+      for (const site of sites) {
+        const siteSlug = slugify(site.name)
+        const direct = availabilityBySlug[siteSlug]
+        if (direct) {
+          mapped[site.id] = direct
+          const directItem = availabilityItems.find(
+            (item) => item.aliasSlug === siteSlug || item.nameSlug === siteSlug,
+          )
+          if (directItem?.alias) {
+            bookingMap[site.id] = `https://bookings.parks.vic.gov.au/${directItem.alias}`
+          }
+          continue
+        }
+        const siteTokens = new Set(normalizeTokens(site.name))
+        let best: AvailabilityStatus | null = null
+        let bestTokenCount = 0
+        let bestAlias: string | null = null
+        for (const item of availabilityItems) {
+          if (!item.tokens.length) continue
+          const tokenSet = new Set(item.tokens)
+          const isSubset =
+            item.tokens.every((token) => siteTokens.has(token)) ||
+            Array.from(siteTokens).every((token) => tokenSet.has(token))
+          if (!isSubset) continue
+          if (item.tokens.length > bestTokenCount) {
+            bestTokenCount = item.tokens.length
+            best = item.status
+            bestAlias = item.alias ?? null
+          }
+        }
+        mapped[site.id] = best ?? 'unbookable'
+        if (bestAlias) {
+          bookingMap[site.id] = `https://bookings.parks.vic.gov.au/${bestAlias}`
+        }
+      }
+
+      return { mapped, bookingMap }
+    }
+
     const loadAvailability = async () => {
       setAvailabilityLoading(true)
       try {
-        const proxyBase = (import.meta.env.VITE_BOOKEASY_PROXY_URL ??
-          '') as string
-        const url = proxyBase
-          ? new URL(proxyBase)
-          : new URL('https://bookings.parks.vic.gov.au/book')
-        if (proxyBase) {
-          url.searchParams.set('date', selectedDate)
-        } else {
-          url.searchParams.set('format', 'json')
-          url.searchParams.set('q', '114')
-          url.searchParams.set('pagenumber', '1')
-          url.searchParams.set('date', selectedDate)
-          url.searchParams.set('period', '1')
+        const proxyBase = (import.meta.env.VITE_BOOKEASY_PROXY_URL ?? '') as string
+        const selectedDateMappings: Record<string, Record<string, AvailabilityStatus>> = {}
+        const mergedBookingMap: Record<string, string> = {}
+
+        for (const date of selectedDates) {
+          const url = proxyBase
+            ? new URL(proxyBase)
+            : new URL('https://bookings.parks.vic.gov.au/book')
+          if (proxyBase) {
+            url.searchParams.set('date', date)
+          } else {
+            url.searchParams.set('format', 'json')
+            url.searchParams.set('q', '114')
+            url.searchParams.set('pagenumber', '1')
+            url.searchParams.set('date', date)
+            url.searchParams.set('period', '1')
+          }
+
+          const response = await fetch(url.toString(), { cache: 'no-store' })
+          if (!response.ok) {
+            throw new Error('Availability unavailable')
+          }
+          const payload = (await response.json()) as {
+            data?: Array<{
+              alias?: string
+              OperatorName?: string
+              isBookable?: boolean
+              isAvailable?: boolean
+              isBookableAndAvailable?: boolean
+            }>
+          }
+          const { mapped, bookingMap } = mapAvailabilityItems(payload.data ?? [])
+          selectedDateMappings[date] = mapped
+          Object.assign(mergedBookingMap, bookingMap)
         }
 
-        const response = await fetch(url.toString(), {
-          cache: 'no-store',
-        })
-        if (!response.ok) {
-          throw new Error('Availability unavailable')
-        }
-
-        const payload = (await response.json()) as {
-          data?: Array<{
-            alias?: string
-            OperatorName?: string
-            isBookable?: boolean
-            isAvailable?: boolean
-            isBookableAndAvailable?: boolean
-          }>
-        }
-
-        const items = payload.data ?? []
-        const availabilityBySlug: Record<string, AvailabilityStatus> = {}
-        const availabilityItems = items.map((item) => {
-          const aliasSlug = item.alias ? slugify(item.alias) : null
-          const nameSlug = item.OperatorName
-            ? slugify(item.OperatorName)
-            : null
-          const aliasOriginal = item.alias ?? null
-          const tokens = [
-            ...(item.alias ? normalizeTokens(item.alias) : []),
-            ...(item.OperatorName ? normalizeTokens(item.OperatorName) : []),
-          ]
-          const isAvailable = Boolean(item.isBookableAndAvailable)
-          const isBookable = Boolean(item.isBookable)
-          const status: AvailabilityStatus = isAvailable
-            ? 'available'
-            : isBookable
-              ? 'booked_out'
-              : 'unbookable'
-          if (aliasSlug) availabilityBySlug[aliasSlug] = status
-          if (nameSlug && !availabilityBySlug[nameSlug]) {
-            availabilityBySlug[nameSlug] = status
-          }
-          return {
-            status,
-            tokens: Array.from(new Set(tokens)),
-            alias: aliasOriginal,
-            aliasSlug,
-            nameSlug,
-          }
-        })
-
-        const mapped: Record<string, AvailabilityStatus> = {}
-        const bookingMap: Record<string, string> = {}
-        for (const site of sites) {
-          const siteSlug = slugify(site.name)
-          const direct = availabilityBySlug[siteSlug]
-          if (direct) {
-            mapped[site.id] = direct
-            const directItem = availabilityItems.find(
-              (item) => item.aliasSlug === siteSlug || item.nameSlug === siteSlug,
-            )
-            if (directItem?.alias) {
-              bookingMap[site.id] =
-                `https://bookings.parks.vic.gov.au/${directItem.alias}`
-            }
-            continue
-          }
-          const siteTokens = new Set(normalizeTokens(site.name))
-          let best: AvailabilityStatus | null = null
-          let bestTokenCount = 0
-          let bestAlias: string | null = null
-          for (const item of availabilityItems) {
-            if (!item.tokens.length) continue
-            const tokenSet = new Set(item.tokens)
-            const isSubset =
-              item.tokens.every((token) => siteTokens.has(token)) ||
-              Array.from(siteTokens).every((token) => tokenSet.has(token))
-            if (!isSubset) continue
-            if (item.tokens.length > bestTokenCount) {
-              bestTokenCount = item.tokens.length
-              best = item.status
-              bestAlias = item.alias ?? null
-            }
-          }
-          mapped[site.id] = best ?? 'unbookable'
-          if (bestAlias) {
-            bookingMap[site.id] =
-              `https://bookings.parks.vic.gov.au/${bestAlias}`
-          }
-        }
-
-        setAvailabilityById(mapped)
-        setAvailabilityDate(selectedDate)
-        setAvailabilityUrlById(bookingMap)
+        const primaryDate = selectedDates[0] ?? null
+        setAvailabilityByDate(selectedDateMappings)
+        setAvailabilityById(primaryDate ? selectedDateMappings[primaryDate] ?? {} : {})
+        setAvailabilityDate(primaryDate)
+        setAvailabilityUrlById(mergedBookingMap)
       } catch {
+        setAvailabilityByDate({})
         setAvailabilityById({})
         setAvailabilityDate(null)
         setAvailabilityUrlById({})
@@ -945,7 +992,7 @@ function App() {
     }
 
     void loadAvailability()
-  }, [selectedDate, sites])
+  }, [selectedDates, sites])
 
   return (
     <div className="min-h-screen text-ink">
@@ -1049,7 +1096,7 @@ function App() {
             </div>
             <div className="control-block">
               <label htmlFor="forecast-date" className="control-label">
-                Date
+                Date from
               </label>
               <input
                 id="forecast-date"
@@ -1060,11 +1107,25 @@ function App() {
                 className="control-input"
               />
               <div className="control-help">Forecast works for the next 14 days.</div>
-              {!isWeatherEligible && selectedDate ? (
+              {!isWeatherEligible && selectedDates.length > 0 ? (
                 <div className="control-help">
                   Weather filters and forecasts are only available for the next 14 days.
                 </div>
               ) : null}
+            </div>
+            <div className="control-block">
+              <label htmlFor="forecast-end-date" className="control-label">
+                Date to (optional)
+              </label>
+              <input
+                id="forecast-end-date"
+                type="date"
+                value={selectedEndDate}
+                min={selectedDate || new Date().toISOString().slice(0, 10)}
+                onChange={(event) => setSelectedEndDate(event.target.value)}
+                className="control-input"
+              />
+              <div className="control-help">Pick a range to compare days in-card.</div>
             </div>
             <div className="control-block">
               <label htmlFor="location-region" className="control-label">
@@ -1142,7 +1203,7 @@ function App() {
                       checked={allowHeat}
                       onChange={(event) => setAllowHeat(event.target.checked)}
                       className="accent-fern"
-                      disabled={!selectedDate || !isWeatherEligible}
+                      disabled={!selectedDates.length || !isWeatherEligible}
                     />
                     I dont mind the heat
                   </label>
@@ -1152,7 +1213,7 @@ function App() {
                       checked={allowRain}
                       onChange={(event) => setAllowRain(event.target.checked)}
                       className="accent-fern"
-                      disabled={!selectedDate || !isWeatherEligible}
+                      disabled={!selectedDates.length || !isWeatherEligible}
                     />
                     I dont mind rain
                   </label>
@@ -1160,7 +1221,7 @@ function App() {
                 <p className="text-xs text-ink/50">
                   Weather thresholds: under 33C and rain under 30% + 4mm.
                 </p>
-                {!isWeatherEligible && selectedDate ? (
+                {!isWeatherEligible && selectedDates.length > 0 ? (
                   <p className="text-xs text-ink/50">
                     Weather filters are disabled for dates beyond 14 days.
                   </p>
@@ -1181,7 +1242,7 @@ function App() {
                           }))
                         }
                         className="accent-fern"
-                        disabled={!selectedDate}
+                        disabled={!selectedDates.length}
                         aria-label={`Availability ${filter.label}`}
                       />
                       {filter.label}
@@ -1272,10 +1333,10 @@ function App() {
                       availabilityUrlById[site.id] ??
                       getBookingUrl(site.sourceUrl)
                     const availabilityForDate =
-                      selectedDate && availabilityDate === selectedDate
+                      selectedDates.length > 0 && availabilityDate === selectedDate
                         ? availabilityById[site.id] ?? 'unknown'
                         : 'unknown'
-                    const availabilityLabel = !selectedDate
+                    const availabilityLabel = selectedDates.length === 0
                       ? 'Select a date'
                       : availabilityLoading
                         ? 'Checking…'
@@ -1380,9 +1441,64 @@ function App() {
                           ) : null}
                         </div>
                         <div className="forecast-section">
-                          {!selectedDate ? (
+                          {!selectedDates.length ? (
                             <div className="forecast-prompt">
                               Select a date to see the forecast.
+                            </div>
+                          ) : isMultiDateSelection ? (
+                            <div className="forecast-grid">
+                              <div className="forecast-grid__row">
+                                <div className="forecast-grid__head">Date</div>
+                                {selectedDates.map((date) => (
+                                  <div key={`${site.id}-${date}-head`} className="forecast-grid__date">
+                                    {formatGridDate(date)}
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="forecast-grid__row">
+                                <div className="forecast-grid__head">Weather</div>
+                                {selectedDates.map((date) => {
+                                  if (date > weatherMaxDate) {
+                                    return (
+                                      <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
+                                        🤷
+                                      </div>
+                                    )
+                                  }
+                                  const daySummary = getWeatherSummaryForDate(site, date)
+                                  if (!daySummary) {
+                                    return (
+                                      <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
+                                        -
+                                      </div>
+                                    )
+                                  }
+                                  return (
+                                    <div key={`${site.id}-${date}-weather`} className="forecast-grid__cell">
+                                      {daySummary.minTemp.toFixed(0)}-{daySummary.maxTemp.toFixed(0)}C
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                              <div className="forecast-grid__row">
+                                <div className="forecast-grid__head">Avail</div>
+                                {selectedDates.map((date) => {
+                                  const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
+                                  const dayLabel =
+                                    dayAvailability === 'available'
+                                      ? 'Avail'
+                                      : dayAvailability === 'booked_out'
+                                        ? 'Out'
+                                        : dayAvailability === 'unbookable'
+                                          ? 'Unbook'
+                                          : '?'
+                                  return (
+                                    <div key={`${site.id}-${date}-avail`} className="forecast-grid__cell">
+                                      {dayLabel}
+                                    </div>
+                                  )
+                                })}
+                              </div>
                             </div>
                           ) : !isWeatherEligible ? (
                             <div className="forecast-prompt">
@@ -1462,7 +1578,7 @@ function App() {
                             </div>
                           </div>
                         ) : null}
-                        {selectedDate ? (
+                        {selectedDates.length > 0 && !isMultiDateSelection ? (
                           <div className="availability-section">
                             <div className="availability-label">Availability</div>
                             {availabilityLoading ? (
@@ -1529,10 +1645,10 @@ function App() {
                             rainMm !== null &&
                             (rainProb > 0 || rainMm > 0)
                           const availabilityForDate =
-                            selectedDate && availabilityDate === selectedDate
+                            selectedDates.length > 0 && availabilityDate === selectedDate
                               ? availabilityById[site.id] ?? 'unknown'
                               : 'unknown'
-                          const availabilityLabel = !selectedDate
+                          const availabilityLabel = selectedDates.length === 0
                             ? 'Select a date'
                             : availabilityLoading
                               ? 'Checking…'
@@ -1625,8 +1741,63 @@ function App() {
                                 ) : null}
                               </div>
                               <div className="forecast-section">
-                                {!selectedDate ? (
+                                {!selectedDates.length ? (
                                   <div className="forecast-prompt">Select a date to see the forecast.</div>
+                                ) : isMultiDateSelection ? (
+                                  <div className="forecast-grid">
+                                    <div className="forecast-grid__row">
+                                      <div className="forecast-grid__head">Date</div>
+                                      {selectedDates.map((date) => (
+                                        <div key={`${site.id}-${date}-head-popup`} className="forecast-grid__date">
+                                          {formatGridDate(date)}
+                                        </div>
+                                      ))}
+                                    </div>
+                                    <div className="forecast-grid__row">
+                                      <div className="forecast-grid__head">Weather</div>
+                                      {selectedDates.map((date) => {
+                                        if (date > weatherMaxDate) {
+                                          return (
+                                            <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
+                                              🤷
+                                            </div>
+                                          )
+                                        }
+                                        const daySummary = getWeatherSummaryForDate(site, date)
+                                        if (!daySummary) {
+                                          return (
+                                            <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
+                                              -
+                                            </div>
+                                          )
+                                        }
+                                        return (
+                                          <div key={`${site.id}-${date}-weather-popup`} className="forecast-grid__cell">
+                                            {daySummary.minTemp.toFixed(0)}-{daySummary.maxTemp.toFixed(0)}C
+                                          </div>
+                                        )
+                                      })}
+                                    </div>
+                                    <div className="forecast-grid__row">
+                                      <div className="forecast-grid__head">Avail</div>
+                                      {selectedDates.map((date) => {
+                                        const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
+                                        const dayLabel =
+                                          dayAvailability === 'available'
+                                            ? 'Avail'
+                                            : dayAvailability === 'booked_out'
+                                              ? 'Out'
+                                              : dayAvailability === 'unbookable'
+                                                ? 'Unbook'
+                                                : '?'
+                                        return (
+                                          <div key={`${site.id}-${date}-avail-popup`} className="forecast-grid__cell">
+                                            {dayLabel}
+                                          </div>
+                                        )
+                                      })}
+                                    </div>
+                                  </div>
                                 ) : !isWeatherEligible ? (
                                   <div className="forecast-prompt">
                                     🤷 We don’t know what the weather will be like that far out.
@@ -1681,7 +1852,7 @@ function App() {
                                   </div>
                                 </div>
                               ) : null}
-                              {selectedDate ? (
+                              {selectedDates.length > 0 && !isMultiDateSelection ? (
                                 <div className="availability-section">
                                   <div className="availability-label">Availability</div>
                                   <div className={availabilityClass}>{availabilityLabel}</div>
