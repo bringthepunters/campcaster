@@ -644,8 +644,17 @@ img {
 }
 
 .forecast-grid__icon-cell {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1;
+  filter: saturate(1.25) contrast(1.1);
+}
+
+.forecast-grid__icon-cell--chance {
+  background: #ffe08a;
+  border-color: #d6a82a;
+  box-shadow: inset 0 0 0 1px rgba(214, 168, 42, 0.28);
+  font-size: 1.45rem;
+  filter: saturate(1.35) contrast(1.15) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .weather-panel {
@@ -683,10 +692,10 @@ img {
 }
 
 .weather-panel__icon {
-  font-size: 2rem;
+  font-size: 2.35rem;
   line-height: 1;
   margin: 0.2rem 0 0.3rem;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  filter: saturate(1.25) contrast(1.12) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
 }
 
 .weather-panel__range {

@@ -1473,7 +1473,7 @@ function App() {
                                     return (
                                       <div
                                         key={`${site.id}-${date}-weather`}
-                                        className="forecast-grid__cell forecast-grid__icon-cell"
+                                        className="forecast-grid__cell forecast-grid__icon-cell forecast-grid__icon-cell--chance"
                                         title="We don’t know what the weather will be like"
                                       >
                                         🎲
@@ -1527,6 +1527,7 @@ function App() {
                                         : dayAvailability === 'unbookable'
                                           ? '🎲'
                                           : '❔'
+                                  const isChance = dayAvailability === 'unbookable'
                                   const dayTitle =
                                     dayAvailability === 'available'
                                       ? 'Available'
@@ -1538,7 +1539,9 @@ function App() {
                                   return (
                                     <div
                                       key={`${site.id}-${date}-avail`}
-                                      className="forecast-grid__cell forecast-grid__icon-cell"
+                                      className={`forecast-grid__cell forecast-grid__icon-cell ${
+                                        isChance ? 'forecast-grid__icon-cell--chance' : ''
+                                      }`}
                                       title={dayTitle}
                                     >
                                       {dayIcon}
@@ -1804,7 +1807,7 @@ function App() {
                                           return (
                                             <div
                                               key={`${site.id}-${date}-weather-popup`}
-                                              className="forecast-grid__cell forecast-grid__icon-cell"
+                                              className="forecast-grid__cell forecast-grid__icon-cell forecast-grid__icon-cell--chance"
                                               title="We don’t know what the weather will be like"
                                             >
                                               🎲
@@ -1858,6 +1861,7 @@ function App() {
                                               : dayAvailability === 'unbookable'
                                                 ? '🎲'
                                                 : '❔'
+                                        const isChance = dayAvailability === 'unbookable'
                                         const dayTitle =
                                           dayAvailability === 'available'
                                             ? 'Available'
@@ -1869,7 +1873,9 @@ function App() {
                                         return (
                                           <div
                                             key={`${site.id}-${date}-avail-popup`}
-                                            className="forecast-grid__cell forecast-grid__icon-cell"
+                                            className={`forecast-grid__cell forecast-grid__icon-cell ${
+                                              isChance ? 'forecast-grid__icon-cell--chance' : ''
+                                            }`}
                                             title={dayTitle}
                                           >
                                             {dayIcon}
