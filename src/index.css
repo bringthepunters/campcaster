@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
 
 :root {
   /* Color Palette - Nature-inspired */
@@ -28,7 +28,7 @@
   --color-border-dark: #d1d5db;
 
   /* Typography */
-  --font-display: 'Lexend', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', ui-serif, serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Spacing */
@@ -61,9 +61,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--color-text-primary);
-  background: radial-gradient(circle at 12% 12%, #fdf8ef 0%, transparent 45%),
-    radial-gradient(circle at 88% 15%, #f1f8f2 0%, transparent 45%),
-    var(--color-bg-secondary);
+  background: #f9fafb;
   line-height: 1.6;
   min-height: 100vh;
 }
