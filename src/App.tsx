@@ -679,7 +679,8 @@ function App() {
       if (
         availabilityFilterActive &&
         selectedDates.length > 0 &&
-        !availabilityLoading
+        !availabilityLoading &&
+        availabilityDate !== null
       ) {
         const availabilityForDate = getSiteAvailabilityStatus(site.id)
         if (!availabilityFilters[availabilityForDate]) {
@@ -1079,10 +1080,20 @@ function App() {
       <div className="guided-header">
         <div className="guided-header__inner">
           <div className="brand-lockup">
-            <div className="brand-lockup__title">CampCaster</div>
-            <p className="brand-lockup__tagline">
-              Find Victorian campsites that match your dates, drive time, weather, and must-have facilities.
-            </p>
+            <div className="brand-lockup__logo" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 6L4 36h36L22 6z" fill="#c86b2a" opacity="0.9"/>
+                <path d="M22 6L13 36h18L22 6z" fill="#f2eadc" opacity="0.25"/>
+                <path d="M16 36v-8h12v8" stroke="#f2eadc" strokeWidth="1.8" strokeLinejoin="round"/>
+                <circle cx="22" cy="18" r="2" fill="#f2eadc" opacity="0.7"/>
+              </svg>
+            </div>
+            <div className="brand-lockup__wordmark">
+              <div className="brand-lockup__title">CampCaster</div>
+              <p className="brand-lockup__tagline">
+                Find Victorian campsites that match your dates, drive time, weather, and must-have facilities.
+              </p>
+            </div>
           </div>
 
           <div className="steps-row">

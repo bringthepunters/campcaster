@@ -956,9 +956,9 @@ img {
    ============================================ */
 
 .guided-header {
-  background: #f2eadc;
-  padding: 2rem 2.5rem 2rem;
-  border-bottom: 1px solid rgba(47, 94, 58, 0.12);
+  background: #1f2a24;
+  padding: 2rem 2.5rem 2.25rem;
+  border-bottom: none;
 }
 
 .guided-header__inner {
@@ -966,37 +966,53 @@ img {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
 .brand-lockup {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
+.brand-lockup__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.brand-lockup__wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
 .brand-lockup__title {
   font-family: 'Fraunces', ui-serif, serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #1f2a24;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: #f2eadc;
   line-height: 1;
 }
 
 .brand-lockup__tagline {
-  font-size: 0.9rem;
-  color: #4b5563;
+  font-size: 0.85rem;
+  color: rgba(242, 234, 220, 0.55);
   line-height: 1.5;
-  max-width: 520px;
+  max-width: 480px;
+  margin: 0;
 }
 
 .steps-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: start;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(242, 234, 220, 0.1);
 }
 
 .step {
@@ -1015,10 +1031,10 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  background: #2f5e3a;
+  background: #c86b2a;
   color: #fff;
   font-size: 0.6rem;
   font-weight: 700;
@@ -1029,65 +1045,63 @@ img {
 .step__name {
   font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #2f5e3a;
+  color: rgba(242, 234, 220, 0.6);
 }
 
 .step__prompt {
-  font-size: 0.78rem;
-  color: #4b5563;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  color: rgba(242, 234, 220, 0.85);
+  line-height: 1.45;
   min-height: 2.4em;
 }
 
 .step__input {
   width: 100%;
   border-radius: 0.5rem;
-  border: 1.5px solid #d1d5db;
-  background: #fff;
+  border: 1.5px solid rgba(242, 234, 220, 0.2);
+  background: rgba(255, 255, 255, 0.07);
   padding: 0.6rem 0.85rem;
   font-size: 0.875rem;
-  color: #1f2a24;
+  color: #f2eadc;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color-scheme: dark;
 }
 
 .step__input:focus {
-  border-color: #2f5e3a;
-  box-shadow: 0 0 0 3px rgba(47, 94, 58, 0.15);
+  border-color: #c86b2a;
+  box-shadow: 0 0 0 3px rgba(200, 107, 42, 0.25);
 }
 
 .step__error {
   font-size: 0.7rem;
-  color: #c86b2a;
+  color: #f59e0b;
   font-weight: 500;
 }
 
 .step__hint {
   font-size: 0.7rem;
-  color: #6b7280;
+  color: rgba(242, 234, 220, 0.4);
   line-height: 1.4;
 }
 
 .step__hint--warn {
-  color: #b45309;
+  color: #f59e0b;
   font-weight: 500;
 }
 
 .step__dates {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
-  align-items: start;
-  flex-wrap: wrap;
 }
 
 .step__dates-group {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  flex: 1;
-  min-width: 120px;
 }
 
 .step__dates-sublabel {
@@ -1095,7 +1109,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #6b7280;
+  color: rgba(242, 234, 220, 0.4);
 }
 
 .step__slider-row {
@@ -1106,13 +1120,13 @@ img {
 
 .step__slider {
   flex: 1;
-  accent-color: #2f5e3a;
+  accent-color: #c86b2a;
 }
 
 .step__slider-value {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #1f2a24;
+  font-weight: 700;
+  color: #f2eadc;
   white-space: nowrap;
   min-width: 4rem;
   text-align: right;
@@ -1126,6 +1140,7 @@ img {
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
   padding: 0.75rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .chip-bar__inner {
@@ -1172,14 +1187,14 @@ img {
 }
 
 .chip:hover {
-  border-color: #2f5e3a;
-  color: #2f5e3a;
+  border-color: #c86b2a;
+  color: #c86b2a;
 }
 
 .chip.is-active {
-  background: #2f5e3a;
-  border-color: #2f5e3a;
-  color: #fff;
+  background: #1f2a24;
+  border-color: #1f2a24;
+  color: #f2eadc;
 }
 
 .chip:disabled,
@@ -1228,7 +1243,7 @@ img {
 
 @media (max-width: 768px) {
   .guided-header {
-    padding: 1.25rem 1rem 1.25rem;
+    padding: 1.5rem 1rem 1.75rem;
   }
 
   .chip-bar {
@@ -1241,10 +1256,10 @@ img {
 
   .steps-row {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .brand-lockup__title {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 }
