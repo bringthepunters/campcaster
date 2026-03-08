@@ -602,6 +602,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
 }
 
 .forecast-grid__row {
@@ -612,8 +614,6 @@ img {
   gap: 0.25rem;
   width: max-content;
   min-width: 100%;
-  overflow-x: auto;
-  padding-bottom: 0.15rem;
 }
 
 .forecast-grid__head {
@@ -653,6 +653,32 @@ img {
   box-shadow: inset 0 0 0 1px rgba(214, 168, 42, 0.28);
   font-size: 1.45rem;
   filter: saturate(1.35) contrast(1.15) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+.forecast-grid__avail--available {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #15803d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.forecast-grid__avail--booked_out {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.forecast-grid__avail--unbookable {
+  background: #ffe08a;
+  border-color: #d6a82a;
+  font-size: 1.3rem;
+}
+.forecast-grid__avail--unknown {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  font-size: 0.9rem;
 }
 
 .weather-panel {

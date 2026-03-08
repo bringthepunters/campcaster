@@ -74,7 +74,7 @@ const FACILITY_FILTERS = [
 const AVAILABILITY_FILTERS = [
   { key: 'available', label: 'Available' },
   { key: 'booked_out', label: 'Booked out' },
-  { key: 'unbookable', label: 'Not Bookable. Just Rock up.' },
+  { key: 'unbookable', label: '🎲 Just Rock up.' },
 ] as const
 
 const HEAT_THRESHOLD_C = 33
@@ -1169,16 +1169,20 @@ function App() {
                   ? `Drive times calculated from ${originCoords.label}.`
                   : 'Enter your suburb or postcode to calculate drive times.'}
               </p>
-              <span className="step__dates-sublabel">Suburb or postcode</span>
-              <input
-                id="origin-postcode"
-                list="vic-origin-options"
-                inputMode="text"
-                placeholder="e.g. 3070 or Northcote"
-                value={originPostcode}
-                onChange={(event) => setOriginPostcode(event.target.value.trim())}
-                className="step__input"
-              />
+              <div className="step__dates">
+                <div className="step__dates-group">
+                  <span className="step__dates-sublabel">Suburb or postcode</span>
+                  <input
+                    id="origin-postcode"
+                    list="vic-origin-options"
+                    inputMode="text"
+                    placeholder="e.g. 3070 or Northcote"
+                    value={originPostcode}
+                    onChange={(event) => setOriginPostcode(event.target.value.trim())}
+                    className="step__input"
+                  />
+                </div>
+              </div>
               <datalist id="vic-origin-options">
                 {originSuggestions.map((option) => (
                   <option key={option} value={option} />
@@ -1198,22 +1202,26 @@ function App() {
                 <span className="step__name">How far?</span>
               </div>
               <p className="step__prompt">How long are you happy to drive?</p>
-              <span className="step__dates-sublabel">Max driving time</span>
-              <div className="step__slider-row">
-                <input
-                  id="drive-time"
-                  type="range"
-                  min={30}
-                  max={maxAvailableDriveMinutes}
-                  step={30}
-                  value={maxDriveMinutes}
-                  onChange={(event) => setMaxDriveMinutes(Number(event.target.value))}
-                  list="drive-time-marks"
-                  className="step__slider"
-                />
-                <span className="step__slider-value">
-                  {formatMinutesAsHours(maxDriveMinutes)}
-                </span>
+              <div className="step__dates">
+                <div className="step__dates-group">
+                  <span className="step__dates-sublabel">Max driving time</span>
+                  <div className="step__slider-row">
+                    <input
+                      id="drive-time"
+                      type="range"
+                      min={30}
+                      max={maxAvailableDriveMinutes}
+                      step={30}
+                      value={maxDriveMinutes}
+                      onChange={(event) => setMaxDriveMinutes(Number(event.target.value))}
+                      list="drive-time-marks"
+                      className="step__slider"
+                    />
+                    <span className="step__slider-value">
+                      {formatMinutesAsHours(maxDriveMinutes)}
+                    </span>
+                  </div>
+                </div>
               </div>
               <datalist id="drive-time-marks">
                 {driveMarks.map((value) => (
@@ -1568,27 +1576,24 @@ function App() {
                                   const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
                                   const dayIcon =
                                     dayAvailability === 'available'
-                                      ? '✅'
+                                      ? '✓'
                                       : dayAvailability === 'booked_out'
-                                        ? '❌'
+                                        ? '✗'
                                         : dayAvailability === 'unbookable'
                                           ? '🎲'
-                                          : '❔'
-                                  const isChance = dayAvailability === 'unbookable'
+                                          : '–'
                                   const dayTitle =
                                     dayAvailability === 'available'
                                       ? 'Available'
                                       : dayAvailability === 'booked_out'
                                         ? 'Booked out'
                                         : dayAvailability === 'unbookable'
-                                          ? 'Not bookable, take your chances'
+                                          ? 'Not bookable — just rock up'
                                           : 'Unknown'
                                   return (
                                     <div
                                       key={`${site.id}-${date}-avail`}
-                                      className={`forecast-grid__cell forecast-grid__icon-cell ${
-                                        isChance ? 'forecast-grid__icon-cell--chance' : ''
-                                      }`}
+                                      className={`forecast-grid__cell forecast-grid__icon-cell forecast-grid__avail--${dayAvailability}`}
                                       title={dayTitle}
                                     >
                                       {dayIcon}
@@ -1902,27 +1907,24 @@ function App() {
                                         const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
                                         const dayIcon =
                                           dayAvailability === 'available'
-                                            ? '✅'
+                                            ? '✓'
                                             : dayAvailability === 'booked_out'
-                                              ? '❌'
+                                              ? '✗'
                                               : dayAvailability === 'unbookable'
                                                 ? '🎲'
-                                                : '❔'
-                                        const isChance = dayAvailability === 'unbookable'
+                                                : '–'
                                         const dayTitle =
                                           dayAvailability === 'available'
                                             ? 'Available'
                                             : dayAvailability === 'booked_out'
                                               ? 'Booked out'
                                               : dayAvailability === 'unbookable'
-                                                ? 'Not bookable, take your chances'
+                                                ? 'Not bookable — just rock up'
                                                 : 'Unknown'
                                         return (
                                           <div
                                             key={`${site.id}-${date}-avail-popup`}
-                                            className={`forecast-grid__cell forecast-grid__icon-cell ${
-                                              isChance ? 'forecast-grid__icon-cell--chance' : ''
-                                            }`}
+                                            className={`forecast-grid__cell forecast-grid__icon-cell forecast-grid__avail--${dayAvailability}`}
                                             title={dayTitle}
                                           >
                                             {dayIcon}
