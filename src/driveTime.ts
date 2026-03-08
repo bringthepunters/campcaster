@@ -1,7 +1,7 @@
 export const DEFAULT_ORIGIN = { lat: -37.7691, lng: 144.9958 }
-const AVG_SPEED_KMH = 35
-const ROAD_FACTOR = 2.6
-const BASE_MINUTES = 25
+const AVG_SPEED_KMH = 80   // average including freeway + country roads
+const ROAD_FACTOR = 1.4    // roads ~40% longer than straight-line distance
+const BASE_MINUTES = 10    // fixed overhead leaving urban area
 
 const toRad = (value: number) => (value * Math.PI) / 180
 
