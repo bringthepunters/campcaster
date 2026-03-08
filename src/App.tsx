@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import MapView from './MapView'
-import { formatDriveTime } from './driveTime'
+import { estimateDriveTimeMinutesFromOrigin, formatDriveTime } from './driveTime'
 
 type Site = {
   id: string
@@ -794,7 +794,18 @@ function App() {
 
     const proxyBase = (import.meta.env.VITE_ROUTE_PROXY_URL ?? '') as string
     if (!proxyBase) {
-      setDriveTimesById({})
+      const estimates: Record<string, number> = {}
+      sites.forEach((site) => {
+        if (Number.isFinite(site.lat) && Number.isFinite(site.lng)) {
+          estimates[site.id] = estimateDriveTimeMinutesFromOrigin(
+            originCoords.lat,
+            originCoords.lng,
+            site.lat,
+            site.lng,
+          )
+        }
+      })
+      setDriveTimesById(estimates)
       setDriveTimesLoading(false)
       return
     }
@@ -1082,10 +1093,10 @@ function App() {
           <div className="brand-lockup">
             <div className="brand-lockup__logo" aria-hidden="true">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 6L4 36h36L22 6z" fill="#c86b2a" opacity="0.9"/>
-                <path d="M22 6L13 36h18L22 6z" fill="#f2eadc" opacity="0.25"/>
-                <path d="M16 36v-8h12v8" stroke="#f2eadc" strokeWidth="1.8" strokeLinejoin="round"/>
-                <circle cx="22" cy="18" r="2" fill="#f2eadc" opacity="0.7"/>
+                <path d="M22 6L4 36h36L22 6z" fill="#15803D" opacity="0.9"/>
+                <path d="M22 6L13 36h18L22 6z" fill="#fff" opacity="0.2"/>
+                <path d="M16 36v-8h12v8" stroke="#fff" strokeWidth="1.8" strokeLinejoin="round"/>
+                <circle cx="22" cy="17" r="2.5" fill="#FBBF24"/>
               </svg>
             </div>
             <div className="brand-lockup__wordmark">
@@ -1158,6 +1169,7 @@ function App() {
                   ? `Drive times calculated from ${originCoords.label}.`
                   : 'Enter your suburb or postcode to calculate drive times.'}
               </p>
+              <span className="step__dates-sublabel">Suburb or postcode</span>
               <input
                 id="origin-postcode"
                 list="vic-origin-options"
@@ -1186,6 +1198,7 @@ function App() {
                 <span className="step__name">How far?</span>
               </div>
               <p className="step__prompt">How long are you happy to drive?</p>
+              <span className="step__dates-sublabel">Max driving time</span>
               <div className="step__slider-row">
                 <input
                   id="drive-time"
