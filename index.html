@@ -14,7 +14,53 @@
       rel="stylesheet"
       href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
     />
-    <title>CAMPCASTER</title>
+
+    <!-- Primary meta -->
+    <title>CampCaster — Find Victorian Campsites by Date, Weather & Drive Time</title>
+    <meta name="description" content="Search every Parks Victoria campsite by your travel dates, drive time from home, weather forecast and facilities like dog-friendly, showers, BBQ and more. Real-time availability and 14-day weather, free." />
+    <meta name="keywords" content="Parks Victoria camping, Victoria campsites, camping availability, camping weather forecast, dog friendly camping Victoria, national park camping Victoria, camping near Melbourne, camping with showers, fire pit camping Victoria, camping booking availability, camping finder Victoria, hiking camping Victoria" />
+    <meta name="author" content="CampCaster" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://campcaster.com.au/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://campcaster.com.au/" />
+    <meta property="og:title" content="CampCaster — Find Victorian Campsites by Date, Weather & Drive Time" />
+    <meta property="og:description" content="Search every Parks Victoria campsite by your travel dates, drive time, weather and facilities. Real-time availability, 14-day forecast, free." />
+    <meta property="og:site_name" content="CampCaster" />
+    <meta property="og:locale" content="en_AU" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CampCaster — Find Victorian Campsites" />
+    <meta name="twitter:description" content="Filter Parks Victoria campsites by drive time, weather, availability and facilities. Free." />
+
+    <!-- Structured data — WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CampCaster",
+      "url": "https://campcaster.com.au/",
+      "description": "Search and filter Parks Victoria campsites by travel dates, drive time from home, 14-day weather forecast, booking availability and facilities.",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+      "areaServed": {
+        "@type": "State",
+        "name": "Victoria",
+        "addressCountry": "AU"
+      },
+      "featureList": [
+        "Parks Victoria campsite search",
+        "Real-time booking availability",
+        "14-day weather forecast per campsite",
+        "Drive time calculator from any Victorian suburb",
+        "Filter by dog-friendly, showers, BBQ, fire pits, drinking water"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
