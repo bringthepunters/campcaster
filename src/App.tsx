@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import MapView from './MapView'
-import { formatDriveTime } from './driveTime'
+import { estimateDriveTimeMinutesFromOrigin, formatDriveTime } from './driveTime'
 
 type Site = {
   id: string
@@ -74,7 +74,7 @@ const FACILITY_FILTERS = [
 const AVAILABILITY_FILTERS = [
   { key: 'available', label: 'Available' },
   { key: 'booked_out', label: 'Booked out' },
-  { key: 'unbookable', label: 'Not Bookable. Just Rock up.' },
+  { key: 'unbookable', label: '🎲 Just Rock up.' },
 ] as const
 
 const HEAT_THRESHOLD_C = 33
@@ -679,7 +679,8 @@ function App() {
       if (
         availabilityFilterActive &&
         selectedDates.length > 0 &&
-        !availabilityLoading
+        !availabilityLoading &&
+        availabilityDate !== null
       ) {
         const availabilityForDate = getSiteAvailabilityStatus(site.id)
         if (!availabilityFilters[availabilityForDate]) {
@@ -793,7 +794,18 @@ function App() {
 
     const proxyBase = (import.meta.env.VITE_ROUTE_PROXY_URL ?? '') as string
     if (!proxyBase) {
-      setDriveTimesById({})
+      const estimates: Record<string, number> = {}
+      sites.forEach((site) => {
+        if (Number.isFinite(site.lat) && Number.isFinite(site.lng)) {
+          estimates[site.id] = estimateDriveTimeMinutesFromOrigin(
+            originCoords.lat,
+            originCoords.lng,
+            site.lat,
+            site.lng,
+          )
+        }
+      })
+      setDriveTimesById(estimates)
       setDriveTimesLoading(false)
       return
     }
@@ -1010,6 +1022,8 @@ function App() {
 
   return (
     <div className="min-h-screen text-ink">
+
+      {/* ── Incident banner ── */}
       <div
         className="incident-banner incident-banner--egg px-6 py-3 text-sm font-semibold sm:px-10"
         style={{ background: '#f1c84b', color: '#2b2b2b' }}
@@ -1057,13 +1071,13 @@ function App() {
               </div>
             </div>
           ) : (
-            <div className="text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
+            <div className="text-xs font-semibold uppercase tracking-[0.15em]">
               {staticIncidentText}{' '}
               <a
                 href="https://www.emergency.vic.gov.au"
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4 transition hover:text-white/80"
+                className="underline underline-offset-4 transition hover:opacity-80"
               >
                 Check VicEmergency
               </a>
@@ -1072,260 +1086,301 @@ function App() {
           )}
         </div>
       </div>
-      <header className="px-6 pb-8 pt-10 sm:px-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4">
-          <div className="hero-row">
-            <div className="brand-title">🏕️ CampCaster</div>
-            <p className="hero-tagline">
-              Which Victorian National Park camp sites within my desired{' '}
-              <span className="hero-tagline__emphasis">drivetime</span> range are{' '}
-              <span className="hero-tagline__emphasis">available</span>, have decent{' '}
-              <span className="hero-tagline__emphasis">weather</span> and the{' '}
-              <span className="hero-tagline__emphasis">facilities</span> I want?
-            </p>
+
+      {/* ── Guided header ── */}
+      <div className="guided-header">
+        <div className="guided-header__inner">
+          <div className="brand-lockup">
+            <div className="brand-lockup__logo" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 6L4 36h36L22 6z" fill="#15803D" opacity="0.9"/>
+                <path d="M22 6L13 36h18L22 6z" fill="#fff" opacity="0.2"/>
+                <path d="M16 36v-8h12v8" stroke="#fff" strokeWidth="1.8" strokeLinejoin="round"/>
+                <circle cx="22" cy="17" r="2.5" fill="#FBBF24"/>
+              </svg>
+            </div>
+            <div className="brand-lockup__wordmark">
+              <div className="brand-lockup__title">CampCaster</div>
+              <p className="brand-lockup__tagline">
+                Find Victorian campsites that match your dates, drive time, weather, and must-have facilities.
+              </p>
+            </div>
           </div>
-          <div className="controls-row">
-            <div className="control-block">
-              <label htmlFor="origin-postcode" className="control-label">
-                Starting point postcode / locality
-              </label>
-              <input
-                id="origin-postcode"
-                list="vic-origin-options"
-                inputMode="text"
-                placeholder="e.g. 3070 or Northcote"
-                value={originPostcode}
-                onChange={(event) => setOriginPostcode(event.target.value.trim())}
-                className="control-input"
-              />
+
+          <div className="steps-row">
+            {/* Step 1 — When? */}
+            <div className="step">
+              <div className="step__label">
+                <span className="step__number">1</span>
+                <span className="step__name">When?</span>
+              </div>
+              <p className="step__prompt">
+                {selectedDate
+                  ? isMultiDateSelection
+                    ? `${selectedDates.length}-night trip selected.`
+                    : 'Single night selected. Add an end date for a range.'
+                  : 'Pick your arrival date to check availability and weather.'}
+              </p>
+              <div className="step__dates">
+                <div className="step__dates-group">
+                  <span className="step__dates-sublabel">From</span>
+                  <input
+                    id="forecast-date"
+                    type="date"
+                    value={selectedDate}
+                    min={new Date().toISOString().slice(0, 10)}
+                    onChange={(event) => setSelectedDate(event.target.value)}
+                    className="step__input"
+                  />
+                </div>
+                {selectedDate ? (
+                  <div className="step__dates-group">
+                    <span className="step__dates-sublabel">To (optional)</span>
+                    <input
+                      id="forecast-end-date"
+                      type="date"
+                      value={selectedEndDate}
+                      min={selectedDate || new Date().toISOString().slice(0, 10)}
+                      onChange={(event) => setSelectedEndDate(event.target.value)}
+                      className="step__input"
+                    />
+                  </div>
+                ) : null}
+              </div>
+              {selectedDates.length > 0 && !isWeatherEligible ? (
+                <p className="step__hint step__hint--warn">
+                  Beyond 14 days — weather forecast and filters unavailable.
+                </p>
+              ) : selectedDate ? (
+                <p className="step__hint">Weather forecasts available for the next 14 days.</p>
+              ) : (
+                <p className="step__hint">Forecasts cover the next 14 days.</p>
+              )}
+            </div>
+
+            {/* Step 2 — Where from? */}
+            <div className="step">
+              <div className="step__label">
+                <span className="step__number">2</span>
+                <span className="step__name">Where from?</span>
+              </div>
+              <p className="step__prompt">
+                {originCoords
+                  ? `Drive times calculated from ${originCoords.label}.`
+                  : 'Enter your suburb or postcode to calculate drive times.'}
+              </p>
+              <div className="step__dates">
+                <div className="step__dates-group">
+                  <span className="step__dates-sublabel">Suburb or postcode</span>
+                  <input
+                    id="origin-postcode"
+                    list="vic-origin-options"
+                    inputMode="text"
+                    placeholder="e.g. 3070 or Northcote"
+                    value={originPostcode}
+                    onChange={(event) => setOriginPostcode(event.target.value.trim())}
+                    className="step__input"
+                  />
+                </div>
+              </div>
               <datalist id="vic-origin-options">
                 {originSuggestions.map((option) => (
                   <option key={option} value={option} />
                 ))}
               </datalist>
-              <div className="control-help">Defaults to Melbourne CBD.</div>
               {originError ? (
-                <div className="control-error">{originError}</div>
-              ) : null}
+                <p className="step__error">{originError}</p>
+              ) : (
+                <p className="step__hint">Defaults to Melbourne CBD (3000).</p>
+              )}
             </div>
-            <div className="control-block">
-              <label htmlFor="forecast-date" className="control-label">
-                Date from
-              </label>
-              <input
-                id="forecast-date"
-                type="date"
-                value={selectedDate}
-                min={new Date().toISOString().slice(0, 10)}
-                onChange={(event) => setSelectedDate(event.target.value)}
-                className="control-input"
-              />
-              <div className="control-help">Forecast works for the next 14 days.</div>
-              {!isWeatherEligible && selectedDates.length > 0 ? (
-                <div className="control-help">
-                  Weather filters and forecasts are only available for the next 14 days.
+
+            {/* Step 3 — How far? */}
+            <div className="step">
+              <div className="step__label">
+                <span className="step__number">3</span>
+                <span className="step__name">How far?</span>
+              </div>
+              <p className="step__prompt">How long are you happy to drive?</p>
+              <div className="step__dates">
+                <div className="step__dates-group">
+                  <span className="step__dates-sublabel">Max driving time</span>
+                  <div className="step__slider-row">
+                    <input
+                      id="drive-time"
+                      type="range"
+                      min={30}
+                      max={maxAvailableDriveMinutes}
+                      step={30}
+                      value={maxDriveMinutes}
+                      onChange={(event) => setMaxDriveMinutes(Number(event.target.value))}
+                      list="drive-time-marks"
+                      className="step__slider"
+                    />
+                    <span className="step__slider-value">
+                      {formatMinutesAsHours(maxDriveMinutes)}
+                    </span>
+                  </div>
                 </div>
-              ) : null}
-            </div>
-            <div className="control-block">
-              <label htmlFor="forecast-end-date" className="control-label">
-                Date to (optional)
-              </label>
-              <input
-                id="forecast-end-date"
-                type="date"
-                value={selectedEndDate}
-                min={selectedDate || new Date().toISOString().slice(0, 10)}
-                onChange={(event) => setSelectedEndDate(event.target.value)}
-                className="control-input"
-              />
-              <div className="control-help">Pick a range to compare days in-card.</div>
-            </div>
-            <div className="control-block">
-              <label htmlFor="location-region" className="control-label">
-                Location
-              </label>
-              <input
-                id="location-region"
-                value="Victoria"
-                readOnly
-                className="control-input"
-              />
-              <div className="control-help">Where are you in the mood to go?</div>
+              </div>
+              <datalist id="drive-time-marks">
+                {driveMarks.map((value) => (
+                  <option key={value} value={value} label={formatMinutesAsHours(value)} />
+                ))}
+              </datalist>
+              <p className="step__hint">
+                {driveTimesLoading
+                  ? 'Calculating drive times…'
+                  : 'Approximate driving time from your starting point.'}
+              </p>
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
-      <main className="px-6 pb-16 sm:px-10">
-        <div className="mx-auto max-w-6xl">
-          <div className="layout-grid">
-            <aside className="filters-panel">
-              <div className="filters-header">Filter by:</div>
-              <div className="filters-section">
-                <div className="section-heading">Approx drive time</div>
-                <div className="filter-row">
-                  <input
-                    id="drive-time"
-                    type="range"
-                    min={30}
-                    max={maxAvailableDriveMinutes}
-                    step={30}
-                    value={maxDriveMinutes}
-                    onChange={(event) =>
-                      setMaxDriveMinutes(Number(event.target.value))
-                    }
-                    list="drive-time-marks"
-                    className="w-full accent-fern"
+      {/* ── Filter chip bar ── */}
+      <div className="chip-bar">
+        <div className="chip-bar__inner">
+          <span className="chip-bar__label">Must have</span>
+
+          {FACILITY_FILTERS.map((filter) => (
+            <button
+              key={filter.key}
+              type="button"
+              className={`chip ${facilityFilters[filter.key] ? 'is-active' : ''}`}
+              onClick={() =>
+                setFacilityFilters((prev) => ({
+                  ...prev,
+                  [filter.key]: !prev[filter.key],
+                }))
+              }
+              aria-pressed={facilityFilters[filter.key] ?? false}
+            >
+              {filter.label}
+            </button>
+          ))}
+
+          <div className="chip-bar__divider" aria-hidden="true" />
+          <span className="chip-bar__label">Weather</span>
+
+          <button
+            type="button"
+            className={`chip ${!allowHeat && selectedDates.length > 0 && isWeatherEligible ? 'is-active' : ''}${!selectedDates.length || !isWeatherEligible ? ' is-disabled' : ''}`}
+            onClick={() => setAllowHeat((v) => !v)}
+            disabled={!selectedDates.length || !isWeatherEligible}
+            title={
+              !selectedDates.length
+                ? 'Select a date to enable weather filters'
+                : !isWeatherEligible
+                  ? 'Weather filters only available within 14 days'
+                  : undefined
+            }
+            aria-pressed={!allowHeat}
+          >
+            Avoid heat (&gt;33°C)
+          </button>
+
+          <button
+            type="button"
+            className={`chip ${!allowRain && selectedDates.length > 0 && isWeatherEligible ? 'is-active' : ''}${!selectedDates.length || !isWeatherEligible ? ' is-disabled' : ''}`}
+            onClick={() => setAllowRain((v) => !v)}
+            disabled={!selectedDates.length || !isWeatherEligible}
+            title={
+              !selectedDates.length
+                ? 'Select a date to enable weather filters'
+                : !isWeatherEligible
+                  ? 'Weather filters only available within 14 days'
+                  : undefined
+            }
+            aria-pressed={!allowRain}
+          >
+            Avoid rain
+          </button>
+
+          {selectedDates.length > 0 ? (
+            <>
+              <div className="chip-bar__divider" aria-hidden="true" />
+              <span className="chip-bar__label">Availability</span>
+              {AVAILABILITY_FILTERS.map((filter) => (
+                <button
+                  key={filter.key}
+                  type="button"
+                  className={`chip ${availabilityFilters[filter.key] ? 'is-active' : ''}`}
+                  onClick={() =>
+                    setAvailabilityFilters((current) => ({
+                      ...current,
+                      [filter.key]: !current[filter.key],
+                    }))
+                  }
+                  aria-pressed={availabilityFilters[filter.key] ?? false}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </>
+          ) : null}
+        </div>
+      </div>
+
+      {/* ── Results ── */}
+      <div className="content-area">
+        <div className="content-area__inner">
+          <div className="results-bar">
+            <div className="results-bar__count">
+              <strong>{filteredSites.length}</strong>{' '}
+              campsite{filteredSites.length !== 1 ? 's' : ''} found
+            </div>
+            <div className="view-toggle">
+              <button
+                type="button"
+                className={`view-toggle__button ${viewMode === 'list' ? 'is-active' : ''}`}
+                onClick={() => setViewMode('list')}
+                aria-pressed={viewMode === 'list'}
+                aria-label="List view"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6 7h12M6 12h12M6 17h12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
-                  <span className="text-sm text-ink/70">
-                    {formatMinutesAsHours(maxDriveMinutes)}
-                  </span>
-                </div>
-                <datalist id="drive-time-marks">
-                  {driveMarks.map((value) => (
-                    <option
-                      key={value}
-                      value={value}
-                      label={formatMinutesAsHours(value)}
-                    />
-                  ))}
-                </datalist>
-              </div>
-              <div className="filters-section">
-                <div className="section-heading">Facilities</div>
-                <div className="filter-col">
-                  {FACILITY_FILTERS.map((filter) => (
-                    <label key={filter.key} className="checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={facilityFilters[filter.key] ?? false}
-                        onChange={(event) =>
-                          setFacilityFilters((prev) => ({
-                            ...prev,
-                            [filter.key]: event.target.checked,
-                          }))
-                        }
-                        className="accent-fern"
-                      />
-                      {filter.label}
-                    </label>
-                  ))}
-                  <label className="checkbox-item">
-                    <input
-                      type="checkbox"
-                      checked={allowHeat}
-                      onChange={(event) => setAllowHeat(event.target.checked)}
-                      className="accent-fern"
-                      disabled={!selectedDates.length || !isWeatherEligible}
-                    />
-                    I dont mind the heat
-                  </label>
-                  <label className="checkbox-item">
-                    <input
-                      type="checkbox"
-                      checked={allowRain}
-                      onChange={(event) => setAllowRain(event.target.checked)}
-                      className="accent-fern"
-                      disabled={!selectedDates.length || !isWeatherEligible}
-                    />
-                    I dont mind rain
-                  </label>
-                </div>
-                <p className="text-xs text-ink/50">
-                  Weather thresholds: under 33C and rain under 30% + 4mm.
-                </p>
-                {!isWeatherEligible && selectedDates.length > 0 ? (
-                  <p className="text-xs text-ink/50">
-                    Weather filters are disabled for dates beyond 14 days.
-                  </p>
-                ) : null}
-              </div>
-              <div className="filters-section">
-                <div className="section-heading">Availability</div>
-                <div className="filter-col">
-                  {AVAILABILITY_FILTERS.map((filter) => (
-                    <label key={filter.key} className="checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={availabilityFilters[filter.key] ?? false}
-                        onChange={(event) =>
-                          setAvailabilityFilters((current) => ({
-                            ...current,
-                            [filter.key]: event.target.checked,
-                          }))
-                        }
-                        className="accent-fern"
-                        disabled={!selectedDates.length}
-                        aria-label={`Availability ${filter.label}`}
-                      />
-                      {filter.label}
-                    </label>
-                  ))}
-                </div>
-              </div>
-              <div className="filters-section">
-                <div className="section-heading">View</div>
-                <div className="view-toggle">
-                  <button
-                    type="button"
-                    className={`view-toggle__button ${
-                      viewMode === 'list' ? 'is-active' : ''
-                    }`}
-                    onClick={() => setViewMode('list')}
-                    aria-pressed={viewMode === 'list'}
-                    aria-label="List view"
-                  >
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M6 7h12M6 12h12M6 17h12"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className={`view-toggle__button ${
-                      viewMode === 'map' ? 'is-active' : ''
-                    }`}
-                    onClick={() => setViewMode('map')}
-                    aria-pressed={viewMode === 'map'}
-                    aria-label="Map view"
-                  >
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M4 6l6-2 5 2 5-2v14l-5 2-5-2-6 2V6z"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinejoin="round"
-                      />
-                      <path d="M10 4v14M15 6v14" stroke="currentColor" strokeWidth="1.8" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </aside>
-            <section className="results-panel">
-              <div className="results-header">
-                <div className="campground-count-label">
-                  Matching Campsites: {filteredSites.length}
-                </div>
-              </div>
-              {status === 'loading' && (
-                <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
-                  Loading campgrounds…
-                </div>
-              )}
-              {status === 'error' && (
-                <div className="rounded-2xl bg-white/70 p-6 text-ember">
-                  Could not load campgrounds. Check `public/data/sites.json`.
-                </div>
-              )}
-              {status === 'idle' && viewMode === 'list' && (
-                <div className="campground-grid">
+                </svg>
+              </button>
+              <button
+                type="button"
+                className={`view-toggle__button ${viewMode === 'map' ? 'is-active' : ''}`}
+                onClick={() => setViewMode('map')}
+                aria-pressed={viewMode === 'map'}
+                aria-label="Map view"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 6l6-2 5 2 5-2v14l-5 2-5-2-6 2V6z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M10 4v14M15 6v14" stroke="currentColor" strokeWidth="1.8" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {status === 'loading' && (
+            <div className="rounded-2xl bg-white/70 p-6 text-ink/70 mt-4">
+              Loading campgrounds…
+            </div>
+          )}
+          {status === 'error' && (
+            <div className="rounded-2xl bg-white/70 p-6 text-ember mt-4">
+              Could not load campgrounds. Check `public/data/sites.json`.
+            </div>
+          )}
+
+          {status === 'idle' && viewMode === 'list' && (
+            <div className="campground-grid mt-4">
                   {filteredSites.map((site) => {
                     const weatherKey = site.lga ?? site.id
                     const summary = getWeatherSummary(site)
@@ -1521,27 +1576,24 @@ function App() {
                                   const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
                                   const dayIcon =
                                     dayAvailability === 'available'
-                                      ? '✅'
+                                      ? '✓'
                                       : dayAvailability === 'booked_out'
-                                        ? '❌'
+                                        ? '✗'
                                         : dayAvailability === 'unbookable'
                                           ? '🎲'
-                                          : '❔'
-                                  const isChance = dayAvailability === 'unbookable'
+                                          : '–'
                                   const dayTitle =
                                     dayAvailability === 'available'
                                       ? 'Available'
                                       : dayAvailability === 'booked_out'
                                         ? 'Booked out'
                                         : dayAvailability === 'unbookable'
-                                          ? 'Not bookable, take your chances'
+                                          ? 'Not bookable — just rock up'
                                           : 'Unknown'
                                   return (
                                     <div
                                       key={`${site.id}-${date}-avail`}
-                                      className={`forecast-grid__cell forecast-grid__icon-cell ${
-                                        isChance ? 'forecast-grid__icon-cell--chance' : ''
-                                      }`}
+                                      className={`forecast-grid__cell forecast-grid__icon-cell forecast-grid__avail--${dayAvailability}`}
                                       title={dayTitle}
                                     >
                                       {dayIcon}
@@ -1656,31 +1708,31 @@ function App() {
                   })}
                 </div>
               )}
-              {status === 'idle' && viewMode === 'map' && (
-                <>
-                  <MapView
-                    sites={filteredSites}
-                    origin={originCoords}
-                    onSiteClick={(siteId) => setSelectedMapSiteId(siteId)}
-                  />
-                  {selectedMapSite ? (
-                    <div
-                      className="map-card-overlay"
-                      role="dialog"
-                      aria-modal="true"
-                      aria-label={selectedMapSite.name}
+          {status === 'idle' && viewMode === 'map' && (
+            <>
+              <MapView
+                sites={filteredSites}
+                origin={originCoords}
+                onSiteClick={(siteId) => setSelectedMapSiteId(siteId)}
+              />
+              {selectedMapSite ? (
+                <div
+                  className="map-card-overlay"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label={selectedMapSite.name}
+                >
+                  <div className="map-card-overlay__backdrop" onClick={() => setSelectedMapSiteId(null)} />
+                  <article className="campground-card map-card-popup">
+                    <button
+                      type="button"
+                      className="map-card-popup__close"
+                      onClick={() => setSelectedMapSiteId(null)}
+                      aria-label="Close campsite details"
                     >
-                      <div className="map-card-overlay__backdrop" onClick={() => setSelectedMapSiteId(null)} />
-                      <article className="campground-card map-card-popup">
-                        <button
-                          type="button"
-                          className="map-card-popup__close"
-                          onClick={() => setSelectedMapSiteId(null)}
-                          aria-label="Close campsite details"
-                        >
-                          Close
-                        </button>
-                        {(() => {
+                      Close
+                    </button>
+                    {(() => {
                           const site = selectedMapSite
                           const summary = getWeatherSummary(site)
                           const hasWeather = summary !== null
@@ -1855,27 +1907,24 @@ function App() {
                                         const dayAvailability = availabilityByDate[date]?.[site.id] ?? 'unknown'
                                         const dayIcon =
                                           dayAvailability === 'available'
-                                            ? '✅'
+                                            ? '✓'
                                             : dayAvailability === 'booked_out'
-                                              ? '❌'
+                                              ? '✗'
                                               : dayAvailability === 'unbookable'
                                                 ? '🎲'
-                                                : '❔'
-                                        const isChance = dayAvailability === 'unbookable'
+                                                : '–'
                                         const dayTitle =
                                           dayAvailability === 'available'
                                             ? 'Available'
                                             : dayAvailability === 'booked_out'
                                               ? 'Booked out'
                                               : dayAvailability === 'unbookable'
-                                                ? 'Not bookable, take your chances'
+                                                ? 'Not bookable — just rock up'
                                                 : 'Unknown'
                                         return (
                                           <div
                                             key={`${site.id}-${date}-avail-popup`}
-                                            className={`forecast-grid__cell forecast-grid__icon-cell ${
-                                              isChance ? 'forecast-grid__icon-cell--chance' : ''
-                                            }`}
+                                            className={`forecast-grid__cell forecast-grid__icon-cell forecast-grid__avail--${dayAvailability}`}
                                             title={dayTitle}
                                           >
                                             {dayIcon}
@@ -1956,25 +2005,14 @@ function App() {
                               ) : null}
                             </>
                           )
-                        })()}
-                      </article>
-                    </div>
-                  ) : null}
-                </>
-              )}
-              {status === 'idle' && filteredSites.length === 0 && (
-                <div className="rounded-2xl bg-white/70 p-6 text-ink/70">
-                  No matching campsites. Try a different search.
+                    })()}
+                  </article>
                 </div>
-              )}
-            </section>
-          </div>
+              ) : null}
+            </>
+          )}
         </div>
-      </main>
-      <footer className="px-6 pb-10 text-center text-xs text-ink/50 sm:px-10">
-        Parks Information sourced from the PARKRES data set. Data sources:
-        VicEmergency RSS, Open-Meteo, Parks Victoria bookings.
-      </footer>
+      </div>
     </div>
   )
 }
