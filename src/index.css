@@ -995,9 +995,9 @@ img {
    ============================================ */
 
 .guided-header {
-  background: #FEFCE8;
+  background: #F5FF52;
   padding: 2rem 2.5rem 2.25rem;
-  border-bottom: 1px solid rgba(21, 128, 61, 0.12);
+  border-bottom: 2px solid rgba(217, 75, 75, 0.2);
 }
 
 .guided-header__inner {
@@ -1010,31 +1010,39 @@ img {
 
 .brand-lockup {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.brand-lockup__logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.brand-lockup__wordmark {
-  display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  align-items: center;
+  gap: 0;
 }
 
-.brand-lockup__title {
-  font-family: 'Fraunces', ui-serif, serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: -0.02em;
-  color: #111827;
-  line-height: 1;
+.brand-lockup__arch {
+  width: 100%;
+  max-width: 460px;
+  display: block;
+  overflow: visible;
+}
+
+.brand-lockup__tagline-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: -0.5rem;
+}
+
+.brand-lockup__tagline-line {
+  width: 2.5rem;
+  height: 2px;
+  background: #D94B4B;
+  flex-shrink: 0;
+}
+
+.brand-lockup__tagline-text {
+  font-family: 'Titan One', cursive;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D94B4B;
+  white-space: nowrap;
 }
 
 .brand-lockup__tagline {
@@ -1051,7 +1059,7 @@ img {
   gap: 1.5rem;
   align-items: start;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(21, 128, 61, 0.1);
+  border-top: 1px solid rgba(217, 75, 75, 0.12);
 }
 
 .step {
@@ -1073,7 +1081,7 @@ img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  background: #15803D;
+  background: #D94B4B;
   color: #fff;
   font-size: 0.6rem;
   font-weight: 700;
@@ -1086,7 +1094,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #15803D;
+  color: #D94B4B;
 }
 
 .step__prompt {
@@ -1109,8 +1117,8 @@ img {
 }
 
 .step__input:focus {
-  border-color: #15803D;
-  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+  border-color: #D94B4B;
+  box-shadow: 0 0 0 3px rgba(217, 75, 75, 0.18);
 }
 
 .step__error {
@@ -1158,7 +1166,7 @@ img {
 
 .step__slider {
   flex: 1;
-  accent-color: #15803D;
+  accent-color: #D94B4B;
 }
 
 .step__slider-value {
@@ -1225,13 +1233,13 @@ img {
 }
 
 .chip:hover {
-  border-color: #15803D;
-  color: #15803D;
+  border-color: #D94B4B;
+  color: #D94B4B;
 }
 
 .chip.is-active {
-  background: #15803D;
-  border-color: #15803D;
+  background: #D94B4B;
+  border-color: #D94B4B;
   color: #fff;
 }
 

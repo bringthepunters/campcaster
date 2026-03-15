@@ -1091,19 +1091,20 @@ function App() {
       <div className="guided-header">
         <div className="guided-header__inner">
           <div className="brand-lockup">
-            <div className="brand-lockup__logo" aria-hidden="true">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 6L4 36h36L22 6z" fill="#15803D" opacity="0.9"/>
-                <path d="M22 6L13 36h18L22 6z" fill="#fff" opacity="0.2"/>
-                <path d="M16 36v-8h12v8" stroke="#fff" strokeWidth="1.8" strokeLinejoin="round"/>
-                <circle cx="22" cy="17" r="2.5" fill="#FBBF24"/>
-              </svg>
-            </div>
-            <div className="brand-lockup__wordmark">
-              <div className="brand-lockup__title">CampCaster</div>
-              <p className="brand-lockup__tagline">
-                Find Victorian campsites that match your dates, drive time, weather, and must-have facilities.
-              </p>
+            <svg className="brand-lockup__arch" viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" aria-label="CampCaster">
+              <defs>
+                <path id="campcaster-arch" d="M 20,168 A 310,310 0 0,0 460,168"/>
+              </defs>
+              <text fill="#D94B4B" fontFamily="'Titan One', cursive" fontSize="62" letterSpacing="3">
+                <textPath href="#campcaster-arch" startOffset="50%" textAnchor="middle">
+                  CAMPCASTER
+                </textPath>
+              </text>
+            </svg>
+            <div className="brand-lockup__tagline-row">
+              <div className="brand-lockup__tagline-line" />
+              <span className="brand-lockup__tagline-text">LESS SEARCHING. MORE CAMPING.</span>
+              <div className="brand-lockup__tagline-line" />
             </div>
           </div>
 
