@@ -201,7 +201,7 @@ function App() {
     ...Object.fromEntries(
       FACILITY_FILTERS.map((filter) => [
         filter.key,
-        ['dogFriendly', 'toilets', 'firePits'].includes(filter.key),
+        ['toilets', 'firePits'].includes(filter.key),
       ]),
     ),
     flushToilets: false,
@@ -1462,7 +1462,7 @@ function App() {
                             </div>
                           </div>
                         ) : null}
-                        {selectedDates.length > 0 && !isMultiDateSelection ? (
+                        {selectedDates.length > 0 ? (
                           <div className="availability-section">
                             <div className="availability-label">Availability</div>
                             {availabilityLoading ? (
@@ -1779,7 +1779,7 @@ function App() {
                                   </div>
                                 </div>
                               ) : null}
-                              {selectedDates.length > 0 && !isMultiDateSelection ? (
+                              {selectedDates.length > 0 ? (
                                 <div className="availability-section">
                                   <div className="availability-label">Availability</div>
                                   <div className={availabilityClass}>{availabilityLabel}</div>
