@@ -583,6 +583,7 @@ export default function FilterSentence(props: FilterSentenceProps) {
   }, [avoidWeather])
 
   const hoursVal = HOURS_OPTS.find(h => h * 60 === maxDriveMinutes) ?? Math.max(1, Math.round(maxDriveMinutes / 60))
+  const hasWeatherFilter = avoidWeather.length > 0
 
   const updatedTime = incidentsUpdatedAt
     ? new Date(incidentsUpdatedAt).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' })
@@ -682,11 +683,12 @@ export default function FilterSentence(props: FilterSentenceProps) {
             <Popover trigger={onClick => <Chip onClick={onClick}>{featureText}</Chip>} panel={featuresPanel} />
             {'.'}
           </div>
-          <div>
-            {`I’d rather not camp in `}
-            <Popover trigger={onClick => <Chip onClick={onClick} muted={!isWeatherEligible}>{avoidText}</Chip>} panel={weatherPanel} />
-            {' weather.'}
-          </div>
+          {hasWeatherFilter && (
+            <div>{`I'd rather not camp in `}<Popover trigger={onClick => <Chip onClick={onClick} muted={!isWeatherEligible}>{avoidText}</Chip>} panel={weatherPanel} />{' weather.'}</div>
+          )}
+          {!hasWeatherFilter && (
+            <div style={{ color: P.mute }}><Popover trigger={onClick => <Chip onClick={onClick} muted>{`I'm fine with any weather`}</Chip>} panel={weatherPanel} />{'.'}</div>
+          )}
         </div>
 
         {footer(true)}
@@ -731,10 +733,21 @@ export default function FilterSentence(props: FilterSentenceProps) {
         <Popover trigger={onClick => <Chip onClick={onClick}>{originLabel || 'Melbourne'}</Chip>} panel={fromPanel} />
         <span>, somewhere with </span>
         <Popover trigger={onClick => <Chip onClick={onClick}>{featureText}</Chip>} panel={featuresPanel} />
-        <span>. I&rsquo;d rather not camp in </span>
-        <Popover trigger={onClick => <Chip onClick={onClick} muted={!isWeatherEligible}>{avoidText}</Chip>} panel={weatherPanel} />
-        <span> weather</span>
-        <span style={{ color: P.mute }}>.</span>
+        {hasWeatherFilter && (
+          <>
+            <span>. I&rsquo;d rather not camp in </span>
+            <Popover trigger={onClick => <Chip onClick={onClick} muted={!isWeatherEligible}>{avoidText}</Chip>} panel={weatherPanel} />
+            <span> weather</span>
+            <span style={{ color: P.mute }}>.</span>
+          </>
+        )}
+        {!hasWeatherFilter && (
+          <>
+            <span style={{ color: P.mute }}>. </span>
+            <Popover trigger={onClick => <Chip onClick={onClick} muted>{`I'm fine with any weather`}</Chip>} panel={weatherPanel} />
+            <span style={{ color: P.mute }}>.</span>
+          </>
+        )}
       </div>
 
       {footer()}

@@ -212,7 +212,7 @@ function App() {
     available: true,
     booked_out: false,
     unbookable: true,
-    unknown: false,
+    unknown: true,
   }))
   const [avoidWeather, setAvoidWeather] = useState<string[]>(['heat', 'rain'])
   const [nights, setNights] = useState(2)
