@@ -959,7 +959,8 @@ function App() {
         setAvailabilityById(mapped)
         setAvailabilityDate(selectedDate)
         setAvailabilityUrlById(bookingMap)
-      } catch {
+      } catch (err) {
+        console.error('[availability] fetch failed:', err)
         setAvailabilityById({})
         setAvailabilityDate(null)
         setAvailabilityUrlById({})
