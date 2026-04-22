@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import FilterSentence from './FilterSentence'
 import MapView from './MapView'
 import { estimateDriveTimeMinutesFromOrigin, formatDriveTime } from './driveTime'
 
@@ -82,7 +83,6 @@ const RAIN_PROB_THRESHOLD = 30
 const RAIN_MM_THRESHOLD = 4
 const WEATHER_CACHE_TTL_MS = 12 * 60 * 60 * 1000
 const AUTO_WEATHER_FETCH_LIMIT = 30
-const DEFAULT_MAX_DRIVE_MINUTES = 240
 
 const toTitleCase = (value: string) =>
   value
@@ -127,13 +127,6 @@ const getBookingUrl = (sourceUrl?: string | null) => {
   }
 }
 
-const formatMinutesAsHours = (minutes: number) => {
-  const hours = Math.floor(minutes / 60)
-  const mins = minutes % 60
-  if (hours <= 0) return `${mins}m`
-  if (mins === 0) return `${hours}h`
-  return `${hours}h ${mins}m`
-}
 
 const formatGridDate = (value: string) => {
   const date = new Date(`${value}T00:00:00`)
@@ -204,13 +197,16 @@ const normalizeTokens = (value: string) =>
 function App() {
   const [sites, setSites] = useState<Site[]>([])
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
-  const [facilityFilters, setFacilityFilters] = useState<Record<string, boolean>>(
-    () =>
-      Object.fromEntries(
-        FACILITY_FILTERS.map((filter) => [filter.key, false]),
-      ),
-  )
-  const [availabilityFilters, setAvailabilityFilters] = useState<
+  const [facilityFilters, setFacilityFilters] = useState<Record<string, boolean>>(() => ({
+    ...Object.fromEntries(
+      FACILITY_FILTERS.map((filter) => [
+        filter.key,
+        ['dogFriendly', 'toilets', 'firePits'].includes(filter.key),
+      ]),
+    ),
+    flushToilets: false,
+  }))
+  const [availabilityFilters] = useState<
     Record<AvailabilityStatus, boolean>
   >(() => ({
     available: true,
@@ -218,8 +214,8 @@ function App() {
     unbookable: true,
     unknown: false,
   }))
-  const [allowHeat, setAllowHeat] = useState(false)
-  const [allowRain, setAllowRain] = useState(false)
+  const [avoidWeather, setAvoidWeather] = useState<string[]>(['heat', 'rain'])
+  const [nights, setNights] = useState(2)
   const [lgaCentroids, setLgaCentroids] = useState<LgaCentroids>({})
   const [weatherByKey, setWeatherByKey] = useState<Record<string, WeatherDaily>>(
     {},
@@ -241,11 +237,14 @@ function App() {
   >({})
   const [availabilityDate, setAvailabilityDate] = useState<string | null>(null)
   const [availabilityLoading, setAvailabilityLoading] = useState(false)
-  const [maxDriveMinutes, setMaxDriveMinutes] = useState(
-    DEFAULT_MAX_DRIVE_MINUTES,
-  )
-  const [selectedDate, setSelectedDate] = useState('')
-  const [selectedEndDate, setSelectedEndDate] = useState('')
+  const [maxDriveMinutes, setMaxDriveMinutes] = useState(180)
+  const [selectedDate, setSelectedDate] = useState(() => {
+    const today = new Date()
+    const daysUntilFri = (5 - today.getDay() + 7) % 7 || 7
+    const fri = new Date(today)
+    fri.setDate(today.getDate() + daysUntilFri)
+    return fri.toISOString().slice(0, 10)
+  })
   const [incidents, setIncidents] = useState<IncidentItem[]>([])
   const [incidentsError, setIncidentsError] = useState<string | null>(null)
   const [incidentsUpdatedAt, setIncidentsUpdatedAt] = useState<string | null>(
@@ -260,7 +259,7 @@ function App() {
     label: string
     postcode: string
   } | null>(null)
-  const [originError, setOriginError] = useState<string | null>(null)
+  const [, setOriginError] = useState<string | null>(null)
   const [vicPostcodeLookup, setVicPostcodeLookup] = useState<
     Record<string, VicLocationRecord>
   >({})
@@ -268,6 +267,7 @@ function App() {
     {},
   )
   const [driveTimesLoading, setDriveTimesLoading] = useState(false)
+  const resultsRef = useRef<HTMLDivElement>(null)
   const staticIncidentText =
     'Always check emergency conditions before planning to camp anywhere.'
   const weatherMaxDate = useMemo(() => {
@@ -275,6 +275,13 @@ function App() {
     date.setDate(date.getDate() + 13)
     return date.toISOString().slice(0, 10)
   }, [])
+  const selectedEndDate = useMemo(() => {
+    if (!selectedDate) return ''
+    if (nights <= 1) return selectedDate
+    const d = new Date(`${selectedDate}T00:00:00`)
+    d.setDate(d.getDate() + nights - 1)
+    return d.toISOString().slice(0, 10)
+  }, [selectedDate, nights])
   const selectedDates = useMemo(() => {
     if (!selectedDate) return [] as string[]
     if (!selectedEndDate || selectedEndDate < selectedDate) return [selectedDate]
@@ -321,19 +328,6 @@ function App() {
     })
 
     return { aliasToPostcode, aliasEntries }
-  }, [vicPostcodeLookup])
-
-  const originSuggestions = useMemo(() => {
-    const values = new Set<string>()
-    Object.entries(vicPostcodeLookup).forEach(([postcode, data]) => {
-      const locality = (data.label ?? '').trim()
-      values.add(postcode)
-      if (locality) {
-        values.add(locality)
-        values.add(`${postcode} ${locality}`)
-      }
-    })
-    return Array.from(values).sort((a, b) => a.localeCompare(b))
   }, [vicPostcodeLookup])
 
   useEffect(() => {
@@ -654,15 +648,12 @@ function App() {
           return false
         }
       }
-      if (selectedDate && isWeatherEligible && (!allowHeat || !allowRain)) {
+      if (facilityFilters['flushToilets'] && site.facilities?.toiletsType !== 'flushing') return false
+      if (selectedDate && isWeatherEligible && avoidWeather.length > 0) {
         const summary = getWeatherSummary(site)
         if (!summary) return true
-        if (!allowHeat && summary.maxTemp >= HEAT_THRESHOLD_C) {
-          return false
-        }
-        if (!allowRain && summary.isRainy) {
-          return false
-        }
+        if (avoidWeather.includes('heat') && summary.maxTemp >= HEAT_THRESHOLD_C) return false
+        if (avoidWeather.includes('rain') && summary.isRainy) return false
       }
       if (!originCoords) {
         return false
@@ -713,8 +704,7 @@ function App() {
     facilityFilters,
     getWeatherSummary,
     maxDriveMinutes,
-    allowHeat,
-    allowRain,
+    avoidWeather,
     availabilityById,
     availabilityDate,
     getSiteAvailabilityStatus,
@@ -722,8 +712,6 @@ function App() {
     selectedDate,
     selectedDates,
     sites,
-    allowHeat,
-    allowRain,
     originCoords,
     driveTimesById,
   ])
@@ -732,23 +720,7 @@ function App() {
     filteredSitesRef.current = filteredSites
   }, [filteredSites])
 
-  const maxAvailableDriveMinutes = useMemo(() => {
-    if (!sites.length || !originCoords) return DEFAULT_MAX_DRIVE_MINUTES
-    const times = Object.values(driveTimesById)
-    const maxMinutes = times.length ? Math.max(...times) : DEFAULT_MAX_DRIVE_MINUTES
-    return Math.max(DEFAULT_MAX_DRIVE_MINUTES, maxMinutes)
-  }, [sites, originCoords, driveTimesById])
 
-  const driveMarks = useMemo(() => {
-    const marks = new Set<number>()
-    marks.add(30)
-    const maxMinutes = maxAvailableDriveMinutes
-    for (let value = 60; value <= maxMinutes; value += 60) {
-      marks.add(value)
-    }
-    marks.add(maxMinutes)
-    return Array.from(marks).sort((a, b) => a - b)
-  }, [maxAvailableDriveMinutes])
 
   const selectedMapSite = useMemo(
     () => filteredSites.find((site) => site.id === selectedMapSiteId) ?? null,
@@ -1020,6 +992,24 @@ function App() {
     void loadAvailability()
   }, [selectedDates, sites])
 
+  const handleReset = useCallback(() => {
+    const today = new Date()
+    const daysUntilFri = (5 - today.getDay() + 7) % 7 || 7
+    const fri = new Date(today)
+    fri.setDate(today.getDate() + daysUntilFri)
+    setSelectedDate(fri.toISOString().slice(0, 10))
+    setNights(2)
+    setOriginPostcode('3000')
+    setMaxDriveMinutes(180)
+    setFacilityFilters({
+      ...Object.fromEntries(
+        FACILITY_FILTERS.map((f) => [f.key, ['dogFriendly', 'toilets', 'firePits'].includes(f.key)]),
+      ),
+      flushToilets: false,
+    })
+    setAvoidWeather(['heat', 'rain'])
+  }, [])
+
   return (
     <div className="min-h-screen text-ink">
 
@@ -1087,244 +1077,30 @@ function App() {
         </div>
       </div>
 
-      {/* ── Guided header ── */}
-      <div className="guided-header">
-        <div className="guided-header__inner">
-          <div className="brand-lockup">
-            <svg className="brand-lockup__arch" viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" aria-label="CampCaster">
-              <defs>
-                <path id="campcaster-arch" d="M 20,168 A 310,310 0 0,0 460,168"/>
-              </defs>
-              <text fill="#D94B4B" fontFamily="'Titan One', cursive" fontSize="62" letterSpacing="3">
-                <textPath href="#campcaster-arch" startOffset="50%" textAnchor="middle">
-                  CAMPCASTER
-                </textPath>
-              </text>
-            </svg>
-            <div className="brand-lockup__tagline-row">
-              <div className="brand-lockup__tagline-line" />
-              <span className="brand-lockup__tagline-text">LESS SEARCHING. MORE CAMPING.</span>
-              <div className="brand-lockup__tagline-line" />
-            </div>
-          </div>
-
-          <div className="steps-row">
-            {/* Step 1 — When? */}
-            <div className="step">
-              <div className="step__label">
-                <span className="step__number">1</span>
-                <span className="step__name">When?</span>
-              </div>
-              <p className="step__prompt">
-                {selectedDate
-                  ? isMultiDateSelection
-                    ? `${selectedDates.length}-night trip selected.`
-                    : 'Single night selected. Add an end date for a range.'
-                  : 'Pick your arrival date to check availability and weather.'}
-              </p>
-              <div className="step__dates">
-                <div className="step__dates-group">
-                  <span className="step__dates-sublabel">From</span>
-                  <input
-                    id="forecast-date"
-                    type="date"
-                    value={selectedDate}
-                    min={new Date().toISOString().slice(0, 10)}
-                    onChange={(event) => setSelectedDate(event.target.value)}
-                    className="step__input"
-                  />
-                </div>
-                {selectedDate ? (
-                  <div className="step__dates-group">
-                    <span className="step__dates-sublabel">To (optional)</span>
-                    <input
-                      id="forecast-end-date"
-                      type="date"
-                      value={selectedEndDate}
-                      min={selectedDate || new Date().toISOString().slice(0, 10)}
-                      onChange={(event) => setSelectedEndDate(event.target.value)}
-                      className="step__input"
-                    />
-                  </div>
-                ) : null}
-              </div>
-              {selectedDates.length > 0 && !isWeatherEligible ? (
-                <p className="step__hint step__hint--warn">
-                  Beyond 14 days — weather forecast and filters unavailable.
-                </p>
-              ) : selectedDate ? (
-                <p className="step__hint">Weather forecasts available for the next 14 days.</p>
-              ) : (
-                <p className="step__hint">Forecasts cover the next 14 days.</p>
-              )}
-            </div>
-
-            {/* Step 2 — Where from? */}
-            <div className="step">
-              <div className="step__label">
-                <span className="step__number">2</span>
-                <span className="step__name">Where from?</span>
-              </div>
-              <p className="step__prompt">
-                {originCoords
-                  ? `Drive times calculated from ${originCoords.label}.`
-                  : 'Enter your suburb or postcode to calculate drive times.'}
-              </p>
-              <div className="step__dates">
-                <div className="step__dates-group">
-                  <span className="step__dates-sublabel">Suburb or postcode</span>
-                  <input
-                    id="origin-postcode"
-                    list="vic-origin-options"
-                    inputMode="text"
-                    placeholder="e.g. 3070 or Northcote"
-                    value={originPostcode}
-                    onChange={(event) => setOriginPostcode(event.target.value.trim())}
-                    className="step__input"
-                  />
-                </div>
-              </div>
-              <datalist id="vic-origin-options">
-                {originSuggestions.map((option) => (
-                  <option key={option} value={option} />
-                ))}
-              </datalist>
-              {originError ? (
-                <p className="step__error">{originError}</p>
-              ) : (
-                <p className="step__hint">Defaults to Melbourne CBD (3000).</p>
-              )}
-            </div>
-
-            {/* Step 3 — How far? */}
-            <div className="step">
-              <div className="step__label">
-                <span className="step__number">3</span>
-                <span className="step__name">How far?</span>
-              </div>
-              <p className="step__prompt">How long are you happy to drive?</p>
-              <div className="step__dates">
-                <div className="step__dates-group">
-                  <span className="step__dates-sublabel">Max driving time</span>
-                  <div className="step__slider-row">
-                    <input
-                      id="drive-time"
-                      type="range"
-                      min={30}
-                      max={maxAvailableDriveMinutes}
-                      step={30}
-                      value={maxDriveMinutes}
-                      onChange={(event) => setMaxDriveMinutes(Number(event.target.value))}
-                      list="drive-time-marks"
-                      className="step__slider"
-                    />
-                    <span className="step__slider-value">
-                      {formatMinutesAsHours(maxDriveMinutes)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <datalist id="drive-time-marks">
-                {driveMarks.map((value) => (
-                  <option key={value} value={value} label={formatMinutesAsHours(value)} />
-                ))}
-              </datalist>
-              <p className="step__hint">
-                {driveTimesLoading
-                  ? 'Calculating drive times…'
-                  : 'Approximate driving time from your starting point.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Filter chip bar ── */}
-      <div className="chip-bar">
-        <div className="chip-bar__inner">
-          <span className="chip-bar__label">Must have</span>
-
-          {FACILITY_FILTERS.map((filter) => (
-            <button
-              key={filter.key}
-              type="button"
-              className={`chip ${facilityFilters[filter.key] ? 'is-active' : ''}`}
-              onClick={() =>
-                setFacilityFilters((prev) => ({
-                  ...prev,
-                  [filter.key]: !prev[filter.key],
-                }))
-              }
-              aria-pressed={facilityFilters[filter.key] ?? false}
-            >
-              {filter.label}
-            </button>
-          ))}
-
-          <div className="chip-bar__divider" aria-hidden="true" />
-          <span className="chip-bar__label">Weather</span>
-
-          <button
-            type="button"
-            className={`chip ${!allowHeat && selectedDates.length > 0 && isWeatherEligible ? 'is-active' : ''}${!selectedDates.length || !isWeatherEligible ? ' is-disabled' : ''}`}
-            onClick={() => setAllowHeat((v) => !v)}
-            disabled={!selectedDates.length || !isWeatherEligible}
-            title={
-              !selectedDates.length
-                ? 'Select a date to enable weather filters'
-                : !isWeatherEligible
-                  ? 'Weather filters only available within 14 days'
-                  : undefined
-            }
-            aria-pressed={!allowHeat}
-          >
-            Avoid heat (&gt;33°C)
-          </button>
-
-          <button
-            type="button"
-            className={`chip ${!allowRain && selectedDates.length > 0 && isWeatherEligible ? 'is-active' : ''}${!selectedDates.length || !isWeatherEligible ? ' is-disabled' : ''}`}
-            onClick={() => setAllowRain((v) => !v)}
-            disabled={!selectedDates.length || !isWeatherEligible}
-            title={
-              !selectedDates.length
-                ? 'Select a date to enable weather filters'
-                : !isWeatherEligible
-                  ? 'Weather filters only available within 14 days'
-                  : undefined
-            }
-            aria-pressed={!allowRain}
-          >
-            Avoid rain
-          </button>
-
-          {selectedDates.length > 0 ? (
-            <>
-              <div className="chip-bar__divider" aria-hidden="true" />
-              <span className="chip-bar__label">Availability</span>
-              {AVAILABILITY_FILTERS.map((filter) => (
-                <button
-                  key={filter.key}
-                  type="button"
-                  className={`chip ${availabilityFilters[filter.key] ? 'is-active' : ''}`}
-                  onClick={() =>
-                    setAvailabilityFilters((current) => ({
-                      ...current,
-                      [filter.key]: !current[filter.key],
-                    }))
-                  }
-                  aria-pressed={availabilityFilters[filter.key] ?? false}
-                >
-                  {filter.label}
-                </button>
-              ))}
-            </>
-          ) : null}
-        </div>
-      </div>
+      {/* ── Sentence filter ── */}
+      <FilterSentence
+        selectedDate={selectedDate}
+        setSelectedDate={setSelectedDate}
+        nights={nights}
+        setNights={setNights}
+        originPostcode={originPostcode}
+        setOriginPostcode={setOriginPostcode}
+        originLabel={originCoords?.label ?? originPostcode}
+        maxDriveMinutes={maxDriveMinutes}
+        setMaxDriveMinutes={setMaxDriveMinutes}
+        facilityFilters={facilityFilters}
+        setFacilityFilters={setFacilityFilters}
+        avoidWeather={avoidWeather}
+        setAvoidWeather={setAvoidWeather}
+        filteredCount={filteredSites.length}
+        isWeatherEligible={isWeatherEligible}
+        incidentsUpdatedAt={incidentsUpdatedAt}
+        onReset={handleReset}
+        onShowSites={() => resultsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+      />
 
       {/* ── Results ── */}
-      <div className="content-area">
+      <div className="content-area" ref={resultsRef}>
         <div className="content-area__inner">
           <div className="results-bar">
             <div className="results-bar__count">
@@ -1404,22 +1180,27 @@ function App() {
                       getBookingUrl(site.sourceUrl)
                     const availabilityForDate = getSiteAvailabilityStatus(site.id)
                     const availabilityLabel = selectedDates.length === 0
-                      ? 'Select a date'
+                      ? 'Select a date to check'
                       : availabilityLoading
                         ? 'Checking…'
                         : availabilityForDate === 'booked_out'
-                          ? 'Booked out'
+                          ? 'Fully booked'
                           : availabilityForDate === 'available'
-                            ? 'Available'
+                            ? 'Available to book'
                             : availabilityForDate === 'unbookable'
-                              ? 'Not Bookable. Just Rock up.'
-                              : 'Unknown'
+                              ? 'Just rock up'
+                              : 'Availability unknown'
+                    const availabilityNote = availabilityForDate === 'unbookable'
+                      ? 'No booking system — you\'ll need to show up in person and see.'
+                      : null
                     const availabilityClass =
                       availabilityForDate === 'available'
                         ? 'availability-status availability-status--available'
                         : availabilityForDate === 'booked_out'
                           ? 'availability-status availability-status--unavailable'
-                          : 'availability-status availability-status--unknown'
+                          : availabilityForDate === 'unbookable'
+                            ? 'availability-status availability-status--rockup'
+                            : 'availability-status availability-status--unknown'
                     const locationLabel = formatRegion(site)
                     const originLabel = originCoords?.label ?? 'Postcode'
                     const driveMinutes = driveTimesById[site.id]
@@ -1692,6 +1473,11 @@ function App() {
                             <div className={availabilityClass}>
                               {availabilityLabel}
                             </div>
+                            {availabilityNote ? (
+                              <div className="text-xs" style={{ marginTop: 4, color: '#92400e', opacity: 0.85 }}>
+                                {availabilityNote}
+                              </div>
+                            ) : null}
                           </div>
                         ) : null}
                         {bookingUrl ? (
@@ -1749,22 +1535,27 @@ function App() {
                             (rainProb > 0 || rainMm > 0)
                           const availabilityForDate = getSiteAvailabilityStatus(site.id)
                           const availabilityLabel = selectedDates.length === 0
-                            ? 'Select a date'
+                            ? 'Select a date to check'
                             : availabilityLoading
                               ? 'Checking…'
                               : availabilityForDate === 'booked_out'
-                                ? 'Booked out'
+                                ? 'Fully booked'
                                 : availabilityForDate === 'available'
-                                  ? 'Available'
+                                  ? 'Available to book'
                                   : availabilityForDate === 'unbookable'
-                                    ? 'Not Bookable. Just Rock up.'
-                                    : 'Unknown'
+                                    ? 'Just rock up'
+                                    : 'Availability unknown'
+                          const availabilityNote = availabilityForDate === 'unbookable'
+                            ? "No booking system — you'll need to show up in person and see."
+                            : null
                           const availabilityClass =
                             availabilityForDate === 'available'
                               ? 'availability-status availability-status--available'
                               : availabilityForDate === 'booked_out'
                                 ? 'availability-status availability-status--unavailable'
-                                : 'availability-status availability-status--unknown'
+                                : availabilityForDate === 'unbookable'
+                                  ? 'availability-status availability-status--rockup'
+                                  : 'availability-status availability-status--unknown'
                           const driveMinutes = driveTimesById[site.id]
                           const driveLabel =
                             originCoords && driveMinutes !== undefined
@@ -1992,6 +1783,11 @@ function App() {
                                 <div className="availability-section">
                                   <div className="availability-label">Availability</div>
                                   <div className={availabilityClass}>{availabilityLabel}</div>
+                                  {availabilityNote ? (
+                                    <div className="text-xs" style={{ marginTop: 4, color: '#92400e', opacity: 0.85 }}>
+                                      {availabilityNote}
+                                    </div>
+                                  ) : null}
                                 </div>
                               ) : null}
                               {bookingUrl ? (

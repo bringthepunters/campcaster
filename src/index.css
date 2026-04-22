@@ -888,6 +888,24 @@ img {
   font-size: 0.75rem;
 }
 
+.availability-status--rockup {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.availability-status--rockup::before {
+  content: '↗';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: #f59e0b;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+}
+
 /* Button Styles */
 .btn {
   display: inline-flex;
