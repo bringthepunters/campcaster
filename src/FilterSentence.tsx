@@ -12,18 +12,18 @@ const FEATURES = [
   { id: 'car',         label: 'vehicle access', facilityKey: 'vehicleAccess' },
 ] as const
 
-// VIC public holiday long weekends — camping start Fridays
-// Source: business.vic.gov.au/business-information/public-holidays
+// VIC public holiday long weekends — camping start Fridays, nights to cover the PH Monday
+// Source: business.vic.gov.au/business-information/public-holidays (2026-2027)
 const VIC_LONG_WEEKENDS = [
-  { name: 'Anzac Day',        campFri: new Date(2026, 3, 24) },  // Mon 27 Apr sub PH
-  { name: "King's Birthday",  campFri: new Date(2026, 5, 5) },   // Mon 8 Jun PH
-  { name: 'AFL Grand Final',  campFri: new Date(2026, 8, 25) },  // Fri 25 Sep PH (approx)
-  { name: 'Christmas',        campFri: new Date(2026, 11, 25) }, // Fri 25 Dec + Mon 28 Dec
-  { name: "New Year's",       campFri: new Date(2027, 0, 1) },   // Fri 1 Jan PH
-  { name: 'Australia Day',    campFri: new Date(2027, 0, 22) },  // Fri 22 Jan → Mon 25 Jan obs.
-  { name: 'Labour Day',       campFri: new Date(2027, 2, 5) },   // Mon 8 Mar PH
-  { name: 'Easter',           campFri: new Date(2027, 2, 26) },  // Good Fri 26 Mar + Mon 29 Mar
-  { name: 'Anzac Day',        campFri: new Date(2027, 3, 23) },  // Mon 26 Apr sub PH
+  { name: 'Anzac Day',        campFri: new Date(2026, 3, 24),  nights: 3 }, // Mon 27 Apr obs.
+  { name: "King's Birthday",  campFri: new Date(2026, 5, 5),   nights: 3 }, // Mon 8 Jun
+  { name: 'AFL Grand Final',  campFri: new Date(2026, 8, 25),  nights: 3 }, // Fri 25 Sep PH
+  { name: 'Christmas',        campFri: new Date(2026, 11, 25), nights: 4 }, // Fri 25–Mon 28 Dec
+  { name: "New Year's",       campFri: new Date(2027, 0, 1),   nights: 3 }, // Fri 1 Jan PH
+  { name: 'Australia Day',    campFri: new Date(2027, 0, 22),  nights: 3 }, // Mon 25 Jan obs.
+  { name: 'Labour Day',       campFri: new Date(2027, 2, 5),   nights: 3 }, // Mon 8 Mar
+  { name: 'Easter',           campFri: new Date(2027, 2, 26),  nights: 4 }, // Good Fri–Easter Mon
+  { name: 'Anzac Day',        campFri: new Date(2027, 3, 23),  nights: 3 }, // Mon 26 Apr obs.
 ]
 
 const WEATHER_AVOID = [
@@ -253,7 +253,10 @@ function DatePanel({ selectedDate, setSelectedDate, nights, setNights }: {
     const d = new Date(today); d.setFullYear(d.getFullYear() + 1); return d
   }, [today])
 
-  const [viewYM, setViewYM] = useState(() => ({ y: today.getFullYear(), m: today.getMonth() }))
+  const [viewYM, setViewYM] = useState(() => {
+    const d = selectedDate ? new Date(`${selectedDate}T00:00:00`) : today
+    return { y: d.getFullYear(), m: d.getMonth() }
+  })
 
   const selected = useMemo(
     () => selectedDate ? new Date(`${selectedDate}T00:00:00`) : today,
@@ -291,9 +294,9 @@ function DatePanel({ selectedDate, setSelectedDate, nights, setNights }: {
     const daysUntilFri = (5 - today.getDay() + 7) % 7 || 7
     const nextLW = VIC_LONG_WEEKENDS.find(lw => lw.campFri >= today)
     return [
-      { label: 'This weekend',  date: addDays(today, daysUntilFri) },
-      { label: 'Next weekend',  date: addDays(today, daysUntilFri + 7) },
-      ...(nextLW ? [{ label: `Long w/e: ${nextLW.name}`, date: nextLW.campFri }] : []),
+      { label: 'This weekend',  date: addDays(today, daysUntilFri),      nights: null },
+      { label: 'Next weekend',  date: addDays(today, daysUntilFri + 7),  nights: null },
+      ...(nextLW ? [{ label: `Long w/e: ${nextLW.name}`, date: nextLW.campFri, nights: nextLW.nights }] : []),
     ]
   }, [today])
 
@@ -304,7 +307,7 @@ function DatePanel({ selectedDate, setSelectedDate, nights, setNights }: {
       <PopRow label="Quick picks">
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {quickPicks.map(q => (
-            <PopPill key={q.label} active={sameDay(selected, q.date)} onClick={() => pickDate(q.date)}>
+            <PopPill key={q.label} active={sameDay(selected, q.date)} onClick={() => { pickDate(q.date); if (q.nights) setNights(q.nights) }}>
               {q.label}
             </PopPill>
           ))}
