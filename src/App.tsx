@@ -623,21 +623,11 @@ function App() {
 
   const getSiteAvailabilityStatus = useCallback(
     (siteId: string): AvailabilityStatus => {
-      if (selectedDates.length === 0) return 'unknown'
-      if (selectedDates.length === 1) {
-        return availabilityDate === selectedDate
-          ? availabilityById[siteId] ?? 'unknown'
-          : 'unknown'
-      }
-      const statuses = selectedDates.map(
-        (date) => availabilityByDate[date]?.[siteId] ?? 'unknown',
-      )
-      if (statuses.includes('available')) return 'available'
-      if (statuses.includes('booked_out')) return 'booked_out'
-      if (statuses.includes('unbookable')) return 'unbookable'
-      return 'unknown'
+      if (!selectedDate) return 'unknown'
+      if (availabilityDate !== selectedDate) return 'unknown'
+      return availabilityById[siteId] ?? 'unknown'
     },
-    [availabilityByDate, availabilityById, availabilityDate, selectedDate, selectedDates],
+    [availabilityById, availabilityDate, selectedDate],
   )
 
   const filteredSites = useMemo(() => {
@@ -939,48 +929,37 @@ function App() {
       setAvailabilityLoading(true)
       try {
         const proxyBase = (import.meta.env.VITE_BOOKEASY_PROXY_URL ?? '') as string
-        const selectedDateMappings: Record<string, Record<string, AvailabilityStatus>> = {}
-        const mergedBookingMap: Record<string, string> = {}
-
-        for (const date of selectedDates) {
-          const url = proxyBase
-            ? new URL(proxyBase)
-            : new URL('https://bookings.parks.vic.gov.au/book')
-          if (proxyBase) {
-            url.searchParams.set('date', date)
-          } else {
-            url.searchParams.set('format', 'json')
-            url.searchParams.set('q', '114')
-            url.searchParams.set('pagenumber', '1')
-            url.searchParams.set('date', date)
-            url.searchParams.set('period', '1')
-          }
-
-          const response = await fetch(url.toString(), { cache: 'no-store' })
-          if (!response.ok) {
-            throw new Error('Availability unavailable')
-          }
-          const payload = (await response.json()) as {
-            data?: Array<{
-              alias?: string
-              OperatorName?: string
-              isBookable?: boolean
-              isAvailable?: boolean
-              isBookableAndAvailable?: boolean
-            }>
-          }
-          const { mapped, bookingMap } = mapAvailabilityItems(payload.data ?? [])
-          selectedDateMappings[date] = mapped
-          Object.assign(mergedBookingMap, bookingMap)
+        const url = proxyBase
+          ? new URL(proxyBase)
+          : new URL('https://bookings.parks.vic.gov.au/book')
+        if (proxyBase) {
+          url.searchParams.set('date', selectedDate)
+        } else {
+          url.searchParams.set('format', 'json')
+          url.searchParams.set('q', '114')
+          url.searchParams.set('pagenumber', '1')
+          url.searchParams.set('date', selectedDate)
+          url.searchParams.set('period', '1')
         }
 
-        const primaryDate = selectedDates[0] ?? null
-        setAvailabilityByDate(selectedDateMappings)
-        setAvailabilityById(primaryDate ? selectedDateMappings[primaryDate] ?? {} : {})
-        setAvailabilityDate(primaryDate)
-        setAvailabilityUrlById(mergedBookingMap)
+        const response = await fetch(url.toString(), { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error('Availability unavailable')
+        }
+        const payload = (await response.json()) as {
+          data?: Array<{
+            alias?: string
+            OperatorName?: string
+            isBookable?: boolean
+            isAvailable?: boolean
+            isBookableAndAvailable?: boolean
+          }>
+        }
+        const { mapped, bookingMap } = mapAvailabilityItems(payload.data ?? [])
+        setAvailabilityById(mapped)
+        setAvailabilityDate(selectedDate)
+        setAvailabilityUrlById(bookingMap)
       } catch {
-        setAvailabilityByDate({})
         setAvailabilityById({})
         setAvailabilityDate(null)
         setAvailabilityUrlById({})
@@ -990,7 +969,7 @@ function App() {
     }
 
     void loadAvailability()
-  }, [selectedDates, sites])
+  }, [selectedDate, sites])
 
   const handleReset = useCallback(() => {
     const today = new Date()
