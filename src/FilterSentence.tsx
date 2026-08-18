@@ -37,7 +37,7 @@ const WEATHER_AVOID = [
 ] as const
 
 const DAYS_OPTS = [1, 2, 3, 4, 5, 7, 10, 14]
-const HOURS_OPTS = [1, 2, 3, 4, 5, 6, 8]
+const HOURS_OPTS = [1, 2, 3, 4, 5, 6, 8, 9, 10]
 const CITY_OPTS = ['Melbourne', 'Geelong', 'Ballarat', 'Bendigo', 'Mornington', 'Traralgon']
 const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December']
 const DOW = ['M','T','W','T','F','S','S']
@@ -540,6 +540,7 @@ export interface FilterSentenceProps {
   avoidWeather: string[]
   setAvoidWeather: (ids: string[]) => void
   filteredCount: number
+  bookedOutHiddenCount: number
   isWeatherEligible: boolean
   incidentsUpdatedAt: string | null
   onReset: () => void
@@ -556,7 +557,7 @@ export default function FilterSentence(props: FilterSentenceProps) {
     maxDriveMinutes, setMaxDriveMinutes,
     facilityFilters, setFacilityFilters,
     avoidWeather, setAvoidWeather,
-    filteredCount, isWeatherEligible,
+    filteredCount, bookedOutHiddenCount, isWeatherEligible,
     incidentsUpdatedAt,
     onReset, onShowSites,
   } = props
@@ -631,6 +632,12 @@ export default function FilterSentence(props: FilterSentenceProps) {
           <span>
             <strong style={{ color: P.pageInk, fontWeight: 700 }}>{filteredCount}</strong> sites match
           </span>
+          {bookedOutHiddenCount > 0 && (
+            <>
+              <span>·</span>
+              <span>{bookedOutHiddenCount} booked out (hidden)</span>
+            </>
+          )}
           <span>·</span>
           <button type="button" onClick={onReset} style={{
             background: 'transparent', border: 'none', color: P.mute, cursor: 'pointer',

@@ -1292,6 +1292,11 @@ img {
   font-size: 1rem;
 }
 
+.results-bar__booked-out-note {
+  font-weight: 400;
+  color: #9ca3af;
+}
+
 /* ============================================
    UI V2 — MAIN CONTENT AREA
    ============================================ */

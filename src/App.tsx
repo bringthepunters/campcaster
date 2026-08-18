@@ -706,6 +706,56 @@ function App() {
     driveTimesById,
   ])
 
+  // Sites that match every filter except availability, but are hidden
+  // because they're confirmed booked out on the selected date -- shown as
+  // a count so "booked out" hiding isn't invisible (there's no filter
+  // chip to disable it).
+  const bookedOutHiddenCount = useMemo(() => {
+    if (
+      availabilityFilters.booked_out ||
+      !selectedDates.length ||
+      availabilityLoading ||
+      availabilityDate === null
+    ) {
+      return 0
+    }
+    return sites.filter((site) => {
+      for (const filter of FACILITY_FILTERS) {
+        if (!facilityFilters[filter.key]) continue
+        if (site.facilities?.[filter.key] !== true) return false
+      }
+      if (facilityFilters['flushToilets'] && site.facilities?.toiletsType !== 'flushing') return false
+      if (selectedDate && isWeatherEligible && avoidWeather.length > 0) {
+        const summary = getWeatherSummary(site)
+        if (summary) {
+          if (avoidWeather.includes('heat') && summary.maxTemp >= HEAT_THRESHOLD_C) return false
+          if (avoidWeather.includes('rain') && summary.isRainy) return false
+        }
+      }
+      if (!originCoords) return false
+      const driveMinutes = driveTimesById[site.id]
+      if (maxDriveMinutes > 0 && driveMinutes !== undefined && driveMinutes > maxDriveMinutes) {
+        return false
+      }
+      return getSiteAvailabilityStatus(site.id) === 'booked_out'
+    }).length
+  }, [
+    sites,
+    facilityFilters,
+    selectedDate,
+    selectedDates,
+    isWeatherEligible,
+    avoidWeather,
+    getWeatherSummary,
+    originCoords,
+    driveTimesById,
+    maxDriveMinutes,
+    availabilityFilters,
+    availabilityLoading,
+    availabilityDate,
+    getSiteAvailabilityStatus,
+  ])
+
   useEffect(() => {
     filteredSitesRef.current = filteredSites
   }, [filteredSites])
@@ -1081,6 +1131,7 @@ function App() {
         avoidWeather={avoidWeather}
         setAvoidWeather={setAvoidWeather}
         filteredCount={filteredSites.length}
+        bookedOutHiddenCount={bookedOutHiddenCount}
         isWeatherEligible={isWeatherEligible}
         incidentsUpdatedAt={incidentsUpdatedAt}
         onReset={handleReset}
@@ -1094,6 +1145,12 @@ function App() {
             <div className="results-bar__count">
               <strong>{filteredSites.length}</strong>{' '}
               campsite{filteredSites.length !== 1 ? 's' : ''} found
+              {bookedOutHiddenCount > 0 && (
+                <span className="results-bar__booked-out-note">
+                  {' '}
+                  ({bookedOutHiddenCount} booked out hidden)
+                </span>
+              )}
             </div>
             <div className="view-toggle">
               <button
@@ -1217,7 +1274,7 @@ function App() {
                         key: 'toilets',
                         label: facilities.toiletsType
                           ? `Toilets (${facilities.toiletsType})`
-                          : 'Toilets',
+                          : 'Some kind of toilet',
                         value: facilities.toilets,
                       },
                       { key: 'showers', label: 'Showers', value: facilities.showers },
@@ -1569,7 +1626,7 @@ function App() {
                               key: 'toilets',
                               label: facilities.toiletsType
                                 ? `Toilets (${facilities.toiletsType})`
-                                : 'Toilets',
+                                : 'Some kind of toilet',
                               value: facilities.toilets,
                             },
                             { key: 'showers', label: 'Showers', value: facilities.showers },
