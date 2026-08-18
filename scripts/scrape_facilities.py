@@ -38,24 +38,55 @@ STOPWORDS = {
 }
 
 DOG_POSITIVE = re.compile(r"dogs?\b.*(allowed|permitted|welcome|on lead|on-lead)", re.I)
-DOG_NEGATIVE = re.compile(r"(no dogs|dogs? not permitted|dogs? prohibited)", re.I)
+DOG_NEGATIVE = re.compile(
+    r"no dogs\b"
+    r"|dogs?\s+(?:are|is)?\s*not\s+(?:permitted|allowed)"
+    r"|dogs?\s+(?:are|is)?\s*(?:not\s+)?prohibited",
+    re.I,
+)
+# Shared suffix for "<facility> is/are not provided/available" phrasing,
+# which none of the original per-category negative regexes caught (they
+# only matched a leading "no <facility>" form) -- meaning "Toilets are not
+# provided" was being read as a POSITIVE toilets match. Safe to reuse as a
+# bare suffix since each regex only ever runs against lines already
+# filtered to mention that facility's keyword.
+NOT_PROVIDED = r"(?:is|are)?\s*not\s+(?:provided|available)"
+
 TOILET_POSITIVE = re.compile(r"toilets?", re.I)
-TOILET_NEGATIVE = re.compile(r"no toilets?|without toilets?", re.I)
+TOILET_NEGATIVE = re.compile(rf"no toilets?|without toilets?|toilets?\s+{NOT_PROVIDED}", re.I)
 TOILET_FLUSH = re.compile(r"(flush|flushing)", re.I)
 TOILET_PIT = re.compile(r"(pit toilet|pit latrine|long drop|drop toilet)", re.I)
 TOILET_COMPOST = re.compile(r"(compost(ing)? toilet|eco toilet)", re.I)
 SHOWER_POSITIVE = re.compile(r"showers?", re.I)
-SHOWER_NEGATIVE = re.compile(r"no showers?|without showers?", re.I)
+SHOWER_NEGATIVE = re.compile(rf"no showers?|without showers?|showers?\s+{NOT_PROVIDED}", re.I)
 BBQ_POSITIVE = re.compile(r"\b(bbq|barbecue)\b", re.I)
-BBQ_NEGATIVE = re.compile(r"no bbq|no barbecue", re.I)
+BBQ_NEGATIVE = re.compile(rf"no bbq|no barbecue|(?:bbqs?|barbecues?)\s+{NOT_PROVIDED}", re.I)
 FIRE_POSITIVE = re.compile(r"(fire pit|firepit|campfire)", re.I)
-FIRE_NEGATIVE = re.compile(r"no fires?|no campfires?", re.I)
+FIRE_NEGATIVE = re.compile(
+    rf"\bno (?:camp)?fires?\b"
+    rf"|(?:fire\s?pits?|campfires?)\s+{NOT_PROVIDED}"
+    rf"|campfires?\s+(?:is|are)?\s*not\s+permitted",
+    re.I,
+)
 PICNIC_POSITIVE = re.compile(r"picnic tables?", re.I)
-PICNIC_NEGATIVE = re.compile(r"no picnic tables?", re.I)
+PICNIC_NEGATIVE = re.compile(rf"no picnic tables?|picnic tables?\s+{NOT_PROVIDED}", re.I)
 WATER_POSITIVE = re.compile(r"(drinking water|potable water|water tap)", re.I)
-WATER_NEGATIVE = re.compile(r"no (drinking|potable) water|no water", re.I)
-VEHICLE_POSITIVE = re.compile(r"(vehicle access|2wd|4wd|car access|drive-in)", re.I)
-VEHICLE_NEGATIVE = re.compile(r"(no vehicle access|walk-in only|hike-in only)", re.I)
+WATER_NEGATIVE = re.compile(
+    rf"no (drinking|potable) water|no water"
+    rf"|(?:drinking|potable) water\s+{NOT_PROVIDED}"
+    rf"|no potable water\s+(?:on|at) site",
+    re.I,
+)
+# "2wd"/"4wd" deliberately excluded: every park page carries a generic
+# "Activities at this park" tag list (4WD, Hiking, Cycling, etc.) that
+# describes the park broadly, not this specific site's own vehicle
+# access -- including them made ~94% of sites read as vehicle-accessible,
+# even hike-in-only ones.
+VEHICLE_POSITIVE = re.compile(r"(vehicle access|car access|drive-in)", re.I)
+VEHICLE_NEGATIVE = re.compile(
+    rf"(no vehicle access|walk-in only|hike-in only|vehicle access\s+{NOT_PROVIDED})",
+    re.I,
+)
 ACCESS_POSITIVE = re.compile(r"(accessible|accessibility|wheelchair)", re.I)
 
 LANDSCAPE_CUES = {
@@ -130,8 +161,28 @@ def fetch_text(url: str, retries: int = 4) -> str:
 
 
 def extract_facilities(text: str) -> dict:
+    # Every page starts with ~10KB of shared sitewide navigation (an
+    # "Activities" menu that literally includes "BBQ spots" and "Four
+    # wheel driving" links, and a "Dog walking" link) rendered as markdown
+    # list items before any page-specific content. Left in, those falsely
+    # match BBQ_POSITIVE/VEHICLE_POSITIVE/DOG_POSITIVE on nearly every
+    # site regardless of its real facilities. The per-site content
+    # consistently begins at the "## Explore" heading, so drop everything
+    # before it when present.
+    explore_idx = text.find("## Explore")
+    if explore_idx != -1:
+        text = text[explore_idx:]
     lines = [line.strip() for line in text.splitlines() if line.strip()]
-    dog_lines = [line for line in lines if "dog" in line.lower()]
+    # Exclude the sitewide "assistance dogs are welcome... usually dog
+    # prohibited" boilerplate, which appears near-verbatim on every park
+    # page regardless of that site's actual pet policy and would otherwise
+    # be matched as a false DOG_NEGATIVE before any genuine per-site line
+    # is reached.
+    dog_lines = [
+        line
+        for line in lines
+        if "dog" in line.lower() and "assistance dog" not in line.lower()
+    ]
     toilet_lines = [line for line in lines if "toilet" in line.lower()]
     shower_lines = [line for line in lines if "shower" in line.lower()]
     bbq_lines = [line for line in lines if "bbq" in line.lower() or "barbecue" in line.lower()]
