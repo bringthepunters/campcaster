@@ -742,7 +742,7 @@ function App() {
       return
     }
 
-    const cacheKey = `driveTimes:${originCoords.postcode}`
+    const cacheKey = `driveTimes:${originCoords.postcode}:${sites.length}`
     const cached = window.localStorage.getItem(cacheKey)
     if (cached) {
       try {
@@ -925,6 +925,7 @@ function App() {
       return { mapped, bookingMap }
     }
 
+    let cancelled = false
     const loadAvailability = async () => {
       setAvailabilityLoading(true)
       try {
@@ -956,20 +957,27 @@ function App() {
           }>
         }
         const { mapped, bookingMap } = mapAvailabilityItems(payload.data ?? [])
+        if (cancelled) return
         setAvailabilityById(mapped)
         setAvailabilityDate(selectedDate)
         setAvailabilityUrlById(bookingMap)
       } catch (err) {
+        if (cancelled) return
         console.error('[availability] fetch failed:', err)
         setAvailabilityById({})
         setAvailabilityDate(null)
         setAvailabilityUrlById({})
       } finally {
-        setAvailabilityLoading(false)
+        if (!cancelled) {
+          setAvailabilityLoading(false)
+        }
       }
     }
 
     void loadAvailability()
+    return () => {
+      cancelled = true
+    }
   }, [selectedDate, sites])
 
   const handleReset = useCallback(() => {
@@ -1157,6 +1165,7 @@ function App() {
                     const bookingUrl =
                       site.bookingUrl ??
                       availabilityUrlById[site.id] ??
+                      site.sourceUrl ??
                       getBookingUrl(site.sourceUrl)
                     const availabilityForDate = getSiteAvailabilityStatus(site.id)
                     const availabilityLabel = selectedDates.length === 0
@@ -1552,6 +1561,7 @@ function App() {
                           const bookingUrl =
                             site.bookingUrl ??
                             availabilityUrlById[site.id] ??
+                            site.sourceUrl ??
                             getBookingUrl(site.sourceUrl)
                           const facilities = site.facilities ?? {}
                           const facilityItems = [
